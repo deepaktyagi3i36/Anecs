@@ -1,0 +1,11 @@
+# This is an example of local setting for development environment
+# If you need such individual settings copy this file to local_development.rb 
+# and customize as you need 
+
+puts 'Local development environment is loading ...'
+
+# This is necessary line to get access to your application configuration
+config = Rails.configuration
+
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp

@@ -1,0 +1,23 @@
+<%= form_for(@user_role, :url => {:action => action_name, :id => @user_role.id},
+  :html => {:id => "user_role", :class => "html-form" }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :role_id %>
+        <%= f.collection_select :role_id, @roles, :id, :name %>
+        <%= f.error_message_on :role_id %>
+      </li>
+      <li>
+        <%= f.mandatory_label :user_id %>
+        <%= f.collection_select :user_id, @users, :id, :login %>
+        <%= f.error_message_on :user_id %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("user_role_user_id") %>
+

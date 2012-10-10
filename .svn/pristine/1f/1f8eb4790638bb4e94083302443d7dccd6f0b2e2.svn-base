@@ -1,0 +1,25 @@
+<%= form_for @tracking_order, :url => {:action => action_name},
+   :html => {:id => "track_form", :class => "basic-form" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "track_section2" %>
+    <ul>
+      <li>
+	    <%= f.mandatory_label :email %>
+	    <%= f.text_field :email %>
+        <%= f.hint_message_on :email %>
+	    <%= f.error_message_on :email %>
+      </li>
+      <li>
+	    <%= f.mandatory_label :invoice %>
+	    <%= f.text_field :invoice %>
+        <%= f.hint_message_on :invoice %>
+	    <%= f.error_message_on :invoice %>
+      </li>
+    </ul>
+    <%# TODO: rewrite the right captcha %>
+    <%#= render :partial => "shared/captcha", :locals => {:f => f} %>
+    <%= f.submit button_label, :class => 'blue-button'  %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("track_email") %>

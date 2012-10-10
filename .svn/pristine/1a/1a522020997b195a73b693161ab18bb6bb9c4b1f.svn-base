@@ -1,0 +1,32 @@
+---
+en:
+  activerecord:
+    models:
+      email:
+        one: "E-Mail"
+        few: "E-Mails"
+        many: "E-Mails"
+        other: "E-Mails"
+    attributes:
+      email:
+        email: "Email"
+    hints:
+      models:
+        email:
+          attributes:
+            email: "Enter valid e-mail to send message"
+  activeview:
+    columns:
+      user:
+        actions: "Actions"
+        login: "Login"
+        user_status: "User status"
+        created_at: "Created"
+    flashes:
+      email:
+        notices:
+          reset_code_sent: "Reset code sent to %{email}"
+          activation_letter_resend: "Activation letter sent to %{email}"
+        warnings:
+          inv_email: "The %{email} does not exist in system for successfully activated account"
+          inv_email_for_resend: "The not-activated %{email} does not exist in system"

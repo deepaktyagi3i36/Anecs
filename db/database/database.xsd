@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Anonimus (Anonimus) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="Database">
+		<xs:annotation>
+			<xs:documentation>Root element of database</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Websites"/>
+				<xs:element ref="Themes"/>
+				<xs:element ref="Users"/>
+				<xs:element ref="Articles"/>
+				<xs:element ref="Manpages"/>
+				<xs:element ref="Properties"/>
+				<xs:element ref="ProductTypes"/>
+				<xs:element ref="Categories"/>
+				<xs:element ref="Products"/>
+				<xs:element ref="Orders"/>
+				<xs:element ref="Feedbacks"/>
+				<xs:element ref="Callmebacks"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Websites">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Website" type="WebsiteType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="WebsiteType">
+		<xs:sequence>
+			<xs:element ref="WebsiteLanguages"/>
+			<xs:element ref="WebsiteCurrencies"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="domain" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="primary" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website primary</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="WebsiteLanguages">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="WebsiteLanguage" type="WebsiteLanguageType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="WebsiteLanguageType">
+		<xs:attribute name="language" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="WebsiteCurrencies">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="WebsiteCurrency" type="WebsiteLanguageType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="WebsiteCurrencyType">
+		<xs:attribute name="currency" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Themes">
+		<xs:annotation>
+			<xs:documentation>Theme list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Theme" type="ThemeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Theme type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ThemeType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Theme naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Theme naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Theme naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="primary" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Theme primary</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Theme naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Users">
+		<xs:annotation>
+			<xs:documentation>Users list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="User" type="UserType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>User type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="UserType">
+		<xs:sequence>
+			<xs:element ref="UserRoles"/>
+			<xs:element ref="Complaints"/>
+		</xs:sequence>
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="user_status" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="firstname" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User firstname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="middlename" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User middlename</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lastname" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User lastname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nickname" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User nickname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="login" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User nickname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="email" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>User nickname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allow_email" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>User nickname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="active" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>User nickname</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Complaints">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Complaint" type="ComplaintType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ComplaintType">
+		<xs:attribute name="complaint_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="complaint_status" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="title" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="body" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="UserRoles">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="UserRole" type="UserRoleType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="UserRoleType">
+		<xs:attribute name="role" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Complaint status</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Articles">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Article" type="ArticleType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ArticleType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="article_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="annotation" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="content" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pagetitle" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metakeywords" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metadescription" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="permalink" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="slug" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ancestry" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="weight" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Manpages">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Manpage" type="ManpageType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ManpageType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="annotation" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="content" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pagetitle" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metakeywords" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metadescription" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="permalink" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="slug" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ancestry" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="weight" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Properties">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Property" type="PropertyType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PropertyType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="datatype" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ProductTypes">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ProductType" type="ProductTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductTypeType">
+		<xs:sequence>
+			<xs:element ref="ProductTypeProperties"/>
+		</xs:sequence>
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ProductTypeProperties">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ProductTypeProperty" type="ProductTypePropertyType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductTypePropertyType">
+		<xs:attribute name="property" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Property code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Categories">
+		<xs:annotation>
+			<xs:documentation>Categorie list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Category" type="CategoryType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>User type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CategoryType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="permalink" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="slug" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ancestry" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="weight" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Products">
+		<xs:annotation>
+			<xs:documentation>Products list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Product" type="ProductType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Product type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductType">
+		<xs:sequence>
+			<xs:element ref="Photos"/>
+			<xs:element ref="Connections"/>
+			<xs:element ref="Instructions"/>
+		</xs:sequence>
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="product_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sketch" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rating" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metakeywords" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metadescription" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="wwwaddress" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="permalink" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="slug" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ancestry" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website ancestry</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="weight" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Photos">
+		<xs:annotation>
+			<xs:documentation>Product photo</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Photo" type="PhotoType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Photo.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PhotoType">
+		<xs:attribute name="primary" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Picture file name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="picture_file_name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Picture file name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="picture_content_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Picture content type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="picture_file_size" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Picture file size</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="picture_updated_at" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Picture filetype</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Connections">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Connection" type="ConnectionType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ConnectionType">
+		<xs:attribute name="category" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Run batch </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bubble" type="xs:integer" use="required">
+			<xs:annotation>
+				<xs:documentation>Run batch </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Instructions">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Instruction" type="InstructionType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="InstructionType">
+		<xs:attribute name="position" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Position</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="title" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Title</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="body" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Title</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Orders">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="OrderType" type="UserType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="OrderType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="order_state" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="user" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="shipping_type" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="payment_type" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="address" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="checkout_state" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="region" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="total_price" type="xs:float" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="total_items" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="shipping_address" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="email" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="user_name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="notes" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Feedbacks">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="FeedbackType" type="UserType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="FeedbackType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="user" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="contact_type" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="contact_status" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="title" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="body" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Callmebacks">
+		<xs:annotation>
+			<xs:documentation>Website list</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="CallmebackType" type="UserType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Website type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CallmebackType">
+		<xs:attribute name="website" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="user" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="contact_type" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="contact_status" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="phone" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="title" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="body" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Website naem</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,52 @@
+---
+en:
+  activerecord:
+    models:
+      theme:
+        one: "theme"
+        few: "themes"
+        many: "themes"
+        other: "themes"
+      theme_filter:
+        one: "theme filter"
+        other: "theme filters"
+    attributes:
+      theme:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        enabled: "Enabled"
+      theme_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      theme:
+        name: "name hint"
+        code: "code hint"
+        about: "about hint"
+  activeview:
+    columns:
+      theme:
+        name: "Name"
+        code: "Code"
+        primary: "Primary"
+        enabled: "Enabled"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      theme:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+        warnings:
+          inv_update: "Unable to update theme"
+          no_id_found: "No theme is selected"
+          too_many_rows: "Too many themes is selected"
+    messages:
+      theme:
+        index: "List"
+        new: "New"
+        edit: "Edit"

@@ -1,0 +1,51 @@
+---
+ru:
+  activerecord:
+    models:
+      bookcase:
+        one: "Разновидность"
+        few: "Разновидность"
+        many: "Разновидность"
+        other: "Разновидность"
+      bookcase_filter:
+        one: "Фильтр разновидности"
+        few: "Фильтр разновидности"
+        many: "Фильтр разновидности"
+        other: "Фильтр разновидности"
+    attributes:
+      bookcase:
+        name: "Наименование"
+        product_id: "Информационный элемент"
+        price: "Цена"
+        enabled: "Активен"
+      bookcase_filter:
+        name: "Наименование"
+        product_id: "Информационных элемент"
+        created_at_since: "Дата создания до"
+        created_at_till: "Дата создания после"
+  bookcases:
+    hints:
+      hint1: Hint1
+      hint2: Hint2
+    columns:
+      name: "Наименование"
+      infoitem: "Информационный элемент"
+      created_at: "Создание"
+  activeview:
+    columns:
+      bookcase:
+        actions: "Действия"
+        login: "Имя пользователя"
+        user_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      bookcase:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+    messages:
+      bookcase:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

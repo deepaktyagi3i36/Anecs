@@ -1,0 +1,35 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Title", "title" %> </th>
+      <th> <%= sortable_field_header "Complaint type", "complaint_types.name" %></th>
+      <th> <%= sortable_field_header "Complaint status", "complaint_statuses.name" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.complaint.created_at"), "created_at" %></th>
+    </tr>
+    <% @feedbacks.each do |feedback| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', feedback.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => feedback} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => feedback} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => feedback} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to feedback.title, :action => "edit", :id =>feedback %></td>
+        <td><%= link_to feedback.contact_type.name, :action => "edit", :id =>feedback %></td>
+        <td><%= link_to feedback.contact_status.name, :action => "edit", :id =>feedback %></td>
+        <td><%= localize(feedback.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

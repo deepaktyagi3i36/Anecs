@@ -1,0 +1,59 @@
+<%= form_for(@request, :url => {:action => action_name, :id => @request.id},
+  :html => {:id => "comment_form" }) do |f| %>
+
+  <%= f.error_messages %>
+  <p style="color: green"><%= flash[:notice] %></p>
+
+  <p>
+    <%= f.label :product_id %>
+    <%= f.collection_select :product_id, @products, :id, :name %>
+    <%= f.error_message_on :product_id %>
+  </p>
+
+  <p>
+    <%= f.label :request_status_id %>
+    <%= f.collection_select :request_status_id, @request_statuses, :id, :name %>
+    <%= f.error_message_on :request_status_id %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, @users, :id, :login %>
+    <%= f.error_message_on :user_id %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.error_message_on :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+    <%= f.error_message_on :body %>
+  </p>
+
+  <p>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+    <%= f.error_message_on :rating %>
+  </p>
+
+  <p>
+    <%= f.label :useful %>
+    <%= f.text_field :useful %>
+    <%= f.error_message_on :useful %>
+  </p>
+
+  <p>
+    <%= f.label :useless %>
+    <%= f.text_field :useless %>
+    <%= f.error_message_on :useless %>
+  </p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("comment_title") %>

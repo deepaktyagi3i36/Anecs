@@ -1,0 +1,10 @@
+<div class="window-box">
+  <div class="window-header">
+    Last websites
+  </div>
+  <div class="window-content">
+    <ul>
+      <li><%= link_to "A-Z Websites", "/websites/index" %></li>
+    </ul>
+  </div>
+</div>

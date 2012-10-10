@@ -1,0 +1,46 @@
+---
+en:
+  activerecord:
+    models:
+      pattern:
+        one: "pattern"
+        few: "patterns"
+        many: "patterns"
+        other: "patterns"
+      pattern_filter:
+        one: "pattern filter"
+        other: "pattern filters"
+    attributes:
+      pattern:
+        name: "Name"
+        name_ru: "Name ru"
+        product_id: "Infoitem"
+        price: "Price"
+        enabled: "Enabled"
+      pattern_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      pattern:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      pattern:
+        name: "Name"
+        title: "Title"
+        created_at: "Created"
+    flashes:
+      pattern:
+        notices:
+          created: "Pattern was successfully created."
+          updated: "Pattern was successfully updated."
+          deleted: "Pattern was successfully deleted."
+    messages:
+      pattern:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+

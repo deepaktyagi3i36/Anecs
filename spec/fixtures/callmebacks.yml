@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: callmebacks
+#
+#  id                :integer(4)      not null, primary key
+#  user_id           :integer(4)
+#  contact_type_id   :integer(4)      not null
+#  contact_status_id :integer(4)      not null
+#  phone             :string(128)     not null
+#  title             :string(128)     not null
+#  body              :string(512)     not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#  website_id        :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+life_isnt_good_callmeback:
+  website: wellness_website
+  user: quentin
+  contact_type: order_contact_type
+  contact_status: active_contact_status
+  phone: "+78129094766"
+  title: "instructions"
+  body: "instructions"
+
+dead_isnt_good_callmeback:
+  website: wellness_website
+  user: nil
+  contact_type: order_contact_type
+  contact_status: active_contact_status
+  phone: "+78129094766"
+  title: "instructions1"
+  body: "instructions1"

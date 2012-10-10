@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      category_type:
+        one: "category type"
+        few: "category types"
+        many: "category types"
+        other: "category types"
+      category_type_filter:
+        one: "category types filter"
+        few: "category types filters"
+        many: "category types filters"
+        other: "category types filters"
+    attributes:
+      category_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      category_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      category_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      category_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      category_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

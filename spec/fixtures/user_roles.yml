@@ -1,0 +1,112 @@
+# == Schema Information
+#
+# Table name: user_roles
+#
+#  id         :integer(4)      not null, primary key
+#  user_id    :integer(4)      not null
+#  role_id    :integer(4)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+root_administrator_role:
+  user: root
+  role: administrator_role
+
+root_manager_role:
+  user: root
+  role: manager_role
+
+root_financier_role:
+  user: root
+  role: financier_role
+
+root_moderator_role:
+  user: root
+  role: moderator_role
+
+root_moderator_role:
+  user: root
+  role: moderator_role
+
+root_stockman_role:
+  user: root
+  role: stockman_role
+
+root_messanger_role:
+  user: root
+  role: messanger_role
+
+root_salesman_role:
+  user: root
+  role: salesman_role
+
+root_hrmanager_role:
+  user: root
+  role: hrmanager_role
+
+root_supporter_role:
+  user: root
+  role: supporter_role
+
+root_expert_role:
+  user: root
+  role: expert_role
+
+root_attorney_role:
+  user: root
+  role: attorney_role
+
+quentin_administrator_role:
+  user: quentin
+  role: administrator_role
+
+quentin_manager_role:
+  user: quentin
+  role: manager_role
+
+quentin_financier_role:
+  user: quentin
+  role: financier_role
+
+quentin_moderator_role:
+  user: quentin
+  role: moderator_role
+
+quentin_moderator_role:
+  user: quentin
+  role: moderator_role
+
+quentin_stockman_role:
+  user: quentin
+  role: stockman_role
+
+quentin_messanger_role:
+  user: quentin
+  role: messanger_role
+
+quentin_salesman_role:
+  user: quentin
+  role: salesman_role
+
+quentin_hrmanager_role:
+  user: quentin
+  role: hrmanager_role
+
+quentin_supporter_role:
+  user: quentin
+  role: supporter_role
+
+quentin_expert_role:
+  user: quentin
+  role: expert_role
+
+quentin_attorney_role:
+  user: quentin
+  role: attorney_role
+
+aaron_administrator_role:
+  user: aaron
+  role: administrator_role

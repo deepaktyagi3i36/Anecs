@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: shipping_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#  enabled    :integer(4)      default(1), not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+courier_shipping_type:
+  name: Курьером
+  code: courier
+  about: courier
+
+post_shipping_type:
+  name: Почта России
+  code: post
+  about: post
+
+selfout_shipping_type:
+  name: Самовывоз
+  code: selfout
+  about: selfout
+

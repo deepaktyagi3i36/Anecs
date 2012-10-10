@@ -1,0 +1,65 @@
+---
+en:
+  activerecord:
+    models:
+      user:
+        one: "User"
+        few: "Users"
+        many: "Users"
+        other: "Users"
+    attributes:
+      muscle_user:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+    errors:
+      models:
+        muscle_user:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+    hints:
+      models:
+        category:
+          attributes:
+            weight: "Enter valid weight"
+  activeview:
+    columns:
+      category:
+        name: "Category"
+        parent: "Parent catetory"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      muscle_user:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      category:
+        index: "Index"
+        new: "New"
+        edit: "Edit"
+    title:
+      muscle_user: "User"
+      new_muscle_user: "Register New User"
+      change_password: "Change password"
+  categories:
+    description:
+      one: "Here you can find the best %{one} in Saint-Petersburg"
+      two: "Here you can find the best %{two} in Saint-Petersburg sorted %{one}"
+      three: "Here you can find the best %{three} in Saint-Petersburg %{two} %{one}. %{three} price is very attractive."
+    title:
+      buy_prefix: "Buy"
+      buy_goods_prefix: "Buy supplements by"
+      price_keyword: "price"
+      price_prefix: "Attractive price for"
+      postfix: " in Saint-Petersburg"
+

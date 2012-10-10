@@ -1,0 +1,18 @@
+<% content_for :meta_keywords do %>
+  <title>Languages at admin task zone</title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "backoffice/settings/templates/list_menu" %>
+<% end %>
+
+<div class="window-box">
+  <div class="window-header">
+    <h1><%= t("activeview.messages.language.new") %></h1>
+  </div>
+  <div class="window-content">
+    <%= render :partial => "templates/form_flash" %>
+    <%= render :partial => "form", :locals => {
+      :action_name => "create", :button_label => t("buttons.create")} %>
+  </div>
+</div>

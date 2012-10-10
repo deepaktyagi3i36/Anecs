@@ -1,0 +1,77 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                :integer(4)      not null, primary key
+#  user_status_id    :integer(4)      not null
+#  firstname         :string(255)     not null
+#  lastname          :string(255)     not null
+#  nickname          :string(255)     not null
+#  login             :string(255)
+#  email             :string(255)
+#  crypted_password  :string(255)     default(""), not null
+#  password_salt     :string(255)     default(""), not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#  middlename        :string(255)
+#  persistence_token :string(255)     not null
+#  website_id        :integer(4)
+#  allow_email       :integer(4)      default(0), not null
+#  active            :boolean(1)      default(FALSE), not null
+#  perishable_token  :string(255)     not null
+#  login_count       :integer(4)      default(0), not null
+#  last_request_at   :datetime
+#  last_login_at     :datetime
+#  current_login_at  :datetime
+#  last_login_ip     :string(255)
+#  current_login_ip  :string(255)
+#
+
+root:
+  website: nil
+  user_status: active_status
+  firstname: root first name
+  middlename: root middle name
+  lastname: root last name
+  nickname: root
+  active: true
+  login: root
+  email: root@example.com
+  password_salt: VNFZ17H7ZymAy5HhgOb
+  crypted_password: aa6f06500ba302098edd96f30e150b673d182e9f05c59786dfff61a5d0aeca81da80fe139711500fb994c360fd584dcaa220682ba9a8010641d3ee5a0b0678bc # root
+  persistence_token: f1d5020069caee7d52b1c67d626295062f23350d84ac73e805b104f6d4b384df17b4b83135b56d303aca7d1b4a829116a91a9019337446ddc8607412b6caab2f
+  perishable_token: VtszBL7wrIbnQ60VWUug
+  created_at: <%= 10.days.ago.to_s :db %>
+
+quentin:
+  website: wellness_website
+  user_status: active_status
+  firstname: quentin first name
+  middlename: quentin middle name
+  lastname: quentin last name
+  nickname: quentin
+  active: true
+  login: quentin
+  email: quentin@example.com
+  password_salt: obAfQvszWH4ROZSWrlS
+  crypted_password: 18c005679374710cab850fd8289992aada6cb66ab27b7e12e4e0575a88eecf0ec057cf5d7fece9976710d5bf05f6f096357eda36d76008bfe9f636d5ef0523e7 # quentin
+  persistence_token: 27e7923bd670e83c0969fd2fdff8fd0537fa3a5b59267bd4707e5b784dff29bf9b65af1eb025dc78c01370b6be8452536e0fc668e8477a55d4a94e2866a0eb25
+  perishable_token: NPYUhxRcRod0wTym0Ba
+  created_at: <%= 5.days.ago.to_s :db %>
+
+
+aaron:
+  website: wellness_website
+  user_status: active_status
+  firstname: aaron first name
+  middlename: aaron middle name
+  lastname: aaron last name
+  nickname: aaron
+  active: true
+  login: aaron
+  email: aaron@example.com
+  password_salt: oH6PXV1AAjvb2BB7H3PE
+  crypted_password: 7669e56b7d49614e4b0aa0c6b0548cd588a7759081964cbedf4e808a56fac5bc0631bd4b8c6af7cb6169cc9cba6b7ea5928a756bb0b61e51e35b8a732b7cd6fb # aaron
+  persistence_token: 93e9c5090884f30286b2c4a7e71ee5d8df13e26a6c9c88e7b1962e19cfd72f028b56f09393b576fcf34f717031af3667e1b570833f91fb388a036cd401c0f6ec
+  perishable_token: 4FAEBZk9LknuXezO9Qf
+  created_at: <%= 1.days.ago.to_s :db %>

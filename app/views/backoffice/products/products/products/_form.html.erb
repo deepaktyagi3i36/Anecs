@@ -1,0 +1,62 @@
+<%= form_for(@product, :url => {:action => action_name, :id => @product.id},
+  :html => {:id => "product", :class => "html-form" }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :product_type_id %>
+        <%= f.collection_select :product_type_id, @product_types, :id, :name %>
+        <%= f.error_message_on :product_type_id %>
+      </li>
+      <li>
+        <%= f.mandatory_label :code %>
+        <%= f.text_field :code %>
+        <%= f.error_message_on :code %>
+      </li>
+      <li>
+        <%= f.mandatory_label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.mandatory_label :sketch %>
+        <%= f.text_field :sketch %>
+        <%= f.error_message_on :sketch %>
+      </li>
+      <li>
+        <%= f.mandatory_label :about %>
+        <%= f.text_area :about, :class => "mceEditor" %>
+        <%= f.error_message_on :about %>
+      </li>
+      <li>
+        <%= f.label :permalink %>
+        <%= f.text_field :permalink %>
+        <%= f.error_message_on :permalink %>
+      </li>
+      <li>
+        <%= f.label :metakeywords %>
+        <%= f.text_field :metakeywords %>
+        <%= f.error_message_on :metakeywords %>
+      </li>
+      <li>
+        <%= f.label :metadescription %>
+        <%= f.text_field :metadescription %>
+        <%= f.error_message_on :metadescription %>
+      </li>
+      <li>
+        <%= f.label :wwwaddress %>
+        <%= f.text_field :wwwaddress %>
+        <%= f.error_message_on :wwwaddress %>
+      </li>
+      <li>
+        <%= f.label :enabled %>
+        <%= f.check_box :enabled %>
+        <%= f.error_message_on :enabled %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("product_name") %>

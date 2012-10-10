@@ -1,0 +1,47 @@
+---
+ru:
+  activerecord:
+    models:
+      complaint:
+        one: "Разновидность"
+        few: "Разновидность"
+        nany: "Разновидность"
+        other: "Разновидность"
+      complaint_filter:
+        one: "Фильтр разновидности"
+        few: "Фильтр разновидности"
+        many: "Фильтр разновидности"
+        other: "Фильтр разновидности"
+    attributes:
+      complaint:
+        name: "Наименование"
+        name_ru: "Наименование ru"
+        product_id: "Информационный элемент"
+        price: "Цена"
+        enabled: "Активен"
+      complaint_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      complaint:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      complaint:
+        name: "Наименование"
+        infoitem: "Информационный элемент"
+        created_at: "Создание"
+    flashes:
+      complaint:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+    messages:
+      complaint:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

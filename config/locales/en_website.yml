@@ -1,0 +1,52 @@
+---
+en:
+  activerecord:
+    models:
+      website:
+        one: "website"
+        few: "websites"
+        many: "websites"
+        other: "websites"
+      website_filter:
+        one: "website filter"
+        other: "website filters"
+    attributes:
+      website:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        enabled: "Enabled"
+      website_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      website:
+        name: "name hint"
+        code: "code hint"
+        about: "about hint"
+  activeview:
+    columns:
+      website:
+        name: "Name"
+        code: "Code"
+        primary: "Primary"
+        enabled: "Enabled"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      website:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+        warnings:
+          inv_update: "Unable to update website"
+          no_id_found: "No website is selected"
+          too_many_rows: "Too many websites is selected"
+    messages:
+      website:
+        index: "List"
+        new: "New"
+        edit: "Edit"

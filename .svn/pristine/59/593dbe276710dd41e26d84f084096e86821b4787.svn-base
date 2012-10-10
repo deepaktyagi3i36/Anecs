@@ -1,0 +1,15 @@
+<% if !@states.empty? %>
+  <div class="progress-bar">
+    <ul>
+      <% @states.each do |state| %>
+        <% content_tag :li, state[:current] ? {:class => 'selected'} : {} do %>
+          <% if state[:link_enabled] && !state[:current] %>
+            <%= link_to state[:checkout_state].t_name, {:action => :set_checkout_state, :id => @order, :checkout_state => state[:checkout_state].code} %>
+          <% else %>
+            <div><%= state[:checkout_state].t_name %></div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

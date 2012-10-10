@@ -1,0 +1,11 @@
+<h1>Ваш учетная запись создана!</h1>
+<p>
+  Добро пожаловать <%= @runtime_settings["server_name"] %>!
+  Логин: <em><%= @user.login if @user%></em>
+  Пароль: <%= @user.password if @user%>
+</p>
+<p>
+  <% if @url %>
+    Посетите url для активации учетной записи: <a href="<%= @url %>"><%= @url %></a>
+  <% end %>
+</p>

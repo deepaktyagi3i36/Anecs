@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      opinion_status:
+        one: "opinion status"
+        few: "opinion statuses"
+        many: "opinion statuses"
+        other: "opinion statuses"
+      opinion_status_filter:
+        one: "opinion statuses filter"
+        few: "opinion statuses filters"
+        many: "opinion statuses filters"
+        other: "opinion statuses filters"
+    attributes:
+      opinion_status:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      opinion_status_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      opinion_status:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      opinion_status:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      opinion_status:
+        index: "List"
+        new: "New"
+        edit: "Edit"

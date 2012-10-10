@@ -1,0 +1,29 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=3 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.address_type.name"), "address_types.name" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.address_type.code"), "address_types.code" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.address_type.enabled"), "address_types.enabled" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.address_type.created_at"), "address_types.created_at" %></th>
+      <th> <%= t("activeview.columns.address_type.actions") %> </th>
+    </tr>
+    <% @address_types.each do |address_type| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', address_type.id, false) %></td>
+        <td><%= link_to address_type.name, :action => "edit", :id =>address_type %></td>
+        <td><%= link_to address_type.code, :action => "edit", :id =>address_type %></td>
+        <td><%= link_to address_type.enabled, :action => "edit", :id =>address_type %></td>
+        <td><%= localize(address_type.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => address_type) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => address_type) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

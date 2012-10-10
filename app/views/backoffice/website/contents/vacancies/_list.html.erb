@@ -1,0 +1,33 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Name", "name" %> </th>
+      <th> <%= sortable_field_header "Region", "regions.name" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.vacancy.created_at"), "created_at" %></th>
+    </tr>
+    <% @vacancies.each do |vacancy| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', vacancy.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => vacancy} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => vacancy} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => vacancy} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to vacancy.name, :action => "edit", :id =>vacancy %></td>
+        <td><%= link_to vacancy.region.name, :action => "edit", :id =>vacancy %></td>
+        <td><%= localize(vacancy.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

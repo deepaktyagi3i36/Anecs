@@ -1,0 +1,2 @@
+module Products::AnnouncementsHelper
+end

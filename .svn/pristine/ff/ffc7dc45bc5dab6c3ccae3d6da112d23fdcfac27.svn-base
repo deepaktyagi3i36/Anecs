@@ -1,0 +1,6 @@
+<div class="basic-form-header">
+  <p>
+    Введите новый пароль.
+  </p>
+  <%= render :partial => "shared/mandatory_message" %>
+</div>

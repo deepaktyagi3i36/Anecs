@@ -1,0 +1,9 @@
+<% content_for :meta_keywords do %>
+  <title>Roles at admin task zone</title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "backoffice/welcome/templates/list_menu" %>
+<% end %>
+
+<h1>TODO: put here is reports</h1>

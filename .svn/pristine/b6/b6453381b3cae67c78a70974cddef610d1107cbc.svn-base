@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: vacancies
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  namel      :string(128)     not null
+#  about      :string(128)     not null
+#  title      :string(255)     not null
+#  body       :string(4000)    not null
+#  region_id  :integer(4)      not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+courier_at_peterburg:
+  website: wellness_website
+  name: St.Petersbur courier
+  namel: St.Petersbur courier
+  about: Курьер в Санкт-Петербурге
+  title: Курьер в Санкт-Петербурге
+  body: Курьер в Санкт-Петербурге
+  region: peterburg_region
+  enabled: 1
+
+courier_at_moscow:
+  website: wellness_website
+  name: Moscow couirer
+  namel: Moscow couirer
+  about: Курьер в Москве
+  title: Курьер в Москве
+  body: Курьер в Москве
+  region: moscow_region
+  enabled: 1

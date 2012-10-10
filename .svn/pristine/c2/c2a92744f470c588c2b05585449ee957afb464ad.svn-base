@@ -1,0 +1,28 @@
+<%= form_for @change_password, :url => {:action => action_name, :id => @change_password.id},
+   :html => {:id => "user", :class => "html-form" } do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages :header_message => t("activerecord.errors.models.change_password.header_message", :count => @change_password.errors.count) %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :old_password %>
+        <%= f.password_field :old_password %>
+        <%= f.error_message_on :old_password %>
+      </li>
+      <li>
+        <%= f.mandatory_label :password %>
+        <%= f.password_field :password %>
+        <%= f.error_message_on :password %>
+      </li>
+      <li>
+        <%= f.mandatory_label :password_confirmation%>
+        <%= f.password_field :password_confirmation %>
+        <%= f.error_message_on :password_confirmation %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("change_password_old_password") %>
+

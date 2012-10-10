@@ -1,0 +1,24 @@
+<div id="order-details">
+  <div id="checkout_step_header" style="background-image: url('/images/mainmenu/main_menu_bg.png')"><%= t('orders.details') %></div>
+  <div id="listmenu">
+    <ul>
+      <% @order.order_variants.each do |order_variant| %>
+        <li>
+          <%= order_variant.product_nm %>,
+          <%= order_variant.variant_nm %>: <%= order_variant.quantity %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <hr/>
+
+  <ul>
+    <li><%= t('orders.delivery.title') %>: <%= @order.shipping_type.name %></li>
+    <li><%= t('orders.address.user_name') %>: <%= @order.user_name %></li>
+    <li><%= t('orders.address.address_info') %>: <%= @order.address.full_name %></li>
+    <li><%= t('orders.payment.title') %>: <%= @order.payment_type.name %></li>
+    <li><%= t('orders.address.notes') %>: <%= @order.notes %></li>
+    <li><%= t('orders.confirmation.email') %>: <%= @order.email %></li>
+  </ul>
+</div>
+

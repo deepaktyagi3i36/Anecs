@@ -1,0 +1,61 @@
+---
+en:
+  activerecord:
+    models:
+      variant_property:
+        one: "User"
+        other: "Users"
+    attributes:
+      variant_property:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+      email:
+        email: "Email"
+      password:
+        old_password: "Current password"
+        password: "New password"
+        password_confirmation: "Password confirmation"
+    errors:
+      models:
+        variant_property:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+    hints:
+      models:
+        variant_property:
+          attributes:
+            email: "Enter valid e-mail to send message"
+  activeview:
+    columns:
+      variant_property:
+        infoitem: "Infoitem"
+        variant: "Variant"
+        property: "Property"
+        value: "Value"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      variant_property:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      variant_property:
+        new: "Registry"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+    title:
+      variant_property: "User"
+      new_user: "Register New User"
+      change_password: "Change password"

@@ -1,0 +1,65 @@
+# == Schema Information
+#
+# Table name: requests
+#
+#  id                :integer(4)      not null, primary key
+#  parent_id         :integer(4)
+#  product_id        :integer(4)      not null
+#  request_status_id :integer(4)      not null
+#  user_id           :integer(4)      not null
+#  author_id         :integer(4)
+#  title             :string(256)     not null
+#  titlel            :string(256)     not null
+#  body              :string(4000)    not null
+#  rating            :integer(4)      not null
+#  useful            :integer(4)      not null
+#  useless           :integer(4)      not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+DEFAULTS: &DEFAULTS
+  created_at: <%= 1.days.ago.to_s :db %>
+
+carbokick_request:
+  parent: nill
+  product: products_supplements_carbokick
+  request_status: active_request_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS
+
+pipkino_request:
+  product: centers_fitnesses_pipkino
+  request_status: active_request_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS
+
+arufanov_request:
+  product: experts_trainers_arufanov
+  request_status: active_request_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS

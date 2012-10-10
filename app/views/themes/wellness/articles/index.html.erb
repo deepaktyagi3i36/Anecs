@@ -1,0 +1,25 @@
+<% content_for :meta_keywords do %>
+  <title>todo</title>
+  <meta name="keywords" content="todio"/>
+  <meta name="description" content="<%= "#{t('.description')}"%>" />
+<% end %>
+
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="article" class="wide-form table-of-contents">
+  <h1>Оглавление</h1>
+  <% @articles.each do |article| %>
+    <% next if article.enabled == 0 %>
+
+    <h2><%= link_to article.name, {:action => "show", :id => article.id} %></h2>
+    <% article.children.each do |child| %>
+      <% next if child.enabled == 0 %>
+      <h3><%= link_to child.name, {:action => "show", :id => child.id} %></h3>
+    <% end %>
+  <% end %>
+</div>

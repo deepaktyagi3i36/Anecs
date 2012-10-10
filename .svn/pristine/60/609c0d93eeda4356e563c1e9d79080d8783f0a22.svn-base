@@ -1,0 +1,73 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.framework.mainmenu.constants")%>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.framework.listmenu.user_statuses"),
+                       :url => "/framework/constants/user_statuses",
+                       :match_path => "^\/(framework\/constants(\/)?|framework\/constants\/user_statuses(.*))$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.address_types"),
+                       :url => "/framework/constants/address_types",
+                       :match_path => "^\/framework\/constants\/address_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.alert_types"),
+                       :url => "/framework/constants/alert_types",
+                       :match_path => "^\/framework\/constants\/alert_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.announcement_statuses"),
+                       :url => "/framework/constants/announcement_statuses",
+                       :match_path => "^\/framework\/constants\/announcement_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.article_types"),
+                       :url => "/framework/constants/article_types",
+                       :match_path => "^\/framework\/constants\/article_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.category_types"),
+                       :url => "/framework/constants/category_types",
+                       :match_path => "^\/framework\/constants\/category_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.comment_statuses"),
+                       :url => "/framework/constants/comment_statuses",
+                       :match_path => "^\/framework\/constants\/comment_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.comment_types"),
+                       :url => "/framework/constants/comment_types",
+                       :match_path => "^\/framework\/constants\/comment_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.complaint_statuses"),
+                       :url => "/framework/constants/complaint_statuses",
+                       :match_path => "^\/framework\/constants\/complaint_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.complaint_types"),
+                       :url => "/framework/constants/complaint_types",
+                       :match_path => "^\/framework\/constants\/complaint_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.contact_types"),
+                       :url => "/framework/constants/contact_types",
+                       :match_path => "^\/framework\/constants\/contact_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.datatypes"),
+                       :url => "/framework/constants/datatypes",
+                       :match_path => "^\/framework\/constants\/datatypes(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.opinion_statuses"),
+                       :url => "/framework/constants/opinion_statuses",
+                       :match_path => "^\/framework\/constants\/opinion_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.order_states"),
+                       :url => "/framework/constants/order_states",
+                       :match_path => "^\/framework\/constants\/order_states(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.pattern_types"),
+                       :url => "/framework/constants/pattern_types",
+                       :match_path => "^\/framework\/constants\/pattern_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.payment_types"),
+                       :url => "/framework/constants/payment_types",
+                       :match_path => "^\/framework\/constants\/payment_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.privacy_types"),
+                       :url => "/framework/constants/privacy_types",
+                       :match_path => "^\/framework\/constants\/privacy_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.promotion_types"),
+                       :url => "/framework/constants/promotion_types",
+                       :match_path => "^\/framework\/constants\/promotion_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.request_statuses"),
+                       :url => "/framework/constants/request_statuses",
+                       :match_path => "^\/framework\/constants\/request_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.shipping_types"),
+                       :url => "/framework/constants/shipping_types",
+                       :match_path => "^\/framework\/constants\/shipping_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.timetable_statuses"),
+                       :url => "/framework/constants/timetable_statuses",
+                       :match_path => "^\/framework\/constants\/timetable_statuses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.contract_types"),
+                       :url => "/framework/constants/contract_types",
+                       :match_path => "^\/framework\/constants\/contract_types(.*)$" %>
+  </ul>
+</div>

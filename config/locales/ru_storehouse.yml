@@ -1,0 +1,57 @@
+---
+ru:
+  activerecord:
+    models:
+      storehouse:
+        one: "Пользователь"
+        few: "Пользователь"
+        many: "Пользователь"
+        other: "Пользователи"
+    attributes:
+      storehouse:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+        captcha_text: "Проверочный код"
+        allow_email: "Посылать новости"
+    errors:
+      models:
+        storehouse:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+          inv_password_update: "Ошибка изменения пароля. Пожалуйста свяжитесь с службой поддержки."
+          inv_storehouse_status_update: "Ошибка изменения статуса пльзователя. Пожалуйста свяжитесь с службой поддержки."
+    hints:
+      models:
+        storehouse:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      storehouse:
+        actions: "Действия"
+        login: "Имя пользователя"
+        storehouse_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      storehouse:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      storehouse:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+    title:
+      storehouse: "Пользователь"
+      new_storehouse: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      country:
+        one: "country"
+        few: "countries"
+        many: "countries"
+        other: "countries"
+      country_filter:
+        one: "countries filter"
+        few: "countries filters"
+        many: "countries filters"
+        other: "countries filters"
+    attributes:
+      country:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      country_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      country:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      country:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      country:
+        index: "List"
+        new: "New"
+        edit: "Edit"

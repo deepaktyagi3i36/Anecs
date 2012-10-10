@@ -1,0 +1,11 @@
+<% content_for :meta_keywords do %>
+  <title>advertisement</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="massmedia" class="html-text">
+  <p>
+    Реквизиыт
+  </p>
+</div>

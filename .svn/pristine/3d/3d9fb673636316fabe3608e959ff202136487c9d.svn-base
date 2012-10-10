@@ -1,0 +1,37 @@
+---
+ru:
+  activerecord:
+    models:
+      user_session:
+        one: "Сессия"
+        few: "Сессии"
+        many: "Сессии"
+        other: "Сессии"
+    attributes:
+      user_session:
+        login: "Логин"
+        password: "Пароль"
+        remember_me: "Запомнить"
+    errors:
+      models:
+    hints:
+      models:
+        user_session:
+          attributes:
+            password: "(чувствителен к регистру)"
+  activeview:
+    flashes:
+      user_session:
+        notices:
+          created: "Добро пожаловать! Вы успешно вошли."
+          deleted: "Сессия успешно завершена."
+        warnings:
+          invalid_website: "Сайт должен быть активирован"
+          must_be_logged_in: "Вы должны быть авторизованы для просмотра этой страницы"
+          must_be_logged_out: "Вы должны бтыь не авторизованы для просмотра этой страницы"
+    messages:
+      user_session:
+        new: "Войти"
+    forms:
+      user_session:
+        title: "Информация для входа"

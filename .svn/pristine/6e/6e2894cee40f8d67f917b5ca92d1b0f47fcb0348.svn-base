@@ -1,0 +1,4 @@
+<div class="basic-form-section">
+  <h2>Reset information</h2>
+  <p>Please pick a new password for <%= @user.email %></p>
+</div>

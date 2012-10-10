@@ -1,0 +1,16 @@
+<div class="sorting-panel">
+  <%= form_tag request.path, :method => 'get' do %>
+    <fieldset>
+      <%#= label_tag unique_id('orderby'), t("sorting.labels.sort_by") %>
+      <%#= select_tag 'orderby', options_for_select(@orderby_options, @orderby), :onchange => 'submit()', :id => last_id('orderby') %>
+      <%= label_tag unique_id('itemsonpage'), t("sorting.labels.on_page") %>
+      <%= select_tag 'itemsonpage', options_for_select(@itemsonpage_options, @itemsonpage), :onchange => 'submit()', :id => last_id('itemsonpage') %>
+      <% request.params.each do |key, value| %>
+        <% next if ['orderby', 'itemsonpage', 'page', 'action', 'controller'].include?(key) %>
+        <%= hidden_field_tag key, value, :id => unique_id(key) %>
+      <% end %>
+    </fieldset>
+  <% end %>
+  <%= render :partial => "templates/paginator_without_info", :locals => {:objects => objects} %>
+</div>
+

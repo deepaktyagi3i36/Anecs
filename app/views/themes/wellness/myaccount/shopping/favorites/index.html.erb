@@ -1,0 +1,21 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title') %></title>
+<% end %>
+
+<h1><%= t('.title') %></h1>
+<% content_for :content_menu do %>
+  <%= render :partial => "myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<!--%= render :partial => "filter" %-->
+<a name="favorite_products"></a>
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.favorite_products') %></h2>
+  </div>
+  <% if @favorite_products.size > 0 %>
+    <%= render :partial => 'list', :locals => {:products => @favorite_products, :form_id => 'favorite_products'} %>
+  <% else %>
+    <p><%= t('.no_favorite_products') %></p>
+  <% end %>
+</div>

@@ -1,0 +1,73 @@
+<% content_for :meta_keywords do %>
+    <title><%= "#{@product.seo_title} | #{@category.path_title + ' ' + @category.seo_postfix}" %></title>
+    <meta name="keywords" content="<%= "#{@product.seo_title}, #{@product.t_name + ' ' + t('.price_keyword')}, #{@product.t_name + ' ' + t('.instruction_keyword')}, #{@product.t_name + ' ' + t('.description_keyword')}, #{@product.manufacturer}, #{@category.path_keywords + ' ' + @category.seo_postfix}" %>"/>
+    <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+<% content_for :content_menu do %>
+    <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+    <%= render :partial => "products/templates/need_advice" %>
+    <%= render :partial => "products/templates/popular_products" %>
+    <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+<div id="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <a name="description"></a>
+
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div id="infoitem-overview" class="infoitem-common">
+      <p class="about">
+
+      <h2><%= t('.product_overview') + ' ' + @product.t_name %></h2>
+      <%= @product.about %>
+      </p>
+    </div>
+    <h2><%= @product.t_name + ' ' + t('.instruction_keyword') %></h2>
+
+    <div id="infoitem-instructions" class="infoitem-common">
+      <% @product.instructions.each do |instruction| %>
+          <h2><%= instruction.title %></h2>
+
+          <p><%= instruction.body %></p>
+      <% end %>
+    </div>
+  </div>
+  <%= render :partial => 'shared/social_buttons' %>
+  <% unless @product.wwwaddress.nil? or @product.wwwaddress.blank? %>
+      <% manufacturer_link = @product.wwwaddress.split(/\s+/)[0] %>
+      <%= t('.manufacturer_link') %>:
+      <%= link_to manufacturer_link, "http://#{manufacturer_link}",
+                  {:title => t("tooltips.extlink"), :class => "external"} %>
+  <% end %>
+</div>
+
+<% if ::Rails.env != 'development' %>
+
+    <div id="google-conversion">
+      <!-- Google Code for &#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088; &#1087;&#1088;&#1086;&#1076;&#1091;&#1082;&#1090;&#1072; Conversion Page -->
+      <script type="text/javascript">
+          /* <![CDATA[ */
+          var google_conversion_id = 1017589833;
+          var google_conversion_language = "ru";
+          var google_conversion_format = "1";
+          var google_conversion_color = "ffffff";
+          var google_conversion_label = "ewdtCNeSkgIQyeCc5QM";
+          var google_conversion_value = 0;
+          if (10) {
+              google_conversion_value = 10;
+          }
+          /* ]]> */
+      </script>
+      <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+        <div style="display:inline;">
+          <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1017589833/?value=10&amp;label=ewdtCNeSkgIQyeCc5QM&amp;guid=ON&amp;script=0"/>
+        </div>
+      </noscript>
+    </div>
+<% end %>

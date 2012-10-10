@@ -1,0 +1,21 @@
+<%= form_for @tracking_user_order, :url => {:action => action_name},
+   :html => {:id => "track_form", :class => "basic-form" } do |f| %>
+  <%= f.error_messages %>
+    <%= render :partial => "track_section1" %>
+    <ul>
+      <li>
+	    <%= f.mandatory_label :login %>
+	    <%= f.text_field :login %>
+        <%= f.hint_message_on :login %>
+	    <%= f.error_message_on :login %>
+      </li>
+      <li>
+	    <%= f.mandatory_label :password %>
+	    <%= f.password_field :password %>
+        <%= f.hint_message_on :password %>
+	    <%= f.error_message_on :password %>
+      </li>
+    </ul>
+    <%= f.submit button_label, :class => 'blue-button'  %>
+<% end %>
+<%= set_focus_on_load("track_email") %>

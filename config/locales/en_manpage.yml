@@ -1,0 +1,25 @@
+---
+en:
+  activerecord:
+    models:
+      manpage:
+        one: "manpage"
+        few: "manpage"
+        many: "manpage"
+        other: "manpage"
+    attributes:
+      name: "Order #"
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        manpage:
+          loop_prohibited: "You cannot create a loop"
+          treepath_exceeded: "Treepath length is exceeded"
+  activeview:
+    flashes:
+      manpage:
+        notices:
+          created: "Manpage was successfully created."
+          updated: "Manpage was successfully updated."
+          deleted: "Manpage was successfully deleted."

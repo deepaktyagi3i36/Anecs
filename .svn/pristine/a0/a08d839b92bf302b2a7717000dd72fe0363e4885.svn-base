@@ -1,0 +1,53 @@
+<div id="checkout_fieldset">
+  <h1><%= t('.choose_order_type') %></h1>
+  <ul>
+    <li>
+      <h2>1. <%= t('.order_by_phone') %>: <span class="blue"><%= render :partial => 'shared/phone' %></span></h2>
+      <div class="option-group"></div>
+    </li>
+    <li>
+      <h2>2. <%= t('.order_as_guest') %></h2>
+
+      <div class="option-group">
+        <%= radio_button_tag "registration_type", "as_guest", true, :id => "guest_option" %>
+        <label for="guest_option"><%= t(".guest") %></label>
+
+        <div class="option-group-content">
+          <ul>
+            <li>
+              <%= f.mandatory_label :email %>
+              <%= f.text_field :email %>
+              <%= f.error_message_on :email %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <h2>3. <%= t('.order_as_user') %></h2>
+
+      <div class="option-group">
+        <%= radio_button_tag "registration_type", "as_registered_user", false, :id => "login_option" %>
+        <label for="login_option"><%= t('.login') %></label>
+
+        <div class="option-group-content">
+          <% fields_for :user do |f| %>
+            <ul>
+              <li>
+                <%= f.mandatory_label :user_name, t('.user_name') %>
+                <%= f.text_field :user_name %>
+              </li>
+              <li>
+                <%= f.mandatory_label :password, t('.password') %>
+                <%= f.password_field :password %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    </li>
+    <li>
+      <%= t('.not_registered_yet') %> <%= link_to t('.signup'), :controller => "/users", :action => "new", :return_to_url => '/orders/edit' %>
+    </li>
+  </ul>
+</div>

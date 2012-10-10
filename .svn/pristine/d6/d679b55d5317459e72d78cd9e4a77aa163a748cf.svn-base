@@ -1,0 +1,10 @@
+<h1>Reset password.</h1>
+<p>
+  Request to reset password received for <%= @user.login %>
+</p>
+<p>
+  <% if @url %>
+    Visit this url to choose a new password: <%= @url %>.
+    Your password will remain the same if no action is taken.
+  <% end %>
+</p>

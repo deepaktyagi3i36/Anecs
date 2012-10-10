@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: cart_items
+#
+#  id               :integer(4)      not null, primary key
+#  shopping_cart_id :integer(4)      not null
+#  variant_id       :integer(4)      not null
+#  quantity         :integer(4)      not null
+#  saved_for_later  :integer(4)      default(0), not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
+quentin_cart_item1:
+  shopping_cart: quentin_cart
+  variant: carbokick_with_banana_taste
+  saved_for_later: 0
+  quantity: 2
+
+quentin_cart_item2:
+  shopping_cart: quentin_cart
+  variant: carbokick_with_chocolate_taste
+  saved_for_later: 1
+  quantity: 3
+
+guest_cart_item1:
+  shopping_cart: guest_cart
+  variant: carbokick_with_banana_taste
+  saved_for_later: 0
+  quantity: 1
+
+guest_cart_item2:
+  shopping_cart: guest_cart
+  variant: carbokick_with_chocolate_taste
+  saved_for_later: 0
+  quantity: 1

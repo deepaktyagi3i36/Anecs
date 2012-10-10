@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: complaints
+#
+#  id                  :integer(4)      not null, primary key
+#  user_id             :integer(4)      not null
+#  complaint_type_id   :integer(4)      not null
+#  complaint_status_id :integer(4)      not null
+#  title               :string(128)     not null
+#  body                :string(512)     not null
+#  created_at          :datetime
+#  updated_at          :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+life_isnt_good_complaint:
+  user: quentin
+  complaint_type: order_complaint_type
+  complaint_status: active_complaint_status
+  title: "instructions"
+  body: "instructions"

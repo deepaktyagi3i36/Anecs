@@ -1,0 +1,58 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+  <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div class="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div id="infoitem-comments" class="infoitem-common">
+        <!--<h1> <%= @product.name%></h1>-->
+      <h2>New comment</h2>
+      <p>Thank you for sharing your thoughts about one of our products!
+        Please focus on the product performance and quality. Your review
+        may be posted on MyMuscul a network site that shares reviews with the shopping community.
+      </p>
+      <fieldset>
+        <label for="author">Name</label>
+        <input id="author" type="text" value="Your Name"/>
+        <label for="email">Email</label>
+        <input id="email" type="text" value="Put you e-mail address here">
+        <label for="your-rating">Your Rating</label>
+        <select id="your-rating">
+          <option>0.0</option>
+          <option>0.5</option>
+          <option>1.0</option>
+          <option>1.5</option>
+          <option>2.0</option>
+          <option>2.5</option>
+          <option>3.0</option>
+          <option>3.5</option>
+          <option>4.0</option>
+          <option>4.5</option>
+          <option>5.0</option>
+        </select>
+        <label for="your-comment">Add a comments</label>
+        <textarea id="your-comment"></textarea>
+        <input type="submit" value="Create"/>
+      </fieldset>
+      <p>
+        <!--<%= link_to "Add a comments", :action => "new", :category_id =>@category, :product_id =>@product%>
+        <%= link_to "How to publish?", :controller => root_path, :action => "publish_policy"%>-->
+      </p>
+    </div>
+  </div>
+</div>

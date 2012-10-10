@@ -1,0 +1,31 @@
+<%= t('orders.notification.user.salutation', :user_name => @order.user_name)%>,
+<%= t('orders.notification.user.message.confirmation', :order_no => @order.name, :site_name => DomainsConfiguration.lookup('server.name')) %>
+
+<%= t('orders.notification.user.see_details') %>
+<h2><%= t('orders.notification.order_name', :order_no => @order.name) %></h2>
+<p>
+  <%= t('orders.total_items') %> <strong><%= @order.total_items %></strong>
+</p>
+<p>
+  <%= t("orders.total_price") %>: <%= @order.total_price %> <%= @currency.sign %>
+</p>
+<hr/>
+<p>
+<div id="listmenu">
+  <ul>
+    <% @order.order_variants.each do |order_variant| %>
+      <li>
+        <%= order_variant.product_nm %>,
+        <%= order_variant.variant_nm %>: <%= order_variant.quantity %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<hr/>
+<ul>
+  <li><%= t('orders.address.user_name') %>: <%= @order.user_name %></li>
+  <li><%= t('orders.address.address_info') %>: <%= @order.address.full_name %></li>
+  <li><%= t('orders.payment.title') %>: <%= @order.payment_type.name %></li>
+  <li><%= t('orders.address.notes') %>: <%= @order.notes %></li>
+</ul>
+</p>

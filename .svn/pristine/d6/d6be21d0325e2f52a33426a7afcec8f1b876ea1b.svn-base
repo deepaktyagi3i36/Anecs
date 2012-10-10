@@ -1,0 +1,45 @@
+---
+en:
+  activerecord:
+    models:
+      complaint:
+        one: "variant"
+        few: "variant"
+        many: "variant"
+        other: "variants"
+      complaint_filter:
+        one: "variant filter"
+        other: "variant filters"
+    attributes:
+      complaint:
+        name: "Name"
+        name_ru: "Name ru"
+        product_id: "Infoitem"
+        price: "Price"
+        enabled: "Enabled"
+      complaint_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      complaint:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      complaint:
+        name: "Name"
+        infoitem: "Infoitem"
+        created_at: "Created"
+    flashes:
+      complaint:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+    messages:
+      complaint:
+        index: "List"
+        new: "New"
+        edit: "Edit"

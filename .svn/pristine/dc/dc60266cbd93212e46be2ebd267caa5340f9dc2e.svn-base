@@ -1,0 +1,54 @@
+---
+en:
+  activerecord:
+    models:
+      user_role:
+        one: "User role"
+        few: "User roles"
+        many: "User roles"
+        other: "User roles"
+    attributes:
+      user_role:
+        name: "Order #"
+        about: "Description"
+        order_state_id: "Order's processing state"
+        user_id: "Order recipient"
+        shipping_type_id: "Shipping type"
+        payment_type_id: "Payment type"
+        address_id: "Shipping address"
+        checkout_state_id: "Order's checkout state"
+        email: "Order's recipient email"
+        user_name: "Recipient's full name"
+        notes: "Delivery notes (convenient time, address clarification)"
+        created_at: "Creation date"
+        updated_at: "Modification date"
+    errors:
+      models:
+        user_role:
+          deletion_prohibited: "You cannot delete a completed order which isn't closed"
+          attributes:
+            email:
+              blank: "Email should be entered for guest user"
+            user_name:
+              blank: "Recipient name couldn't be blank"
+  activeview:
+    columns:
+      user_role:
+        role: "Role"
+        user: "User"
+        actions: "Actions"
+        created_at: "Created"
+    flashes:
+      user_role:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      user_role:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+    title:
+      user: "User"
+      new_user: "Register New User"
+      change_password: "Change password"

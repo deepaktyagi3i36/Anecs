@@ -1,0 +1,14 @@
+<% content_for :meta_keywords do %>
+  <title>Mywellness::Friends::Events#index</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+
+<h1>Mywellness::Friends::Myprofile#index1</h1>
+<p>Find me in app/views/myaccount/welcome/dashboard/index.html.erb</p>
+

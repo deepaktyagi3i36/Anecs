@@ -1,0 +1,10 @@
+<div id="sub-menu">
+  <ul>
+    <%= sub_menu_item :label => t("navigation.myaccount.submenu.welcome"),
+                      :url => "/myaccount/welcome/dashboard", :match_path => root_path %>
+    <%= sub_menu_item :label => t("navigation.myaccount.submenu.community"),
+                      :url => "/myaccount/community/dashboard", :match_path => "/community" %>
+    <%= sub_menu_item :label => t("navigation.myaccount.submenu.shopping"),
+                      :url => "/myaccount/shopping/dashboard", :match_path => "/shopping" %>
+  </ul>
+</div>

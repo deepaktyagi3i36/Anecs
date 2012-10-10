@@ -1,0 +1,52 @@
+# == Schema Information
+#
+# Table name: bookcases
+#
+#  id         :integer(4)      not null, primary key
+#  product_id :integer(4)      not null
+#  article_id :integer(4)      not null
+#  annotation :string(16384)   not null
+#  position   :integer(4)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+carbokick_aminos_bookcase:
+  product: products_supplements_carbokick
+  article: aminos_supplement_article
+  annotation: aminos
+  position: 1
+
+carbokick_protein_bookcase:
+  product: products_supplements_carbokick
+  article: protein_supplement_article
+  annotation: protein
+  position: 1
+
+
+pipkino_aminos_bookcase:
+  product: centers_fitnesses_pipkino
+  article: aminos_supplement_article
+  annotation: aminos
+  position: 1
+
+pipkino_protein_bookcase:
+  product: centers_fitnesses_pipkino
+  article: protein_supplement_article
+  annotation: protein
+  position: 1
+
+svyal_aminos_bookcase:
+  product: experts_trainers_svyal
+  article: aminos_supplement_article
+  annotation: aminos
+  position: 1
+
+svyal_protein_bookcase:
+  product: experts_trainers_svyal
+  article: protein_supplement_article
+  annotation: protein
+  position: 1
+

@@ -1,0 +1,19 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.mainmenu.promotions") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.channels"),
+                       :url => "/backoffice/promotions/channels",
+                       :match_path => "^\/(backoffice\/promotions(\/)?|backoffice\/promotions\/channels(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.promotions"),
+                       :url => "/backoffice/promotions/promotions",
+                       :match_path => "^\/backoffice\/promotions\/promotions(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.promoitems"),
+                       :url => "/backoffice/promotions/promoitems",
+                       :match_path => "^\/backoffice\/promotions\/promoitems(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.contacts"),
+                       :url => "/backoffice/promotions/contacts",
+                       :match_path => "^\/backoffice\/promotions\/contacts(.*)$" %>
+  </ul>
+</div>

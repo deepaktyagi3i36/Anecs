@@ -1,0 +1,53 @@
+# == Schema Information
+#
+# Table name: order_states
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+accepted_order_state:
+  name: Accepted
+  code: accepted
+  about: order is accepted
+
+pending_order_state:
+  name: Collecting order's items
+  code: pending
+  about: goods is pending
+
+inprogress_order_state:
+  name: In progress
+  code: inprogress
+  about: order is inprogress
+
+delivery_order_state:
+  name: Shipped
+  code: delivery
+  about: order is in delivery
+
+closed_order_state:
+  name: Closed
+  code: closed
+  about: order is closed
+
+cancelled_order_state:
+  name: Cancelled
+  code: cancelled
+  about: order is cancelled by user
+
+waiting_order_state:
+  name: Waiting
+  code: waiting
+  about: waiting for the order items to be available
+
+payment_confirmed_order_state:
+  name: Payment confirmed
+  code: payment_confirmed
+  about: payment is confirmed

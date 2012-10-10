@@ -1,0 +1,13 @@
+<div id="main-menu-box">
+  <ul id="main-menu">
+    <%= main_menu_item :label => t("navigation.framework.mainmenu.heartbeat"),
+                          :url => "/framework/heartbeat/heartbeat",
+                          :match_path => "^\/(framework(\/)?|framework\/heartbeat(.*))$" %>
+    <%= main_menu_item :label => t("navigation.framework.mainmenu.settings"),
+                          :url => "/framework/settings/countries",
+                          :match_path => "^\/(framework\/settings(.*))$" %>
+    <%= main_menu_item :label => t("navigation.framework.mainmenu.constants"),
+                          :url => "/framework/constants/user_statuses",
+                          :match_path => "^\/(framework\/constants(.*))$" %>
+  </ul>
+</div>

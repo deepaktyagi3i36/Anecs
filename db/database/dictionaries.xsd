@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Anonimus (Anonimus) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="Dictionaries">
+		<xs:annotation>
+			<xs:documentation>Root element of dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AddressTypes"/>
+				<xs:element ref="AdminJobs"/>
+				<xs:element ref="AnnouncementStatuses"/>
+				<xs:element ref="ArticleTypes"/>
+				<xs:element ref="CategoryTypes"/>
+				<xs:element ref="ChangeFreqs"/>
+				<xs:element ref="CheckoutStates"/>
+				<xs:element ref="CommentStatuses"/>
+				<xs:element ref="CommentTypes"/>
+				<xs:element ref="ComplaintStatuses"/>
+				<xs:element ref="ComplaintTypes"/>
+				<xs:element ref="ContactStatuses"/>
+				<xs:element ref="ContractTypes"/>
+				<xs:element ref="Countries"/>
+				<xs:element ref="Currencies"/>
+				<xs:element ref="Datatypes"/>
+				<xs:element ref="Languages"/>
+				<xs:element ref="OpinionStatuses"/>
+				<xs:element ref="OrderStates"/>
+				<xs:element ref="PatternTypes"/>
+				<xs:element ref="PaymentTypes"/>
+				<xs:element ref="PrivacyTypes"/>
+				<xs:element ref="PromotionTypes"/>
+				<xs:element ref="RequestStatuses"/>
+				<xs:element ref="Roles"/>
+				<xs:element ref="RuntimeSettings"/>
+				<xs:element ref="ShippingTypes"/>
+				<xs:element ref="States"/>
+				<xs:element ref="TimetableStatuses"/>
+				<xs:element ref="UserStatuses"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddressTypes">
+		<xs:annotation>
+			<xs:documentation>Address type dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AddressType" type="AddressTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Address type.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AddressTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the address type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the address type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Desctiption of the address type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="AdminJobs">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AdminJob" type="AdminJobType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AdminJobType">
+		<xs:sequence>
+			<xs:element ref="AdminJobReports"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="job" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Ruby class of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="AdminJobReports">
+		<xs:annotation>
+			<xs:documentation>Admin job reports</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AdminJobReport" type="AdminJobReportType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job reports.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AdminJobReportType">
+		<xs:attribute name="runbatch" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Run batch </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="message" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Message while executing admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="AnnouncementStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AnnouncementStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AnnouncementStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ArticleTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ArticleType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ArticleTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="CategoryTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="CategoryType" type="CategoryTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CategoryTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ChangeFreqs">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ChangeFreq" type="CategoryTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ChangeFreqType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="CheckoutStates">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="CheckoutState" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CheckoutStateType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="CommentStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="CommentStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CommentStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="CommentTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="CommentType" type="CommentTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CommentTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ComplaintStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ComplaintStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ComplaintStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ComplaintTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ComplaintType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ComplaintTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ContactStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ContactStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ContactStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ContractTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ContractType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ContractTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Countries">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Country" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CountryType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Currencies">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Currency" type="CurrencyType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CurrencyType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sign" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Datatypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Datatype" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="DatatypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Languages">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Language" type="LanguageType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="LanguageType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="locale" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="enabled" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="OpinionStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="OpinionStatus" type="OpinionStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="OpinionStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="OrderStates">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="OrderState" type="OrderStateType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="OrderStateType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="PatternTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="PatternType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PatternTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="PaymentTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="PaymentType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PaymentTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="PrivacyTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="PrivacyType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PrivacyTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="PromotionTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="PromotionsType" type="PromotionsTypeType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PromotionsTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="RequestStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="RequestStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RequestStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="Roles">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Role" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RoleType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="RuntimeSettings">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="RuntimeSetting" type="RuntimeSettingType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RuntimeSettingType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="value" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ShippingTypes">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ShippingType" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ShippingTypeType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="States">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="State" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="StateType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="TimetableStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="TimetableStatus" type="AnnouncementStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TimetableStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="UserStatuses">
+		<xs:annotation>
+			<xs:documentation>Admin job dictinaries</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="UserStatus" type="UserStatusType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Admin job.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="UserStatusType">
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Code of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="about" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>About of the admin job</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

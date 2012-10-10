@@ -1,0 +1,40 @@
+<%= form_for :comment_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "comments_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :titlel %>
+        <%= f.text_field :titlel %>
+        <%= f.error_message_on :titlel %>
+      </li>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products_filter, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :comment_status_id %>
+        <%= f.collection_select :comment_status_id, @comment_statuses_filter, :id, :name %>
+        <%= f.error_message_on :comment_status_id %>
+      </li>
+      <li>
+        <%= f.label :comment_type_id %>
+        <%= f.collection_select :comment_type_id, @comment_types_filter, :id, :name %>
+        <%= f.error_message_on :comment_type_id %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("comment_filter_titlel") %>

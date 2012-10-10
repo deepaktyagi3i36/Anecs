@@ -1,0 +1,30 @@
+<%= form_for(@feedback, :url => {:action => action_name, :id => @feedback.id},
+  :html => {:id => "feedback_form", :class => "basic-form"}) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.mandatory_label :contact_type_id %>
+        <%= f.collection_select :contact_type_id, @contact_types, :id, :name %>
+        <%= f.error_message_on :contact_type_id %>
+      </li>
+      <li>
+        <%= f.mandatory_label :title %>
+        <%= f.text_field :title %>
+        <%= f.error_message_on :title %>
+      </li>
+      <li>
+        <%= f.mandatory_label :body %>
+        <%= f.text_area :body %>
+        <%= f.error_message_on :body %>
+      </li>
+    </ul>
+    <% if @current_user.nil? %>
+      <%# TODO: rewrite the right captcha %>
+      <%# = render :partial => "shared/captcha", :locals => {:f => f} %>
+    <% end %>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("feedback_title") %>

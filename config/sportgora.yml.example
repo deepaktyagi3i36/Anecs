@@ -1,0 +1,19 @@
+# Config file sportgora.ru http access
+
+development:
+  login_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  products_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  username: RRufanov@yahoo.com
+  password: sportgora
+
+production:
+  login_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  products_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  username: RRufanov@yahoo.com
+  password: sportgora
+
+test:
+  login_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  products_url: http://sport-gora.myinsales.ru:80/admin/warehouse_categories/-1
+  username: RRufanov@yahoo.com
+  password: sportgora

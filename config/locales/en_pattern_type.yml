@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      pattern_type:
+        one: "pattern type"
+        few: "pattern types"
+        many: "pattern types"
+        other: "pattern types"
+      pattern_type_filter:
+        one: "pattern types filter"
+        few: "pattern types filters"
+        many: "pattern types filters"
+        other: "pattern types filters"
+    attributes:
+      pattern_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      pattern_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      pattern_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      pattern_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      pattern_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

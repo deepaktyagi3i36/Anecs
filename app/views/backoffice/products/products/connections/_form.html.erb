@@ -1,0 +1,27 @@
+<%= form_for(@connection, :url => {:action => action_name, :id => @connection.id},
+	:html => {:id => "connection_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+  	<%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :category_id %>
+        <%= f.collection_select :category_id, @categories, :id, :name %>
+        <%= f.error_message_on :category_id %>
+      </li>
+      <li>
+        <%= f.label :bubble %>
+        <%= f.check_box :bubble %>
+        <%= f.error_message_on :bubble %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("connection_name") %>

@@ -1,0 +1,43 @@
+<div id="logo-search">
+  <a href="/welcome/index"><img src={{"logos/logo_muscle.png" | theme_image_url }} alt="home" title="home"></a>
+  <div id="solr-search">
+    <div id="top-user-name">
+      {% if current_user %}
+        {{ "logo_search.welcome" | translate_message }} {{ current_user.nickname | link_to: "/myaccount/shopping/dashboard"}}
+      {% else %}
+        {{ "logo_search.welcome_to" | translate_message }}
+      {% endif %} &nbsp;
+    </div>
+
+    <form method="post" action="/search/results">
+      <fieldset>
+        <input type="text" name="q" id="q">
+        <input type="image" src="{{"buttons/search_in_site.png" | theme_image_url }}">
+        <div class="flash-compact" id="flash">
+          
+          {% if !flash[:search_notice].nil? %}
+          <div class="notice">
+            {{ flash[:search_notice] }}
+          </div>
+          {% endif %}
+          {% if !flash[:search_error].nil? %}
+            <div id="flash" class="error">
+              {{ flash[:search_error] }}
+            </div>
+          {% endif %}
+          
+        </div>
+      </fieldset>
+    </form>
+
+    <div id="contact-top-phone">
+      {% if @region %}
+        {{ @region.title }}
+        <span class="blue">{{ @region.phone }}</span>
+      {% else %}
+        {{ "logo_search.other_regions" | translate_message  }} <span class="blue">(812) 950-87-60</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+

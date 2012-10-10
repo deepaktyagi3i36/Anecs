@@ -1,0 +1,30 @@
+<% if !@popular_products.nil? && !@popular_products.empty? %>
+  <div class="form-header">
+    <h2><%= t('.title') %></h2>
+  </div>
+  <ul class="narrow-list">
+    <% counter = 0 %>
+    <% @popular_products.each do |product| %>
+      <% counter = counter + 1 %>
+      <li>
+        <dl>
+          <dt>
+            <%= link_to product.name, product.url, {:title => product.name} %>
+          </dt>
+          <dd class="number"><span><%= counter.to_s %></span></dd>
+          <dd>
+            <% product.photos.each do |photo| %>
+              <% if photo.primary > 0 %>
+                <%= link_to theme_image_tag(photo.picture.url(:small)),
+                        product.url,
+                        {:class => "infoitem-thumbnail"} %>
+              <% end %>
+            <% end %>
+            <%# Promo labels commented out: maybe we still need them in future %>
+            <%#= render :partial => 'products/templates/promo_labels', :locals => {:product => product, :size => 'small'} %>
+          </dd>
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

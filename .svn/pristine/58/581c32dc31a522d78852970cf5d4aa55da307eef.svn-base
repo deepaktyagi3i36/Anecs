@@ -1,0 +1,44 @@
+---
+en:
+  activerecord:
+    models:
+      shipping_type:
+        one: "shipping type"
+        few: "shipping types"
+        many: "shipping types"
+        other: "shipping types"
+      shipping_type_filter:
+        one: "shipping types filter"
+        few: "shipping types filters"
+        many: "shipping types filters"
+        other: "shipping types filters"
+    attributes:
+      shipping_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      shipping_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        enabled: "Enabled"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      shipping_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      shipping_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      shipping_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th> <%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.runtime_setting.name"), "runtime_settings.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.runtime_setting.value"), "runtime_settings.value" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.runtime_setting.created_at"), "runtime_settings.created_at" %></th>
+      <th> <%= t("activeview.columns.runtime_setting.actions") %> </th>
+    </tr>
+    <% @runtime_settings.each do |runtime_setting| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', runtime_setting.id, false) %></td>
+        <td><%= link_to runtime_setting.name, :action => "edit", :id =>runtime_setting %></td>
+        <td><%= link_to runtime_setting.value, :action => "edit", :id =>runtime_setting %></td>
+        <td><%= localize(runtime_setting.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => runtime_setting) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => runtime_setting) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

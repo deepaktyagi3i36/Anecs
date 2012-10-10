@@ -1,0 +1,207 @@
+<% content_for :meta_keywords do %>
+  <title>Majoron sitemap</title>
+  <meta name="keywords" content="Majoron, AntHill, AntHIll SMPP, AntHIll Diameter, Majoron latest news, Majoron events and announcements" />
+  <meta name="description" content="Majoron expertise is focused on two following directions: networking to create set of libraries to allow uniform communication across different transports and auxiliary utilities to speedup and standardize development process in early phases." />
+<% end %>
+
+<div id="sitemap" class="html-text">
+  <h1>Majoron sitemap</h1>
+  <div class="window-box">
+    <div class="window-header">
+      General information
+    </div>
+    <div class="window-content">
+      <ul>
+        <li>
+          <%= link_to "Home", {:controller=>"/home", :action => "index"} %>
+          <ul>
+            <li><%= link_to "Sitemap", {:controller=>"/home", :action => "sitemap"}%></li>
+            <li><%= link_to "Term of use", {:controller=>"/home", :action => "terms_of_use"}%></li>
+            <li><%= link_to "Privacy policy", {:controller=>"/home", :action => "privacy_policy"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Welcome", {:controller=>"/welcome", :action => "index"} %>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/welcome", :action => "index"}%></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear" />
+  <div class="window-box">
+    <div class="window-header">
+      Projects
+    </div>
+    <div class="window-content">
+      <ul>
+        <li>
+          <%= link_to "Acts as Solr", {:controller=>"/project/rbundle/acts_as_solr"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/acts_as_solr", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/acts_as_solr", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/acts_as_solr", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/acts_as_solr", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "AntHill Cpp", {:controller=>"/project/anthill/cpp"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/anthill/cpp", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/anthill/cpp", :action => "index"}%></li>
+            <li><%= link_to "Documentations", {:controller=>"/project/anthill/cpp", :action => "documentations"}%></li>
+            <li><%= link_to "Dependencies", {:controller=>"/project/anthill/cpp", :action => "dependencies"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/anthill/cpp", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/anthill/cpp", :action => "archive"}%></li>
+            <li><%= link_to "Change log", {:controller=>"/project/anthill/cpp", :action => "change_log"}%></li>
+            <li><%= link_to "Roadmap", {:controller=>"/project/anthill/cpp", :action => "roadmap"}%></li>
+            <li><%= link_to "Known bugs", {:controller=>"/project/anthill/cpp", :action => "known_bugs"}%></li>
+            <li><%= link_to "Report a bug", {:controller=>"/project/anthill/cpp", :action => "report_a_bug"}%></li>
+            <li><%= link_to "Get support", {:controller=>"/project/anthill/cpp", :action => "get_support"}%></li>
+            <li><%= link_to "Contribute", {:controller=>"/project/anthill/cpp", :action => "contribute"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "AntHill Ruby", {:controller=>"/project/anthill/ruby"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/anthill/ruby", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/anthill/ruby", :action => "index"}%></li>
+            <li><%= link_to "Documentations", {:controller=>"/project/anthill/ruby", :action => "documentations"}%></li>
+            <li><%= link_to "Dependencies", {:controller=>"/project/anthill/ruby", :action => "dependencies"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/anthill/ruby", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/anthill/ruby", :action => "archive"}%></li>
+            <li><%= link_to "Change log", {:controller=>"/project/anthill/ruby", :action => "change_log"}%></li>
+            <li><%= link_to "Roadmap", {:controller=>"/project/anthill/ruby", :action => "roadmap"}%></li>
+            <li><%= link_to "Known bugs", {:controller=>"/project/anthill/ruby", :action => "known_bugs"}%></li>
+            <li><%= link_to "Report a bug", {:controller=>"/project/anthill/ruby", :action => "report_a_bug"}%></li>
+            <li><%= link_to "Contribute", {:controller=>"/project/anthill/ruby", :action => "contribute"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "AntHill SMPP Cpp", {:controller=>"/project/smpp/cpp"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/smpp/cpp", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/smpp/cpp", :action => "index"}%></li>
+            <li><%= link_to "Documentations", {:controller=>"/project/smpp/cpp", :action => "documentations"}%></li>
+            <li><%= link_to "Dependencies", {:controller=>"/project/smpp/cpp", :action => "dependencies"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/smpp/cpp", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/smpp/cpp", :action => "archive"}%></li>
+            <li><%= link_to "Change log", {:controller=>"/project/smpp/cpp", :action => "change_log"}%></li>
+            <li><%= link_to "Roadmap", {:controller=>"/project/smpp/cpp", :action => "roadmap"}%></li>
+            <li><%= link_to "Known bugs", {:controller=>"/project/smpp/cpp", :action => "known_bugs"}%></li>
+            <li><%= link_to "Report a bug", {:controller=>"/project/smpp/cpp", :action => "report_a_bug"}%></li>
+            <li><%= link_to "Get support", {:controller=>"/project/smpp/cpp", :action => "get_support"}%></li>
+            <li><%= link_to "Contribute", {:controller=>"/project/smpp/cpp", :action => "contribute"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "AntHill SMPP Ruby", {:controller=>"/project/smpp/ruby"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/smpp/ruby", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/smpp/ruby", :action => "index"}%></li>
+            <li><%= link_to "Documentations", {:controller=>"/project/smpp/ruby", :action => "documentations"}%></li>
+            <li><%= link_to "Dependencies", {:controller=>"/project/smpp/ruby", :action => "dependencies"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/smpp/ruby", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/smpp/ruby", :action => "archive"}%></li>
+            <li><%= link_to "Change log", {:controller=>"/project/smpp/ruby", :action => "change_log"}%></li>
+            <li><%= link_to "Roadmap", {:controller=>"/project/smpp/ruby", :action => "roadmap"}%></li>
+            <li><%= link_to "Known bugs", {:controller=>"/project/smpp/ruby", :action => "known_bugs"}%></li>
+            <li><%= link_to "Report a bug", {:controller=>"/project/smpp/ruby", :action => "report_a_bug"}%></li>
+            <li><%= link_to "Contribute", {:controller=>"/project/smpp/ruby", :action => "contribute"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Auxiliary Addons", {:controller=>"/project/rbundle/auxiliary_addons"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/auxiliary_addons", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/auxiliary_addons", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/auxiliary_addons", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/auxiliary_addons", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "AuxUtils Cpp", {:controller=>"project/auxutils/cpp"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/auxutils/cpp", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/auxutils/cpp", :action => "index"}%></li>
+            <li><%= link_to "Documentations", {:controller=>"/project/auxutils/cpp", :action => "documentations"}%></li>
+            <li><%= link_to "Dependencies", {:controller=>"/project/auxutils/cpp", :action => "dependencies"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/auxutils/cpp", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/auxutils/cpp", :action => "archive"}%></li>
+            <li><%= link_to "Change log", {:controller=>"/project/auxutils/cpp", :action => "change_log"}%></li>
+            <li><%= link_to "Roadmap", {:controller=>"/project/auxutils/cpp", :action => "roadmap"}%></li>
+            <li><%= link_to "Known bugs", {:controller=>"/project/auxutils/cpp", :action => "known_bugs"}%></li>
+            <li><%= link_to "Report a bug", {:controller=>"/project/auxutils/cpp", :action => "report_a_bug"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Clockworkd", {:controller=>"/project/rbundle/clockworkd"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/clockworkd", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/clockworkd", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/clockworkd", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/clockworkd", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Rails Breadcrumbs", {:controller=>"/project/rbundle/rails_breadcrumbs"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/rails_breadcrumbs", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/rails_breadcrumbs", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/rails_breadcrumbs", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/rails_breadcrumbs", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "RMagick Captcha", {:controller=>"/project/rbundle/rmagick_captcha"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/rmagick_captcha", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/rmagick_captcha", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/rmagick_captcha", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/rmagick_captcha", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Role Based Security", {:controller=>"/project/rbundle/role_based_security"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/role_based_security", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/role_based_security", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/role_based_security", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/role_based_security", :action => "archive"}%></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Yandex Market", {:controller=>"/project/rbundle/yandex_market"}%>
+          <ul>
+            <li><%= link_to "News & events", {:controller=>"/project/rbundle/yandex_market", :action => "news"}%></li>
+            <li><%= link_to "Overview", {:controller=>"/project/rbundle/yandex_market", :action => "index"}%></li>
+            <li><%= link_to "Downloads", {:controller=>"/project/rbundle/yandex_market", :action => "downloads"}%></li>
+            <li><%= link_to "Archive", {:controller=>"/project/rbundle/yandex_market", :action => "archive"}%></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear" />
+  <div class="window-box">
+    <div class="window-header">
+      My majoron
+    </div>
+    <div class="window-content">
+      <ul>
+        <li>
+          <%= link_to "Account", {:controller=>"/myaccount/welcome/dashboard"}%>
+          <ul>
+            <li><%= link_to "Dashboard", {:controller=>"/myaccount/welcome/dashboard" }%></li>
+            <li><%= link_to "My profile", {:controller=>"/myaccount/welcome/myprofile", :action => "edit"}%></li>
+            <li><%= link_to "Change password", {:controller=>"/myaccount/welcome/password", :action => "edit"}%></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear" />
+</div>
+
+

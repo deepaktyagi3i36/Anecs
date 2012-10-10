@@ -1,0 +1,12 @@
+<% content_for :meta_keywords do %>
+  <title>Mywellness::Friends::Events#index</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/community/templates/slide_menu" %>
+<% end %>
+
+<h1>Mywellness::Friends::Messages#index</h1>
+<p>Find me in app/views/myaccount/community/messages/index.html.erb</p>

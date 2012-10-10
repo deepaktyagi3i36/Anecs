@@ -1,0 +1,18 @@
+<% content_for :meta_keywords do %>
+  <title>todo</title>
+  <meta name="keywords" content="todio"/>
+  <meta name="description" content="<%= "#{t('.description')}"%>" />
+<% end %>
+
+<div id="manpage" class="wide-form table-of-contents">
+  <h1>Оглавление</h1>
+  <% @manpages.each do |manpage| %>
+    <% next if manpage.enabled == 0 %>
+
+    <h2><%= link_to manpage.name, {:action => "show", :id => manpage.id} %></h2>
+    <% manpage.children.each do |child| %>
+      <% next if child.enabled == 0 %>
+      <h3><%= link_to child.name, {:action => "show", :id => child.id} %></h3>
+    <% end %>
+  <% end %>
+</div>

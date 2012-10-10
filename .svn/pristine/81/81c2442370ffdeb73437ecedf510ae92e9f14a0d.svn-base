@@ -1,0 +1,38 @@
+---
+en:
+  activerecord:
+    models:
+      feedback:
+        one: "Feedback"
+        few: "Feedbacks"
+        many: "Feedbacks"
+        other: "Feedbacks"
+    attributes:
+      feedback:
+        user_id: "User"
+        contact_type_id: "Reason to contact"
+        contact_status_id: "State"
+        title: "Title"
+        body: "Body"
+  activeview:
+    columns:
+      feedback:
+        user: "User"
+        contact_type: "Reason to contact"
+        contact_status: "State"
+        title: "Title"
+        body: "Body"
+    flashes:
+      feedback:
+        notices:
+          created: "Thanks for your feedback. We'll contact you later."
+    messages:
+      feedback:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+    feedbacks:
+      new:
+        title: "Feedback"
+      header:
+        info: "Please let us know what information are you interested in and how we may contact you."

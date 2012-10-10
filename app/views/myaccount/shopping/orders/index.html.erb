@@ -1,0 +1,45 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title') %></title>
+<% end %>
+
+<h1><%= t('.title') %></h1>
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<!--%= render :partial => "filter" %-->
+<a name="active_orders"></a>
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.active_orders') %></h2>
+  </div>
+  <% if @active_orders.size > 0 %>
+    <%= render :partial => 'list', :locals => {:orders => @active_orders, :form_id => 'active'} %>
+  <% else %>
+    <p><%= t('.no_active_orders') %></p>
+  <% end %>
+</div>
+
+<a name="waiting_orders"></a>
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.waiting_orders') %></h2>
+  </div>
+  <% if @waiting_orders.size > 0 %>
+    <%= render :partial => 'list', :locals => {:orders => @waiting_orders, :form_id => 'waiting'} %>
+  <% else %>
+    <p><%= t('.no_waiting_orders') %></p>
+  <% end %>
+</div>
+
+<a name="archived_orders"></a>
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.archived_orders') %></h2>
+  </div>
+  <% if @archived_orders.size > 0 %>
+    <%= render :partial => 'list', :locals => {:orders => @archived_orders, :form_id => 'archived', :paginated => true} %>
+  <% else %>
+    <p><%= t('.no_archived_orders') %></p>
+  <% end %>
+</div>

@@ -1,0 +1,89 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title') %></title>
+<% end %>
+
+<h1><%= t('.title') %></h1>
+<% content_for :content_menu do %>
+  <%= render :partial => "myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<%# TODO: Messages section %>
+
+<% unless @last_order.nil? %>
+  <div class="form form-750">
+    <div class="form-header form-header-blue">
+      <h2><%= t('.store_section') %></h2>
+    </div>
+    <div class="form-content">
+      <dl class="aligned-deflist">
+        <dt><%= t('.last_order') %></dt>
+        <dd><%= link_to @last_order.name, :controller => 'myaccount/shopping/orders', :action => :show, :id => @last_order %></dd>
+
+        <dt><%= t('.order_date') %></dt>
+        <dd>
+          <span class="date"><%= link_to localize(@last_order.created_at.to_date, :format => :long), :controller => 'myaccount/shopping/orders', :action => :show, :id => @last_order %></span>
+        </dd>
+
+        <dt><%= t('.payment_type') %></dt>
+        <dd><%= link_to @last_order.payment_type.name, :controller => 'myaccount/shopping/orders', :action => :show, :id => @last_order %></dd>
+
+        <dt><%= t('.shipping_type') %></dt>
+        <dd><%= link_to @last_order.shipping_type.name, :controller => 'myaccount/shopping/orders', :action => :show, :id => @last_order %></dd>
+
+        <dt><%= t('.shipping_address') %></dt>
+        <dd><%= link_to @last_order.address.full_name, :controller => 'myaccount/shopping/orders', :action => :show, :id => @last_order %></dd>
+      </dl>
+    </div>
+  </div>
+<% end %>
+
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.orders_section') %></h2>
+  </div>
+  <div class="form-content">
+    <ul class="two-column-list">
+      <li>
+        <%= link_to t('.cart'), :controller => '/shopping_carts', :action => :edit, :id => @cart %>
+      </li>
+      <li>
+        <%= link_to t('.active_orders'), :controller => '/myaccount/shopping/orders', :action => :index, :anchor => 'active_orders' %>
+      </li>
+      <li>
+        <%= link_to t('.waiting_orders'), :controller => '/myaccount/shopping/orders', :action => :index, :anchor => 'waiting_orders' %>
+      </li>
+      <li>
+        <%= link_to t('.archived_orders'), :controller => '/myaccount/shopping/orders', :action => :index, :anchor => 'archived_orders' %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="form-float form-360">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.personal_section') %></h2>
+  </div>
+  <div class="form-content">
+    <ul class="two-column-list">
+      <li>
+        <%= link_to t('.favorites'), :controller => '/myaccount/shopping/favorites', :action => :index %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="form-float form-360">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.settings_section') %></h2>
+  </div>
+  <div class="form-content">
+    <ul class="two-column-list">
+      <li>
+        <%= link_to t('.addresses'), :controller => '/myaccount/shopping/addresses', :action => :index %>
+      </li>
+      <li>
+        <%= link_to t('navigation.myaccount.slidemenu.shopping.change_password'), '/change_password' %>
+      </li>
+    </ul>
+  </div>
+</div>

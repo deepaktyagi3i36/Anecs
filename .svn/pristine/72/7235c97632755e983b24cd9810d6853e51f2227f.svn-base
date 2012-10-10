@@ -1,0 +1,22 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.contents") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.articles"),
+                       :url => "/backoffice/website/contents/articles",
+                       :match_path => "^\/(backoffice\/website(\/)?|backoffice\/website\/contents(\/)?|backoffice\/website\/contents\/articles(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.manpages"),
+                       :url => "/backoffice/website/contents/manpages",
+                       :match_path => "^\/backoffice\/website\/contents\/manpages(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.vacancies"),
+                       :url => "/backoffice/website/contents/vacancies",
+                       :match_path => "^\/backoffice\/website\/contents\/vacancies(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.redirects"),
+                       :url => "/backoffice/website/contents/redirects",
+                       :match_path => "^\/backoffice\/website\/contents\/redirects(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.invalid_routes"),
+                       :url => "/backoffice/website/contents/invalid_routes",
+                       :match_path => "^\/backoffice\/website\/contents\/invalid_routes(.*)$" %>
+  </ul>
+</div>

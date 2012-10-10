@@ -1,0 +1,105 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+  <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div id="infoitem-comments" class="infoitem-common">
+      <div class="left">
+        <label for="view-infoitem-reviews">Select on</label>
+        <select name="view-infoitem-reviews" id="view-infoitem-reviews">
+          <option value="">Professionals reviews</option>
+          <option value="">Users reviews</option>
+          <option value="">Usefull first</option>
+          <option value="">New to Old</option>
+          <option selected="selected" value="">Old to New</option>
+          <option value="">All reviews</option>
+        </select>
+      </div>
+
+      <div class="right">
+        <span class="big-raiting-stars"></span>
+        <span class="rating-value">4.5</span>
+        <span>32 reviews</span>
+      </div>
+
+      <p>
+        <%= link_to "Add a comments", {:action => "new", :category_id =>@category, :product_id =>@product}, {:class => "button"} %>
+        <%= link_to "How to publish?", {:controller =>'/welcome', :action => "publish_policy"}%>
+        <a class="button" href="#">Subscribe to reviews</a>
+      </p>
+
+      <ul>
+        <li>
+          <div class="user-info">
+            <span class="status" id="professional">Professional</span>
+            <a class="author" href="#">Vasek Kolbasov</a>
+            <span class="rating-bars"></span>
+          </div>
+          <div class="time">15:25</div>
+          <div class="date">12 Oct 05</div>
+          <span class="big-raiting-stars"></span>
+          <p>and after the 1st sip of it u dont want
+            to finish the rest of it. If your looking to gain weight
+            and fat quick this is great! i gained 5lbs in months and
+            i saw almost no change in size i will just stick with extreme 60
+          </p>
+          <div class="usefull-block">Is this answer usefull for you
+            <a class="button" href="#">Yes</a>
+            <a class="button" href="#">No</a>
+          </div>
+        </li>
+        <li>
+          <div class="user-info">
+            <span class="status" id="user">User</span>
+            <a class="author" href="#">Vasek Kolbasov</a>
+            <span class="rating-bars"></span>
+          </div>
+          <div class="time">15:25</div>
+          <div class="date">12 Oct 05</div>
+          <span class="big-raiting-stars"></span>
+          <p>and after the 1st sip of it u dont want
+            to finish the rest of it. If your looking to gain weight
+            and fat quick this is great! i gained 5lbs in months and
+            i saw almost no change in size i will just stick with extreme 60
+          </p>
+          <div class="usefull-block">Is this answer usefull for you
+            <a class="button" href="#">Yes</a>
+            <a class="button" href="#">No</a>
+          </div>
+        </li>
+      </ul>
+
+      <% @comments.each do |comment| %>
+        <div class="comments-list">
+          <p>Rating: <%= comment.rating %></p>
+          <h2><%= comment.title %></h2>
+          <p><%= comment.created_at %></p>
+          <p><%= comment.body %></p>
+          <p>Useful comment:<%= comment.useful%></p>
+          <p>Useless comment: Age:<%= comment.useless%></p>
+
+          <%= link_to "Vote up" %>
+          <%= link_to "Vote down"%>
+          <hr/>
+        </div>
+      <% end %>
+      <%= render :partial => "shared/paginator_without_info", :locals => { :objects => @comments } %>
+    </div>
+  </div>
+</div>

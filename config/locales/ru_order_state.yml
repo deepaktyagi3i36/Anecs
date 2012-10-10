@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      order_state:
+        one: "Состояние заказа"
+        few: "Состояние заказа"
+        many: "Состояние заказа"
+        other: "Состояние заказа"
+      order_state_filter:
+        one: "Фильтр состояния заказа"
+        few: "Фильтр состояния заказа"
+        many: "Фильтр состояния заказа"
+        other: "Фильтр состояния заказа"
+    attributes:
+      order_state:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      order_state_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        order_state:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        order_state:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      order_state:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      order_state:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      order_state:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

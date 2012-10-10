@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      datatype:
+        one: "datatype"
+        few: "datatypes"
+        many: "datatypes"
+        other: "datatypes"
+      datatype_filter:
+        one: "datatypes filter"
+        few: "datatypes filters"
+        many: "datatypes filters"
+        other: "datatypes filters"
+    attributes:
+      datatype:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      datatype_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      datatype:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      datatype:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      datatype:
+        index: "List"
+        new: "New"
+        edit: "Edit"

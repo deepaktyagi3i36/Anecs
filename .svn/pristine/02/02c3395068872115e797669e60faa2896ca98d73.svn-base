@@ -1,0 +1,46 @@
+# == Schema Information
+#
+# Table name: runtime_settings
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  value      :string(256)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+default_website_id:
+  website:
+  name: default_website_id
+  code: default_website_id
+  about: default_website_id
+  value: 0
+
+is_show_article_counters_runtime_setting:
+  website: wellness_website
+  name: is_show_article_counters
+  code: is_show_article_counters
+  about: is_show_article_counters
+  value: 1
+
+
+limit_variants_in_product_runtime_setting:
+  website: wellness_website
+  name: limit_in_product_variants
+  code: limit_in_product_variants
+  about: limit_in_product_variants
+  value: 100
+
+
+session_expire_timeout_runtime_setting:
+  website: wellness_website
+  name: session_expire_timeout
+  code: session_expire_timeout
+  about: session_expire_timeout
+  value: 7
+

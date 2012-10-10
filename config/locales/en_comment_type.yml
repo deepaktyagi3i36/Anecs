@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      comment_type:
+        one: "comment type"
+        few: "comment types"
+        many: "comment types"
+        other: "comment types"
+      comment_type_filter:
+        one: "comment types filter"
+        few: "comment types filters"
+        many: "comment types filters"
+        other: "comment types filters"
+    attributes:
+      comment_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      comment_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      comment_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      comment_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      comment_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

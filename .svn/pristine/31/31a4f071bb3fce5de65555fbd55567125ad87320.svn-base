@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: states
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+state1_country:
+  name: state1
+  code: state1
+  about: state1
+
+state2_country:
+  name: state2
+  code: state2
+  about: state2

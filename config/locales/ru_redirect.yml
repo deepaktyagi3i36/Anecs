@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      redirect:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      redirect:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        redirect:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        redirect:
+          attributes:
+            job: "введите имя класса"
+  activeview:
+    columns:
+      redirect:
+        priority: "Приоритет"
+        pattern: "Шиблон"
+        enabled: "Активно"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      redirect:
+        notices:
+          created: "Перенаправление успешно создано."
+          updated: "Перенаправление успешно изменено."
+          deleted: "Перенаправление успешно удалено."
+    messages:
+      redirect:
+        index: "Список Перенаправлений"
+        new: "Создать новое перенаправление"
+        edit: "Редактировать существующую перенаправление"
+    title:
+      redirect: "Пользователь"
+      new_redirect: "Регистрация нового пользователя"
+      edit_redirect: "Edit"

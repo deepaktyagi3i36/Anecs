@@ -1,0 +1,27 @@
+<%= form_for(@comment_status, :url => {:action => action_name, :id => @comment_status.id},
+	:html => {:id => "comment_status_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+  	<%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.mandatory_label :code %>
+        <%= f.text_field :code %>
+        <%= f.error_message_on :code %>
+      </li>
+      <li>
+        <%= f.mandatory_label :about %>
+        <%= f.text_field :about %>
+        <%= f.error_message_on :about %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("comment_status_name") %>

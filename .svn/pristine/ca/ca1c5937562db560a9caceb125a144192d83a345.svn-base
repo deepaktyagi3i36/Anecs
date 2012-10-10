@@ -1,0 +1,37 @@
+<%= form_for(@variant, :url => {:action => action_name, :id => @variant.id},
+	:html => {:id => "variant_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.label :price %>
+        <%= f.text_field :price %>
+        <%= f.error_message_on :price %>
+      </li>
+      <li>
+        <%= f.label :currency_id %>
+        <%= f.collection_select :currency_id, @currencies, :id, :name %>
+        <%= f.error_message_on :currency_id %>
+      </li>
+      <li>
+        <%= f.label :enabled %>
+        <%= f.check_box :enabled %>
+        <%= f.error_message_on :enabled %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("variant_name") %>

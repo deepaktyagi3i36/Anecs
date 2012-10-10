@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      polling:
+        one: "polling"
+        few: "pollings"
+        many: "pollings"
+        other: "pollings"
+    attributes:
+      polling:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        polling:
+          header_message:
+            one: "polling registration failed because of %{count} error"
+            few: "polling registration failed because of %{count} errors"
+            many: "polling registration failed because of %{count} errors"
+            other: "polling registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_polling_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        polling:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      polling:
+        actions: "Actions"
+        login: "Login"
+        polling_status: "polling status"
+        created_at: "Created"
+    flashes:
+      polling:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      polling:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New polling %{login} has been activated"
+    title:
+      polling: "polling"
+      new_polling: "Register New polling"
+      change_password: "Change password"

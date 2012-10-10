@@ -1,0 +1,53 @@
+---
+en:
+  activerecord:
+    models:
+      comment:
+        one: "comment"
+        few: "comments"
+        many: "comments"
+        other: "comments"
+    attributes:
+      comment:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        comment:
+          header_message:
+            one: "comment registration failed because of %{count} error"
+            few: "comment registration failed because of %{count} errors"
+            many: "comment registration failed because of %{count} errors"
+            other: "comment registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_comment_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        comment:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      comment:
+        actions: "Actions"
+        login: "Login"
+        comment_status: "comment status"
+        created_at: "Created"
+    flashes:
+      comment:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      comment:
+        index: "List"
+        new: "New"
+        edit: "Edit"

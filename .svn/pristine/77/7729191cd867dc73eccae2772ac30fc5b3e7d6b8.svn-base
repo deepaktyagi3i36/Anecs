@@ -1,0 +1,37 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.myaccount.mainmenu.shopping") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.dashboard"),
+                       :url => "/myaccount/shopping/dashboard",
+                       :match_path => "^\/(myaccount(\/)?|myaccount\/shopping(\/)?|myaccount\/shopping\/dashboard(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.orders"),
+                       :url => "/myaccount/shopping/orders",
+                       :match_path => "^\/(myaccount\/shopping\/orders(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.favorites"),
+                       :url => "/myaccount/shopping/favorites",
+                       :match_path => "^\/(myaccount\/shopping\/favorites(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.addresses"),
+                       :url => "/myaccount/shopping/addresses",
+                       :match_path => "^\/(myaccount\/shopping\/addresses(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.addresses"),
+                       :url => "/myaccount/shopping/addresses",
+                       :match_path => "^\/(myaccount\/shopping\/addresses(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.comments"),
+                       :url => "/myaccount/shopping/comments",
+                       :match_path => "^\/(myaccount\/shopping\/comments(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.whishlists"),
+                       :url => "/myaccount/shopping/whishlists",
+                       :match_path => "^\/(myaccount\/shopping\/whishlists(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.tags"),
+                       :url => "/myaccount/shopping/tags",
+                       :match_path => "^\/(myaccount\/shopping\/tags(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.alerts"),
+                       :url => "/myaccount/shopping/alerts",
+                       :match_path => "^\/(myaccount\/shopping\/alerts(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.payments"),
+                       :url => "/myaccount/shopping/payments",
+                       :match_path => "^\/(myaccount\/shopping\/payments(.*))$" %>
+  </ul>
+</div>

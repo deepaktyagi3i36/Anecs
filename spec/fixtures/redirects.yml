@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: redirects
+#
+#  id         :integer(4)      not null, primary key
+#  priority   :integer(4)      not null
+#  pattern    :string(128)     not null
+#  httpurl    :string(128)     default("/"), not null
+#  status     :integer(4)      default(301), not null
+#  flash      :string(1024)
+#  enabled    :integer(4)      default(1), not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+index_html_redirect:
+  priority: 9
+  pattern: "^\/index.html"
+  httpurl: "/"
+  status: 301
+  flash: "This page moved permanently."
+  enabled: 1

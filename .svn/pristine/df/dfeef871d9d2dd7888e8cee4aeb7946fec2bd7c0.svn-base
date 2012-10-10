@@ -1,0 +1,7 @@
+<div class="buttons-panel">
+  <% ctrl = "/backoffice/hrmanager/tasks/vacancies" %>
+  <% disabled = (@vacancies.size > 0 ? false : true)%>
+  <%=submit_tag t("buttons.create"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/new';" %>
+  <%=submit_tag t("buttons.delete"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/destroy';", :disabled => disabled %>
+  <%= render :partial => "templates/paginator_with_info", :locals => { :objects => @vacancies } %>
+</div>

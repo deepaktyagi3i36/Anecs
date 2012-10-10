@@ -1,0 +1,23 @@
+<%= form_for(@promoitem, :url => {:action => action_name, :id => @promoitem.id},
+	:html => {:id => "promoitem_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :product_id %>
+	  <%= f.collection_select :product_id, @infoitems, :id, :name %>
+	  <%= f.error_message_on :product_id %>
+	</p>
+
+	<p>
+	  <%= f.label :promotion_id %>
+	  <%= f.collection_select :promotion_id, @promotions, :id, :name %>
+	  <%= f.error_message_on :promotion_id %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("promoitem_name") %>

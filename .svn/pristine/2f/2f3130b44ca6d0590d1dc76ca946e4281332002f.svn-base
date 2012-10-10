@@ -1,0 +1,36 @@
+<%= form_for(@bookcase, :url => {:action => action_name, :id => @bookcase.id},
+	:html => {:id => "bookcase_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :product_id %>
+	  <%= f.collection_select :product_id, @products, :id, :name %>
+	  <%= f.error_message_on :product_id %>
+	</p>
+
+	<p>
+	  <%= f.label :article_id %>
+	  <%= f.collection_select :article_id, @articles, :id, :name %>
+	  <%= f.error_message_on :article_id %>
+	</p>
+
+	<p>
+	  <%= f.label :annotation %>
+	  <%= f.text_field :annotation %>
+	  <%= f.error_message_on :annotation %>
+	</p>
+
+	<p>
+	  <%= f.label :position %>
+	  <%= f.text_field :position %>
+	  <%= f.error_message_on :position %>
+	</p>
+
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("bookcase_name") %>

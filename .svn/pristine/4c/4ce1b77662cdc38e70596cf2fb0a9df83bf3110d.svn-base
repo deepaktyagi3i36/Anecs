@@ -1,0 +1,81 @@
+<% content_for :meta_keywords do %>
+  <title>You comparator cart</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="comparision">
+  <h1>Сравнение товаров</h1>
+  <%= render :partial => 'shared/flash_message' %>
+  <%= form_tag({:controller => '/comparators', :action => 'update'}, {:id=>'list'}) do %>
+    <% if @comparator_items.size > 0 %>
+      <table>
+        <col class="col-property">
+        <col class="col-value">
+        <thead>
+          <tr>
+            <td></td>
+            <% @comparator_items.each do |comparator_item| %>
+              <td>
+                <% comparator_item.variant.infoitem.images.each do |photo| %>
+                  <% if photo.primary > 0 %>
+                    <%= link_to theme_image_tag(photo.picture.url(:thumb)),
+                      comparator_item.variant.infoitem.url,
+                      {:class => "infoitem-thumbnail"}%>
+                  <% end %>
+                <% end %>
+                <dl>
+                  <dt>
+                    <%= link_to comparator_item.variant.name,
+                      comparator_item.variant.infoitem.url,
+                      {:class => "name", :title => comparator_item.variant.name} %>
+                  </dt>
+                </dl>
+              </td>
+            <% end %>
+          </tr>
+          <tr>
+            <td></td>
+            <% @comparator_items.each do |comparator_item| %>
+              <td>
+				<%=link_to(theme_image_tag("/images/buttons/add_to_cart.png", {:alt => t("tooltips.add_to_cart"), :title => t("tooltips.add_to_cart")}),
+				  {:controller => "/shopping_carts", :action => "add_to_cart", :variant_id => comparator_item.variant.id}) %>
+                <%= image_submit_tag "/images/buttons/delete_object.png",
+                        :alt => t("tooltips.delete"), :title => t("tooltips.delete"),
+                        :name => "comparator[comparator_items_attributes][#{comparator_item.id}][_destroy]",
+                        :value => 1, :class => "delete" %>
+              </td>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="odd">
+            <td>Цена</td>
+            <% @comparator_items.each do |comparator_item| %>
+              <td>
+                <span class="red">
+                  <%= comparator_item.variant.price %>
+                  <%= @currency.sign %>
+                </span>
+              </td>
+            <% end %>
+          </tr>
+          <% @comparator_items[0].variant.infoitem.infoitem_type.infoitem_type_properties.each do |infoitem_type_property| %>
+            <tr class="odd">
+              <td><%= infoitem_type_property.property.name %></td>
+              <% @comparator_items.each do |comparator_item| %>
+              <td>
+                  <% comparator_item.variant.variant_properties.each do |variant_property| %>
+                    <% if infoitem_type_property.property_id == variant_property.property_id %>
+                    <%= variant_property.value %>
+                    <% end %>
+                  <% end %>
+              </td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  <% end %>
+</div>

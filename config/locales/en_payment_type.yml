@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      payment_type:
+        one: "payment type"
+        few: "payment types"
+        many: "payment types"
+        other: "payment types"
+      payment_type_filter:
+        one: "payment types filter"
+        few: "payment types filters"
+        many: "payment types filters"
+        other: "payment types filters"
+    attributes:
+      payment_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      payment_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      payment_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      payment_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      payment_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

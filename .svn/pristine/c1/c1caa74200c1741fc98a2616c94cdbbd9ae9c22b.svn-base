@@ -1,0 +1,113 @@
+<div id="top-line">
+  <div id="meta-navi" class="round-bottom">
+    <ul>
+      {% if current_user %}
+        <li>{{ "navigation.metamenu.profile" | translate_message | link_to: "/myaccount/shopping/dashboard"}} </li>
+        <li>{{ "navigation.metamenu.logout" | translate_message | link_to: "/logout"}} </li>
+        <li>{{ "navigation.metamenu.tracking" | translate_message | link_to: "/myaccount/shopping/orders"}} </li>
+      {% else %}
+        <li>{{ "navigation.metamenu.login" | translate_message | link_to: "/login"}} </li>
+        <li>{{ "navigation.metamenu.signin" | translate_message | link_to: "/users/new"}} </li>
+        <li>{{ "navigation.metamenu.tracking" | translate_message | link_to: "/orders/track"}} </li>
+      {% endif %}
+
+      <li>{{ "navigation.metamenu.delivery" | translate_message | manpage_url_by_code: "delivery"}} </li>
+      <li>{{ "navigation.metamenu.manpages" | translate_message | manpage_root_url }} </li>
+    </ul>
+  </div>
+
+  <div id="settings" class="round-bottom">
+    <form method="get" id="language" action="/settings/set_language">
+      <fieldset>
+        {% if @languages.size > 1 %}
+          <select onchange="this.form.submit();" name="language[id]" id="language_id">
+        {% else %}
+          <select onchange="this.form.submit();" name="language[id]" id="language_id" disabled="disabled">
+        {% endif %}
+        {% for language in languages %}
+          <option value={{language.id}}>{{language.name}}</option>
+        {% endfor %}
+          </select>
+      </fieldset>
+    </form>
+
+    <form method="get" id="currency" action="/settings/set_currency">
+      <fieldset>
+        {% if @currencies.size > 1 %}
+          <select onchange="this.form.submit();" name="currency[id]" id="currency_id">
+        {% else %}
+          <select onchange="this.form.submit();" name="currency[id]" id="currency_id" disabled="disabled">
+        {% endif %}
+        {% for currency in currencies %}
+          <option value={{currency.id}}>{{currency.name}}</option>
+        {% endfor %}
+          </select>
+      </fieldset>
+    </form>
+    <form method="get" id="region" action="/settings/set_region">
+      <fieldset>
+        <label for="region_id">{{ "settings.region" | translate_message }}</label>
+        {% if @regions.size > 1 %}
+          <select onchange="this.form.submit();" name="region[id]" id="region_id">
+        {% else %}
+          <select onchange="this.form.submit();" name="region[id]" id="region_id" disabled="disabled">
+        {% endif %}
+
+        {% for region in regions %}
+          <option value={{region.id}}>{{region.name}}</option>
+        {% endfor %}
+          </select>
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="shopping-cart-line" class="round-bottom">
+    <div class="info-top-cart">
+      <a href="/myaccount/shopping/favorites">
+        <img title={{"shopping_cart.favorites" | translate_message}} src="/assets/wellness/images/metaicons/favorites.png" alt={{"shopping_cart.favorites" | translate_message}}>
+      </a>
+      {% if @cart.total_item > 0 %}
+        <a href="/shopping_carts/edit">
+          <img title={{"shopping_cart.cart" | translate_message}} src="/assets/wellness/images/metaicons/filled_cart.png" alt={{"shopping_cart.cart" | translate_message}}>
+        </a>
+      {% else %}
+        <img title={{"shopping_cart.cart" | translate_message}} src="/assets/wellness/images/metaicons/empty_cart.png" alt={{"shopping_cart.cart" | translate_message}}>
+      {% endif %}
+
+      <div class="cart-item-price">
+        {{"shopping_cart.total" | translate_message}}
+        <span id="cart-items">
+          {% if @cart.total_buy_now_items > 0 %}
+            <a href="/shopping_carts/edit">
+              {{ @cart.total_buy_now_items }}
+            </a>
+          {% else %}
+            {{ @cart.total_buy_now_items }}
+          {% endif %}
+        </span>
+
+        {{"shopping_cart.price" | translate_message}}
+        <span id="price-in-cart">
+          {% if (@cart.exist?) and (@cart.total_items > 0) %}
+            <a href="/shopping_carts/edit">{{ @cart.buy_now_price }}</a>{{ currency.sign }}
+          {% else %}
+            {{ @cart.buy_now_price }}{{ currency.sign }}
+          {% endif %}
+        </span>
+     
+        {% if @cart %}
+          <form method="get" id="shopping-cart" action="/orders/new">
+            <fieldset>
+              {% if @order or @cart.total_buy_now_items > 0 %}
+                <input type="submit" class="disabled-button" value={{ "buttons.checkout" | translate_message }}>
+              {% else %}
+                <input type="submit" class="red-button" value={{ "buttons.checkout" | translate_message }} disabled="disabled">
+             {%endif%}
+            </fieldset>
+          </form>
+        {% endif %}
+
+	</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div id="html-error" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>We're sorry, but something went wrong (500 error)</h1>
+  </div>
+  <div class="window-content">
+    <p>
+      <%= image_tag("flashicons/fatal_middle.png", {:alt => "Fatal icon", :title => "Fatal icon"})%>
+      <span>500 error</span>
+      We've been notified about this issue and we'll take a look at it shortly.
+    </p>
+  </div>
+</div>

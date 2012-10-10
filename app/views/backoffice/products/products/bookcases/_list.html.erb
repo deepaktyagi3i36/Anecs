@@ -1,0 +1,39 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Product", "products.name" %> </th>
+      <th> <%= sortable_field_header "Article", "articles.name" %> </th>
+      <th> <%= sortable_field_header "Annotation", "bookcases.annotation" %> </th>
+    </tr>
+    <% @bookcases.each do |bookcase| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', bookcase.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => bookcase} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => bookcase} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => bookcase} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to bookcase.product.name, :action => "edit", :id =>bookcase %></td>
+        <td><%= link_to bookcase.article.name, :action => "edit", :id =>bookcase %></td>
+        <td>
+          <% if bookcase.annotation.length < 25 %>
+            <%= link_to bookcase.annotation, :action => "edit", :id =>bookcase %>
+          <% else %>
+            <%= link_to bookcase.annotation[0..25]+"...", :action => "edit", :id =>bookcase %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

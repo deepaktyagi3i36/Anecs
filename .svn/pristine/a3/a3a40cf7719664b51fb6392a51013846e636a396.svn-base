@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      pattern_type:
+        one: "Тип шаблона"
+        few: "Типы шаблона"
+        many: "Типы шаблона"
+        other: "Типы шаблона"
+      pattern_type_filter:
+        one: "Фильтр типы шаблона"
+        few: "Фильтр типы шаблона"
+        many: "Фильтр типы шаблона"
+        other: "Фильтр типы шаблона"
+    attributes:
+      pattern_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      pattern_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        pattern_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        pattern_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      pattern_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      pattern_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      pattern_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

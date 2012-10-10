@@ -1,0 +1,24 @@
+<div id="main-menu-box">
+  <ul id="main-menu">
+    <% if current_user %>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.welcome"),
+                           :url => "/backoffice/welcome",
+                           :match_path => "^\/(backoffice(\/)?|backoffice\/welcome(.*))$"%>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.orders"),
+                           :url => "/backoffice/orders",
+                           :match_path => "^\/(backoffice\/orders(.*))$"%>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.products"),
+                           :url => "/backoffice/products",
+                           :match_path => "^\/(backoffice\/products(.*))$"%>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.promotions"),
+                           :url => "/backoffice/promotions",
+                           :match_path => "^\/(backoffice\/promotions(.*))$"%>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.website"),
+                           :url => "/backoffice/website",
+                           :match_path => "^\/(backoffice\/website(.*))$"%>
+        <%= main_menu_item :label => t("navigation.backoffice.mainmenu.settings"),
+                           :url => "/backoffice/settings",
+                           :match_path => "^\/(backoffice\/settings(.*))$"%>
+    <% end %>
+  </ul>
+</div>

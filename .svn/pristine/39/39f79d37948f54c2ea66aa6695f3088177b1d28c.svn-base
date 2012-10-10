@@ -1,0 +1,28 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.mainmenu.settings") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.payment"),
+                       :url => "/backoffice/settings/payment",
+                       :match_path => "^\/(backoffice\/settings(\/)?|backoffice\/settings\/payment(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.shipping"),
+                       :url => "/backoffice/settings/shipping",
+                       :match_path => "^\/backoffice\/settings\/shipping(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.currencies"),
+                       :url => "/backoffice/settings/currencies",
+                       :match_path => "^\/backoffice\/settings\/currencies(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.languages"),
+                       :url => "/backoffice/settings/languages",
+                       :match_path => "^\/backoffice\/settings\/languages(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.regions"),
+                       :url => "/backoffice/settings/regions",
+                       :match_path => "^\/backoffice\/settings\/regions(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.storehouses"),
+                       :url => "/backoffice/settings/storehouses",
+                       :match_path => "^\/backoffice\/settings\/storehouses(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.runtime_settings"),
+                       :url => "/backoffice/settings/runtime_settings",
+                       :match_path => "^\/backoffice\/settings\/runtime_settings(.*)$" %>
+  </ul>
+</div>

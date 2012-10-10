@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      opinion_status:
+        one: "Статус мнения"
+        few: "Статус мнения"
+        many: "Статус мнения"
+        other: "Статус мнения"
+      opinion_status_filter:
+        one: "Фильтр статус мнения"
+        few: "Фильтр статус мнения"
+        many: "Фильтр статус мнения"
+        other: "Фильтр статус мнения"
+    attributes:
+      opinion_status:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      opinion_status_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        opinion_status:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        opinion_status:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      opinion_status:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      opinion_status:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      opinion_status:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

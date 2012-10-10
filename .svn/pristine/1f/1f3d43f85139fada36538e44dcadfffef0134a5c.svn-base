@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      state:
+        one: "Штаны"
+        few: "Штаны"
+        many: "Штаны"
+        other: "Штаны"
+      state_filter:
+        one: "Фильтр штаты"
+        few: "Фильтр штаты"
+        many: "Фильтр штаты"
+        other: "Фильтр штаты"
+    attributes:
+      state:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      state_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        state:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        state:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      state:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      state:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      state:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

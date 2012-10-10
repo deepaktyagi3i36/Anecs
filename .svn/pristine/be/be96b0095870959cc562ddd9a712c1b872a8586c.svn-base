@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: complaint_statuses
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+nofk_complaint_status:
+  name: nofk
+  code: nofk
+  about: nofk
+
+active_complaint_status:
+  name: active
+  code: active
+  about: active
+
+closed_complaint_status:
+  name: closed
+  code: closed
+  about: closed

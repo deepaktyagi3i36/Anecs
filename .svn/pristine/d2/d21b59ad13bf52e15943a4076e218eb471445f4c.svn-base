@@ -1,0 +1,44 @@
+---
+en:
+  activerecord:
+    models:
+      runtime_setting:
+        one: "runtime_setting"
+        few: "runtime_settinges"
+        many: "runtime_settinges"
+        other: "runtime_settinges"
+      runtime_setting_filter:
+        one: "runtime_settinges filter"
+        few: "runtime_settinges filters"
+        many: "runtime_settinges filters"
+        other: "runtime_settinges filters"
+    attributes:
+      runtime_setting:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      runtime_setting_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      runtime_setting:
+        name: "Name"
+        code: "Code"
+        value: "Value"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      runtime_setting:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      runtime_setting:
+        index: "List"
+        new: "New"
+        edit: "Edit"

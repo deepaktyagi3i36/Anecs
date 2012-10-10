@@ -1,0 +1,35 @@
+<% content_for :meta_keywords do %>
+  <title>You order</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="order-cart">
+	<h1>New order</h1>
+	<%= form_for(@order, :url => {:action => "create", :id => @order.id},
+		:html => {:id => "order_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+		<p>
+		  <%= f.label :order_state_id %>
+		  <%= f.text_field :order_state_id %>
+		  <%= f.error_message_on :order_state_id %>
+		</p>
+
+
+		<p>
+		  <%= f.label :name %>
+		  <%= f.text_field :name %>
+		  <%= f.error_message_on :name %>
+		</p>
+
+
+	  <p>
+	    <%= f.submit "Create" %>
+	  </p>
+	<% end %>
+	<%= set_focus_on_load("order_name") %>
+</div>
+

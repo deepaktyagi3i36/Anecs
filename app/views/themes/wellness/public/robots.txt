@@ -1,0 +1,29 @@
+# See http://www.robotstxt.org/wc/norobots.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+User-Agent: *
+Disallow: /callmebacks/
+Disallow: /backoffice/
+Disallow: /framework/
+Disallow: /feedbacks/
+Disallow: /myaccount/
+Disallow: /html_errors/
+Disallow: /login
+Disallow: /forgot
+Disallow: /reset
+Disallow: /search/
+Disallow: /settings/
+Disallow: /signup
+Disallow: /shopping_carts/
+Disallow: /comparators/
+Disallow: /orders/
+Disallow: /support/
+Disallow: /svn/
+Disallow: /mwiki/
+Disallow: /anecs_xplanner/
+Disallow: /products/show
+Disallow: /product/instruction/
+Disallow: /articles/show
+Disallow: /manpages/show
+Sitemap: http://miranecsa.ru/sitemap.xml
+Clean-param: authenticity_token

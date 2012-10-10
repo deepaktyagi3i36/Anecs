@@ -1,0 +1,116 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('main_footer.sitemap')%> MirWellnessa.ru</title>
+  <meta name="keywords" content="<%= t('main_footer.sitemap') %>, mirwellnessa.ru" />
+  <meta name="description" content="<%= t('main_footer.sitemap') %> MirWellnessa.ru" />
+<% end %>
+
+<div id="sitemap" class="html-text">
+  <h1><%= t("labels.sitemap") %></h1>
+
+  <div class="form form-960">
+    <div class="form-header form-header-blue">
+      <h2><%= t("sitemap.headers.primary") %></h2>
+    </div>
+    <div class="form-content">
+      <ul>
+        <li>
+          <h3><%= t("sitemap.sections.primary.common") %></h3>
+          <ul>
+            <li><%= link_to t("sitemap.mapitems.primary.common.about_us"), {:controller => '/welcome', :action => "about_us"}%></li>
+            <li><%= link_to t("sitemap.mapitems.primary.common.contact_us"), {:controller => '/welcome', :action=>"contact_us"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.common.vacancies"), {:controller=>"/vacancies", :action => "index"}%></li>
+            <!--li><%#= link_to t("sitemap.mapitems.primary.common.advertising"), {:controller => '/welcome', :action => "advertising"}%></li-->
+            <li><%= link_to t('sitemap.mapitems.primary.common.requisites'), {:controller => '/welcome', :action => "requisites"}%></li>
+            <li><%= link_to t("sitemap.mapitems.primary.common.cooperation"), {:controller => '/welcome', :action => "cooperation"}%></li>
+            <li><%= link_to t("sitemap.mapitems.primary.common.massmedia"), {:controller => '/welcome', :action => "massmedia"}%></li>
+          </ul>
+        </li>
+        <li>
+          <h3><%= t("sitemap.sections.primary.useful") %></h3>
+          <ul>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.sitemap"), {:controller => '/welcome', :action=>"sitemap"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.feedback"), {:controller=>"/feedbacks", :action=>"new"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.callback"), {:controller=>"/callmebacks", :action=>"new"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.terms_of_use"), {:controller => '/welcome', :action=>"terms_of_use"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.privacy_policy"), {:controller => '/welcome', :action=>"privacy_policy"} %></li>
+            <li><%= link_to t("sitemap.mapitems.primary.useful.publish_policy"), {:controller => '/welcome', :action=>"publish_policy"} %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="form form-960">
+    <div class="form-header form-header-blue">
+      <h2><%= t("sitemap.headers.products") %></h2>
+    </div>
+    <div class="form-content">
+      <ul>
+        <% @product_categories.each do |root| %>
+          <% next if !root.parent_id.nil? %>
+          <li>
+            <%= link_to root.name, root.url%>
+            <ul>
+              <% @product_categories.each do |child| %>
+                <% next if child.parent_id !=  root.id %>
+                <li><%= link_to child.name, child.url %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <% if current_user %>
+    <div class="form form-960">
+      <div class="form-header form-header-blue">
+        <h2><%= t("sitemap.headers.myaccount") %></h2>
+      </div>
+      <div class="form-content">
+        <ul>
+          <li>
+            <%= link_to t("sitemap.sections.myaccount.welcome"), {:controller=>"/myaccount/welcome/dashboard"} %>
+            <ul>
+              <li><%= link_to t("sitemap.mapitems.myaccount.welcome.dashboard"), {:controller=>"/myaccount/welcome/dashboard"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.welcome.myprofile"), {:controller=>"/myaccount/welcome/myprofile"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.welcome.complaints"), {:controller=>"/myaccount/welcome/complaints"}%></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to t("sitemap.sections.myaccount.shopping"), {:controller=>"/myaccount/shopping/dashboard"} %>
+            <ul>
+              <li><%= link_to t("sitemap.mapitems.myaccount.shopping.dashboard"), {:controller=>"/myaccount/shopping/dashboard"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.shopping.orders"), {:controller=>"/myaccount/shopping/orders"}%></li>
+              <!--li><%#= link_to t("sitemap.mapitems.myaccount.shopping.comments"), {:controller=>"/myaccount/shopping/comments"}%></li-->
+              <li><%= link_to t("sitemap.mapitems.myaccount.shopping.favorites"), {:controller=>"/myaccount/shopping/favorites"}%></li>
+              <!--li><%#= link_to t("sitemap.mapitems.myaccount.shopping.whishlists"), {:controller=>"/myaccount/shopping/whishlists"}%></li-->
+              <!--li><%#= link_to t("sitemap.mapitems.myaccount.shopping.tags"), {:controller=>"/myaccount/shopping/tags"}%></li-->
+              <!--li><%#= link_to t("sitemap.mapitems.myaccount.shopping.alerts"), {:controller=>"/myaccount/shopping/alerts"}%></li-->
+              <li><%= link_to t("sitemap.mapitems.myaccount.shopping.addresses"), {:controller=>"/myaccount/shopping/addresses"}%></li>
+              <!--li><%#= link_to t("sitemap.mapitems.myaccount.shopping.payments"), {:controller=>"/myaccount/shopping/payments"}%></li-->
+            </ul>
+          </li>
+          <li>
+            <%= link_to t("sitemap.sections.myaccount.community"), {:controller=>"/myaccount/community/dashboard"} %>
+            <ul>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.dashboard"), {:controller=>"/myaccount/community/dashboard"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.myprofile"), {:controller=>"/myaccount/community/myprofile"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.friends"), {:controller=>"/myaccount/community/friends"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.photos"), {:controller=>"/myaccount/community/photos"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.videos"), {:controller=>"/myaccount/community/videos"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.audios"), {:controller=>"/myaccount/community/audios"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.messages"), {:controller=>"/myaccount/community/messages"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.groups"), {:controller=>"/myaccount/community/groups"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.meetings"), {:controller=>"/myaccount/community/meetings"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.notes"), {:controller=>"/myaccount/community/notes"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.privacy"), {:controller=>"/myaccount/community/privacy"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.alerts"), {:controller=>"/myaccount/community/alerts"}%></li>
+              <li><%= link_to t("sitemap.mapitems.myaccount.community.blacklists"), {:controller=>"/myaccount/community/blacklists"}%></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

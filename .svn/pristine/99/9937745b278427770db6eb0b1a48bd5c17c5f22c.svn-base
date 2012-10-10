@@ -1,0 +1,35 @@
+<%= form_for :bookcase_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "bookcases_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :article_id %>
+        <%= f.collection_select :article_id, @articles_filter, :id, :name %>
+        <%= f.error_message_on :article_id %>
+      </li>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products_filter, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :annotation %>
+        <%= f.text_field :annotation %>
+        <%= f.error_message_on :annotation %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("bookcase_filter_article_id") %>

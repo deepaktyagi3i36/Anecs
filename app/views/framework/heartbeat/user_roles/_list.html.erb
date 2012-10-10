@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.user_role.role"), "roles.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.user_role.user"), "users.login" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.user_role.created_at"), "created_at" %></th>
+      <th> <%= t("activeview.columns.user.actions") %> </th>
+    </tr>
+    <% @user_roles.each do |user_role| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', user_role.id, false) %></td>
+        <td><%= link_to user_role.role.name, :action => "edit", :id =>user_role %></td>
+        <td><%= link_to user_role.user.login, :action => "edit", :id =>user_role %></td>
+        <td><%= localize(user_role.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => user_role) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => user_role) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

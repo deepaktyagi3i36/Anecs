@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th> <%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.contract_type.name"), "contract_types.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.contract_type.code"), "contract_types.code" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.contract_type.created_at"), "contract_types.created_at" %></th>
+      <th> <%= t("activeview.columns.contract_type.actions") %> </th>
+    </tr>
+    <% @contract_types.each do |contract_type| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', contract_type.id, false) %></td>
+        <td><%= link_to contract_type.name, :action => "edit", :id =>contract_type %></td>
+        <td><%= link_to contract_type.code, :action => "edit", :id =>contract_type %></td>
+        <td><%= localize(contract_type.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => contract_type) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => contract_type) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

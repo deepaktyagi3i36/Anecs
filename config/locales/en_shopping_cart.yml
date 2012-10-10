@@ -1,0 +1,13 @@
+---
+en:
+  activeview:
+    flashes:
+      shopping_cart:
+        notices:
+          updated: "Shopping cart was updated successfully."
+          deleted: "All shopping cart items were deleted."
+        warnings:
+          empty_cart: "You cart is empty."
+        errors:
+          not_updated: "Shopping cart wasn't updated due to errors"
+

@@ -1,0 +1,54 @@
+---
+ru:
+  activerecord:
+    models:
+      website:
+        one: "Вебсайт"
+        few: "Вебсайты"
+        many: "Вебсайты"
+        other: "Вебсайты"
+      website_filter:
+        one: "Фильтр разновидности"
+        few: "Фильтр разновидности"
+        many: "Фильтр разновидности"
+        other: "Фильтр разновидности"
+    attributes:
+      website:
+        name: "Наименование"
+        code: "Код"
+        about: "Описание"
+        enabled: "Активен"
+      website_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      website:
+        name: "Подсказка имени на русском"
+        code: "Подсказка кода на русском"
+        about: "Подсказка описания на русском"
+  activeview:
+    columns:
+      website:
+        name: "Наименование"
+        code: "Код"
+        primary: "Главный"
+        enabled: "Enabled"
+        created_at: "Создание"
+        actions: "Actions"
+    flashes:
+      website:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+        warnings:
+          inv_update: "Ошибка изменения языка"
+          no_id_found: "Укажите сайт"
+          too_many_rows: "Укажите только один сайт"
+    messages:
+      website:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

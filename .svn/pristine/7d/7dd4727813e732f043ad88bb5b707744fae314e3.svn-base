@@ -1,0 +1,24 @@
+<% content_for :meta_keywords do %>
+  <title>Product</title>
+<% end %>
+
+<% content_for :content_menu do %>
+    <%= render :partial => "templates/products_list_menu" %>
+<% end %>
+
+<% @product.photos.each do |photo| %>
+  <% if photo.primary > 0 %>
+    <%= link_to image_tag(photo.picture.url(:large)),
+                {:action => "show", :product=> @product.to_param, :category => @category.to_param,
+                 :layout => show_product_layout(@category) },
+                {:class => "product-thumbnail"} %>
+  <% end %>
+<% end %>
+<div class="description">
+  <%= link_to @product.name,
+              {:action => "show", :product=> @product.to_param, :category => @category.to_param,
+               :layout => show_product_layout(@category)},
+              {:class => "name", :title => @product.name} %>
+  <p><%= @product.sketch %></p>
+  <p><%= @product.about %></p>
+</div>

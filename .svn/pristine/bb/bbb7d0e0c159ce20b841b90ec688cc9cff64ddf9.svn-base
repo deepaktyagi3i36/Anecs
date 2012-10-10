@@ -1,0 +1,12 @@
+<div id="feedback">
+  <div class="form form-440">
+    <div class="form-header">
+      <h1><%= t('.title') %></h1>
+    </div>
+    <div class="form-content">
+      <%= render :partial => "shared/flash_message" %>
+      <%= render :partial => "form", :locals => {
+        :action_name => "create", :button_label => t("buttons.create")} %>
+    </div>
+  </div>
+</div>

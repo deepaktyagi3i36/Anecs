@@ -1,0 +1,22 @@
+<% content_for :meta_keywords do %>
+  <title>Roles at admin task zone</title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "backoffice/website/design/templates/list_menu" %>
+<% end %>
+
+<div class="window-box">
+  <div class="window-header">
+    <h1><%= t("activeview.messages.admin_job.edit") %></h1>
+  </div>
+  <div class="window-content">
+    <%= render :partial => "templates/form_flash" %>
+    <%= render :partial => "form", :locals => {
+      :action_name => "update", :button_label => t("buttons.update")} %>
+    <h2><%= t("labels.result") %></h2>
+    <%= render :partial => "result" %>
+    <h2><%= t("labels.details") %></h2>
+    <%= render :partial => "details" %>
+  </div>
+</div>

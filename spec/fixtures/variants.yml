@@ -1,0 +1,55 @@
+# == Schema Information
+#
+# Table name: variants
+#
+#  id          :integer(4)      not null, primary key
+#  product_id  :integer(4)      not null
+#  name        :string(128)     not null
+#  namel       :string(128)     not null
+#  price       :decimal(10, 2)  default(0.0), not null
+#  currency_id :integer(4)      not null
+#  enabled     :integer(4)      default(0), not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+carbokick_with_nofk_taste:
+  product: products_supplements_carbokick
+  name: with nofk taste
+  namel: with nofk taste
+  price: 100
+  currency: rouble_currency
+  enabled: 1
+
+carbokick_with_banana_taste:
+  product: products_supplements_carbokick
+  name: with banana taste
+  namel: with banana taste
+  price: 100
+  currency: rouble_currency
+  enabled: 1
+
+carbokick_with_chocolate_taste:
+  product: products_supplements_carbokick
+  name: with chocolate taste
+  namel: with chocolate taste
+  price: 100
+  currency: rouble_currency
+  enabled: 1
+
+pipkino_with_void_property:
+  product: centers_fitnesses_pipkino
+  name: with void property
+  namel: with void property
+  price: 0
+  currency: rouble_currency
+  enabled: 1
+
+svyal_with_void_property:
+  product: experts_trainers_svyal
+  name: with void property
+  namel: with void property
+  price: 0
+  currency: rouble_currency
+  enabled: 1

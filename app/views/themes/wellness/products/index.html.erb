@@ -1,0 +1,134 @@
+<% content_for :meta_keywords do %>
+    <title><%= @category.seo_title %></title>
+    <meta name="keywords" content="<%= @category.seo_keywords %>"/>
+    <meta name="description" content="<%= @category.path_description %>"/>
+<% end %>
+
+<% content_for :content_menu do %>
+    <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+    <%= render :partial => "products/templates/popular_products" %>
+    <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="infoitem">
+  <% @categories.each do |category| %>
+      <% next if category.id != @category.id %>
+      <h1>
+        <% if !category.seo_prefix.blank? %>
+            <%= category.seo_prefix + category.name %>
+        <% else %>
+            <%= category.name %>
+        <% end %></h1>
+
+      <div class="html-text"><%= raw category.about %></div>
+      <h2><%= category.name + ' - ' + t('.price_for_package') %></h2>
+      <% break %>
+  <% end %>
+  <% if @products.size > 0 %>
+      <%= render :partial => "shared/sorting_panel", :locals => {:objects => @products} %>
+  <% else %>
+      <%= t '.empty_section' %>
+  <% end %>
+  <ul class="infoitem-list">
+    <% @products.each do |product| %>
+        <li>
+          <% product.photos.each do |photo| %>
+              <% if photo.primary > 0 %>
+                  <%= link_to theme_image_tag(photo.picture.url(:small)),
+                              product.url,
+                              {:class => "infoitem-thumbnail"} %>
+              <% end %>
+          <% end %>
+          <%= render :partial => 'products/templates/promo_labels', :locals => {:product => product, :size => 'small'} %>
+          <div class="description">
+            <%= link_to product.name, product.url, {:class => "name", :title => product.name} %>
+            <p><%= product.sketch %></p>
+            <%= link_to t("labels.description"), product.url + "#description", {:class => "instructions", :title => t("tooltips.description")} %>
+            <% if product.has_specific_view?("articles") %>
+                <%= link_to t("labels.articles"), '/product/articles' + product.relative_url, {:class => "articles", :title => t("tooltips.articles")} %>
+            <% end %>
+            <% unless @favorites.nil? %>
+                <% favorites_action = product.is_favorite(@favorites) ? 'remove_from_favorites' : 'add_to_favorites' %>
+                <div class="right">
+                  <%= form_tag({:controller => "/favorites", :action => favorites_action},
+                              {:id => unique_id("favorites_form")}) do %>
+                      <fieldset>
+                        <%= hidden_field_tag "product_id", product.id, :id => unique_id("product_id") %>
+                        <%= submit_tag t("buttons.#{favorites_action}") %>
+                      </fieldset>
+                  <% end %>
+                </div>
+            <% end %>
+
+          </div>
+          <table class="variants" cellpadding="0" cellspacing="0">
+            <col class="in-cart"/>
+            <col class="variant-name"/>
+            <col class="price"/>
+            <col class="activity"/>
+            <% product.variants.each do |variant| %>
+                <% next if variant.enabled == 0 %>
+                <tr>
+                  <td>
+                    <% if @cart %>
+                        <% in_cart = false %>
+                        <% @cart.buy_now_items.each do |item| %>
+                            <% in_cart = true if item.variant.id == variant.id %>
+                        <% end %>
+                        <% if in_cart %>
+                            <%= theme_image_tag("catalog/in_cart.png", :alt => t("tooltips.in_cart"), :title => t("tooltips.in_cart")) %>
+                        <% end %>
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= variant.name %>
+                  </td>
+                  <td>
+                    <div class="price">
+                      <% if product.enabled == 1 %>
+                          <%= variant.price.to_s %>
+                          <span> <%= @currency.sign %></span>
+                      <% else %>
+                          <span class="red"><%= t('.out_of_stocks') %></span>
+                      <% end %>
+                    </div>
+                    <!--div class="new-price">
+                  <%#= (variant.price-10).to_s %>
+                  <span> <%#= @currency.name %></span>
+                </div-->
+                  </td>
+                  <td>
+                    <%= form_tag({:controller => "/comparators", :action => "add_to_comparator"},
+                                {:id => unique_id("compare_item_form")}) do %>
+                        <fieldset>
+                          <%= hidden_field_tag "variant_id", variant.id, :id => unique_id("variant_id") %>
+                          <%= image_submit_tag("/images/buttons/compare_infoitem.png",
+                                               :alt => t("tooltips.add_to_comparator"), :title => t("tooltips.add_to_comparator")) %>
+                        </fieldset>
+                    <% end %>
+                    <% if product.enabled == 1 %>
+                        <%= form_tag({:controller => "/shopping_carts", :action => "add_to_cart"},
+                                    {:id => unique_id("buy_now_item_form")}) do %>
+                            <fieldset>
+                              <%= hidden_field_tag "variant_id", variant.id, :id => unique_id("variant_id") %>
+                              <%= image_submit_tag("/images/buttons/add_to_cart.png",
+                                                   :alt => t("tooltips.add_to_cart"), :title => t("tooltips.add_to_cart")) %>
+                            </fieldset>
+                        <% end %>
+                    <% end %>
+                  </td>
+                </tr>
+            <% end %>
+          </table>
+        </li>
+    <% end %>
+  </ul>
+  <% if @products.size > 0 %>
+      <%= render :partial => "shared/sorting_panel", :locals => {:objects => @products} %>
+  <% end %>
+</div>
+
+

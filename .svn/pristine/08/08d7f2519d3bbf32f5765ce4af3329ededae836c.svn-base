@@ -1,0 +1,12 @@
+<div id="html-error" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>Страница, которую Вы ищите, отсутствует (404 html ошибка)</h1>
+  </div>
+  <div class="window-content">
+    <p>
+      <%= image_tag("flashicons/error_middle.png", {:alt => "Error icon", :title => "Error icon"})%>
+      <span>404 ошибка</span>
+      Возможно вы опечатались в адресе или страница переехала.
+    </p>
+  </div>
+</div>

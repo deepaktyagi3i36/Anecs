@@ -1,0 +1,32 @@
+<div id="main-menu" class="round-top">
+  <ul id="main-menu">
+    {% if current_user and current_user.user_has_role contains 'administrator' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/admin/tasks/users" }} </li>
+    {% elsif current_user and current_user.user_has_role contains 'manager' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/manager/products/categories" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'financier' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/financier/reports/orders" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'moderator' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/moderator/tasks/comments" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'hrmanager' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/hrmanager/tasks/vacancies" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'stockman' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/stockman/tasks/orders" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'messanger' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/messanger/tasks/orders" }}</li>
+    {% elsif current_user and current_user.user_has_role contains 'salesman' %}
+      <li>{{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/salesman/reports/buy_offers" }}</li>
+    {% endif %}
+
+    {% if current_user %}
+      <li>{{ "navigation.mainmenu.myaccount" | translate_message | link_to : "/myaccount/welcome/dashboard" }}</li>
+    {% endif %}
+
+    <li>{{ "navigation.mainmenu.products" | translate_message | link_to : "/products" }}</li>
+    <li>{{ "navigation.mainmenu.articles" | translate_message | link_to : "/articles" }}</li>
+    <li>{{ "navigation.mainmenu.mprograms" | translate_message | link_to : "/mprograms/android" }}</li>
+  </ul>
+</div>
+
+
+

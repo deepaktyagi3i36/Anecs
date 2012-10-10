@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title> The www.MirWellnessa.ru: <%= @email_name != nil ? @email_name : '' %> </title>
+  <style type="text/css">
+body {
+  background-color: white;
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: black;
+  margin:10px;
+}
+
+#header {
+  height: 70px;
+  padding: 10px 10px 10px 30px;
+  border-bottom:1px solid #cccccc;
+}
+
+#footer {
+  border-top:1px solid #cccccc;
+  font-size:11px;
+  padding:0px 10px 10px 30px;
+  color:#7c7c7c;
+}
+
+#footer p {
+  padding:2px 0px;
+  margin:0px 0px;
+}
+
+#message-body {
+  padding:10px 10px 10px 30px;
+  color:#7c7c7c;
+}
+
+#message-body p {
+  font-size:14px;
+  margin:0;
+}
+
+#message-body h1 {
+  font-size:16px;
+  color:#0b0b0b;
+  margin-top:0px;
+  font-weight:normal;
+}
+
+#message-body a {
+  text-decoration: none;
+  color: #88b9da;
+}
+
+#message-body a:hover {
+  text-decoration: underline;
+}
+
+#message-body a:visited {
+  color: #16489f;
+}
+
+  </style>
+</head>
+<body>
+  <%= render :partial => "postoffice/main_header" %>
+  <div id="message-body">
+    <%= yield %>
+  </div>
+  <%= render :partial => "postoffice/main_footer" %>
+</body>
+</html>

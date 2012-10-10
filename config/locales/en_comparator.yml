@@ -1,0 +1,11 @@
+---
+en:
+  activeview:
+    flashes:
+      comparator:
+        notices:
+          updated: "Comparator was updated successfully."
+          deleted: "All comparator items were deleted."
+        errors:
+          not_updated: "Comparator wasn't updated due to errors"
+

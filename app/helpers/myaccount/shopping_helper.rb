@@ -1,0 +1,2 @@
+module Myaccount::ShoppingHelper
+end

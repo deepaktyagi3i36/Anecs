@@ -1,0 +1,46 @@
+<%= form_for :inventory_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "inventories_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products_filter, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :variant_id %>
+        <%= f.collection_select :variant_id, @variants_filter, :id, :name %>
+        <%= f.error_message_on :variant_id %>
+      </li>
+      <li>
+        <%= f.label :storehouse_id %>
+        <%= f.collection_select :storehouse_id, @storehouses_filter, :id, :name %>
+        <%= f.error_message_on :storehouse_id %>
+      </li>
+      <li>
+        <%= f.label :quantity_since %>
+        <%= f.text_field :quantity_since %>
+        <%= f.error_message_on :quantity_since %>
+      </li>
+      <li>
+        <%= f.label :quantity_till %>
+        <%= f.text_field :quantity_till %>
+        <%= f.error_message_on :quantity_till %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("inventory_filter_product_id") %>
+

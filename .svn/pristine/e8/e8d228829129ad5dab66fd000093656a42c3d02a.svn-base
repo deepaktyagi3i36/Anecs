@@ -1,0 +1,35 @@
+<%= form_for(@storehouse, :url => {:action => action_name, :id => @storehouse.id},
+	:html => {:id => "storehouse_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :about %>
+	  <%= f.text_field :about %>
+	  <%= f.error_message_on :about %>
+	</p>
+
+	<p>
+	    <%= f.label :region_id %>
+	    <%= f.collection_select :region_id, @regions, :id, :name %>
+	    <%= f.error_message_on :region_id %>
+	</p>
+
+	<p>
+	  <%= f.label :enabled %>
+	  <%= f.check_box :enabled %>
+	  <%= f.error_message_on :enabled %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("storehouse_name") %>

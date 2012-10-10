@@ -1,0 +1,17 @@
+<div id="main-menu-box">
+  <ul id="main-menu">
+    <% if current_user %>
+      <%= main_menu_item :label => t("navigation.myaccount.mainmenu.welcome"),
+                         :url => "/myaccount/welcome/dashboard",
+                         :match_path => "^\/(myaccount(\/)?|myaccount\/welcome(\/)?|myaccount\/welcome\/dashboard(.*))$" %>
+      <%= main_menu_item :label => t("navigation.myaccount.mainmenu.shopping"),
+                         :url => "/myaccount/shopping/dashboard",
+                         :match_path => "^\/(myaccount\/shopping(\/)?|myaccount\/shopping\/dashboard(.*))$"%>
+      <%= main_menu_item :label => t("navigation.myaccount.mainmenu.community"),
+                         :url => "/myaccount/community/dashboard",
+                         :match_path => "^\/(myaccount\/community(\/)?|myaccount\/community\/dashboard(.*))$"%>
+    <% end %>
+  </ul>
+</div>
+
+

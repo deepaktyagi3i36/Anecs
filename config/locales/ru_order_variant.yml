@@ -1,0 +1,51 @@
+---
+ru:
+  activerecord:
+    models:
+      order_variant:
+        one: "Разновидность"
+        few: "Разновидность"
+        many: "Разновидность"
+        other: "Разновидность"
+      order_variant_filter:
+        one: "Фильтр разновидности"
+        few: "Фильтр разновидности"
+        many: "Фильтр разновидности"
+        other: "Фильтр разновидности"
+    attributes:
+      order_variant:
+        name: "Наименование"
+        name_ru: "Наименование ru"
+        product_id: "Информационный элемент"
+        price: "Цена"
+        enabled: "Активен"
+      order_variant_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      variant:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      order_variant:
+        product: "Продукт"
+        variant: "Вариант"
+        price: "Цена"
+        currency: "Валюта"
+        quantity: "Кол-во"
+        created_at: "Создание"
+        actions: "Дествие"
+    flashes:
+      order_variant:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+    messages:
+      order_variant:
+        new: "Создать новое разновидность"
+        edit: "Редактировать разновидность"
+        inventories: "Варианты на складе"

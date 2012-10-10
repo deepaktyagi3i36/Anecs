@@ -1,0 +1,85 @@
+# == Schema Information
+#
+# Table name: addresses
+#
+#  id              :integer(4)      not null, primary key
+#  name            :string(128)     not null
+#  address_type_id :integer(4)
+#  user_id         :integer(4)
+#  full_name       :string(1024)    not null
+#  phone           :string(32)      not null
+#  extra_phone     :string(32)
+#  street_address1 :string(128)     not null
+#  street_address2 :string(128)
+#  city            :string(128)     not null
+#  country_id      :integer(4)      not null
+#  zip             :string(16)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  default         :integer(4)      default(0), not null
+#
+
+quentin_shipping_address:
+  name: Адрес доставки Квентина
+  address_type: shipping_address_type
+  user: quentin
+  full_name: Quentin Tarantino
+  phone: +78120000000
+  extra_phone: +79110000000
+  street_address1: Средний Шкиперский проток, строение 2 литера А
+  street_address2: офис 911
+  city: Санкт-Петербург
+  country: russia_country
+  zip: 197000
+
+quentin_shipping_address2:
+  name: Адрес доставки Квентина(2)
+  address_type: shipping_address_type
+  user: quentin
+  full_name: Quentin Tarantino
+  phone: +78120000000
+  extra_phone: +79110000000
+  street_address1: Средний Шкиперский проток, строение 2 литера А
+  street_address2: офис 911/2
+  city: Санкт-Петербург
+  country: russia_country
+  zip: 197000
+
+quentin_shipping_address3:
+  name: Адрес доставки Квентина(3)
+  address_type: shipping_address_type
+  user: quentin
+  full_name: Quentin Tarantino
+  phone: +78120000000
+  extra_phone: +79110000000
+  street_address1: Средний Шкиперский проток, строение 2 литера А
+  street_address2: офис 911/3
+  city: Санкт-Петербург
+  country: russia_country
+  zip: 197000
+
+quentin_billing_address:
+  name: Биллинговый адрес Квентина
+  address_type: billing_address_type
+  user: quentin
+  full_name: Quentin Tarantino
+  phone: +78120000000
+  extra_phone: +79110000000
+  street_address1: Большой Шкиперский проток, дом 11а
+  street_address2: кв. 101
+  city: Санкт-Петербург
+  country: russia_country
+  zip: 197000
+
+aaron_shipping_address:
+  name: Адрес доставки Аарона
+  address_type: shipping_address_type
+  user: aaron
+  full_name: Aaron Johnson
+  phone: +74950000000
+  extra_phone: +79160000000
+  street_address1: ЮЗАО, Бибиревская ул. 121
+  street_address2: кв. 22
+  city: Москва
+  country: russia_country
+  zip: 151000

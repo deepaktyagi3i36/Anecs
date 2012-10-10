@@ -1,0 +1,61 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id                :integer(4)      not null, primary key
+#  name              :string(128)     not null
+#  namel             :string(128)     not null
+#  about             :string(128)
+#  order_state_id    :integer(4)      not null
+#  user_id           :integer(4)
+#  shipping_type_id  :integer(4)
+#  payment_type_id   :integer(4)
+#  address_id        :integer(4)
+#  checkout_state_id :integer(4)      not null
+#  email             :string(128)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  session_id        :integer(4)
+#  user_name         :string(255)
+#  notes             :string(255)
+#  total_price       :decimal(10, 2)  not null
+#  total_items       :integer(4)      not null
+#  shipping_address  :string(1024)
+#  website_id        :integer(4)      not null
+#  region_id         :integer(4)      not null
+#
+
+quentin_order:
+  website: wellness_website
+  region: nofk_region
+  name: Заказ №222102
+  namel: заказ №222102
+  about: Заказ порошков для роста мышц
+  order_state: accepted_order_state
+  user: quentin
+  shipping_type: courier_shipping_type
+  payment_type: cash_to_courier_payment_type
+  address: quentin_shipping_address
+  checkout_state: completed_checkout_state
+  email: quentin@about.com
+  user_name: quentin last name quentin first name quentin middle name
+  total_price: 3434
+  total_items: 2
+
+quentin_delivery_order:
+  website: wellness_website
+  region: nofk_region
+  name: Заказ №222673
+  namel: заказ №222673
+  about: Заказ порошков для роста мышц
+  order_state: delivery_order_state
+  user: quentin
+  shipping_type: courier_shipping_type
+  payment_type: cash_to_courier_payment_type
+  address: quentin_shipping_address
+  checkout_state: started_checkout_state
+  email: quentin@about.com
+  user_name: quentin last name quentin first name quentin middle name
+  total_price: 0
+  total_items: 0
+

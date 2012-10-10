@@ -1,0 +1,10 @@
+<ul>
+  <li>Admin job result: <em><%= @admin_job.success.to_s %></em></li>
+  <li>Admin job begin time: <em><%= localize(@admin_job.begin_at, :format => :long) if @admin_job.begin_at %></em></li>
+  <li>Admin job begin time: <em><%= localize(@admin_job.finish_at, :format => :long) if @admin_job.finish_at %></em></li>
+</ul>
+
+<% if @admin_job && @admin_job.exception%>
+  <p><code> <pre><%= @admin_job.exception %></pre> </code></p>
+<% end %>
+

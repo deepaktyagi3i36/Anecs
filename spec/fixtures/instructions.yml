@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: instructions
+#
+#  id         :integer(4)      not null, primary key
+#  product_id :integer(4)      not null
+#  pattern_id :integer(4)
+#  title      :string(256)     not null
+#  body       :string(16384)   not null
+#  created_at :datetime
+#  updated_at :datetime
+#  position   :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+carbokick_ingredients:
+  product: products_supplements_carbokick
+  pattern: nil
+  title: Ingredients
+  body: Ingredients
+  position: 1
+
+carbokick_warnings:
+  product: products_supplements_carbokick
+  pattern: nil
+  title: Warnings
+  body: Warnings
+  position: 2

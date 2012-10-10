@@ -1,0 +1,41 @@
+<%= form_for(@instruction, :url => {:action => action_name, :id => @instruction.id},
+	:html => {:id => "instruction_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :product_id %>
+	  <%= f.collection_select :product_id, @products, :id, :name%>
+	  <%= f.error_message_on :product_id %>
+	</p>
+
+	<p>
+	  <%= f.label :pattern_id %>
+	  <%= f.collection_select :pattern_id, @patterns, :id, :name, {}, {:disabled => disabled_pattern, :onchange => 'submit()'}  %>
+	  <%= f.error_message_on :pattern_id %>
+	</p>
+
+	<p>
+	  <%= f.label :title %>
+	  <%= f.text_field :title %>
+	  <%= f.error_message_on :title %>
+	</p>
+
+	<p>
+	  <%= f.label :body %>
+	  <%= f.text_area :body %>
+	  <%= f.error_message_on :body %>
+	</p>
+
+	<p>
+	  <%= f.label :position %>
+	  <%= f.text_field :position %>
+	  <%= f.error_message_on :position %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("instruction_title") %>

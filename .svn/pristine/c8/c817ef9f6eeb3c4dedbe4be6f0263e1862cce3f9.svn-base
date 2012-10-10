@@ -1,0 +1,101 @@
+/*
+ * Content list styles
+ *   Common styles
+ *     Common primitives styles
+ *     Common decorate styles
+ *     Page header styles
+ *     Forms & content styles
+*/
+
+/* =Common primitives styles
+ * This section contains common primitive styles for all site, susch as
+ * h1, h2, a, table and etc
+-------------------------------------------------------------------*/
+body {
+  font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color:#0b0b0b;
+  background:url(/anecs/public/images/messages/main_bg.png);
+}
+
+a, img {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+/* =Common decorate styles
+ * This section contains common decorate styles for all site, susch as
+ * blue, red, help and etc.
+-------------------------------------------------------------------*/
+.date {
+  font-style:italic;
+  white-space:nowrap;
+}
+
+
+/* =Page header styles
+ * This section contains ...
+-------------------------------------------------------------------*/
+#header {
+  width:440px;
+  margin-left:auto;
+  margin-right:auto;
+  height:30px;
+  overflow:hidden;
+}
+
+
+#header >.lang {
+  text-align:right;
+  float:right;
+}
+
+#header >.lang a {
+  float:right;
+  width:25px;
+}
+
+
+/* =Common forms styles
+ * This section contains common form styles for all site, susch as wide-form,
+ * norrow-form and etc.
+-------------------------------------------------------------------*/
+.form {
+  margin: 10px auto;
+  padding: 0 8px;
+  width: 440px;
+  background: url(/anecs/public/images/forms/shadow_440.png) no-repeat 0 20px;
+}
+
+.form-header{
+  height: 20px;
+  line-height: 20px;
+  background: url(/anecs/public/images/forms/header_blue_440.png) no-repeat 0 0;
+}
+
+.form-header h1, .form-header h2{
+  font-size: 14px;
+  color: #000;
+  font-family: 'Trebuchet MS';
+  text-indent: 10px !important;
+  margin: 0 !important;
+  border-bottom: 0 none !important;
+}
+
+.form-content {
+  border: 1px solid #e2dedd;
+  padding: 20px;
+}
+
+.form-content p {
+  width:358px;
+  background:white;
+  padding:20px 20px 30px 20px;
+  margin:0px;
+}
+
+.form-content p img {
+  float:left;
+  margin-right:20px;
+}
+

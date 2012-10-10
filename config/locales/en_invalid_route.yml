@@ -1,0 +1,55 @@
+---
+en:
+  activerecord:
+    models:
+      invalid_route:
+        one: "Invalid route"
+        few: "Invalid routes"
+        many: "Invalid routes"
+        other: "Invalid routes"
+    attributes:
+      invalid_route:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+    errors:
+      models:
+        invalid_route:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+    hints:
+      models:
+        invalid_route:
+          attributes:
+            job: "Enter valid class name for job"
+  activeview:
+    columns:
+      invalid_route:
+        priority: "Priority"
+        pattern: "Pattern"
+        enabled: "Enabled"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      invalid_route:
+        notices:
+          created: "Invalid route was successfully created."
+          updated: "Invalid route was successfully updated."
+          deleted: "Invalid route was successfully deleted."
+    messages:
+      invalid_route:
+        index: "Invalid route list"
+        new: "New invalid route"
+        edit: "Edit invalid route"
+    title:
+      invalid_route: "User"
+      new_invalid_route: "New"
+      edit_invalid_route: "Edit"

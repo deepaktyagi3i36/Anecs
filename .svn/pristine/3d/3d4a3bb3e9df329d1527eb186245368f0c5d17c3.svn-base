@@ -1,0 +1,14 @@
+# Config file for the acts_as_solr plugin.
+#
+# If you change the host or port number here, make sure you update 
+# them in your Solr config file
+
+# Tomcat based configurations
+development:
+  url: http://localhost:8080/anecs_solrd
+
+test:
+  url: http://localhost:8080/anecs_solrt
+  
+production:
+  url: http://localhost:8080/anecs_solr

@@ -1,0 +1,2 @@
+module Myaccount::WelcomeHelper
+end

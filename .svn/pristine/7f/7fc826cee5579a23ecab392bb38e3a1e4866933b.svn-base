@@ -1,0 +1,12 @@
+---
+ru:
+  activeview:
+    flashes:
+      shopping_cart:
+        notices:
+          updated: "Содержимое корзины успешно обновлено."
+          deleted: "Все содержимое корзины было удалено."
+        warnings:
+          empty_cart: "Ваша корзина пуста."
+        errors:
+          not_updated: "Содержимое корзины не было изменено из-за ошибок."

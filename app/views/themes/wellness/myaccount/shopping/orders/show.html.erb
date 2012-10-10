@@ -1,0 +1,44 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title', :order_no => @order.name) %></title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "myaccount/shopping/templates/list_menu" %>
+<% end %>
+<h1><%= t('.title', :order_no => @order.name) %></h1>
+
+<p>
+  <label><%= t('.state') %>:</label> <%= @order.order_state.t_name %>
+</p>
+<p>
+  <label><%= t('.payment_type') %>:</label> <%= @order.payment_type.name %>
+</p>
+<p>
+  <label><%= t('.address') %>:</label> <%= @order.address.full_name %>
+</p>
+<p>
+  <label><%= t('.shipping_type') %>:</label> <%= @order.shipping_type.name %>
+</p>
+<p>
+  <label><%= t('.notes') %>:</label> <%= @order.notes %>
+</p>
+
+<% if @order.is_cancelling_enabled %>
+  <%= link_to t('.edit_shipping_details'), {:action => :edit, :id => @order}, :class => 'button blue-button' %>
+<% end %>
+
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('.items') %></h2>
+  </div>
+  <%= render :partial => "myaccount/shopping/orders/variants/list" %>
+</div>
+
+<p>
+  <label><%= t('.total_price') %>:</label> <%= @order.total_price.to_s << ' ' << @currency.sign %>
+</p>
+
+<% if @order.is_cancelling_enabled %>
+<%= link_to t('buttons.cancel'), {:action => :cancel, :id => @order}, :class => 'button red-button' %>
+<% end %>
+<%= link_to t('buttons.repeat'), {:action => :repeat, :id => @order}, :class => 'button blue-button' %>

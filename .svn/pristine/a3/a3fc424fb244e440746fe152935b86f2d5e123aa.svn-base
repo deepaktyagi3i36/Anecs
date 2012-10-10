@@ -1,0 +1,27 @@
+<% content_for :meta_keywords do %>
+  <title>advertisement</title>
+  <meta name="keywords" content="mirwellnessa.ru"/>
+  <meta name="description" content="mirwellnessa.ru"/>
+<% end %>
+
+<div id="mounting" class="html-text">
+  <h1>Company information</h1>
+
+  <table cellspacing="0" cellpadding="0">
+    <col/>
+    <col/>
+    <col/>
+    <tr>
+      <td> Name </td>
+      <td> "Grand Service" LLC</td>
+    </tr>
+    <tr>
+      <td> Address </td>
+      <td> pom. 2H, Asafieva 7 lit A, Saint-Petersburg, Russia, 194356</td>
+    </tr>
+  </table>
+
+  <p>
+    <%= link_to t('main_footer.contact_us'), {:controller => '/welcome', :action=>"contact_us"} %> if you have any questions.
+  </p>
+</div>

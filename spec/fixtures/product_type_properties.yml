@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: product_type_properties
+#
+#  id              :integer(4)      not null, primary key
+#  product_type_id :integer(4)      not null
+#  property_id     :integer(4)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+quantity_in_supplement_product_type:
+  product_type: supplement_products_type
+  property: quantity_property
+
+size_in_supplement_product_type:
+  product_type: supplement_products_type
+  property: size_property
+
+quantity_in_fitness_product_type:
+  product_type: fitness_centers_type
+  property: quantity_property
+
+size_in_fitness_product_type:
+  product_type: fitness_centers_type
+  property: size_property
+
+quantity_in_trainer_product_type:
+  product_type: trainer_experts_type
+  property: quantity_property
+
+size_in_trainer_product_type:
+  product_type: trainer_experts_type
+  property: size_property

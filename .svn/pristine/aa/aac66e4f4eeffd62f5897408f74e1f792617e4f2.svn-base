@@ -1,0 +1,10 @@
+На сайте <a href=http://<%= @runtime_settings["server_url"] %> ><%= @runtime_settings["server_url"] %></a>
+активирована учетная запись пользователя:
+<ul>
+  <li>Логин: <%= @user.login %></li>
+  <li>Ник: <%= @user.nickname %></li>
+  <li>Почта: <%= @user.email %></li>
+  <li>Имя: <%= @user.firstname %></li>
+  <li>Отчество: <%= @user.middlename %></li>
+  <li>Фамилия: <%= @user.lastname %></li>
+</ul>

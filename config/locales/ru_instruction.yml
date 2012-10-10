@@ -1,0 +1,44 @@
+---
+ru:
+  activerecord:
+    models:
+      instruction:
+        one: "Свойство"
+        few: "Свойства"
+        many: "Свойства"
+        other: "Свойства"
+      instruction_filter:
+        one: "Фильтр инструкций"
+        few: "Фильтр инструкций"
+        many: "Фильтр инструкций"
+        other: "Фильтр инструкций"
+    attributes:
+      instruction:
+        title: "Заголовок"
+        body: "Содержимое"
+        position: "Порядок следования"
+        product_id: "Информационный элемент"
+      instruction_filter:
+        title: "Заголовок"
+        body: "Содержимое"
+        product_id: "Информационный элемент"
+        created_at_since: "Создан после"
+        created_at_till: "Создан до"
+  activeview:
+    columns:
+      instruction:
+        title: "Заголовок"
+        body: "Содержимое"
+        position: "Порядок следования"
+        infoitem: "Информационный элемент"
+        created_at: "Создано"
+    flashes:
+      instruction:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      instruction:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

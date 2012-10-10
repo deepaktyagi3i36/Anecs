@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: complaint_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+nofk_complaint_type:
+  name: nofk
+  code: nofk
+  about: nofk
+
+order_complaint_type:
+  name: order
+  code: order
+  about: order
+
+others_complaint_type:
+  name: others
+  code: others
+  about: others

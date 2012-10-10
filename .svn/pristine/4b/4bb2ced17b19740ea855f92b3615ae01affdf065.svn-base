@@ -1,0 +1,35 @@
+<%= form_for :state_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "states_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.label :code %>
+        <%= f.text_field :code %>
+        <%= f.error_message_on :code %>
+      </li>
+      <li>
+        <%= f.label :about %>
+        <%= f.text_field :about %>
+        <%= f.error_message_on :about %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("state_filter_name") %>

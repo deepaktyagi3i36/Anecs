@@ -1,0 +1,22 @@
+<%= t('orders.notification.user.salutation', :user_name => @order.user_name) %>,
+<%= t('orders.notification.user.message.cancellation', :order_no => @order.name, :site_name => DomainsConfiguration.lookup('server.name')) %>
+
+<%= t('orders.notification.user.see_details') %>
+<h2><%= t('orders.notification.order_name', :order_no => @order.name) %></h2>
+<p>
+  <%= t('orders.total_items') %> <strong><%= @order.total_items %></strong>
+</p>
+<p>
+  <%= t("orders.total_price") %>: <%= @order.total_price %> <%= @currency.sign %>
+</p>
+<hr/>
+<div id="listmenu">
+  <ul>
+    <% @order.order_variants.each do |order_variant| %>
+      <li>
+        <%= order_variant.product_nm %>,
+        <%= order_variant.variant_nm %>: <%= order_variant.quantity %>
+      </li>
+    <% end %>
+  </ul>
+</div>

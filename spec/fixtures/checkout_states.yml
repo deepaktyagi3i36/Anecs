@@ -1,0 +1,46 @@
+# == Schema Information
+#
+# Table name: checkout_states
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+started_checkout_state:
+  name: Checkout started
+  code: started
+  about: Checkout started stage of checkout process
+
+registration_checkout_state:
+  name: Registration
+  code: registration
+  about: registration stage of checkout process
+
+delivery_checkout_state:
+  name: Choose delivery type
+  code: delivery
+  about: delivery stage of checkout process
+
+address_checkout_state:
+  name: Enter shipping address
+  code: address
+  about: address stage of checkout process
+
+payment_checkout_state:
+  name: Choose payment type
+  code: payment
+  about: payment stage of checkout process
+
+confirmation_checkout_state:
+  name: Confirmation
+  code: confirmation
+  about: confirmation stage of checkout process
+
+completed_checkout_state:
+  name: Checkout completed
+  code: completed
+  about: Checkout completed stage of checkout process

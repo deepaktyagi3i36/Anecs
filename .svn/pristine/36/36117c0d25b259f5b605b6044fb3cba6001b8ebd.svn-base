@@ -1,0 +1,46 @@
+<div id="top-header">
+  <div id="breadcrumbs">
+   <span>You are here:</span> {{ render_breadcrumbs }}
+  </div>
+
+  <ul id="nav">
+    <li>
+      {% if current_user_session %}
+          {{ "My majoron" | link_to : "/myaccount/welcome/dashboard"}}
+      {% else %}
+          {{ "Login" | link_to : "/login"}}     
+      {% endif %}
+      <ul>
+         {% if current_user_session %}
+          <li>{{ "Dashboard" | link_to : "/myaccount/welcome/dashboard"}}</li>
+          <li>{{ "Logout" | link_to : "/logout"}}</li>
+        {% else %}
+          <li>{{ "Login" | link_to : "/login"}}</li>
+          <li>{{ "Singup" | link_to : "/signup"}}</li>
+        {% endif %}
+      </ul>
+    </li>
+    <li>{{ "Development" | link_to : "/support"}}
+      <ul>
+        <li>{{ "Bugzilla" | link_to : "/support"}}</li>
+        <li>{{ "Forum" | link_to : "/forum"}}</li>
+        <li>{{ "MediaWiki" | link_to : "/mwiki"}}</li>
+      </ul>
+    </li>
+    <li>{{ "Quick links" | link_to : "/myaccount/welcome/dashboard"}}
+      <ul>
+        <li>{{ "Contact Us" | link_to : "/aboutus/contact_us"}}</li>
+        <li>{{ "Sitemap" | link_to : "/home/sitemap"}}</li>
+        <li>{{ "Terms of Use" | link_to : "/home/terms_of_use"}}</li>
+        <li>{{ "Privacy Policy" | link_to : "/home/privacy_policy"}}</li>
+      </ul>
+    </li>
+    <li>{{ "Languages" | link_to: "/"}}
+       <ul>
+         {% for language in languages %}
+            <li>{{ language.name | link_to_language, language.id }}</li>
+         {% endfor %}
+         </ul>
+    </li>
+  </ul>
+</div>

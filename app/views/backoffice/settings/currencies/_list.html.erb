@@ -1,0 +1,38 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/>
+    <col class="colname"/>
+    <col class="colname"/>
+    <col class="colnumber"/>
+    <col class="coldate"/>
+    <col class="actions"/>
+    <tr>
+      <th> <%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.currency.name"), "currencies.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.currency.code"), "currencies.code" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.currency.enabled"), "currencies.enabled" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.currency.created_at"), "currencies.created_at" %></th>
+      <th> <%= t("activeview.columns.currency.actions") %> </th>
+    </tr>
+    <% @currencies.each do |currency| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', currency.id, false) %></td>
+        <td><%= link_to currency.name, :action => "edit", :id => currency %></td>
+        <td><%= link_to currency.code, :action => "edit", :id => currency %></td>
+        <td><%= link_to currency.enabled, :action => "edit", :id => currency %></td>
+        <td><%= localize(currency.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => currency) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => currency) %>
+          <% if currency.enabled == 1 %>
+            <%=link_to(image_tag("buttons/disable_object.png", {:alt => t('buttons.disable'), :title => "Disable"}), :action => "disable", :id => currency) %>
+          <% else %>
+            <%=link_to(image_tag("buttons/enable_object.png", {:alt => t('buttons.enable'), :title => "Enable"}), :action => "enable", :id => currency) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

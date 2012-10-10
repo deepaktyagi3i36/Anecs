@@ -1,0 +1,37 @@
+<%= form_tag( {}, {:id => form_id}) do %>
+  <table class="list-table">
+    <col class="actions"/><col class="coldata"/><col class="coldata"/><col class="coldata"/><col class="coldata"/>
+    <col class="actions"/>
+    <tr>
+      <th> <%= sortable_field_header t('.name'), "name", form_id %> </th>
+      <th> <%= sortable_field_header t('.state'), "order_states.#{OrderState.localname(:name)}", form_id %> </th>
+      <th> <%= sortable_field_header t('.total_price'), "total_price", form_id %> </th>
+      <th> <%= sortable_field_header t('.address'), "shipping_address", form_id %> </th>
+      <th> <%= sortable_field_header t('.created_at'), "created_at", form_id %></th>
+      <th> <%= t('labels.actions')%></th>
+    </tr>
+    <% orders.each do |order| %>
+      <tr>
+        <td><%= link_to order.name, :action => "show", :id => order %></td>
+        <td><%= link_to order.order_state.t_name, :action => "show", :id => order %></td>
+        <td><%= link_to order.total_price.to_s << @currency.sign, :action => "show", :id => order %></td>
+        <td><%= link_to order.shipping_address, :action => "show", :id => order %></td>
+        <td><%= localize(order.created_at.to_date) %></td>
+        <td>
+          <%= link_to theme_image_tag('/images/buttons/edit.png', :alt => t('buttons.edit'), :title => t("tooltips.edit")),
+                  {:action => :show, :id => order}, :class => 'img-button' %>
+          <% if order.is_cancelling_enabled %>
+          <%= link_to theme_image_tag('/images/buttons/delete.png', :alt => t('buttons.cancel'), :title => t("tooltips.cancel")),
+                  {:action => :cancel, :id => order}, :class => 'img-button' %>
+          <% end %>
+          <%= link_to theme_image_tag('/images/buttons/repeat.png', :alt => t('buttons.repeat'), :title => t("tooltips.repeat")),
+                  {:action => :repeat, :id => order}, :class => 'img-button' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <% paginated ||= false %>
+  <% if paginated %>
+    <%= render :partial => "shared/paginator_without_info", :locals => { :objects => orders } %>
+  <% end %>
+<%end%>

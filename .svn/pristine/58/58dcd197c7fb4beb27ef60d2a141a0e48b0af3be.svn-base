@@ -1,0 +1,3 @@
+<div id="ajax_progress_indicator">
+	<%= image_tag("/images/ajaxindic/circle.gif") %> Loading... 
+</div>

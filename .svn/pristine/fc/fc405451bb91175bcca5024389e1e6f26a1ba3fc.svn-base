@@ -1,0 +1,34 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title') %></title>
+  <meta name="keywords" content="mirwellnessa.ru"/>
+  <meta name="description" content="mirwellnessa.ru"/>
+<% end %>
+
+<div id="vacancy">
+  <h1><%= t('.title') %></h1>
+  <% if !@vacancies.nil? and @vacancies.size > 0 %>
+    <ul>
+      <% @vacancies.each do |vacancy| %>
+        <li>
+          <%= link_to vacancy.title, {:action => "show", :id => vacancy.id} %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <%= t('.no_vacancies') %>
+  <% end %>
+  <%# curregion = 0 %>
+  <%# @vacancies.each do |vacancy| %>
+  <%# if curregion != vacancy.region_id %>
+  <%# if curregion != 0 %>
+  <%# end %>
+  <%# curregion = vacancy.region_id %>
+  <!--h2><%#= t('.region') %>: <%#= vacancy.region.t_name %></h2-->
+  <%# end %>
+  <!--li-->
+  <%#= link_to vacancy.title, {:action => "show", :id => vacancy.id} %>
+  <!--/li-->
+  <%# end %>
+
+</div>
+

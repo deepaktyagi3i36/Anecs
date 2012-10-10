@@ -1,0 +1,12 @@
+<div id="signup">
+  <div class="form form-440">
+    <div class="form-header">
+      <h1><%= t("activeview.messages.user.reset") %></h1>
+    </div>
+    <div class="form-content">
+      <%= render :partial => "shared/flash_message" %>
+      <%= render :partial => "reset_form", :locals => {
+        :action_name => "reset", :button_label => t("buttons.save")} %>
+    </div>
+  </div>
+</div>

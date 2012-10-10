@@ -1,0 +1,9 @@
+<div id="footer">
+    {{ "Site Map" | link_to:  "/home/sitemap" }} &nbsp;|&nbsp;
+    {{ "Contacts Us" | link_to:  "/aboutus/contact_us" }} &nbsp;|&nbsp;
+    {{ "Terms of Use" | link_to:  "/home/terms_of_use" }} &nbsp;|&nbsp;
+    {{ "Privacy Policy" | link_to:  "/home/privacy_policy" }} &nbsp;|&nbsp;
+   <div class="copyright">&copy; Majoron Ltd, 2007. All rights reserved.</div>
+</div>
+
+

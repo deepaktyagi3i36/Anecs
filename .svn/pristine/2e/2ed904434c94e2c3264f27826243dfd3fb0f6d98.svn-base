@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: storehouses
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  about      :string(128)     not null
+#  region_id  :integer(4)      not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+peterburg_storehouse:
+  website: wellness_website
+  name: St.Petersbur storehouse
+  about: Склад Санкт-Петербург
+  region: peterburg_region
+  enabled: 1
+
+moscow_storehouse:
+  website: wellness_website
+  name: Moscow storehouse
+  about: Склад Москва
+  region: moscow_region
+  enabled: 1

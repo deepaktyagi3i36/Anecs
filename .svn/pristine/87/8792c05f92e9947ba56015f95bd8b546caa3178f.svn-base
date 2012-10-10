@@ -1,0 +1,29 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=3 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.website.name"), "websites.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.website.code"), "websites.code" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.website.primary"), "websites.primary" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.website.created_at"), "websites.created_at" %></th>
+      <th> <%= t("activeview.columns.website.actions") %> </th>
+    </tr>
+    <% @websites.each do |website| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', website.id, false) %></td>
+        <td><%= link_to website.name, :action => "edit", :id =>website %></td>
+        <td><%= link_to website.code, :action => "edit", :id =>website %></td>
+        <td><%= link_to website.primary, :action => "edit", :id =>website %></td>
+        <td><%= localize(website.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => website) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => website) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

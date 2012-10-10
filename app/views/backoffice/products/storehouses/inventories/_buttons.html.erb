@@ -1,0 +1,7 @@
+<div class="buttons-panel">
+  <% ctrl = "/backoffice/products/storehouses/inventories" %>
+  <% disabled = (@inventories.size > 0 ? false : true)%>
+  <%=submit_tag t("buttons.create"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/new?#{hash_to_string(params)}';" %>
+  <%=submit_tag t("buttons.delete"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/destroy?#{hash_to_string(params)}';", :disabled => disabled %>
+  <%= render :partial => "templates/paginator_with_info", :locals => { :objects => @inventories } %>
+</div>

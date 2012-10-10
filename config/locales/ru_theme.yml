@@ -1,0 +1,54 @@
+---
+ru:
+  activerecord:
+    models:
+      theme:
+        one: "Тема"
+        few: "Тема"
+        many: "Тема"
+        other: "Тема"
+      theme_filter:
+        one: "Фильтр темы"
+        few: "Фильтр темы"
+        many: "Фильтр темы"
+        other: "Фильтр темы"
+    attributes:
+      theme:
+        name: "Наименование"
+        code: "Код"
+        about: "Описание"
+        enabled: "Активен"
+      theme_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      theme:
+        name: "Подсказка имени на русском"
+        code: "Подсказка кода на русском"
+        about: "Подсказка описания на русском"
+  activeview:
+    columns:
+      theme:
+        name: "Наименование"
+        code: "Код"
+        primary: "Главный"
+        enabled: "Enabled"
+        created_at: "Создание"
+        actions: "Actions"
+    flashes:
+      theme:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+        warnings:
+          inv_update: "Ошибка изменения языка"
+          no_id_found: "Укажите сайт"
+          too_many_rows: "Укажите только один сайт"
+    messages:
+      theme:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

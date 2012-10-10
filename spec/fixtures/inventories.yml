@@ -1,0 +1,25 @@
+# == Schema Information
+#
+# Table name: inventories
+#
+#  id            :integer(4)      not null, primary key
+#  storehouse_id :integer(4)      not null
+#  variant_id    :integer(4)      not null
+#  quantity      :integer(4)      default(0), not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+carbokick_with_chocolate_taste_in_peterburg:
+  storehouse: peterburg_storehouse
+  variant: carbokick_with_chocolate_taste
+  quantity: 10
+
+carbokick_with_chocolate_taste_in_moscow:
+  storehouse: moscow_storehouse
+  variant: carbokick_with_chocolate_taste
+  quantity: 10
+
+

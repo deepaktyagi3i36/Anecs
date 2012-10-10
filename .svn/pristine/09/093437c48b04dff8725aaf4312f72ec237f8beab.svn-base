@@ -1,0 +1,11 @@
+<% content_for :meta_keywords do %>
+  <title>You order</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="order-cart">
+	<h1>Thank you</h1>
+	<p>Ваш заказ принят к оплате</p>
+</div>
+

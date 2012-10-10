@@ -1,0 +1,10 @@
+<div class="button-panel">
+  <% ctrl = "/backoffice/orders/customers" %>
+  <% disabled = (@admin_jobs.size > 0 ? false : true)%>
+  <%=submit_tag t("buttons.create"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/new';" %>
+  <%=submit_tag t("buttons.delete"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/destroy';", :disabled => disabled %>
+  <%=submit_tag t("buttons.start"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/start';", :disabled => disabled %>
+  <%=submit_tag t("buttons.execute"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/execute'", :disabled => disabled; %>
+  <%=submit_tag t("buttons.reset"), :class => "submit-button", :onclick => "document.list.action='#{ctrl}/reset';", :disabled => disabled %>
+  <%= render :partial => "templates/paginator_with_info", :locals => { :objects => @admin_jobs } %>
+</div>

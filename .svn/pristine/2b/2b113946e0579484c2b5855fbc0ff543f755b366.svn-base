@@ -1,0 +1,33 @@
+<%= I18n.t('orders.notification.sales.subject.cancellation', :order_no => @order.name, :site_name => DomainsConfiguration.lookup('server.name')) %>.
+<%= I18n.t('orders.notification.sales.see_details') %>:
+<h2><%= I18n.t('orders.notification.order_name', :order_no => @order.name) %></h2>
+<p>
+  <%= t('orders.total_items') %> <strong><%= @order.total_items %></strong>
+</p>
+<p>
+  <%= t("orders.total_price") %>: <%= @order.total_price %> <%= @currency.sign %>
+</p>
+<hr/>
+<div id="listmenu">
+  <ul>
+    <% @order.order_variants.each do |order_variant| %>
+      <li>
+        <%= order_variant.product_nm %>,
+        <%= order_variant.variant_nm %>: <%= order_variant.quantity %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<hr/>
+<ul>
+  <li><%= t('orders.delivery.title') %>: <%= @order.shipping_type.name %></li>
+  <% if !@order.user_id.nil? %>
+    <li><%= t('orders.registration.user_name') %>:
+      <%= @order.user.login %>
+    </li>
+  <% end %>
+  <li><%= t('orders.address.user_name') %>: <%= @order.user_name %></li>
+  <li><%= t('orders.address.address_info') %>: <%= @order.address.full_name %></li>
+  <li><%= t('orders.payment.title') %>: <%= @order.payment_type.name %></li>
+  <li><%= t('orders.address.notes') %>: <%= @order.notes %></li>
+</ul>

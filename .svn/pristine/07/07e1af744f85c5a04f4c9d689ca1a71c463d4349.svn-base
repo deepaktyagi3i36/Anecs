@@ -1,0 +1,43 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+  <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div class="infoitem-common">
+<!--<h1><%= @product.name%></h1>-->
+      <h2>New request</h2>
+      <p>Thank you for sharing your thoughts about one of our products! Please focus on the product performance and quality. Your review may be posted on MyMuscul a network site that shares reviews with the shopping community.</p>
+      <%= form_for(@request, :url => {:action => action_name, :id => @request.id},
+        :html => {:id => "role_form" }) do |f| %>
+
+        <%= f.error_messages %>
+        <p style="color: green"><%= flash[:notice] %></p>
+        <fieldset>
+          <label for="author">Name</label>
+          <input id="author" type="text" value="Your Name"/>
+          <label for="email">Email</label>
+          <input id="email" type="text" value="Put you e-mail address here">
+          <label for="question">Ask question</label>
+          <textarea id="question"></textarea>
+          <%= f.submit "Create" %>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>

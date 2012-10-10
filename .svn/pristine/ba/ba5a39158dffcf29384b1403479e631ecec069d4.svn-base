@@ -1,0 +1,26 @@
+---
+ru:
+  activerecord:
+    models:
+      email:
+        one: "Почта"
+        few: "Почты"
+        many: "Почты"
+        other: "Почты"
+    attributes:
+      email:
+         email: "Электронная почта"
+    hints:
+      models:
+        email:
+          attributes:
+            email: "введите существующий почтовый ящик"
+  activeview:
+    flashes:
+      email:
+        notices:
+          reset_code_sent: "Код смены пароля послан на %{email}"
+          activation_letter_resend: "Письмо активации повторно послано на почтовый адрес: %{email}"
+        warnings:
+          inv_email: "Почтовый ящик %{email} не зарегистрирован в системе для успешно активированной учетной записи"
+          inv_email_for_resend: "Не активированная учетная запись для почтового адреса %{email} в системе не существует"

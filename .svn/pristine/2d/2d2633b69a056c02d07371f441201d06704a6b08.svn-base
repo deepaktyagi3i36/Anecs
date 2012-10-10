@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      contact_type:
+        one: "Тип контакта"
+        few: "Типы контакта"
+        many: "Типы контакта"
+        other: "Типы контакта"
+      contact_type_filter:
+        one: "Фильтр типы контакта"
+        few: "Фильтр типы контакта"
+        many: "Фильтр типы контакта"
+        other: "Фильтр типы контакта"
+    attributes:
+      contact_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      contact_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        contact_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        contact_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      contact_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      contact_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      contact_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

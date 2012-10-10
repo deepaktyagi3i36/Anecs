@@ -1,0 +1,35 @@
+<% form_for(@pattern, :url => {:action => action_name, :id => @pattern.id},
+	:html => {:id => "pattern_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :pattern_type_id %>
+	  <%= f.collection_select :pattern_type_id, @pattern_types, :id, :name %>
+	  <%= f.error_message_on :pattern_type_id %>
+	</p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :title %>
+	  <%= f.text_field :title %>
+	  <%= f.error_message_on :title %>
+	</p>
+
+	<p>
+	  <%= f.label :body %>
+	  <%= f.text_area :body %>
+	  <%= f.error_message_on :body %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("pattern_name") %>

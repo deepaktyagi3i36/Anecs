@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      country:
+        one: "Страна"
+        few: "Страна"
+        many: "Страна"
+        other: "Страна"
+      country_filter:
+        one: "Фильтр страны"
+        few: "Фильтр страны"
+        many: "Фильтр страны"
+        other: "Фильтр страны"
+    attributes:
+      country:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      country_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        country:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        country:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      country:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      country:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      country:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

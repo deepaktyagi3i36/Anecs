@@ -1,0 +1,15 @@
+<% content_for :meta_keywords do %>
+  <title>Product title</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+
+<% content_for :content_menu do %>
+    <%= render :partial => "list_menu" %>
+<% end %>
+
+<div id="mprogram">
+	<p>Hello!</p>
+</div>
+

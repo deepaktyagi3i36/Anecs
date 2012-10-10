@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      complaint_type:
+        one: "complaint type"
+        few: "complaint types"
+        many: "complaint types"
+        other: "complaint types"
+      complaint_type_filter:
+        one: "complaint types filter"
+        few: "complaint types filters"
+        many: "complaint types filters"
+        other: "complaint types filters"
+    attributes:
+      complaint_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      complaint_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      complaint_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      complaint_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      complaint_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

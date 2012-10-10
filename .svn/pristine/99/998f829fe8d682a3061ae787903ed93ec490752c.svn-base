@@ -1,0 +1,60 @@
+---
+en:
+  activerecord:
+    models:
+      admin job:
+        one: "User"
+        few: "Users"
+        many: "Users"
+        other: "Users"
+    attributes:
+      admin_job:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+    errors:
+      models:
+        admin_job:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+    hints:
+      models:
+        admin_job:
+          attributes:
+            job: "Enter valid class name for job"
+  activeview:
+    columns:
+      admin_job:
+        name: "Name"
+        code: "Code"
+        job: "Job"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      admin_job:
+        notices:
+          created: "Admin job was successfully created."
+          updated: "Admin job was successfully updated."
+          deleted: "Admin job was successfully deleted."
+          started: "Admin job was successfully started."
+          executed: "Admin job was successfully executed."
+          resetted: "Admin job was successfully resetted."
+    messages:
+      admin_job:
+        index: "Admin job list"
+        new: "New admin job"
+        edit: "Edit admin job"
+        success: "Success"
+        failure: "Failure"
+    title:
+      admin_job: "User"
+      new_admin_job: "Register New User"
+      change_password: "Change password"

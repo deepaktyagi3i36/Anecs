@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      privacy_type:
+        one: "privacy type"
+        few: "privacy types"
+        many: "privacy types"
+        other: "privacy types"
+      privacy_type_filter:
+        one: "privacy types filter"
+        few: "privacy types filters"
+        many: "privacy types filters"
+        other: "privacy types filters"
+    attributes:
+      privacy_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      privacy_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      privacy_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      privacy_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      privacy_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

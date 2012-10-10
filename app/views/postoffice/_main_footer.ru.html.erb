@@ -1,0 +1,13 @@
+<div id="footer">
+  <p>
+    Если вы получили это письмо и полагаете что она предназначется не вам, пожалуйста сообщите
+    в службу поддержки: <a href="mailto:<%= @runtime_settings["email_abuse_address"] %>">
+    <%= @runtime_settings["email_abuse_address"] %></a>.
+  </p>
+  <p>
+    Это сообщение было послано так как вы зарегистрированы на
+    <a href=http://<%= @runtime_settings["server_url"] %> ><%= @runtime_settings["server_name"] %></a>.
+    Вы можете изменить настройки нотификации <a href="http://<%= @runtime_settings["server_url"] %>">здесь</a>.
+  </p>
+</div>
+

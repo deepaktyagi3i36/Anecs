@@ -1,0 +1,41 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.myaccount.mainmenu.community") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.dashboard"),
+                       :url => "/myaccount/community/dashboard",
+                       :match_path => "^\/(myaccount(\/)?|myaccount\/community(\/)?|myaccount\/community\/dashboard(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.friends"),
+                       :url => "/myaccount/community/friends",
+                       :match_path => "^\/(myaccount\/community\/friends(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.photos"),
+                       :url => "/myaccount/community/photos",
+                       :match_path => "^\/(myaccount\/community\/photos(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.audios"),
+                       :url => "/myaccount/community/audios",
+                       :match_path => "^\/(myaccount\/community\/audios(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.messages"),
+                       :url => "/myaccount/community/messages",
+                       :match_path => "^\/(myaccount\/community\/messages(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.groups"),
+                       :url => "/myaccount/community/groups",
+                       :match_path => "^\/(myaccount\/community\/groups(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.meetings"),
+                       :url => "/myaccount/community/meetings",
+                       :match_path => "^\/(myaccount\/community\/meetings(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.notes"),
+                       :url => "/myaccount/community/notes",
+                       :match_path => "^\/(myaccount\/community\/notes(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.privacy"),
+                       :url => "/myaccount/community/privacy",
+                       :match_path => "^\/(myaccount\/community\/privacy(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.alerts"),
+                       :url => "/myaccount/community/alerts",
+                       :match_path => "^\/(myaccount\/community\/alerts(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.blacklists"),
+                       :url => "/myaccount/community/blacklists",
+                       :match_path => "^\/(myaccount\/community\/blacklists(.*))$" %>
+  </ul>
+</div>
+

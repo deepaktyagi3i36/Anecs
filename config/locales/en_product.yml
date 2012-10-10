@@ -1,0 +1,143 @@
+---
+en:
+  activerecord:
+    models:
+      product:
+        one: "Product"
+        few: "Products"
+        many: "Products"
+        other: "Products"
+    attributes:
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        infoitem:
+          loop_prohibited: "You cannot create a loop"
+          treepath_exceeded: "Treepath length is exceeded"
+  activeview:
+    columns:
+      infoitem:
+        name: "Name"
+        product_type: "Product type"
+        enabled: "Enabled"
+        created_at: "Created"
+  products:
+    index:
+      supplements: "Supplements"
+      empty_section: "There's no items at this section for the moment. Please see other sections of the site."
+      price_for_package: "price is given for each package size/flavour"
+      out_of_stocks: "Out of stocks"
+    show:
+      description: "Here you can buy and read about %{product} by %{manufacturer}. Variants with prices and instruction. Price for %{product} is very attractive."
+      manufacturer_link: "Link to manufacturer's site"
+      price_keyword: "price"
+      instruction_keyword: "instruction"
+      description_keyword: "description"
+      product_overview: "Overview of the product"
+    templates:
+      supplements:
+        price_for_package: "price is given for each package size/flavour"
+        out_of_stocks: "Out of stocks"
+        out_of_stock_long: "This product is out of stocks"
+    instructions:
+      index:
+        instructions: "Instructions"
+        description: "Here you can read instruction about %{product} by %{manufacturer}."
+        manufacturer_link: "Link to manufacturer's site"
+    bookcases:
+      index:
+        bookcases: "Articles"
+        description: "Here you can find articles related to %{product}."
+        manufacturer_link: "Link to manufacturer's site"
+  activerecord:
+    models:
+      muscle user:
+        one: "User"
+        other: "Users"
+      email:
+        one: "E-Mail"
+        other: "E-Mails"
+      password:
+        one: "Password"
+        other: "Passwords"
+    attributes:
+      user:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+      email:
+        email: "Email"
+      password:
+        old_password: "Current password"
+        password: "New password"
+        password_confirmation: "Password confirmation"
+    errors:
+      models:
+        user:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+        password:
+          not_changed: "Password wasn't changed due to errors"
+          not_reset: "Password wasn't reset due to errors"
+        password_change:
+          header_message:
+            one: "Password change attempt failed because of %{count} error"
+            few: "Password change attempt failed because of %{count} errors"
+            many: "Password change attempt failed because of %{count} errors"
+            other: "Password change attempt failed because of %{count} errors"
+    hints:
+      models:
+        category:
+          attributes:
+            weight: "Enter valid weight"
+  activeview:
+    columns:
+      category:
+        name: "Category"
+        parent: "Parent catetory"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      user:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+      email:
+        notices:
+          reset_code_sent: "Reset code sent to %{email}"
+          activation_letter_resend: "Activation letter sent to %{email}"
+        warnings:
+          inv_email: "The %{email} does not exist in system for successfully activated account"
+          inv_email_for_resend: "The not-activated %{email} does not exist in system"
+      password:
+        notices:
+          password_resetted: "Password reset successfully for %{email}"
+          password_changed: "Password changed successfully for user %{nickname}"
+        warnings:
+          inv_reset_code: "Invalid reset code"
+          change_authorized: "Password change can be done by authorized user only"
+    messages:
+      product:
+        index: "Index"
+        new: "New"
+        edit: "Edit"
+    title:
+      user: "User"
+      new_user: "Register New User"
+      change_password: "Change password"
+  products:
+    templates:
+      popular_products:
+        title: "Popular Products"
+        view_comments: "View comments"
+      thebest_products:
+        title: "The Best Products"

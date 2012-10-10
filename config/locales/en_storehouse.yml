@@ -1,0 +1,57 @@
+---
+en:
+  activerecord:
+    models:
+      storehouse:
+        one: "User"
+        few: "Users"
+        many: "Users"
+        other: "Users"
+    attributes:
+      storehouse:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        storehouse:
+          header_message:
+            one: "User registration failed because of %{count} error"
+            few: "User registration failed because of %{count} errors"
+            many: "User registration failed because of %{count} errors"
+            other: "User registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_storehouse_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        storehouse:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      storehouse:
+        actions: "Actions"
+        login: "Login"
+        storehouse_status: "User status"
+        created_at: "Created"
+    flashes:
+      storehouse:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      storehouse:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+    title:
+      storehouse: "User"
+      new_storehouse: "Register New User"
+      change_password: "Change password"

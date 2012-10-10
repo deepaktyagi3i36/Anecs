@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      invalid_route:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      invalid_route:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        invalid_route:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        invalid_route:
+          attributes:
+            job: "введите имя класса"
+  activeview:
+    columns:
+      invalid_route:
+        priority: "Приоритет"
+        pattern: "Шиблон"
+        enabled: "Активно"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      invalid_route:
+        notices:
+          created: "Ошибка маршрута успешно создано."
+          updated: "Ошибка маршрута успешно изменено."
+          deleted: "Ошибка маршрута успешно удалено."
+    messages:
+      invalid_route:
+        index: "Список Перенаправлений"
+        new: "Создать новое перенаправление"
+        edit: "Редактировать существующую перенаправление"
+    title:
+      invalid_route: "Пользователь"
+      new_invalid_route: "Регистрация нового пользователя"
+      edit_invalid_route: "Edit"

@@ -1,0 +1,3 @@
+<div class="basic-form-header">
+  <%= render :partial => "shared/mandatory_message" %>
+</div>

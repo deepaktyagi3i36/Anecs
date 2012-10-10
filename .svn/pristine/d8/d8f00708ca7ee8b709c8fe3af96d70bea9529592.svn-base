@@ -1,0 +1,11 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('activeview.title.edit_address') %></title>
+<% end %>
+
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

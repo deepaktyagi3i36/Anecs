@@ -1,0 +1,5 @@
+<ul>
+  <% @admin_job.runbatch_reports.each do |report| %>
+    <li><%=h report.message %></li>
+  <% end %>
+</ul>

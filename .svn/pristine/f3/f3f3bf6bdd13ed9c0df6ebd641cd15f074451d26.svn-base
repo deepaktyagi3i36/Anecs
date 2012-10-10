@@ -1,0 +1,64 @@
+---
+ru:
+  activerecord:
+    models:
+      muscle user:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      muscle_user:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        muscle_user:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        category:
+          attributes:
+            weight: "Укажите правильный вес"
+  activeview:
+    columns:
+      category:
+        name: "Категория"
+        parent: "Родитель"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      muscle_user:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      category:
+        index: "Список"
+        new: "Создать"
+        edit: "Изменить"
+    title:
+      muscle_user: "Пользователь"
+      new_muscle_user: "Регистрация нового пользователя"
+      change_password: "Смена пароля"
+  categories:
+    description:
+      one: "Здесь вы можете найти лучшее %{one} в Санкт-Петербурге"
+      two: "Здесь вы можете найти лучшее %{two} в Санкт-Петербурге, отсортированное %{one} "
+      three: "Здесь вы можете купить %{one}, а также найти лучшее %{three} в Санкт-Петербурге %{two} %{one}. %{one} цена вам понравится. "
+    title:
+      buy_prefix: "Купить"
+      buy_goods_prefix: "Купить спортивное питание"
+      price_keyword: "цена"
+      price_prefix: "Выгодная цена на"
+      postfix: " в Санкт-Петербурге"

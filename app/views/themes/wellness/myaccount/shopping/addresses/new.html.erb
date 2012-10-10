@@ -1,0 +1,16 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('activeview.title.new_address') %></title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h1><%= t('activeview.title.new_address') %></h1>
+  </div>
+  <div class="form-content">
+    <%= render :partial => "form", :locals => {:action_name => "create", :button_label => t("buttons.create")} %>
+  </div>
+</div>

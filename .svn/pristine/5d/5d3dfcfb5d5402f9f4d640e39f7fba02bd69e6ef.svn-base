@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: contact_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#  enabled    :integer(4)      default(1), not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+order_contact_type:
+  name: order
+  code: order
+  about: order
+  enabled: 1
+
+others_contact_type:
+  name: other
+  code: other
+  about: other
+  enabled: 1

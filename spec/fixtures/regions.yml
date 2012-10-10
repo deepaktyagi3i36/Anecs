@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: regions
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  title      :string(128)     not null
+#  phone      :string(128)     not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+nofk_region:
+  website: wellness_website
+  name: nofk
+  code: nofk
+  about: nofk
+  title: nofk
+  phone: +78129094765
+  enabled: 1
+
+
+peterburg_region:
+  website: wellness_website
+  name: St.Peterburg and region
+  code: peterburg
+  about: St.Petersburg
+  title: St.Peterburg
+  phone: +78129094767
+  enabled: 1
+
+
+moscow_region:
+  website: wellness_website
+  name: Moscow and region
+  code: Moscow
+  about: Moscow
+  title: Moscow
+  phone: +78129094768
+  enabled: 1
+

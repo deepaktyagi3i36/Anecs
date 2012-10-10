@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      buy_offer:
+        one: "buy_offer"
+        few: "buy_offers"
+        many: "buy_offers"
+        other: "buy_offers"
+    attributes:
+      buy_offer:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        buy_offer:
+          header_message:
+            one: "buy_offer registration failed because of %{count} error"
+            few: "buy_offer registration failed because of %{count} errors"
+            many: "buy_offer registration failed because of %{count} errors"
+            other: "buy_offer registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_buy_offer_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        buy_offer:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      buy_offer:
+        actions: "Actions"
+        login: "Login"
+        buy_offer_status: "buy_offer status"
+        created_at: "Created"
+    flashes:
+      buy_offer:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      buy_offer:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New buy_offer %{login} has been activated"
+    title:
+      buy_offer: "buy_offer"
+      new_buy_offer: "Register New buy_offer"
+      change_password: "Change password"

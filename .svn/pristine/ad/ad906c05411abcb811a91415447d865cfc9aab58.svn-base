@@ -1,0 +1,26 @@
+-#<div id="delivery" style="width: 90%; border: 1px solid grey; margin-left: 5% ">
+-#  <div id="checkout_step_header" style="background-image: url('/images/decorators/main_menu.png')"><%= t('orders.delivery.title') %></div>
+-#  <div id="checkout_fieldset">
+-#    <fieldset id="<%= @order.checkout_stage %>">
+-#      <% @shipping_types.each do |shipping_type|%>
+-#        <%= f.radio_button("shipping_type_id", shipping_type.id, :checked => shipping_type.id == @shipping_type.id) %>
+-#        <%= shipping_type.name%>
+-#      <% end %>
+-#
+-#      <%=submit_tag t("buttons.back"), :name => "event[previous]",  :class => "blue-button" %>
+-#      <%=submit_tag t("buttons.proceed"), :name => "event[next]",  :class => "blue-button" %>
+-#    </fieldset>
+-#  </div>
+-#</div>
+#delivery
+  #checkout_step_header=t('orders.delivery.title')
+  #checkout_fieldset
+    %fieldset{:id => @order.checkout_stage}
+      - @shipping_types.each do |shipping_type|
+        =f.radio_button("shipping_type_id", shipping_type.id, :checked => shipping_type.id == @shipping_type.id)
+        =shipping_type.name
+        %br
+      %br
+      %br
+      =submit_tag t("buttons.back"), :name => "event[previous]",  :class => "blue-button"
+      =submit_tag t("buttons.proceed"), :name => "event[next]",  :class => "blue-button"

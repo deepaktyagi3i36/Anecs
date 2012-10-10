@@ -1,0 +1,30 @@
+<%= form_for :vacancy_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "vacancies_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :region_id %>
+        <%= f.collection_select :region_id, @regions_filter, :id, :name %>
+        <%= f.error_message_on :region_id %>
+      </li>
+      <li>
+        <%= f.label :namel %>
+        <%= f.text_field :namel %>
+        <%= f.error_message_on :namel %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("vacancy_filter_region_id") %>

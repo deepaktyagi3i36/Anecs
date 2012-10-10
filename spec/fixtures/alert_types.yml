@@ -1,0 +1,44 @@
+# == Schema Information
+#
+# Table name: alert_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+invitation_to_someones_alert_type:
+  name: Оповещать, когда Вам предлагают стать друзьями
+  code: invitation_to_someones
+  about: invitation_to_someones
+
+user_private_messages_alert_type:
+  name: Оповещать о новых личных сообщениях
+  code: user_private_messages
+  about: user_private_messages
+
+user_walls_messages_alert_type:
+  name: Оповещать о новых сообщениях на стене
+  code: user_walls_messages
+  about: user_walls_messages
+
+comment_of_the_photos_alert_type:
+  name: Оповещать, когда комментируют Ваши фотографии
+  code: comment_of_the_photos
+  about: comment_of_the_photos
+
+invitation_to_groups_alert_type:
+  name: Оповещать, когда Вас приглашают в группы
+  code: invitation_to_groups
+  about: invitation_to_groups

@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: order_variants
+#
+#  id          :integer(4)      not null, primary key
+#  order_id    :integer(4)      not null
+#  variant_id  :integer(4)      not null
+#  product_nm  :string(128)     not null
+#  variant_nm  :string(128)     not null
+#  quantity    :integer(4)      not null
+#  price       :decimal(10, 2)  default(0.0), not null
+#  currency_id :integer(4)      not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+quentin_order_variant1:
+  order: quentin_order
+  variant: carbokick_with_banana_taste
+  product_nm: banana_taste_carbokick
+  variant_nm: 897 g. vanilla
+  quantity: 1
+  price: 1004
+  currency: rouble_currency
+
+quentin_order_variant2:
+  order: quentin_order
+  variant: carbokick_with_chocolate_taste
+  product_nm: pipkino box
+  variant_nm: 2240 g. wild strawberry
+  quantity: 1
+  price: 2430
+  currency: rouble_currency

@@ -1,0 +1,37 @@
+# == Schema Information
+#
+# Table name: promoitems
+#
+#  id           :integer(4)      not null, primary key
+#  product_id   :integer(4)      not null
+#  promotion_id :integer(4)      not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+carbokick_feburary23_promoitem:
+  product: products_supplements_carbokick
+  promotion: feburary23_action
+
+carbokick_newitem_promoitem:
+  product: products_supplements_carbokick
+  promotion: newitem_product
+
+pipkino_feburary23_promoitem:
+  product: centers_fitnesses_pipkino
+  promotion: feburary23_action
+
+pipkino_newitem_promoitem:
+  product: centers_fitnesses_pipkino
+  promotion: newitem_product
+
+svyal_feburary23_promoitem:
+  product: experts_trainers_svyal
+  promotion: feburary23_action
+
+svyal_newitem_promoitem:
+  product: experts_trainers_svyal
+  promotion: newitem_product
+

@@ -1,0 +1,26 @@
+---
+en:
+  search:
+    results:
+      title: "Search Results"
+      price_from: "starting at"
+    orderby_options:
+      by_relevance: "Relevance"
+      by_price_asc: "Price ascending"
+      by_price_desc: "Price descending"
+    top_categories:
+      products: "Products"
+      articles: "Articles"
+      centers: "Centers"
+      experts: "Experts"
+      total: "All items"
+      search_results:
+        products: "Search results: Products"
+        articles: "Search results: Articles"
+        centers: "Search results: Centers"
+        experts: "Search results: Experts"
+        total: "Search results: All items"
+    message:
+      query_empty: "Empty query"
+      illegal_characters: "Allowed symbols are letters, digits, spaces and '%', '.', ',' symbols"
+      query_invalid: "Invalid query"

@@ -1,0 +1,12 @@
+<% content_for :meta_keywords do %>
+  <title>Vacancies</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="vacancy">
+  <h1><%= @vacancy.title %></h1>
+  <div class="tiny_mce">
+    <%= @vacancy.body %>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      complaint_status:
+        one: "Статус жалобы"
+        few: "Статусы жалоб"
+        many: "Статусы жалоб"
+        other: "Статусы жалоб"
+      complaint_status_filter:
+        one: "Фильтр статусы жалоб"
+        few: "Фильтр статусы жалоб"
+        many: "Фильтр статусы жалоб"
+        other: "Фильтр статусы жалоб"
+    attributes:
+      complaint_status:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      complaint_status_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        complaint_status:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        complaint_status:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      complaint_status:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      complaint_status:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      complaint_status:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

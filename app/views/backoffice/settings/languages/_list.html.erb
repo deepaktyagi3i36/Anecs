@@ -1,0 +1,38 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table cellspacing="0" cellpadding="0" class="list-table">
+    <col class="checkbox"/>
+    <col class="colname"/>
+    <col class="colname"/>
+    <col class="colnumber"/>
+    <col class="coldate"/>
+    <col class="actions"/>
+    <tr>
+      <th> <%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.language.name"), "laguages.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.language.code"), "laguages.code" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.language.enabled"), "laguages.enabled" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.language.created_at"), "laguages.created_at" %></th>
+      <th> <%= t("activeview.columns.language.actions") %> </th>
+    </tr>
+    <% @languages.each do |language| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', language.id, false) %></td>
+        <td><%= link_to language.name, :action => "edit", :id =>language %></td>
+        <td><%= link_to language.code, :action => "edit", :id =>language %></td>
+        <td><%= link_to language.enabled, :action => "edit", :id =>language %></td>
+        <td><%= localize(language.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => language) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => language) %>
+          <% if language.enabled == 1 %>
+            <%=link_to(image_tag("buttons/disable_object.png", {:alt => t('buttons.disable'), :title => "Disable"}), :action => "disable", :id => language) %>
+          <% else %>
+            <%=link_to(image_tag("buttons/enable_object.png", {:alt => t('buttons.enable'), :title => "Enable"}), :action => "enable", :id => language) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

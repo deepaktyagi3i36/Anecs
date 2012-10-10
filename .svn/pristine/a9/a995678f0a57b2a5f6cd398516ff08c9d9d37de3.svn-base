@@ -1,0 +1,65 @@
+---
+ru:
+  activerecord:
+    models:
+      delayed job:
+        one: "Отложенное задание"
+        few: "Отложенные задания"
+        many: "Отложенные задания"
+        other: "Отложенные задания"
+    attributes:
+      delayed_job:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        delayed_job:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        delayed_job:
+          attributes:
+            job: "введите имя класса"
+  activeview:
+    columns:
+      delayed_job:
+        priority: "Приоритет"
+        attempts: "Попытки"
+        handler: "Обработчик"
+        last_error: "Последняя ошибка"
+        run_at: "Запущено"
+        locked_at: "Заблокировано"
+        failed_at: "Завершилось ошибкой"
+        locked_by: "Кем заблокировано"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      delayed_job:
+        notices:
+          created: "Задача успешно создано."
+          updated: "Задача успешно изменено."
+          deleted: "Задача успешно удалено."
+          started: "Задача успешно запущена."
+          executed: "Задача успешно выполнена."
+          resetted: "Задача успешно очищена."
+    messages:
+      delayed_job:
+        index: "Список задач"
+        new: "Создать новую задачу"
+        edit: "Редактировать существующую задачу"
+        success: "Задание выполненно успешно"
+        failure: "Задание выполненно не успешно"
+    title:
+      delayed_job: "Пользователь"
+      new_delayed_job: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

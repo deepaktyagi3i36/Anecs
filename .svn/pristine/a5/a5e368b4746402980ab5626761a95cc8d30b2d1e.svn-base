@@ -1,0 +1,26 @@
+# Config file for proxy settings
+# Supported authenticates are: empty and NTLM
+
+development:
+  authenticate: NTLM
+  host:
+  port:
+  domain: example.com
+  username: artem.rufanov
+  password: secret
+
+production:
+  authenticate:
+  host:
+  port:
+  domain:
+  username:
+  password:
+
+test:
+  authenticate:
+  host:
+  port:
+  domain:
+  username:
+  password:

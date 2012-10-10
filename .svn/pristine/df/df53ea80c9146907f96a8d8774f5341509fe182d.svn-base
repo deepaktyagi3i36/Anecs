@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.connection.category"), "categories.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.connection.product"), "products.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.connection.created_at"), "created_at" %></th>
+      <th> <%= t("activeview.columns.connection.actions") %> </th>
+    </tr>
+    <% @connections.each do |connection| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', connection.id, false) %></td>
+        <td><%= link_to connection.category.name, :action => "edit", :id =>connection %></td>
+        <td><%= link_to connection.product.name, :action => "edit", :id =>connection %></td>
+        <td><%= localize(connection.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => connection) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => connection) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

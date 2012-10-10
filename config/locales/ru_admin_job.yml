@@ -1,0 +1,60 @@
+---
+ru:
+  activerecord:
+    models:
+      admin job:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      admin_job:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        admin_job:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        admin_job:
+          attributes:
+            job: "введите имя класса"
+  activeview:
+    columns:
+      admin_job:
+        name: "Имя"
+        code: "Код"
+        job: "Задание"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      admin_job:
+        notices:
+          created: "Задача успешно создано."
+          updated: "Задача успешно изменено."
+          deleted: "Задача успешно удалено."
+          started: "Задача успешно запущена."
+          executed: "Задача успешно выполнена."
+          resetted: "Задача успешно очищена."
+    messages:
+      admin_job:
+        index: "Список задач"
+        new: "Создать новую задачу"
+        edit: "Редактировать существующую задачу"
+        success: "Задание выполненно успешно"
+        failure: "Задание выполненно не успешно"
+    title:
+      admin_job: "Пользователь"
+      new_admin_job: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

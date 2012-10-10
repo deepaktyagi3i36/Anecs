@@ -1,0 +1,11 @@
+<% if controller.controller_path.downcase.include?("backoffice") %>
+    <%= render :partial => "templates/backoffice_main_menu" %>
+<% elsif controller.controller_path.downcase.include?("framework") %>
+    <%= render :partial => "templates/framework_main_menu" %>
+<% elsif controller.controller_path.downcase.include?("myaccount") %>
+    <%= render :partial => "templates/myaccount_main_menu" %>
+<% elsif controller.controller_path.downcase.include?("home") %>
+    <%= render :partial => "templates/home_main_menu" %>
+<% else %>
+    <%= render :partial => "templates/products_main_menu" %>
+<% end %>

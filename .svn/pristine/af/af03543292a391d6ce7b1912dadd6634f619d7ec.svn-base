@@ -1,0 +1,67 @@
+---
+en:
+  activerecord:
+    models:
+      photo:
+        one: "photo"
+        few: "photos"
+        many: "photos"
+        other: "photos"
+    attributes:
+      photo:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        photo:
+          header_message:
+            one: "photo registration failed because of %{count} error"
+            few: "photo registration failed because of %{count} errors"
+            many: "photo registration failed because of %{count} errors"
+            other: "photo registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_photo_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        photo:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      photo:
+        product: "Product"
+        primary: "Primary"
+        photo_file_name: "Photo file name"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      photo:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      photo:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New photo %{login} has been activated"
+    title:
+      photo: "photo"
+      new_photo: "Register New photo"
+      change_password: "Change password"

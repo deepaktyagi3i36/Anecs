@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      order_state:
+        one: "order state"
+        few: "order states"
+        many: "order states"
+        other: "order states"
+      order_state_filter:
+        one: "order states filter"
+        few: "order states filters"
+        many: "order states filters"
+        other: "order states filters"
+    attributes:
+      order_state:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      order_state_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      order_state:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      order_state:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      order_state:
+        index: "List"
+        new: "New"
+        edit: "Edit"

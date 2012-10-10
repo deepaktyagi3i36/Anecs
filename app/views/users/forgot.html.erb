@@ -1,0 +1,17 @@
+<% content_for :meta_keywords do %>
+  <title>Welcome page title</title>
+  <meta name="keywords" content="majoron.com" />
+  <meta name="description" content="majoron.com" />
+<% end %>
+
+
+<div id="forgot" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>Register new user</h1>
+  </div>
+  <div class="window-content">
+    <%= render :partial => "templates/form_flash" %>
+    <%= render :partial => "forgot_form", :locals => {
+      :action_name => "forgot", :button_label => t("buttons.submit") } %>
+  </div>
+</div>

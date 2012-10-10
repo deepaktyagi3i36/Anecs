@@ -1,0 +1,16 @@
+<div id="tabular-menu">
+  <ul>
+    <%= tabular_menu_item :label => t("navigation.backoffice.tabularmenu.products"),
+                       :url => "/backoffice/products/products",
+                       :match_path => "^\/(backoffice\/products(\/)?|backoffice\/products\/products(.*))$"%>
+    <%= tabular_menu_item :label => t("navigation.backoffice.tabularmenu.storehouses"),
+                       :url => "/backoffice/products/storehouses",
+                       :match_path => "^\/(backoffice\/products\/storehouses(.*))$"%>
+    <%= tabular_menu_item :label => t("navigation.backoffice.tabularmenu.feedbacks"),
+                       :url => "/backoffice/products/feedbacks",
+                       :match_path => "^\/(backoffice\/products\/feedbacks(.*))$"%>
+    <%= tabular_menu_item :label => t("navigation.backoffice.tabularmenu.properties"),
+                       :url => "/backoffice/products/properties",
+                       :match_path => "^\/(backoffice\/products\/properties(.*))$"%>
+  </ul>
+</div>

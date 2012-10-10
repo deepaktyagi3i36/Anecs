@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      vacancy:
+        one: "vacancy"
+        few: "vacancys"
+        many: "vacancys"
+        other: "vacancys"
+    attributes:
+      vacancy:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        vacancy:
+          header_message:
+            one: "vacancy registration failed because of %{count} error"
+            few: "vacancy registration failed because of %{count} errors"
+            many: "vacancy registration failed because of %{count} errors"
+            other: "vacancy registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_vacancy_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        vacancy:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      vacancy:
+        actions: "Actions"
+        login: "Login"
+        vacancy_status: "vacancy status"
+        created_at: "Created"
+    flashes:
+      vacancy:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      vacancy:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New vacancy %{login} has been activated"
+    title:
+      vacancy: "vacancy"
+      new_vacancy: "Register New vacancy"
+      change_password: "Change password"

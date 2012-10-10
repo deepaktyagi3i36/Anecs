@@ -1,0 +1,58 @@
+# Run job every day at 1:59: 59 1 * * *
+# Run job every two minute: */2 * * * *
+clear_sesssion_job:
+  cron: "59 1 * * *"
+  block: Delayed::Job.enqueue ClearSessionsJob.new
+  description: "This job clear sessions table"
+
+# Run job every day at 4:59: 59 4 * * *
+# Run job every two minute: */2 * * * *
+clear_job_reports_job:
+  cron: "59 4 * * *"
+  block: Delayed::Job.enqueue ClearJobReportsJob.new
+  description: "This job clear job report table"
+
+# Run job every day at 6:59: 59 6 * * *
+clear_orders_job:
+  cron: "59 6 * * *"
+  block: Delayed::Job.enqueue ClearOrdersJob.new
+  description: "This job clear orders table"
+
+# There isn't remsport integration now
+# Run job every day at 7:59: 59 7 * * *
+#sync_remsport_job:
+#  cron: "59 7 * * *"
+#  block: Delayed::Job.enqueue SyncRemsportJob.new
+#  description: "This job clear orders table"
+
+# Run job every day at 8:59: 59 8 * * *
+clear_all_exports_job:
+  cron: "59 8 * * *"
+  block: Delayed::Job.enqueue ClearAllExportsJob.new
+  description: "This job clear all exports from public"
+
+
+# Run job every day at 9:59: 59 9 * * *
+export_sitemap_job:
+  cron: "59 9 * * *"
+  block: Delayed::Job.enqueue ExportSitemapJob.new
+  description: "This job export sitemap for each website"
+
+# Run job every day at 10:59: 59 10 * * *
+export_amazon_market_job:
+  cron: "59 10 * * *"
+  block: Delayed::Job.enqueue ExportAmazonMarketJob.new
+  description: "This job export data for amazon market for each website"
+
+
+# Run job every day at 11:59: 59 11 * * *
+export_google_market_job:
+  cron: "59 11 * * *"
+  block: Delayed::Job.enqueue ExportGoogleMarketJob.new
+  description: "This job export data for google market for each website"
+
+# Run job every day at 12:59: 59 12 * * *
+export_yandex_market_job:
+  cron: "59 12 * * *"
+  block: Delayed::Job.enqueue ExportYandexMarketJob.new
+  description: "This job export data for yandex market for each website"

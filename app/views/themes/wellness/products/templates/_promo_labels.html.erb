@@ -1,0 +1,18 @@
+<div class="promoitems">
+  <% new_count, action_count, sale_count = [0, 0, 0] %>
+  <% product.promoitems.each do |promoitem| %>
+    <%# There's no sense to put the same image several times, but this could be changed if there'll be different images %>
+    <% if promoitem.promotion.promotion_type.code == "newitem" and new_count == 0 %>
+      <% new_count = 1 %>
+      <div class="newitem-<%=size%>-sign"></div>
+    <% end %>
+    <% if promoitem.promotion.promotion_type.code == "action" and action_count == 0 %>
+      <% action_count = 1 %>
+      <div class="action-<%=size%>-sign"></div>
+    <% end %>
+    <% if promoitem.promotion.promotion_type.code == "saleoff" and sale_count == 0 %>
+      <% sale_count = 1 %>
+      <div class="saleoff-<%=size%>-sign"></div>
+    <% end %>
+  <% end %>
+</div>

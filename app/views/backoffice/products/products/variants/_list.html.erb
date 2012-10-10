@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.variant.name"), "variants.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.variant.product"), "products.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.variant.created_at"), "variants.created_at" %></th>
+      <th> <%= t("activeview.columns.variant.actions") %> </th>
+    </tr>
+    <% @variants.each do |variant| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', variant.id, false) %></td>
+        <td><%= link_to variant.name, :action => "edit", :id =>variant %></td>
+        <td><%= link_to variant.product.name, :action => "edit", :id =>variant %></td>
+        <td><%= localize(variant.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => variant) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => variant) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

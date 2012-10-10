@@ -1,0 +1,15 @@
+<div id="main-menu-box">
+  <% categories = parents_self_and_childs(@category) %>
+  <% if categories.size() >= 2 %>
+    <ul id="main-menu">
+      <% categories[0].children.each do |category| %>
+        <% currents = self_and_childs(category) %>
+        <% current = currents[currents.size()-1] %>
+        <%= main_menu_item :label => category.name,
+                           :url => "/products?category=#{current.to_param}&layout=products2",
+                           :active => (categories[1] == category) %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+

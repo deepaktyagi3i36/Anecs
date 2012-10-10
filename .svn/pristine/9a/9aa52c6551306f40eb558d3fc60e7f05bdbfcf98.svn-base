@@ -1,0 +1,5 @@
+<div class="digg_pagination">
+  <div class="pagination-block">
+    <%= will_paginate objects, :container => false, :params => params%>
+  </div>
+</div>

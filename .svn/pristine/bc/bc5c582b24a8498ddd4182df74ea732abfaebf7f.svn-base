@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <%= yield :meta_keywords %>
+  <%= render :partial => "shared/metatags_info" %>
+</head>
+<body>
+<div id="container">
+  <div id="wrapper">
+    <div id="header">
+      <%= render :partial => "shared/top_line" %>
+      <%= render :partial => "shared/logo_search" %>
+      <%= render :partial => "shared/main_menu" %>
+      <%= render :partial => "myaccount/templates/sub_menu" %>
+    </div>
+    <%= render :partial => "myaccount/templates/breadcrumbs" %>
+    <div id="content" class="myaccount">
+      <div id="navigation">
+        <%= yield :content_menu %>
+      </div>
+      <div id="main-content">
+        <%= render :partial => "myaccount/templates/flash_message" %>
+        <%= yield %>
+      </div>
+    </div>
+    <%= render :partial => "shared/main_footer" %>
+  </div>
+</div>
+<%= render :partial => "shared/analytics" %>
+</body>
+</html>

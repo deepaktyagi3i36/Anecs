@@ -1,0 +1,31 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.products") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.categories"),
+                       :url => "/backoffice/products/products/categories",
+                       :match_path => "^\/(backoffice\/products(\/)?|backoffice\/products\/products(\/)?|backoffice\/products\/products\/categories(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.products"),
+                       :url => "/backoffice/products/products/products",
+                       :match_path => "^\/backoffice\/products\/products\/products(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.connections"),
+                       :url => "/backoffice/products/products/connections",
+                       :match_path => "^\/backoffice\/products\/products\/connections(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.photos"),
+                       :url => "/backoffice/products/products/photos",
+                       :match_path => "^\/backoffice\/products\/products\/photos(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.agents"),
+                       :url => "/backoffice/products/products/agents",
+                       :match_path => "^\/backoffice\/products\/products\/agents(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.bookcases"),
+                       :url => "/backoffice/products/products/bookcases",
+                       :match_path => "^\/backoffice\/products\/products\/bookcases(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.instructions"),
+                       :url => "/backoffice/products/products/instructions",
+                       :match_path => "^\/backoffice\/products\/products\/instructions(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.variants"),
+                       :url => "/backoffice/products/products/variants",
+                       :match_path => "^\/backoffice\/products\/products\/variants(.*)$" %>
+  </ul>
+</div>

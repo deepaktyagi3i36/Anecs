@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      contract_type:
+        one: "Тип контракта"
+        few: "Типы контракта"
+        many: "Типы контракта"
+        other: "Типы контракта"
+      contract_type_filter:
+        one: "Фильтр типы контракта"
+        few: "Фильтр типы контракта"
+        many: "Фильтр типы контракта"
+        other: "Фильтр типы контракта"
+    attributes:
+      contract_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      contract_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        contract_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        contract_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      contract_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      contract_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      contract_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

@@ -1,0 +1,26 @@
+<%= form_for(@agent, :url => {:action => action_name, :id => @agent.id},
+	:html => {:id => "agent_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+    <%= f.label :product_id %>
+    <%= f.collection_select :product_id, @products, :id, :name %>
+    <%= f.error_message_on :product_id %>
+
+	</p>
+
+  <p>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, @users, :id, :login %>
+    <%= f.error_message_on :user_id %>
+
+  </p>
+
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("agent_name") %>

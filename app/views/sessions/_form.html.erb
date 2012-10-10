@@ -1,0 +1,33 @@
+<%= form_for @user_session, :url => {:action => "create"},
+   :html => {:id => "session", :class => "html-form" } do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages :header_message => t("activerecord.errors.models.credential.header_message", :count => @user_session.errors.count) %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.mandatory_label :login %>
+        <%= f.text_field :login %>
+        <%= f.error_message_on :login %>
+      </li>
+      <li>
+        <%= f.mandatory_label :password %>
+        <%= f.password_field :password %>
+        <%= f.hint_message_on :password %>
+        <%= f.error_message_on :password %>
+      </li>
+      <li>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+        <%= f.error_message_on :remember_me %>
+      </li>
+    </ul>
+    <%= f.submit button_label  %>
+  </fieldset>
+  <p>
+    <%= link_to t("labels.signup"), {:controller=>"/signup"} %>
+    <%= link_to t("labels.restore"), {:controller=>"/forgot"} %>
+    <%= link_to t("labels.resend"), {:controller=>"/resend"} %>
+  </p>
+<% end -%>
+<%= set_focus_on_load("session_login") %>
+

@@ -1,0 +1,14 @@
+<% content_for :meta_keywords do %>
+  <title><%= @manpage.path_title %></title>
+  <meta name="keywords" content="<%= @manpage.path_keywords %>"/>
+  <meta name="description" content="<%= @manpage.annotation %>"/>
+<% end %>
+
+<div id="manpage" class="wide-form">
+  <h1><%= @manpage.name %></h1>
+  <div class="in-wide-form tiny_mce">
+    <%= raw @manpage.content%>
+  </div>
+</div>
+
+

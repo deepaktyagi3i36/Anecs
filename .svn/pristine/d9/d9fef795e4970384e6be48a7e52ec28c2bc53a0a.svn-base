@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Сервер обслуживается</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="allow-search" content="yes" />
+  <meta http-equiv="content-language" content="en" />
+  <meta http-equiv="revisit-after" content="5 days" />
+  <meta http-equiv="rating" content="General" />
+  <link rel="stylesheet" href="/anecs/public/stylesheets/messages.css" type="text/css" />
+</head>
+<body>
+  <div id="header">
+    <span class="lang">
+      <a href="/anecs/public/maintenance.en.html" rel="lang">
+        <img src="/anecs/public/images/flags/gb.png" alt="Английский флаг" title="Английский флаг" />
+      </a>
+      <a href="/anecs/public/maintenance.ru.html" rel="lang">
+        <img src="/anecs/public/images/flags/ru.png"  alt="Русский флаг" title="Русский флаг" />
+      </a>
+    </span>
+  </div>
+  <div class="form">
+    <div class="form-header">
+      <h1>Сервер обслуживается</h1>
+    </div>
+    <div class="form-content">
+      <p>
+        <img src="/anecs/public/images/flashicons/information_middle.png" alt="Иконка информации" title="Иконка информации" />
+        Сервер обслуживается, возвращайтесь через 2 часа.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

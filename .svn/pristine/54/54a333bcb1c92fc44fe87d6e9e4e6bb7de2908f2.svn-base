@@ -1,0 +1,88 @@
+<% content_for :meta_keywords do %>
+  <title><%= t(".title") %></title>
+<% end %>
+
+<div id="search-results">
+  <h1><%= t(".title") %></h1>
+  <%= render :partial => "top_categories" %>
+  <% unless (@type.nil? and @total < 1) or (@type == 'products' and @products_total < 1) or (@type == 'articles' and @articles_total < 1) %>
+    <%= render :partial => "sorting_panel", :locals => {:objects => @searches} %>
+  <% end %>
+  <ul>
+    <% @searches.each do |item| %>
+      <% item_class = ActionController::RecordIdentifier.singular_class_name(item) %>
+      <% if @type.nil? %>
+        <h2><%= item.class.human_name %></h2>
+      <% end %>
+      <li class="selected-item selected-<%= item_class %>">
+        <% if item.respond_to? :images %>
+          <div class="infoitem-thumbnail">
+            <% item.images.each do |photo| %>
+              <% if photo.primary > 0 %>
+                <%= link_to theme_image_tag(photo.picture.url(:small)),
+                        item.url %>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="description">
+          <%= link_to item.t_name, item.url, {:class => "name", :title => item.name} %>
+
+          <% if item.kind_of?(Center) %>
+            <p><%= item.sketch %></p>
+
+            <div class="infoitem-services">
+              <dl>
+                <dt>Центры</dt>
+                <dd>
+                  <a href="#" title="Центр йоги">Центр йоги</a>,
+                  <a href="#" title="Планета Фитнесс">Планета Фитнесс</a>
+                </dd>
+                <dt>Занятия</dt>
+                <dd>
+                  <a href="#" title="Тренажерный зал">Тренажерный зал</a>,
+                  <a href="#" title="Персональный тренинг">Персональный тренинг</a>,
+                  <a href="#" title="Детский клуб">Детский клуб</a>
+                </dd>
+              </dl>
+            </div>
+          <% elsif item.kind_of?(Expert) %>
+            <div class="price-block">
+              от <span class="red">33000</span> руб
+            </div>
+            <p><%= item.sketch %></p>
+
+            <div class="infoitem-services">
+              <dl>
+                <dt>Центры</dt>
+                <dd>
+                  <a href="#" title="Центр йоги">Центр йоги</a>,
+                  <a href="#" title="Планета Фитнесс">Планета Фитнесс</a>
+                </dd>
+                <dt>Занятия</dt>
+                <dd>
+                  <a href="#" title="Тренажерный зал">Тренажерный зал</a>,
+                  <a href="#" title="Персональный тренинг">Персональный тренинг</a>,
+                  <a href="#" title="Детский клуб">Детский клуб</a>
+                </dd>
+              </dl>
+            </div>
+          <% elsif item.kind_of?(Product) %>
+            <div class="price-block">
+              <%= t('.price_from') %> <span class="red"><%= item.min_price %></span> <%= item.currency.sign %>
+            </div>
+            <p><%= item.sketch %></p>
+
+
+          <% elsif item.kind_of?(Article) %>
+            <p><%= item.annotation %></p>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <% unless (@type.nil? and @total < 1) or (@type == 'products' and @products_total < 1) or (@type == 'articles' and @articles_total < 1) %>
+    <%= render :partial => "sorting_panel", :locals => {:objects => @searches} %>
+    <%= render :partial => "top_categories" %>
+  <% end %>
+</div>

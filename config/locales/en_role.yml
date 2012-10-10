@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      role:
+        one: "role"
+        few: "rolees"
+        many: "rolees"
+        other: "rolees"
+      role_filter:
+        one: "rolees filter"
+        few: "rolees filters"
+        many: "rolees filters"
+        other: "rolees filters"
+    attributes:
+      role:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      role_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      role:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      role:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      role:
+        index: "List"
+        new: "New"
+        edit: "Edit"

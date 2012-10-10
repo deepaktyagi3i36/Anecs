@@ -1,0 +1,40 @@
+---
+ru:
+  activerecord:
+    models:
+      callmeback:
+        one: "обратный вызов"
+        few: "обратный вызов"
+        many: "обратный вызов"
+        other: "обратный вызов"
+    attributes:
+      callmeback:
+        muscle_user_id: "Пользователь"
+        contact_type_id: "Причина обращения"
+        contact_status_id: "Состояние"
+        phone: "Телефон"
+        title: "Обращение (ФИО)"
+        body: "Сообщение"
+  activeview:
+    columns:
+      callmeback:
+        muscle_user: "Пользователь"
+        contact_type: "Причина обращения"
+        contact_status: "Состояние"
+        phone: "Телефон"
+        title: "Обращение (ФИО)"
+        body: "Сообщение"
+    flashes:
+      callmeback:
+        notices:
+          created: "Спасибо за обращение. Мы свяжемся с Вами."
+    messages:
+      callmeback:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+    callmebacks:
+      new:
+        title: "Обратный вызов"
+      header:
+        info: "Пожалуйста укажите причину Вашего обращения и способ связи с Вами."

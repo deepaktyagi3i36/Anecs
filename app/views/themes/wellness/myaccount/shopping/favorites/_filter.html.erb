@@ -1,0 +1,31 @@
+<div class="list-filter">
+  <%= form_for :order_filter, :url => {:action => "index"},
+	:html => {:id => "orders_filter" } do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+    <p>
+      <%= f.label :namel %>
+      <%= f.text_field :namel %>
+      <%= f.error_message_on :namel %>
+    </p>
+
+    <p>
+      <%= f.label :created_at_since %>
+      <%= f.date_time_picker :created_at_since %><br />
+      <%= f.error_message_on :created_at_since %>
+    </p>
+
+    <p>
+      <%= f.label :created_at_till %>
+      <%= f.date_time_picker :created_at_till %><br />
+      <%= f.error_message_on :create_at_after %>
+    </p>
+
+    <p>
+      <%= f.submit t("buttons.filtrate") %>
+    </p>
+  <% end %>
+  <%= set_focus_on_load("order_filter_name") %>
+</div>

@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      comment_status:
+        one: "Статус комментария"
+        few: "Статусы комментариев"
+        many: "Статусы комментариев"
+        other: "Статусы комментариев"
+      comment_status_filter:
+        one: "Фильтр статусов кментариев"
+        few: "Фильтр статусов кментариев"
+        many: "Фильтр статусов кментариев"
+        other: "Фильтр статусов кментариев"
+    attributes:
+      comment_status:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      comment_status_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        comment_status:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        comment_status:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      comment_status:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      comment_status:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      comment_status:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

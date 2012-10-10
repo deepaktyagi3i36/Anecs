@@ -1,0 +1,20 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('activeview.title.address') %></title>
+<% end %>
+
+<h1><%= t('activeview.title.address') %></h1>
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<!--%= render :partial => "filter" %-->
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h2><%= t('activeview.title.shipping_addresses') %></h2>
+  </div>
+  <%= render :partial => 'list', :locals => {:addresses => @shipping_addresses} %>
+  <% if @billing_address_type.enabled == 1 %>
+    <h2><%= t('activeview.title.billing_addresses') %></h2>
+    <%= render :partial => 'list', :locals => {:addresses => @billing_addresses} %>
+  <% end %>
+</div>

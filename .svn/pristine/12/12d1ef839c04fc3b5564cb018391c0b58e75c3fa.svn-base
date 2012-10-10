@@ -1,0 +1,15 @@
+<div id="sub-menu">
+  <ul>
+    <% @root_categories.each do |menu_item| %>
+        <li>
+          <% if menu_item.id == @root_category.id %>
+            <span>
+              <%= link_to menu_item.name, menu_item.url %>
+            </span>
+          <% else %>
+            <%= link_to menu_item.name, menu_item.url %>
+          <% end %>
+        </li>
+    <% end %>
+  </ul>
+</div>

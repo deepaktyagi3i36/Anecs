@@ -1,0 +1,21 @@
+<%= form_tag( {},{:id=>"list"}) do %>
+  <table class="list-table">
+   <col class="coldata"/>
+    <tr>
+      <th> <%=  t('.product_name') %> </th>
+      <th> <%=  t('.variant_name') %> </th>
+      <th> <%=  t('.price') %> </th>
+      <th> <%=  t('.quantity') %> </th>
+    </tr>
+    <% @order_variants.each do |variant| %>
+      <tr>
+        <td><%= variant.product_nm %></td>
+        <td><%= variant.variant_nm %></td>
+        <td><%= variant.price.to_s << ' ' << variant.currency.sign %></td>
+        <td><%= variant.quantity %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= render :partial => "shared/paginator_without_info", :locals => { :objects => @order_variants } %>
+<%end%>

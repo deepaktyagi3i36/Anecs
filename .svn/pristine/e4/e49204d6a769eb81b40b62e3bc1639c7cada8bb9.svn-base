@@ -1,0 +1,33 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Title", "title" %> </th>
+      <th> <%= sortable_field_header "Status", "announcement_status_id" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.polling.created_at"), "created_at" %></th>
+    </tr>
+    <% @announcements.each do |announcement| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', announcement.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => announcement} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => announcement} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => announcement} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to announcement.title, :action => "edit", :id =>announcement %></td>
+        <td><%= link_to announcement.announcement_status.name, :action => "edit", :id =>announcement %></td>
+        <td><%= localize(announcement.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

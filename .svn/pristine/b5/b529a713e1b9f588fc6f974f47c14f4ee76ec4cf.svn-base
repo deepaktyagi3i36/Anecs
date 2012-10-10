@@ -1,0 +1,51 @@
+---
+en:
+  activerecord:
+    models:
+      language:
+        one: "language"
+        few: "languages"
+        many: "languages"
+        other: "languages"
+      language_filter:
+        one: "language filter"
+        other: "language filters"
+    attributes:
+      language:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        locale: "Locale"
+        enabled: "Enabled"
+      language_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      language:
+        name: "name hint"
+        code: "code hint"
+        about: "about hint"
+        locale: "locale hint"
+  activeview:
+    columns:
+      language:
+        name: "Name"
+        code: "Code"
+        enabled: "Enabled"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      language:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+        warnings:
+          inv_update: "Unable to update language"
+    messages:
+      language:
+        index: "List"
+        new: "New"
+        edit: "Edit"

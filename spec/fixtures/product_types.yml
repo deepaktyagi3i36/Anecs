@@ -1,0 +1,40 @@
+# == Schema Information
+#
+# Table name: product_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+supplement_products_type:
+  website: wellness_website
+  name: supplement
+  code: supplement
+  about: supplement
+
+nofk_products_type:
+  website: wellness_website
+  name: nofk
+  code: nofk
+  about: nofk
+
+fitness_centers_type:
+  website: wellness_website
+  name: fitness
+  code: fitness
+  about: fitness
+
+trainer_experts_type:
+  website: wellness_website
+  name: trainer
+  code: trainer
+  about: trainer
+
+

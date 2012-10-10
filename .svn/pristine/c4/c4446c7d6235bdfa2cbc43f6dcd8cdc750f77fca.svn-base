@@ -1,0 +1,12 @@
+<div id="html-error" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>Ваши изменения отвергнуты(422 html ошибка)</h1>
+  </div>
+  <div class="window-content">
+    <p>
+      <%= image_tag("flashicons/error_middle.png", {:alt => "Error icon", :title => "Error icon"})%>
+      <span>422 ошибка</span>
+      Вы пытаетесь изменить нечто, на что у Вас нет прав.
+    </p>
+  </div>
+</div>

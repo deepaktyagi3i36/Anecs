@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      promoitem:
+        one: "promoitem"
+        few: "promoitems"
+        many: "promoitems"
+        other: "promoitems"
+    attributes:
+      promoitem:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        promoitem:
+          header_message:
+            one: "promoitem registration failed because of %{count} error"
+            few: "promoitem registration failed because of %{count} errors"
+            many: "promoitem registration failed because of %{count} errors"
+            other: "promoitem registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_promoitem_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        promoitem:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      promoitem:
+        actions: "Actions"
+        login: "Login"
+        promoitem_status: "promoitem status"
+        created_at: "Created"
+    flashes:
+      promoitem:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      promoitem:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New promoitem %{login} has been activated"
+    title:
+      promoitem: "promoitem"
+      new_promoitem: "Register New promoitem"
+      change_password: "Change password"

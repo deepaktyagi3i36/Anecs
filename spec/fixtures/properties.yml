@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: properties
+#
+#  id          :integer(4)      not null, primary key
+#  name        :string(128)     not null
+#  code        :string(128)     not null
+#  about       :string(128)     not null
+#  datatype_id :integer(4)      not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#  website_id  :integer(4)      default(0), not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+quantity_property:
+  name: quantity
+  code: quantity
+  about: quantity
+  datatype: integer_datatype
+
+size_property:
+  name: size
+  code: size
+  about: size
+  datatype: integer_datatype
+
+weight_property:
+  name: weight
+  code: weight
+  about: weight
+  datatype: integer_datatype
+
+taste_property:
+  name: taste
+  code: taste
+  about: taste
+  datatype: integer_datatype

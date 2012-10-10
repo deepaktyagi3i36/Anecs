@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: article_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+information_article_type:
+  name: information
+  code: information
+  about: information
+
+advertisement_article_type:
+  name: advertisement
+  code: advertisement
+  about: advertisement
+

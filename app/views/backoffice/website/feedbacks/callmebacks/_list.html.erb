@@ -1,0 +1,35 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Title", "title" %> </th>
+      <th> <%= sortable_field_header "Complaint type", "callmeback_types.name" %></th>
+      <th> <%= sortable_field_header "Complaint status", "callmeback_statuses.name" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.callmeback.created_at"), "created_at" %></th>
+    </tr>
+    <% @callmebacks.each do |callmeback| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', callmeback.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => callmeback} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => callmeback} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => callmeback} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to callmeback.title, :action => "edit", :id =>callmeback %></td>
+        <td><%= link_to callmeback.contact_type.name, :action => "edit", :id =>callmeback %></td>
+        <td><%= link_to callmeback.contact_status.name, :action => "edit", :id =>callmeback %></td>
+        <td><%= localize(callmeback.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

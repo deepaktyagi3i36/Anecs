@@ -1,0 +1,29 @@
+<% content_for :meta_keywords do %>
+  <title><%= @article.path_title %></title>
+  <meta name="keywords" content="<%= @article.path_keywords %>"/>
+  <meta name="description" content="<%= @article.annotation %>"/>
+<% end %>
+
+<% content_for :advertisement do %>
+    <%= render :partial => "products/templates/need_advice" %>
+    <%= render :partial => "products/templates/popular_products" %>
+    <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="article" class="wide-form">
+  <h1><%= @article.name %></h1>
+  <div class="in-wide-form tiny_mce">
+    <%= raw @article.content%>
+    <% if @article.bookcases.size() > 0 %>
+      <div id="infoitem-related">
+        <p>
+          <%= t("labels.products")%>:
+          <% @article.bookcases.each do |bookcase| %>
+            <%= link_to bookcase.product.name,{:controller => "/products",
+              :action => "show", :product_id => bookcase.product.id} %>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

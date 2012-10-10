@@ -1,0 +1,26 @@
+<h1><%= I18n.t('contact.notification.subject', :type => @contact.class.human_name,
+        :reason => @contact.contact_type.t_name, :site_name => DomainsConfiguration.lookup('server.name')) %></h1>
+<% fields_for @contact do |f| %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :contact_type_id %>:
+        <strong><%= @contact.contact_type.t_name %></strong>
+      </li>
+      <li>
+        <%= f.label :title %>:
+        <strong><%= @contact.title %></strong>
+      </li>
+      <% if @contact.kind_of?(Callmeback) %>
+        <li>
+          <%= f.label :phone %>:
+          <strong><%= @contact.phone %></strong>
+        </li>
+      <% end %>
+      <li>
+        <%= f.label :body %>:
+        <strong><%= @contact.body %></strong>
+      </li>
+    </ul>
+  </fieldset>
+<% end %>

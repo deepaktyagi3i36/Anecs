@@ -1,0 +1,37 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header t("manpages.columns.name"), "name" %> </th>
+      <th> <%= sortable_field_header t("manpages.columns.code"), "code" %> </th>
+      <th> <%= sortable_field_header t("manpages.columns.parent"), "parents_manpages.name" %> </th>
+      <th> <%= sortable_field_header t("manpages.columns.enabled"), "enabled" %> </th>
+      <th> <%= sortable_field_header t("manpages.columns.created"), "created_at" %> </th>
+    </tr>
+    <% @manpages.each do |manpage| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', manpage.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => manpage} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => manpage} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => manpage} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to manpage.name, :action => "edit", :id =>manpage %></td>
+        <td><%= link_to manpage.code, :action => "edit", :id =>manpage %></td>
+        <td><%= manpage.parent.name if !manpage.parent.nil?%></td>
+        <td><%= link_to manpage.enabled, :action => "edit", :id =>manpage %></td>
+        <td><%= localize(manpage.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

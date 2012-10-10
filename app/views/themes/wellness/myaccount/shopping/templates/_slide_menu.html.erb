@@ -1,0 +1,25 @@
+<div id="slide-menu">
+  <ul>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.dashboard"), :url => "/myaccount/shopping/dashboard" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.orders"), :url => "/myaccount/shopping/orders" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.favorites"), :url => "/myaccount/shopping/favorites" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.addresses"), :url => "/myaccount/shopping/addresses" %>
+    <ul>
+      <div>
+        <%= t("navigation.myaccount.slidemenu.shopping.personalization") %>
+      </div>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.favorites"), :url => "/myaccount/shopping/favorites" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.comments"), :url => "/myaccount/shopping/comments" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.whishlists"), :url => "/myaccount/shopping/whishlists" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.tags"), :url => "/myaccount/shopping/tags" %>
+    </ul>
+    <ul>
+      <div>
+        <%= t("navigation.myaccount.slidemenu.shopping.settings") %>
+      </div>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.addresses"), :url => "/myaccount/shopping/addresses" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.alerts"), :url => "/myaccount/shopping/alerts" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.payments"), :url => "/myaccount/shopping/payments" %>
+    </ul>
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+    <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<%= render :partial => "products/templates/product_menu" %>
+<div id="infoitem">
+</div>

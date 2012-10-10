@@ -1,0 +1,35 @@
+<div class="form-content">
+  <table class="list-table">
+    <col class="wide"/>
+    <col class="coldata"/>
+    <col class="coldata"/>
+    <col class="buttons"/>
+    <tr>
+      <th> <%= sortable_field_header t('activeview.columns.address.full_name'), 'full_name' %> </th>
+      <th> <%= sortable_field_header t('activeview.columns.address.name'), 'name' %> </th>
+      <th><%= t('activeview.columns.address.default') %> </th>
+      <th> <%= t('activeview.columns.address.actions') %></th>
+    </tr>
+    <% addresses.each do |address| %>
+      <tr>
+        <td><%= link_to address.full_name, :action => :edit, :id =>address %></td>
+        <td><%= link_to address.name, :action => :edit, :id =>address %></td>
+        <td>
+          <% if address.default == 1 %>
+            <%= image_tag '/images/decorators/blue_tick.png', :alt => t('activeview.columns.address.default') %>
+          <% else %>
+            <%= link_to t('buttons.default'), {:action => :make_default, :id => address}, :class => 'button blue-button' %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to image_tag('/images/buttons/edit.png', :alt => t('buttons.edit'), :title => t("tooltips.edit")),
+                  {:action => :edit, :id => address}, :class => 'img-button' %>
+          <%= link_to image_tag('/images/buttons/delete.png', :alt => t('buttons.delete'), :title => t("tooltips.delete")),
+                  {:action => :destroy, :id => address}, :class => 'img-button' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "/templates/paginator_without_info", :locals => {:objects => addresses} %>
+  <%= link_to t('buttons.create'), {:action => :new}, :class => 'button blue-button' %>
+</div>

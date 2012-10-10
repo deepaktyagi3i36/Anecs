@@ -1,0 +1,13 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.design") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.themes"),
+                       :url => "/backoffice/website/design/themes",
+                       :match_path => "^\/(backoffice\/website\/design(\/)?|backoffice\/website\/design\/themes(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.savepoints"),
+                       :url => "/backoffice/website/design/savepoints",
+                       :match_path => "^\/backoffice\/website\/design\/savepoints(.*)$" %>
+  </ul>
+</div>

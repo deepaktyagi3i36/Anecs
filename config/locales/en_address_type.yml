@@ -1,0 +1,45 @@
+---
+en:
+  activerecord:
+    models:
+      address_type:
+        one: "user status"
+        few: "user statuses"
+        many: "user statuses"
+        other: "user statuses"
+      address_type_filter:
+        one: "user statuses filter"
+        few: "user statuses filters"
+        many: "user statuses filters"
+        other: "user statuses filters"
+    attributes:
+      address_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        enabled: "Enabled"
+      address_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      address_type:
+        name: "Name"
+        code: "Code"
+        enabled: "Enabled"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      address_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      address_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

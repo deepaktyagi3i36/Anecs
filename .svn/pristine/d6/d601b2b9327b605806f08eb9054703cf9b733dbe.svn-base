@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      article_type:
+        one: "article type"
+        few: "article types"
+        many: "article types"
+        other: "article types"
+      article_type_filter:
+        one: "article types filter"
+        few: "article types filters"
+        many: "article types filters"
+        other: "article types filters"
+    attributes:
+      article_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      article_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      article_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      article_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      article_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

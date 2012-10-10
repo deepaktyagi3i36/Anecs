@@ -1,0 +1,53 @@
+---
+ru:
+  activerecord:
+    models:
+      product_type:
+        one: "Предвставление"
+        few: "Предвставления"
+        many: "Предвставления"
+        other: "Предвставления"
+    attributes:
+      product_type:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        product_type:
+          header_message:
+            one: "Создание представления не удалась из-за %{count} ошибки"
+            few: "Создание представления не удалась из-за %{count} ошибок"
+            many: "Создание представления не удалась из-за %{count} ошибок"
+            other: "Создание представления не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        product_type:
+          attributes:
+            job: "введите имя класса"
+  activeview:
+    columns:
+      product_type:
+        name: "Наименование"
+        code: "Код"
+        about: "Описание"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      product_type:
+        notices:
+          created: "Представление успешно создано."
+          updated: "Представление успешно изменено."
+          deleted: "Представление успешно удалено."
+    messages:
+      product_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+    title:
+      product_type: "Пользователь"

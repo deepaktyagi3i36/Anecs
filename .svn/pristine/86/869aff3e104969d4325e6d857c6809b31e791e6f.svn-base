@@ -1,0 +1,56 @@
+# == Schema Information
+#
+# Table name: connections
+#
+#  id          :integer(4)      not null, primary key
+#  category_id :integer(4)      not null
+#  product_id  :integer(4)      not null
+#  bubble      :integer(4)      default(1), not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+DEFAULTS: &DEFAULTS
+  bubble: 1
+
+products_carbokick_in_ababolic_category:
+  category: products_supplements_bycategory_anabolic_category
+  product: products_supplements_carbokick
+  <<: *DEFAULTS
+
+products_dreamtan_in_ababolic_category:
+  category: products_supplements_bycategory_anabolic_category
+  product: products_supplements_dreamtan
+  <<: *DEFAULTS
+
+products_carbokick_in_multipower_category:
+  category: manufacturer_multipower_category
+  product: products_supplements_carbokick
+  <<: *DEFAULTS
+
+products_dreamtan_in_multipower_category:
+  category: manufacturer_multipower_category
+  product: products_supplements_dreamtan
+  <<: *DEFAULTS
+
+centers_pipkino_in_spb_category:
+  category: centers_fitnesses_by_city_spb_category
+  product: centers_fitnesses_pipkino
+  <<: *DEFAULTS
+
+centers_pupkino_in_spb_category:
+  category: centers_fitnesses_by_city_spb_category
+  product: centers_fitnesses_pupkino
+  <<: *DEFAULTS
+
+experts_arufanov_in_spb_category:
+  category: experts_trainers_by_city_spb_category
+  product: experts_trainers_arufanov
+  <<: *DEFAULTS
+
+experts_svyal_in_spb_category:
+  category: experts_trainers_by_city_spb_category
+  product: experts_trainers_svyal
+  <<: *DEFAULTS

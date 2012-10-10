@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: themes
+#
+#  id         :integer(4)      not null, primary key
+#  website_id :integer(4)      not null
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  primary    :integer(4)      default(0), not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+anecs_theme:
+  website_id: anecs_website.id
+  name: anecs
+  code: anecs
+  about: anecs
+  primary: 1
+  enabled: 1

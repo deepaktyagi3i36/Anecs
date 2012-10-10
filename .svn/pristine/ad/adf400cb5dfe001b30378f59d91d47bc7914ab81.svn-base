@@ -1,0 +1,17 @@
+<div id="infoitem-menu">
+  <ul>
+    <% root_url = '/product/' + @product.trans_url(@product.root_category.t_name) %>
+    <% if @product.has_specific_view?("overview")%>
+      <%= product_menu_item :label => t("navigation.catalog.productmenu.overview"), :url => "", :match_path => root_url %>
+    <% end %>
+    <% if @product.has_specific_view?("comments")%>
+      <%= product_menu_item :label => t("navigation.catalog.productmenu.comments"), :url => "/comments", :match_path => "/product/comments" %>
+    <% end %>
+    <% if @product.has_specific_view?("articles")%>
+      <%= product_menu_item :label => t("navigation.catalog.productmenu.articles"), :url => "/articles", :match_path => "/product/articles" %>
+    <% end %>
+    <% if @product.has_specific_view?("requests")%>
+      <%= product_menu_item :label => t("navigation.catalog.productmenu.requests"), :url => "/requests", :match_path => "/product/requests" %>
+    <% end %>
+  </ul>
+</div>

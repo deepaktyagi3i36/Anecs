@@ -1,0 +1,7 @@
+<% if controller.controller_path.downcase.include?("backoffice") %>
+    <%= render :partial => "templates/backoffice_tabular_menu" %>
+<% elsif controller.controller_path.downcase.include?("framework") %>
+    <%= render :partial => "templates/framework_tabular_menu" %>
+<% else %>
+    <% raise "not implemented" %>
+<% end %>

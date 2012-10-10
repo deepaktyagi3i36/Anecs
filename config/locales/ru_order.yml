@@ -1,0 +1,214 @@
+---
+ru:
+  activerecord:
+    models:
+      order:
+        one: "Заказ"
+        few: "Заказ"
+        many: "Заказ"
+        other: "Заказ"
+      tracking order:
+        one: "Статус заказа"
+        few: "Статус заказа"
+        many: "Статус заказа"
+        other: "Статус заказа"
+    attributes:
+      order:
+        name: "Заказ №"
+        about: "Примечания к заказу:"
+        order_state_id: "Состояние обработки заказа"
+        user_id: "Получатель заказа"
+        shipping_type_id: "Тип доставки"
+        payment_type_id: "Тип платежа"
+        address_id: "Адрес доставки"
+        checkout_state_id: "Состояние оформления заказа"
+        email: "Адрес эл. почты получателя"
+        user_name: "Фамилия Имя Отчество"
+        notes: "Примечания (удобное время доставки, уточнение адреса)"
+        created_at: "Дата создания"
+        updated_at: "Дата изменения"
+      tracking_order:
+        email: "Почтовый адрес"
+        invoice: "Номер заказа"
+      tracking_user_order:
+        login: "Имя пользователя"
+        password: "Пароль пользователя"
+    errors:
+      models:
+        order:
+          deletion_prohibited: "Нельзя удалять полностью оформленный и незакрытый заказ"
+          variants_missing: "Отсутствуют следующие товары: %{variants}"
+          empty_cart: "В вашей корзине отсутствуют товары"
+          attributes:
+            email:
+              blank: "должен быть указан для неавторизованного пользователя "
+            user_name:
+              blank: "должен быть указан"
+            address_id:
+              blank: "должен быть указан"
+            shipping_type_id:
+              blank: "должен быть указан"
+            payment_type_id:
+              blank: "должен быть указан"
+    hints:
+      models:
+        tracking_order:
+          attributes:
+            email: "(на который посылали заказ)"
+            invoice: "(номер заказа при оформлении)"
+            captcha_text: "(текст картинки)"
+        tracking_user_order:
+          attributes:
+            login: "(имя пользователя)"
+            password: "(регистрозависимый)"
+  activeview:
+    columns:
+      order:
+        name: "Номер"
+        total_price: "Цена"
+        total_items: "Всего"
+        state: "Состояние"
+        user_name: "Пользователь"
+        about: "Описание"
+        address: "Адрес"
+        notes: "Примечания"
+        created_at: "Создано"
+        actions: "Действие"
+    flashes:
+      order:
+        notices:
+          created: "Заказ успешно создан"
+          updated: "Заказ успешно обновлен"
+          cancelled: "Заказ успешно отменен"
+          deleted: "Заказ успешно удален"
+        errors:
+          not_created: "Заказ не создан из-за ошибок"
+          not_repeated: "Не удалось повторить заказ"
+          not_updated: "Заказ не обновлен из-за ошибок"
+          not_cancelled: "Заказ не отменен из-за ошибок"
+          not_deleted: "Заказ не удален из-за ошибок"
+    messages:
+      order:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+        variants: "Варианты заказа"
+  orders:
+    title: "Ваш заказ"
+    name: "Заказ №"
+    total_items: "Всего продуктов"
+    total_price: "Итого"
+    address:
+      title: "Реквизиты"
+      contact_info: "Контактная информация"
+      user_name: "Получатель"
+      notes: "Примечания к доставке"
+      phone: "Домашний телефон"
+      extra_phone: "Мобильный телефон"
+      address_info: "Адрес"
+      street_address1: "Улица, номер дома"
+      street_address2: "Квартира"
+      city: "Город"
+      country: "Страна"
+      default: "(основной)"
+    completed:
+      thanks: "Спасибо за заказ!"
+      processing_start: "Ваш заказ №%{order_no} поступил в обработку"
+      title: "Оформление заказа завершено."
+    confirmation:
+      title: "Подтверждение заказа"
+      details: "Подробная информация"
+      question: "Завершить формирование заказа?"
+      email: "Письмо с подтверждением будет выслано на адрес"
+    delivery:
+      title: "Тип доставки"
+    details: "Содержимое заказа"
+    payment:
+      title: "Вид оплаты"
+    registration:
+      choose_order_type: "Выберите удобный для Вас способ заказа"
+      order_by_phone: "Заказать по телефону"
+      order_as_guest: "Заказать без регистрации (нет возможности отслеживать свой заказ, просматривать историю)"
+      order_as_user: "Заказать как зарегистрированный пользователь (отслеживание заказа, повтор заказа, история, избранные товары)"
+      title: "Выбор способа заказа"
+      guest: "Гость"
+      email: "Email"
+      login: "Войти как зарегистрированный пользователь"
+      user_name: "Имя пользователя"
+      password: "Пароль"
+      not_registered_yet: "Еще не зарегистрированы?"
+      signup: "Зарегистрироваться"
+    notification:
+      user:
+        subject:
+          confirmation: "Ваш заказ №%{order_no} на %{site_name} успешно зарегистрирован"
+          cancellation: "Ваш заказ №%{order_no} на %{site_name} отменен"
+        see_details: "Ниже вы можете видеть содержимое вашего заказа"
+        salutation: "Уважаемый %{user_name}"
+        message:
+          confirmation: "Уведомляем Вас, что Ваш заказ №%{order_no} на %{site_name} был успешно зарегистрирован. Мы приступили к обработке Вашего заказа."
+          cancellation: "Уведомляем Вас, что Ваш заказ №%{order_no} на %{site_name} был отменен."
+      sales:
+        subject:
+          confirmation: "На %{site_name} зарегистрирован заказ №%{order_no}"
+          cancellation: "Заказ №%{order_no} на %{site_name} был отменен"
+        see_details: "Ниже вы можете видеть содержимое этого заказа"
+      stockman:
+        subject:
+          out_of_stocks: "%{variant} заканчивается на складе после заказа на сайте %{site_name}"
+      order_name: "Заказ №%{order_no}"
+  myaccount:
+    shopping:
+      dashboard:
+        index:
+          title: "Главная"
+          store_section: "Магазин"
+          last_order: "Номер последнего заказа"
+          order_date: "Дата"
+          payment_type: "Тип платежа"
+          shipping_type: "Тип доставки"
+          shipping_address: "Адрес доставки"
+          billing_address: "Платежный адрес"
+          orders_section: "Заказы"
+          cart: "Корзина"
+          active_orders: "Активные заказы (в обработке)"
+          waiting_orders: "Заказы в состоянии ожидания"
+          archived_orders: "Архив заказов"
+          personal_section: "Персональное"
+          favorites: "Избранное"
+          settings_section: "Настройки"
+          addresses: "Адреса"
+      orders:
+        index:
+          title: "Заказы"
+          active_orders: "Активные заказы"
+          archived_orders: "Заказы в архиве"
+          waiting_orders: "Заказы в состоянии ожидания"
+          no_active_orders: "У вас нет активных заказов"
+          no_waiting_orders: "У вас нет заказов в состоянии ожидания"
+          no_archived_orders: "У вас нет выполненных заказов"
+        list:
+          name: "№ Заказа"
+          total_price: "Итого"
+          address: "Адрес получателя"
+          state: "Состояние"
+          created_at: "Создан"
+        show:
+          title: "Заказ №%{order_no}"
+          items: "Состав заказа"
+          total_price: "Итого"
+          address: "Адрес получателя"
+          state: "Состояние"
+          payment_type: "Тип платежа"
+          shipping_type: "Тип доставки"
+          notes: "Примечания к доставке"
+          edit_shipping_details: "Изменить детали доставки"
+        edit:
+          title: "Заказ №%{order_no}"
+          edit_shipping_details: "Изменить детали доставки"
+        variants:
+          list:
+            product_name: "Продукт"
+            variant_name: "Разновидность"
+            price: "Цена"
+            quantity: "Количество"

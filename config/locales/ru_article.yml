@@ -1,0 +1,36 @@
+---
+ru:
+  activerecord:
+    models:
+      article:
+        one: "Статья"
+        few: "Статья"
+        many: "Статья"
+        other: "Статья"
+    attributes:
+      name: "Order #"
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        article:
+          loop_prohibited: "Нельзя создать цикл"
+          treepath_exceeded: "Длина пути превысила максимальный размер"
+  activeview:
+    columns:
+      article:
+        actions: "Действия"
+        login: "Имя пользователя"
+        article_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      article:
+        notices:
+          created: "Статья успешно создана."
+          updated: "Статья успешно обновлена."
+          deleted: "Статья успешно удалена."
+    messages:
+      article:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

@@ -1,0 +1,47 @@
+---
+en:
+  activerecord:
+    models:
+      promotion:
+        one: "variant"
+        few: "variants"
+        many: "variants"
+        other: "variants"
+      language_filter:
+        one: "variant filter"
+        few: "variant filters"
+        many: "variant filters"
+        other: "variant filters"
+    attributes:
+      promotion:
+        name: "Name"
+        name_ru: "Name ru"
+        product_id: "Infoitem"
+        price: "Price"
+        enabled: "Enabled"
+      promotion_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_till: "Created since"
+        created_at_till: "Created till"
+    hints:
+      promotion:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      promotion:
+        name: "Name"
+        infoitem: "Infoitem"
+        created_at: "Created"
+    flashes:
+      promotion:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+    messages:
+      promotion:
+        index: "List"
+        new: "New"
+        edit: "Edit"

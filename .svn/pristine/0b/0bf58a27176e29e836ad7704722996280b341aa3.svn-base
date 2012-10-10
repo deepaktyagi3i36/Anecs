@@ -1,0 +1,69 @@
+# == Schema Information
+#
+# Table name: roles
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+administrator_role:
+  name: administrator
+  code: administrator
+  about: administrator
+
+manager_role:
+  name: manager
+  code: manager
+  about: manager
+
+financier_role:
+  name: financier
+  code: financier
+  about: financier
+
+moderator_role:
+  name: moderator
+  code: moderator
+  about: moderator
+
+stockman_role:
+  name: stockman
+  code: stockman
+  about: stockman
+
+messanger_role:
+  name: messanger
+  code: messanger
+  about: messanger
+
+salesman_role:
+  name: salesman
+  code: salesman
+  about: salesman
+
+hrmanager_role:
+  name: hrmanager
+  code: hrmanager
+  about: hrmanager
+
+supporter_role:
+  name: supporter
+  code: supporter
+  about: supporter
+
+expert_role:
+  name: expert
+  code: expert
+  about: expert
+
+attorney_role:
+  name: attorney
+  code: attorney
+  about: attorney
+

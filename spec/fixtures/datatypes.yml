@@ -1,0 +1,42 @@
+# == Schema Information
+#
+# Table name: datatypes
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+integer_datatype:
+  name: Целые числа
+  code: integer
+  about: Целые числа
+
+unsigned_datatype:
+  name: Целые положительные числа
+  code: unsigned
+  about: Целые положительные числа
+
+float_datatype:
+  name: Дробные числа
+  code: float
+  about: Дробные числа
+
+ufloat_datatype:
+  name: Дробные положительные числа
+  code: ufloat
+  about: Дробные положительные числа
+
+string_datatype:
+  name: Строка
+  code: string
+  about: Строка
+
+datetime_datatype:
+  name: Дата и время
+  code: datetime
+  about: Дата и время

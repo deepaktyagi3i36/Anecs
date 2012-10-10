@@ -1,0 +1,13 @@
+<div id="main-search">
+  <!-- Google CSE Search Box Begins -->
+  <form action="http://majoron.com/home/search_results" id="cse-search-box">
+    <fieldset>
+      <input type="hidden" name="cx" value="014675724349212320602:p3gav1ini9s" />
+      <input type="hidden" name="cof" value="FORID:9" />
+      <input type="text" name="q" class="search-input"/>
+      <input type="submit" name="sa" value="Search" class="search-button" />
+    </fieldset>
+  </form>
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+  <!-- Google CSE Search Box Ends -->
+</div>

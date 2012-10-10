@@ -1,0 +1,62 @@
+---
+ru:
+  activerecord:
+    models:
+      address:
+        one: "адрес"
+        few: "адрес"
+        many: "адрес"
+        other: "адрес"
+    attributes:
+      address:
+        name: "Псевдоним адреса"
+        full_name: "Адрес"
+        country_id: "Страна"
+        city: "Город"
+        street_address1: "Адрес (улица, номер дома)"
+        street_address2: "Адрес (номер квартиры, офиса)"
+        zip: "Почтовый код"
+        phone: "Телефон для связи"
+        extra_phone: "Дополнительный телефон"
+        address_type_id: "Тип адреса"
+        defaults:
+          name: "Мой основной адрес"
+    errors:
+      models:
+        address:
+          address_in_not_closed_order_couldnt_be_deleted: "Нельзя удалять адрес, который указан в незавершенном заказе №%{order_no}"
+  activeview:
+    columns:
+      address:
+        actions: "Действия"
+        default: "Основной"
+        name: "Псевдоним"
+        full_name: "Адрес"
+        country: "Страна"
+        city: "Город"
+        street_address1: "Адрес (улица, номер дома)"
+        street_address2: "Адрес (номер квартиры, офиса)"
+        zip: "Почтовый код"
+        phone: "Телефон для связи"
+        extra_phone: "Дополнительный телефон"
+        address_type: "Тип адреса"
+    flashes:
+       address:
+        notices:
+          created: "Адрес успешно создан."
+          updated: "Адрес успешно обновлен."
+          deleted: "Адрес успешно удален."
+        errors:
+          not_created: "Адрес не был создан из-за ошибок."
+          not_updated: "Адрес не был изменен из-за ошибок."
+          not_deleted: "Адрес не был удален из-за ошибок."
+    messages:
+       address:
+        new: "Добавить новый адрес"
+        edit: "Редактирование адреса"
+    title:
+      address: "Адреса"
+      new_address: "Новый адрес"
+      edit_address: "Редактирование адреса"
+      shipping_addresses: "Адреса доставки"
+      billing_addresses: "Платежные адреса"

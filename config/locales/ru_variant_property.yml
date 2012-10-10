@@ -1,0 +1,57 @@
+---
+ru:
+  activerecord:
+    models:
+      variant_property:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      variant_property:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+    errors:
+      models:
+        variant_property:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        variant_property:
+          attributes:
+            email: "введите существующий почтовый ящик"
+  activeview:
+    columns:
+      variant_property:
+        infoitem: "Ин.элемент"
+        variant: "Вариант"
+        property: "Свойство"
+        value: "Значение"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      variant_property:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      variant_property:
+        new: "Регистрация"
+        forgot: "Забыли пароль?"
+        reset: "Восстановление пароля"
+        change_password: "Смена пароля"
+        resend: "Повторная отправка письма активации"
+    title:
+      variant_property: "Пользователь"
+      new_user: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

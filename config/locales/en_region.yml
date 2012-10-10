@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      region:
+        one: "region"
+        few: "regions"
+        many: "regions"
+        other: "regions"
+      region_filter:
+        one: "regions filter"
+        few: "regions filters"
+        many: "regions filters"
+        other: "regions filters"
+    attributes:
+      region:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      region_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      region:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      region:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      region:
+        index: "List"
+        new: "New"
+        edit: "Edit"

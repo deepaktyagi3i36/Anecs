@@ -1,0 +1,46 @@
+---
+ru:
+  activerecord:
+    models:
+      property:
+        one: "Свойство"
+        few: "Свойства"
+        many: "Свойства"
+        other: "Свойства"
+      property_filter:
+        one: "Фильтр свойств"
+        few: "Фильтр свойств"
+        many: "Фильтр свойств"
+        other: "Фильтр свойств"
+    attributes:
+      property:
+        name: "Наименование"
+        code: "Код"
+        about: "Описание"
+        datatype_id: "Тип данных"
+      property_filter:
+        name: "Наименование"
+        code: "Код"
+        about: "Описание"
+        datatype_id: "Тип данных"
+        created_at_since: "Создано после"
+        created_at_till: " Создано до"
+  activeview:
+    columns:
+      property:
+        name: "Наименование"
+        code: "Код"
+        datatype: "Тип данные"
+        created_at: "Создание"
+        actions: "Действие"
+    flashes:
+      property:
+        notices:
+          created: "Свойство успешно создано."
+          updated: "Свойство успешно изменено."
+          deleted: "Свойство успешно удалено."
+    messages:
+      property:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

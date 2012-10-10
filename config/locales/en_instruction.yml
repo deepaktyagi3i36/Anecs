@@ -1,0 +1,44 @@
+---
+en:
+  activerecord:
+    models:
+      instruction:
+        one: "property"
+        few: "properties"
+        many: "properties"
+        other: "properties"
+      instruction_filter:
+        one: "instruction filter"
+        few: "instruction filters"
+        many: "instruction filters"
+        other: "instruction filters"
+    attributes:
+      instruction:
+        title: "Title"
+        body: "Body"
+        position: "Position"
+        product_id: "Infoitem"
+      instruction_filter:
+        title: "Title"
+        body: "Body"
+        product_id: "Infoitem"
+        created_at_since: "Created after"
+        created_at_till: "Created till"
+  activeview:
+    columns:
+      instruction:
+        actions: "Actions"
+        login: "Login"
+        user_status: "User status"
+        created_at: "Created"
+    flashes:
+      instruction:
+        notices:
+          created: "Instruction was successfully created."
+          updated: "Instruction type property was successfully updated."
+          deleted: "Instruction type property was successfully deleted."
+    messages:
+      instruction:
+        index: "List"
+        new: "New"
+        edit: "Edit"

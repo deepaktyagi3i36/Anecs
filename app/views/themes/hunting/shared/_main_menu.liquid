@@ -1,0 +1,31 @@
+<div id="main-menu-box">
+  <ul id="main-menu">
+   {% if current_user and current_user.user_has_role contains 'administrator' %}
+      {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/admin/tasks/users" }}
+   {% elsif current_user and current_user.user_has_role contains 'manager' %}
+         {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/manager/products/categories" }}
+   {% elsif current_user and current_user.user_has_role contains 'financier' %}
+        {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/financier/reports/orders" }}
+   {% elsif current_user and current_user.user_has_role contains 'moderator' %}
+         {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/moderator/tasks/comments" }}
+   {% elsif current_user and current_user.user_has_role contains 'hrmanager' %}
+         {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/hrmanager/tasks/vacancies" }}
+   {% elsif current_user and current_user.user_has_role contains 'stockman' %}
+         {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/stockman/tasks/orders" }}
+   {% elsif current_user and current_user.user_has_role contains 'messanger' %}
+          {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/messanger/tasks/orders" }}
+   {% elsif current_user and current_user.user_has_role contains 'salesman' %}
+          {{ "navigation.mainmenu.employee" | translate_message | link_to : "/employee/salesman/reports/buy_offers" }}
+   {% endif %}
+
+   {% if current_user %}
+      {{ "navigation.mainmenu.employee" | translate_message | link_to : "/myaccount/welcome/dashboard" }}
+   {% endif %}
+
+   {{ "navigation.mainmenu.welcome" | translate_message | link_to : "/websites" }}
+   {{ "navigation.mainmenu.aboutus" | translate_message | link_to : "/aboutus" }}
+  </ul>
+</div>
+
+
+

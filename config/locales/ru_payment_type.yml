@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      payment_type:
+        one: "Тип оплыты"
+        few: "Типы оплыты"
+        many: "Типы оплыты"
+        other: "Типы оплыты"
+      payment_type_filter:
+        one: "Фильтр типы оплыты"
+        few: "Фильтр типы оплыты"
+        many: "Фильтр типы оплыты"
+        other: "Фильтр типы оплыты"
+    attributes:
+      payment_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      payment_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        payment_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        payment_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      payment_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      payment_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      payment_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

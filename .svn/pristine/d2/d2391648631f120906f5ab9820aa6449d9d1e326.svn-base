@@ -1,0 +1,8 @@
+<% content_for :meta_keywords do %>
+  <title>advertisement</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="cooperation" class="html-text">
+</div>

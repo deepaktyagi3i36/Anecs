@@ -1,0 +1,214 @@
+---
+en:
+  activerecord:
+    models:
+      order:
+        one: "order"
+        few: "orders"
+        many: "orders"
+        other: "orders"
+      tracking order:
+        one: "tracking order"
+        few: "tracking orders"
+        many: "tracking orders"
+        other: "tracking orders"
+    attributes:
+      order:
+        name: "Order #"
+        about: "Description"
+        order_state_id: "Order's processing state"
+        user_id: "Order recipient"
+        shipping_type_id: "Shipping type"
+        payment_type_id: "Payment type"
+        address_id: "Shipping address"
+        checkout_state_id: "Order's checkout state"
+        email: "Order's recipient email"
+        user_name: "Recipient's full name"
+        notes: "Delivery notes (convenient time, address clarification)"
+        created_at: "Creation date"
+        updated_at: "Modification date"
+      tracking_order:
+        email: "Email"
+        invoice: "Invoice"
+      tracking_user_order:
+        login: "Login"
+        password: "Password"
+    errors:
+      models:
+        order:
+          deletion_prohibited: "You cannot delete a completed order which isn't closed"
+          variants_missing: "The following items are missing: %{variants}"
+          empty_cart: "Your shopping cart is empty"
+          attributes:
+            email:
+              blank: "should be entered for guest user"
+            user_name:
+              blank: "couldn't be blank"
+            address_id:
+              blank: "should be specified"
+            shipping_type_id:
+              blank: "should be specified"
+            payment_type_id:
+              blank: "should be specified"
+    hints:
+      models:
+        tracking_order:
+          attributes:
+            email: "(for which order)"
+            invoice: "(invoice number)"
+            captcha_text: "(images's text)"
+        tracking_user_order:
+          attributes:
+            login: "(login)"
+            password: "(case sensitive)"
+  activeview:
+    columns:
+      order:
+        name: "Name"
+        total_price: "Total price"
+        total_items: "Total items"
+        state: "State"
+        user_name: "Username"
+        about: "Description"
+        address: "Address"
+        notes: "Notes"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      order:
+        notices:
+          created: "Order was created successfully"
+          updated: "Order was updated successfully"
+          cancelled: "Order was cancelled successfully"
+          deleted: "Order was deleted successfully"
+        errors:
+          not_created: "Order wasn't created due to errors"
+          not_repeated: "Order wasn't repeated due to errors"
+          not_updated: "Order wasn't updated due to errors"
+          not_cancelled: "Order wasn't cancelled due to errors"
+          not_deleted: "Order wasn't deleted due to errors"
+    messages:
+      order:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        variants: "Order's variants"
+  orders:
+    title: "Your order"
+    name: "Order number"
+    total_items: "Total items"
+    total_price: "Total price"
+    address:
+      title: "Address"
+      contact_info: "Contact Information"
+      user_name: "Recipient"
+      notes: "Delivery notes"
+      phone: "Home phone number"
+      extra_phone: "Mobile phone number"
+      address_info: "Address Information"
+      street_address1: "Street Address 1"
+      street_address2: "Street Address 2"
+      city: "City"
+      country: "Country"
+      default: "(default)"
+    completed:
+      thanks: "Thanks for your order!"
+      processing_start: "Processing of your order #%{order_no} started"
+      title: "Order is ready"
+    confirmation:
+      title: "Order Confirmation"
+      details: "Details of your order"
+      question: "Do you wish to proceed with completing your order?"
+      email: "Order confirmation will be sent to"
+    delivery:
+      title: "Delivery Type"
+    details: "Order's details"
+    payment:
+      title: "Payment Preference"
+    registration:
+      choose_order_type: "Choose order type convinient for you"
+      order_by_phone: "Order by phone"
+      order_as_guest: "Order without registration (no ability to track your orders)"
+      order_as_user: "Order as a registered user (order tracking, history, favorites)"
+      title: "Registration"
+      guest: "Guest"
+      email: "Email"
+      login: "Login"
+      user_name: "User name"
+      password: "Password"
+      not_registered_yet: "Not registered yet?"
+      signup: "Sign Up"
+    notification:
+      user:
+        subject:
+          confirmation: "Your order #%{order_no} at %{site_name} was successfully registered"
+          cancellation: "Your order #%{order_no} at %{site_name} was cancelled"
+        see_details: "Below your can see details of your order"
+        salutation: "Dear %{user_name}"
+        message:
+          confirmation: "This is to confirm that your order #%{order_no} at %{site_name} was cancelled."
+          cancellation: "This is to confirm that your order #%{order_no} at %{site_name} was successfully registered. We started to process your order."
+      sales:
+        subject:
+          confirmation: "Order #%{order_no} at %{site_name} was successfully registered"
+          cancellation: "Order #%{order_no} at %{site_name} was cancelled"
+        see_details: "Below your can see details of this order"
+      stockman:
+        subject:
+          out_of_stocks: "Variant %{variant} is running out of stocks after an order from %{site_name}"
+      order_name: "Order #%{order_no}"
+  myaccount:
+    shopping:
+      dashboard:
+        index:
+          title: "Dashboard"
+          store_section: "Shopping"
+          last_order: "Last order #"
+          order_date: "Date"
+          payment_type: "Payment type"
+          shipping_type: "Shipping type"
+          shipping_address: "Shipping address"
+          billing_address: "Billing address"
+          orders_section: "Orders"
+          cart: "Shopping cart"
+          active_orders: "Active orders (in progress)"
+          waiting_orders: "Orders in waiting state (needing your attention)"
+          archived_orders: "Orders archive"
+          personal_section: "Personal"
+          favorites: "Favorites"
+          settings_section: "Settings"
+          addresses: "Addresses"
+      orders:
+        index:
+          title: "Orders"
+          active_orders: "Active orders"
+          archived_orders: "Archived orders"
+          waiting_orders: "Orders in waiting state"
+          no_active_orders: "You don't have active orders"
+          no_waiting_orders: "You don't have orders in waiting state"
+          no_archived_orders: "You don't have completed orders"
+        list:
+          name: "Order #"
+          total_price: "Total"
+          address: "Recipient address"
+          state: "State"
+          created_at: "Created at"
+        show:
+          title: "Order #%{order_no}"
+          items: "Order's items"
+          total_price: "Total"
+          address: "Recipient address"
+          state: "State"
+          payment_type: "Payment type"
+          shipping_type: "Shipping type"
+          notes: "Notes"
+          edit_shipping_details: "Edit Shipping Details"
+        edit:
+          title: "Order #%{order_no}"
+          edit_shipping_details: "Edit Shipping Details"
+        variants:
+          list:
+            product_name: "Product"
+            variant_name: "Variant"
+            price: "Price"
+            quantity: "Quantity"

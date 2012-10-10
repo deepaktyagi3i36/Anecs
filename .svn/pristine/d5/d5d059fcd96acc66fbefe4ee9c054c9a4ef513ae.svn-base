@@ -1,0 +1,53 @@
+---
+ru:
+  activerecord:
+    models:
+      comment:
+        one: "Пользователь"
+        few: "Пользователь"
+        many: "Пользователь"
+        other: "Пользователи"
+    attributes:
+      comment:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+        captcha_text: "Проверочный код"
+        allow_email: "Посылать новости"
+    errors:
+      models:
+        comment:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+          inv_password_update: "Ошибка изменения пароля. Пожалуйста свяжитесь с службой поддержки."
+          inv_comment_status_update: "Ошибка изменения статуса пльзователя. Пожалуйста свяжитесь с службой поддержки."
+    hints:
+      models:
+        comment:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      comment:
+        actions: "Действия"
+        login: "Имя пользователя"
+        comment_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      comment:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      comment:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

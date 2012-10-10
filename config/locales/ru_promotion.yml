@@ -1,0 +1,47 @@
+---
+ru:
+  activerecord:
+    models:
+      promotion:
+        one: "Разновидность"
+        few: "Разновидность"
+        many: "Разновидность"
+        other: "Разновидность"
+      promotion_type_filter:
+        one: "Фильтр разновидности"
+        few: "Фильтр разновидности"
+        many: "Фильтр разновидности"
+        other: "Фильтр разновидности"
+    attributes:
+      promotion:
+        name: "Наименование"
+        name_ru: "Наименование ru"
+        product_id: "Информационный элемент"
+        price: "Цена"
+        enabled: "Активен"
+      promotion_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      promotion:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      promotion:
+        name: "Наименование"
+        infoitem: "Информационный элемент"
+        created_at: "Создание"
+    flashes:
+      promotion:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+    messages:
+      promotion:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

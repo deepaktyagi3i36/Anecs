@@ -1,0 +1,25 @@
+---
+ru:
+  activerecord:
+    models:
+      manpage:
+        one: "Помощь"
+        few: "Помощь"
+        many: "Помощь"
+        other: "Помощь"
+    attributes:
+      name: "Order #"
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        manpage:
+          loop_prohibited: "Нельзя создать цикл"
+          treepath_exceeded: "Длина пути превысила максимальный размер"
+  activeview:
+    flashes:
+      manpage:
+        notices:
+          created: "Страница помощи успешно создана."
+          updated: "Страница помощи успешно обновлена."
+          deleted: "Страница помощи успешно удалена."

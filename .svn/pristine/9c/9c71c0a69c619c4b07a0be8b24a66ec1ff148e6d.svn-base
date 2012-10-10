@@ -1,0 +1,33 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header t("instructions.columns.title"), "instructions.title" %> </th>
+      <th> <%= sortable_field_header t("instructions.columns.product"), "products.name" %> </th>
+      <th> <%= sortable_field_header t("instructions.columns.created_at"), "instructions.created_at" %></th>
+    </tr>
+    <% @instructions.each do |instruction| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', instruction.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => instruction} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => instruction} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => instruction} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to instruction.title, :action => "edit", :id =>instruction %></td>
+        <td><%= link_to instruction.product.name, :action => "edit", :id =>instruction %></td>
+        <td><%= localize(instruction.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

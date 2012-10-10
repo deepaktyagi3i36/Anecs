@@ -1,0 +1,56 @@
+---
+ru:
+  activerecord:
+    models:
+      runtime_setting:
+        one: "Статус настройки"
+        few: "Статус настройки"
+        many: "Статус настройки"
+        other: "Статус настройки"
+      runtime_setting_filter:
+        one: "Фильтр настройки"
+        few: "Фильтр настройки"
+        many: "Фильтр настройки"
+        other: "Фильтр настройки"
+    attributes:
+      runtime_setting:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      runtime_setting_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        runtime_setting:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        runtime_setting:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      runtime_setting:
+        name: "Имя"
+        code: "Код"
+        value: "Значение"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      runtime_setting:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      runtime_setting:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

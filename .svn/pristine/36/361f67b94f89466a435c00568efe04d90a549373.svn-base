@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      promotion_type:
+        one: "Тип продвижения"
+        few: "Типы продвижения"
+        many: "Типы продвижения"
+        other: "Типы продвижения"
+      promotion_type_filter:
+        one: "Фильтр типы продвижения"
+        few: "Фильтр типы продвижения"
+        many: "Фильтр типы продвижения"
+        other: "Фильтр типы продвижения"
+    attributes:
+      promotion_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      promotion_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        promotion_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        promotion_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      promotion_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      promotion_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      promotion_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

@@ -1,0 +1,19 @@
+# Config file remsport http
+
+development:
+  url: http://remsportapi:fc8f260149@dev.mgk78.ru:8080/remsport.ru/component/api
+  key: eb883e391522802d991101ac60909107f2c894d4
+  username: mirwellnessa
+  password: mirwellnessa2009
+
+production:
+  url: http://remsport.ru/component/api
+  key: eb883e391522802d991101ac60909107f2c894d4
+  username: mirwellnessa
+  password: mirwellnessa2009
+
+test:
+  url: http://remsportapi:fc8f260149@dev.mgk78.ru:8080/remsport.ru/component/api
+  key: eb883e391522802d991101ac60909107f2c894d4
+  username: mirwellnessa
+  password: mirwellnessa2009

@@ -1,0 +1,27 @@
+<div class="top-categories">
+  <ul>
+    <%= tabular_menu_item :label => "#{t('.total')} (#{@total})",
+            :url => url_for({:action => :results, :q => @q}),
+            :is_active => @type.nil? %>
+    <% if @products_total > 0 %>
+      <%= tabular_menu_item :label => "#{t('.products')} (#{@products_total})",
+              :url => url_for({:action => :results, :type => 'products', :q => @q}),
+              :is_active => (!@type.nil? && @type == 'products') %>
+    <% end %>
+    <% if @articles_total > 0 %>
+      <%= tabular_menu_item :label => "#{t('.articles')} (#{@articles_total})",
+              :url => url_for({:action => :results, :type => 'articles', :q => @q}),
+              :is_active => (!@type.nil? && @type == 'articles') %>
+    <% end %>
+    <%# if @centers_total > 0 %>
+      <%#= tabular_menu_item :label => "#{t('.centers')} (#{@centers_total})",
+              :url => url_for({:action => :results, :type => 'centers', :q => @q}),
+              :is_active => (!@type.nil? && @type == 'centers') %>
+    <%# end %>
+    <%# if @experts_total > 0 %>
+      <%#= tabular_menu_item :label => "#{t('.experts')} (#{@experts_total})",
+              :url => url_for({:action => :results, :type => 'experts', :q => @q}),
+              :is_active => (!@type.nil? && @type == 'experts') %>
+    <%# end %>
+  </ul>
+</div>

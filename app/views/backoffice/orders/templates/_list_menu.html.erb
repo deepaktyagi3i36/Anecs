@@ -1,0 +1,13 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.mainmenu.orders") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.orders"),
+                       :url => "/backoffice/orders/orders",
+                       :match_path => "^\/(backoffice\/orders(\/)?|backoffice\/orders\/orders(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.customers"),
+                       :url => "/backoffice/orders/customers",
+                       :match_path => "^\/backoffice\/orders\/customers(.*)$" %>
+  </ul>
+</div>

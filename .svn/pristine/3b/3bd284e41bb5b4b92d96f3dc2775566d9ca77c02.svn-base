@@ -1,0 +1,8 @@
+<%= I18n.t('orders.notification.stockman.subject.out_of_stocks', :variant => @variant_name, :site_name => DomainsConfiguration.lookup('server.name')) %>.
+<h2>Details: </h2>
+<ul>
+  <li>Product: <%= @inventory.variant.infoitem.t_name %></li>
+  <li>Variant: <%= @inventory.variant.t_name %></li>
+  <li>Region: <%= @inventory.storehouse.region.t_name %></li>
+  <li>Quantity left: <%= @inventory.quantity %></li>
+</ul>

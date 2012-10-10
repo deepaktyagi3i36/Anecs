@@ -1,0 +1,17 @@
+<h1>Результат.</h1>
+<p>
+  Результат выполнения задания: <%= @admin_job.success.to_s if @admin_job %>
+  <% if @admin_job && @admin_job.exception%>
+    <code> <pre><%= @admin_job.exception %></pre> </code>
+  <% end %>
+</p>
+
+
+<h1>Подробности.</h1>
+<% if @admin_job %>
+  <ul>
+    <% @admin_job.runbatch_reports.each do |report| %>
+      <li><%= report.message %></li>
+    <% end %>
+  </ul>
+<% end %>

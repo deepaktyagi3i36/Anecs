@@ -1,0 +1,31 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Product", "products.name" %> </th>
+      <th> <%= sortable_field_header "Promotion", "promotions.name" %> </th>
+    </tr>
+    <% @promoitems.each do |promoitem| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', promoitem.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => promoitem} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => promoitem} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => promoitem} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to promoitem.product.name, :action => "edit", :id =>promoitem %></td>
+        <td><%= link_to promoitem.promotion.name, :action => "edit", :id =>promoitem %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

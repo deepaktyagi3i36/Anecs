@@ -1,0 +1,163 @@
+<h1><%= @product.seo_title %></h1>
+<% unless @product.manufacturer_category.nil? %>
+    <p>
+      <strong><%= t('labels.manufacturer') %></strong> <%= link_to(@product.manufacturer, @manufacturer_category.url) %>
+    </p>
+<% end %>
+<div id="photo-block">
+  <% @product.images.each do |photo| %>
+      <% if photo.primary > 0 %>
+          <%= link_to (theme_image_tag photo.picture.url(:large)), photo.picture.url(:huge), {:rel => "lyteshow[images]"} %>
+      <% end %>
+  <% end %>
+
+  <%= render :partial => 'products/templates/promo_labels', :locals => {:product => @product, :size => 'large'} %>
+
+
+
+  <div class="preview-thumbnails">
+    <% @product.images.each do |photo| %>
+        <%= link_to (theme_image_tag photo.picture.url(:thumb)), photo.picture.url(:huge), {:rel => "lyteshow[images]"} %>
+    <% end %>
+  </div>
+</div>
+
+<div class="description">
+  <p><%= @product.sketch %></p>
+
+  <% unless @product.enabled == 1 %>
+      <h3 class="red"><%= t('.out_of_stocks_long') %></h3>
+
+  <% end %>
+  <% unless @favorites.nil? %>
+      <% favorites_action = @product.is_favorite(@favorites) ? 'remove_from_favorites' : 'add_to_favorites' %>
+      <div class="button-block">
+        <%= form_tag({:controller => "/favorites", :action => favorites_action},
+                    {:id => unique_id("favorites_form")}) do %>
+            <fieldset>
+              <%= hidden_field_tag "product_id", @product.id, :id => unique_id("product_id") %>
+              <%= submit_tag t("buttons.#{favorites_action}") %>
+            </fieldset>
+        <% end %>
+      </div>
+  <% end %>
+
+  <% @product.promoitems.each do |promoitem| %>
+      <% if promoitem.promotion.promotion_type.code == "action" %>
+          <div class="action-message">
+            <p>
+              <%= promoitem.promotion.title %>
+            </p>
+
+            <p>
+              <%= promoitem.promotion.body %>
+            </p>
+          </div>
+      <% end %>
+      <% if promoitem.promotion.promotion_type.code == "saleoff" %>
+          <div class="saleoff-message">
+            <p>
+              <%= promoitem.promotion.title %>
+            </p>
+
+            <p>
+              <%= promoitem.promotion.body %>
+            </p>
+          </div>
+      <% end %>
+
+  <% end %>
+</div>
+
+<% if !::Rails.env.include?('production') %>
+    <div class="label-block">
+      <%= link_to(theme_image_tag("decorators/help_link.png", {:alt => t("tooltips.help"), :title => t("tooltips.help")}), :controller => root_path) %>
+
+      <span><%= t("labels.system_labels") %></span>
+      <a href="#">muscul</a>,<a href="#">Free gift</a>
+      <a href="#">muscul</a>,<a href="#">Vaska gift</a>
+      <a href="#">muscul</a>,<a href="#">Vaska gift</a>
+
+      <span><%= t("labels.user_labels") %></span>
+      <a href="#">muscul</a>,<a href="#">Best Pre-Workout</a>
+      <a href="#">muscul</a>,<a href="#">Good tasting</a>
+      <a href="#">muscul</a>,<a href="#">Vaska gift</a>
+
+
+      <%= form_tag({:controller => "/shopping_carts", :action => "add_to_cart"},
+                  {:id => unique_id("buy_now_item_form"), :class => "add-label-block"}) do %>
+          <fieldset>
+            <label for="new-label"><%= t("labels.type_label") %></label>
+            <input type="text" value="none"/>
+            <label for="user-label-list"><%= t("labels.choose_label") %></label>
+            <select>
+              <option selected="selected">Gift</option>
+              <option>Box</option>
+              <option>Lungs</option>
+            </select>
+            <%= submit_tag t("buttons.create") %>
+          </fieldset>
+      <% end %>
+    </div>
+<% end %>
+
+<h2 style="clear: both"><%= @product.t_name + ' ' + t('.price_for_package') %></h2>
+<table cellspacing="0" cellpadding="0" class="variants">
+  <col class="in-cart"/>
+  <col class="variant-name"/>
+  <col class="price"/>
+  <col class="activity"/>
+  <tbody>
+  <% @product.variants.each do |variant| %>
+      <% next if variant.enabled == 0 %>
+      <tr>
+        <td>
+          <% in_cart = false %>
+          <% @cart.buy_now_items.each do |item| %>
+              <% in_cart = true if item.variant.id == variant.id %>
+          <% end %>
+          <% if in_cart %>
+              <%= theme_image_tag("catalog/in_cart.png", :alt => t("tooltips.in_cart"), :title => t("tooltips.in_cart")) %>
+          <% end %>
+        </td>
+        <td>
+          <%= variant.t_name %>
+        </td>
+        <td>
+          <div class="price">
+            <% if @product.enabled == 1 %>
+                <%= variant.price.to_s %>
+                <span> <%= @currency.sign %></span>
+            <% else %>
+                <span class="red"><%= t('.out_of_stocks') %></span>
+            <% end %>
+          </div>
+          <!--div class="new-price">
+          <%#= (variant.price-10).to_s %>
+          <span> <%#= @currency.name %></span>
+        </div-->
+        </td>
+        <td>
+          <%= form_tag({:controller => "/comparators", :action => "add_to_comparator"},
+                      {:id => unique_id("compare_item_form")}) do %>
+              <fieldset>
+                <%= hidden_field_tag "variant_id", variant.id, :id => unique_id("variant_id") %>
+                <%= image_submit_tag("/images/buttons/compare_infoitem.png",
+                                     :alt => t("tooltips.add_to_comparator"), :title => t("tooltips.add_to_comparator")) %>
+              </fieldset>
+          <% end %>
+          <% if @product.enabled == 1 %>
+              <%= form_tag({:controller => "/shopping_carts", :action => "add_to_cart"},
+                          {:id => unique_id("buy_now_item_form")}) do %>
+                  <fieldset>
+                    <%= hidden_field_tag "variant_id", variant.id, :id => unique_id("variant_id") %>
+                    <%= image_submit_tag("/images/buttons/add_to_cart.png",
+                                         :alt => t("tooltips.add_to_cart"), :title => t("tooltips.add_to_cart")) %>
+                  </fieldset>
+              <% end %>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

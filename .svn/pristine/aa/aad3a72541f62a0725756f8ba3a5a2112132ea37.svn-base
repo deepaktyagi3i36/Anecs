@@ -1,0 +1,47 @@
+<%= form_for(@region, :url => {:action => action_name, :id => @region.id},
+	:html => {:id => "region_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :title %>
+	  <%= f.text_field :title %>
+	  <%= f.error_message_on :title %>
+	</p>
+
+    <p>
+	  <%= f.label :phone %>
+	  <%= f.text_field :phone %>
+	  <%= f.error_message_on :phone %>
+	</p>
+
+	<p>
+	  <%= f.label :code %>
+	  <%= f.text_field :code %>
+	  <%= f.error_message_on :code %>
+	</p>
+
+	<p>
+	  <%= f.label :about %>
+	  <%= f.text_field :about %>
+	  <%= f.error_message_on :about %>
+	</p>
+
+	<p>
+	  <%= f.label :enabled %>
+	  <%= f.check_box :enabled %>
+	  <%= f.error_message_on :enabled %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("region_name") %>

@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      promotion_type:
+        one: "promotion type"
+        few: "promotion types"
+        many: "promotion types"
+        other: "promotion types"
+      promotion_type_filter:
+        one: "promotion types filter"
+        few: "promotion types filters"
+        many: "promotion types filters"
+        other: "promotion types filters"
+    attributes:
+      promotion_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      promotion_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      promotion_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      promotion_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      promotion_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

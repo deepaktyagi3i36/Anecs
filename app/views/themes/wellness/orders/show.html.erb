@@ -1,0 +1,52 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('orders.title') %></title>
+<% end %>
+
+<div class="form form-750">
+  <div class="form-header form-header-blue">
+    <h1><%= t('orders.completed.title') %></h1>
+  </div>
+  <div class="form-content">
+    <h1><%= t('orders.completed.thanks') %></h1>
+    <p>
+      <strong><%= t('orders.completed.processing_start', :order_no => @order.name) %></strong>
+    </p>
+    <p>
+      <%= t('orders.total_items') %>: <strong><%= @order.total_items %></strong>
+    </p>
+    <p>
+      <%= t("orders.total_price") %>: <h3><%= @order.total_price %> <%= @currency.sign %></h3>
+    </p>
+
+    <%= render :partial => "details" %>
+    <%= link_to t('buttons.continue_shopping'), {:controller => '/products', :action => 'index'}, :class => 'button blue-button' %>
+  </div>
+</div>
+
+
+
+<% if ::Rails.env != 'development' %>
+  <div id="google-conversion">
+    <!-- Google Code for &#1055;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1085;&#1099;&#1081; &#1079;&#1072;&#1082;&#1072;&#1079; Conversion Page -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1017589833;
+    var google_conversion_language = "ru";
+    var google_conversion_format = "1";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "PtoCCO-ekgIQyeCc5QM";
+    var google_conversion_value = 0;
+    if (25) {
+      google_conversion_value = 25;
+    }
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1017589833/?value=25&amp;label=PtoCCO-ekgIQyeCc5QM&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+  </div>
+<% end %>

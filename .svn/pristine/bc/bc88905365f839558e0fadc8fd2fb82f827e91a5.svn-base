@@ -1,0 +1,21 @@
+<%form_tag( {}, {:id => form_id}) do %>
+  <table class="list-table">
+    <col class="coldata"/><col class="coldata"/><col class="actions"/>
+    <tr>
+      <th> <%= sortable_field_header t('.name'), "name" %> </th>
+      <th> <%= t('.manufacturer') %> </th>
+      <th> <%= t('labels.actions')%></th>
+    </tr>
+    <% products.each do |product| %>
+      <tr>
+        <td><%= link_to product.t_name, product.url %></td>
+        <td><%= link_to product.manufacturer, product.url %></td>
+        <td>
+          <%= link_to image_tag('/images/buttons/delete.png', :alt => t('buttons.remove_from_favorites'), :title => t("tooltips.remove_from_favorites")),
+                  {:controller => '/favorites', :action => :remove_from_favorites, :infoitem_id => product.id}, :class => 'img-button' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+    <%= render :partial => "/templates/paginator_without_info", :locals => { :objects => products } %>
+<%end%>

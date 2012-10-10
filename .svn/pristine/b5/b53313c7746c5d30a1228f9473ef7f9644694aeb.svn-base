@@ -1,0 +1,151 @@
+/*
+ * Content list styles
+ *   Layout and navivation styles
+ *     Common primitives styles
+ *     Common decorate styles
+ *     Page header styles
+ *     Window box styles
+ *   Special pages styles
+ *     Html error page styles
+*/
+
+
+/*
+ * Layout and navivation styles.
+ */
+
+/* =Common primitives styles
+ * This section contains common primitive styles for all site, susch as
+ * h1, h2, a, table and etc
+-------------------------------------------------------------------*/
+body {
+  font:12px Arial, Helvetica, sans-serif;
+  color:#3D3D3D;
+  background:url(/anecs/public/images/messages/main_bg.png);
+  background: #e6e6e6;
+}
+
+a, img {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+/* =Common decorate styles
+ * This section contains common decorate styles for all site, susch as
+ * blue, red, help and etc.
+-------------------------------------------------------------------*/
+.date {
+  font-style:italic;
+  white-space:nowrap;
+}
+
+
+/* =Page header styles
+ * This section contains ...
+-------------------------------------------------------------------*/
+#header {
+  width:440px;
+  margin-left:auto;
+  margin-right:auto;
+  height:15px;
+  overflow:hidden;
+  margin-top:20px;
+}
+
+
+#header >.lang {
+  text-align:right;
+  float:right;
+}
+
+#header >.lang a {
+  float:right;
+  width:25px;
+}
+
+#header >.lang img {
+  border: 2px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* =Window box styles
+ * This section contains
+ * X
+-------------------------------------------------------------------*/
+.window-box {
+  margin: 10px auto;
+  padding: 0 8px;
+  width: 440px;
+  background: url(/anecs/public/images/forms/shadow_440.png) no-repeat 0 20px;
+}
+
+.window-header{
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+    border-left: 1px solid #95a2aa;
+    border-top: 1px solid #e7e5e5;
+    border-right: 1px solid #95a2aa;
+    border-bottom: 1px solid #7b919e;
+    text-shadow: -1px -1px 0px #616469;
+    color: #e2e1e1;
+    font-size: 14px;
+    background: -o-linear-gradient(#aaadb2,#798290);
+    background: -webkit-gradient(linear,left top,left bottom, from(#aaadb2), to(#798290));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaadb2', endColorstr='#798290');
+    background: -moz-linear-gradient(top,  #aaadb2,  #798290);
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.window-header h1, .window-header h2{
+  font-size: 14px;
+  color: #e2e1e1;
+  margin: 0 0;
+  padding: 0.5px;
+}
+
+.window-content {
+  overflow: hidden;
+  text-align: left;
+  border-right: 1px solid #c8c7c7;
+  border-left: 1px solid #c8c7c7;
+  border-bottom: 1px solid #b5b4b4;
+  border-radius: 0px 0px 3px 3px;
+  -moz-border-radius: 0px 0px 3px 3px;
+  -webkit-border-radius: 0px 0px 3px 3px;
+  padding: 10px 10px 18px;
+  background: -o-linear-gradient(#fdfdfd,#efefef);
+  background: -webkit-gradient(linear,left top,left bottom, from(#fdfdfd), to(#efefef));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#efefef');
+  background: -moz-linear-gradient(top,  #fdfdfd,  #efefef);
+}
+
+.window-content p {
+  padding:10px 10px 20px 10px;
+  margin:0px;
+}
+
+.window-content p img {
+  float:left;
+  margin-right:20px;
+}
+
+.window-content span {
+  color: #BA0E12;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+/*
+ * Special pages styles.
+ */
+
+/* =Html error page styles
+ * TODO:
+-------------------------------------------------------------------*/

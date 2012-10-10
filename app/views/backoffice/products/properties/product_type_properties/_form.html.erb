@@ -1,0 +1,23 @@
+<%= form_for(@product_type_property, :url => {:action => action_name, :id => @product_type_property.id},
+	:html => {:id => "product_type_property_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :property_id %>
+	  <%= f.collection_select :property_id, @properties, :id, :name %>
+	  <%= f.error_message_on :property_id %>
+	</p>
+
+	<p>
+	  <%= f.label :product_type_id %>
+	  <%= f.collection_select :product_type_id, @product_types, :id, :name %>
+	  <%= f.error_message_on :product_type_id %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("product_type_property_name") %>

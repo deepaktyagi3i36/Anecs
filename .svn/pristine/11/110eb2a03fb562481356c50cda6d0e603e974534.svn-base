@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: variant_properties
+#
+#  id          :integer(4)      not null, primary key
+#  variant_id  :integer(4)      not null
+#  property_id :integer(4)      not null
+#  value       :string(255)     not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+quantity_property_for_carbokick_with_banana_taste:
+  variant: carbokick_with_banana_taste
+  property: quantity_property
+  value: 10
+
+size_property_for_carbokick_with_banana_taste:
+  variant: carbokick_with_banana_taste
+  property: size_property
+  value: 100
+
+quantity_property_for_pipkino_with_void_property:
+  variant: pipkino_with_void_property
+  property: quantity_property
+  value: 10
+
+quantity_property_for_svyal_with_void_property:
+  variant: svyal_with_void_property
+  property: quantity_property
+  value: 10

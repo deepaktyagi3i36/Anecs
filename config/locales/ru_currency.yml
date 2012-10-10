@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      currency:
+        one: "Валюта"
+        few: "Валюта"
+        many: "Валюта"
+        other: "Валюта"
+      currency_filter:
+        one: "Фильтр вылюты"
+        few: "Фильтр вылюты"
+        many: "Фильтр вылюты"
+        other: "Фильтр вылюты"
+    attributes:
+      currency:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      currency_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        currency:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        currency:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      currency:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      currency:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      currency:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

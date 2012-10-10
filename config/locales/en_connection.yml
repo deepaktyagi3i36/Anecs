@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      connection:
+        one: "connection"
+        few: "connections"
+        many: "connections"
+        other: "connections"
+    attributes:
+      connection:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        connection:
+          header_message:
+            one: "connection registration failed because of %{count} error"
+            few: "connection registration failed because of %{count} errors"
+            many: "connection registration failed because of %{count} errors"
+            other: "connection registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_connection_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        connection:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      connection:
+        actions: "Actions"
+        login: "Login"
+        connection_status: "connection status"
+        created_at: "Created"
+    flashes:
+      connection:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      connection:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New connection %{login} has been activated"
+    title:
+      connection: "connection"
+      new_connection: "Register New connection"
+      change_password: "Change password"

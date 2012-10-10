@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      timetable_status:
+        one: "timetable status"
+        few: "timetable statuses"
+        many: "timetable statuses"
+        other: "timetable statuses"
+      timetable_status_filter:
+        one: "timetable statuses filter"
+        few: "timetable statuses filters"
+        many: "timetable statuses filters"
+        other: "timetable statuses filters"
+    attributes:
+      timetable_status:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      timetable_status_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      timetable_status:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      timetable_status:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      timetable_status:
+        index: "List"
+        new: "New"
+        edit: "Edit"

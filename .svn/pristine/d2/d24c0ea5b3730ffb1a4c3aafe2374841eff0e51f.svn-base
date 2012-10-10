@@ -1,0 +1,66 @@
+<%= form_for @user, :url => url_for(:controller => '/users'),
+    :html => {:id => "user", :class => "basic-form" } do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages :header_message => t("activerecord.errors.models.user.header_message", :count => @user.errors.count) %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :login %>
+        <%= f.text_field :login %>
+        <%= f.error_message_on :login %>
+      </li>
+      <li>
+        <%= f.mandatory_label :email %>
+        <%= f.text_field :email %>
+        <%= f.error_message_on :email %>
+      </li>
+      <li>
+        <%= f.mandatory_label :password %>
+        <%= f.password_field :password %>
+        <%= f.error_message_on :password %>
+      </li>
+      <li>
+        <%= f.mandatory_label :password_confirmation%>
+        <%= f.password_field :password_confirmation %>
+        <%= f.error_message_on :password_confirmation %>
+      </li>
+      <li>
+        <%= f.mandatory_label :firstname %>
+        <%= f.text_field :firstname %>
+        <%= f.error_message_on :firstname %>
+      </li>
+      <li>
+        <%= f.label :middlename %>
+        <%= f.text_field :middlename %>
+        <%= f.error_message_on :middlename %>
+      </li>
+      <li>
+        <%= f.mandatory_label :lastname %>
+        <%= f.text_field :lastname %>
+        <%= f.error_message_on :lastname %>
+      </li>
+      <li>
+        <%= f.mandatory_label :nickname %>
+        <%= f.text_field :nickname %>
+        <%= f.error_message_on :nickname %>
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <%= render :partial => "section2" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :captcha_text %>
+        <%= f.text_field :captcha_text, :maxlength => 16%>
+        <%= f.error_message_on :captcha_text %>
+        <%= rmagick_captcha_tag( :controller => "captcha", :id => "user_captcha")  %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+  <p>
+    <%= link_to t("labels.resend"), {:controller=>"/resend"} %>
+  </p>
+<% end %>
+<%= set_focus_on_load("user_login") %>

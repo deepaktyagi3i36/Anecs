@@ -1,0 +1,49 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('.title', :order_no => @order.name) %></title>
+<% end %>
+
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<h1><%= t('.title', :order_no => @order.name) %></h1>
+
+  <div class="form form-750">
+    <div class="form-header form-header-blue">
+      <h2><%= t('.edit_shipping_details') %></h2>
+    </div>
+    <% form_for(@order, :url => {:action => :update, :id => @order.id},
+            :html => {:id => "order_form"}) do |f| %>
+
+      <%= f.error_messages %>
+      <p style="color: green"><%= flash[:notice] %></p>
+
+      <% if @shipping_types.size > 1 %>
+        <p>
+          <%= f.label :shipping_type_id %> <br/>
+          <%= f.collection_select :shipping_type_id, @shipping_types, :id, :name %>
+          <%= f.error_message_on :shipping_type_id %>
+        </p>
+      <% end %>
+
+      <p>
+        <%= f.label :address_id %> <br/>
+        <%= f.collection_select :address_id, @shipping_addresses, :id, :full_name %>
+        <%= f.error_message_on :address_id %>
+      </p>
+
+      <p>
+        <%= f.label :notes %> <br/>
+        <%= f.text_field :notes %>
+        <%= f.error_message_on :notes %>
+      </p>
+      <br/>
+
+      <p>
+        <%= f.submit t("buttons.update") %>
+      </p>
+    <% end %>
+    <%= set_focus_on_load('shipping_type_id') %>
+  </div>
+
+

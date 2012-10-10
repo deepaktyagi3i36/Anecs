@@ -1,0 +1,36 @@
+<div id="slide-menu">
+  <ul>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.dashboard"),
+                        :url => "/myaccount/shopping/dashboard", :match_path => "/myaccount/shopping/dashboard" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.orders"),
+                        :url => "/myaccount/shopping/orders", :match_path => "/myaccount/shopping/orders" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.favorites"),
+                        :url => "/myaccount/shopping/favorites", :match_path => "/myaccount/shopping/favorites" %>
+    <%= slide_menu_item :label => t("navigation.myaccount.slidemenu.shopping.addresses"),
+                        :url => "/myaccount/shopping/addresses", :match_path => "/myaccount/shopping/addresses" %>
+    <ul>
+      <div>
+        <%= t("navigation.myaccount.slidemenu.shopping.personalization") %>
+      </div>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.favorites"),
+                         :url => "/myaccount/shopping/favorites", :match_path => "/myaccount/shopping/favorites" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.comments"),
+                         :url => "/myaccount/shopping/comments", :match_path => "/myaccount/shopping/comments" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.whishlists"),
+                         :url => "/myaccount/shopping/whishlists", :match_path => "/myaccount/shopping/whishlists" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.tags"),
+                         :url => "/myaccount/shopping/tags", :match_path => "/myaccount/shopping/tags" %>
+    </ul>
+    <ul>
+      <div>
+        <%= t("navigation.myaccount.slidemenu.shopping.settings") %>
+      </div>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.addresses"),
+                         :url => "/myaccount/shopping/addresses", :match_path => "/myaccount/shopping/addresses" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.alerts"),
+                         :url => "/myaccount/shopping/alerts", :match_path => "/myaccount/shopping/alerts" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.shopping.payments"),
+                         :url => "/myaccount/shopping/payments", :match_path => "/myaccount/shopping/payments" %>
+    </ul>
+  </ul>
+</div>

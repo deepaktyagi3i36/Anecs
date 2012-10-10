@@ -1,0 +1,3 @@
+<div class="basic-form-header">
+  <%= render :partial => "/templates/mandatory_message" %>
+</div>

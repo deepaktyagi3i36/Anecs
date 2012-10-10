@@ -1,0 +1,22 @@
+<% content_for :meta_keywords do %>
+  <title>Roles at admin task zone</title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "framework/heartbeat/templates/list_menu" %>
+<% end %>
+
+
+<div class="window-box">
+  <div class="window-header">
+    <h1><%= t("activeview.messages.theme.index") %></h1>
+  </div>
+  <div class="window-content">
+    <%= render :partial => "templates/form_flash" %>
+    <h2><%= t("labels.filter") %></h2>
+    <%= render :partial => "filter" %>
+    <h2><%= t("labels.managment") %></h2>
+    <%= render :partial => "list" %>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+<% content_for :meta_keywords do %>
+  <title>Majoron news and events</title>
+  <meta name="keywords" content="Majoron, AntHill, AntHIll SMPP, AntHIll Diameter, Majoron latest news, Majoron events and announcements" />
+  <meta name="description" content="Majoron expertise is focused on two following directions: networking to create set of libraries to allow uniform communication across different transports and auxiliary utilities to speedup and standardize development process in early phases." />
+<% end %>
+
+<div id="departments">
+  <h1>You welcome to store!</h1>
+  <% @clothes_department = Category.find_by_code("clothes_department") %>
+  <%=link_to(image_tag("welcome/clothes.png", {:alt => "Clothes", :title => "Clothes"}),
+             :controller => "/home", :action => "index") %>
+
+  <% @electronics_department = Category.find_by_code("electronics_department") %>
+  <%=link_to(image_tag("welcome/electronics.png", {:alt => "Electronics", :title => "Electronics"}),
+             :controller => "/products", :action => "index") %>
+</div>

@@ -1,0 +1,86 @@
+<div id="checkout_fieldset">
+  <fieldset>
+    <% if !@addresses.nil? and !@addresses.empty? %>
+      <% @addresses.each do |address| %>
+        <%= f.radio_button('address_id', address.id, :checked => address.id == @address.id, :id => unique_id('address_id')) %>
+        <%= f.label last_id('address_id'), address.full_name %>
+        <% if address.default == 1 %>
+          <%= t('.default') %>
+        <% end %>
+
+      <% end %>
+      <% if !@show_new_address %>
+        <%= submit_tag t("buttons.add"), :name => "event[create_address]", :class => "blue-button" %>
+      <% end %>
+    <% end %>
+    <% if @show_new_address or @addresses.nil? or @addresses.empty? %>
+      <% fields_for @address do |ff| %>
+        <%= ff.error_messages %>
+        <ul>
+          <% if @order.user_id.nil? %>
+            <li>
+              <%= f.mandatory_label :user_name %>
+              <%= f.text_field :user_name %>
+              <%= f.error_message_on :user_name %>
+            </li>
+          <% else %>
+            <li>
+              <%= ff.mandatory_label :name %>
+              <%= ff.text_field :name %>
+              <%= ff.error_message_on :name %>
+            </li>
+          <% end %>
+          <li>
+            <%= ff.mandatory_label :country_id %>
+            <%= ff.collection_select :country_id, @countries, :id, :name %>
+            <%= ff.error_message_on :country_id %>
+          </li>
+
+          <li>
+            <%= ff.mandatory_label :city %>
+            <%= ff.text_field :city %>
+            <%= ff.error_message_on :city %>
+          </li>
+
+          <li>
+            <%= ff.mandatory_label :street_address1 %>
+            <%= ff.text_field :street_address1 %>
+            <%= ff.error_message_on :street_address1 %>
+          </li>
+
+          <li>
+            <%= ff.label :street_address2 %>
+            <%= ff.text_field :street_address2 %>
+            <%= ff.error_message_on :street_address2 %>
+          </li>
+
+          <li>
+            <%= ff.label :zip %>
+            <%= ff.text_field :zip %>
+            <%= ff.error_message_on :zip %>
+          </li>
+
+          <li>
+            <%= ff.mandatory_label :phone %>
+            <%= ff.text_field :phone %>
+            <%= ff.error_message_on :phone %>
+          </li>
+
+          <li>
+            <%= ff.label :extra_phone %>
+            <%= ff.text_field :extra_phone %>
+            <%= ff.error_message_on :extra_phone %>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+    <ul>
+      <li>
+        <%= f.label :notes %>
+        <%= f.text_area :notes %>
+        <%= f.error_message_on :notes %>
+      </li>
+    </ul>
+    <%= set_focus_on_load("address_name") %>
+  </fieldset>
+</div>

@@ -1,0 +1,28 @@
+<% content_for :meta_keywords do %>
+  <title>Связаться с нами</title>
+  <meta name="keywords" content="связаться с нами, форма связи, сайт mirwellnessa.ru" />
+  <meta name="description" content="Информация о способах связи с нашей компанией" />
+<% end %>
+
+<div id="contact-us" class="html-text">
+  <h1>Как с нами связаться</h1>
+  <p>
+    Уважаемый посетитель! Вы можете связаться с нами
+  </p>
+  <ul>
+    <li>
+      через <%= link_to "форму обратной связи", {:controller=>"/feedbacks", :action => "new"}%>
+    </li>
+    <li>
+      или заказав  <%= link_to "обратный звонок", {:controller=>"/callmebacks", :action => "new"}%>
+    </li>
+    <li>
+      или позвонив по телефону в службу по работе с клиентами
+        <ul>
+          <li>
+            Санкт-Петербург — <%= render :partial => 'shared/phone' %> ежедневно с 10:00 до 22:00
+          </li>
+        </ul>
+    </li>
+  </ul>
+</div>

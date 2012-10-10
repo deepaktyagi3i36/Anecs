@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      comment_type:
+        one: "Тип комментария"
+        few: "Типы комментария"
+        many: "Типы комментария"
+        other: "Типы комментария"
+      comment_type_filter:
+        one: "Фильтр типы комментария"
+        few: "Фильтр типы комментария"
+        many: "Фильтр типы комментария"
+        other: "Фильтр типы комментария"
+    attributes:
+      comment_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      comment_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        comment_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        comment_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      comment_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      comment_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      comment_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

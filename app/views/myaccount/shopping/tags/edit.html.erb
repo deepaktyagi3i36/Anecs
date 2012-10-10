@@ -1,0 +1,16 @@
+<% content_for :meta_keywords do %>
+  <title>Orders at admin task zone</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<% content_for :list_menu do %>
+  <%= render :partial => "/myaccount/shopping/templates/list_menu" %>
+<% end %>
+
+<h1>Editing order</h1>
+<%= render :partial => "form", :locals => {
+	:action_name => "update", :button_label => t("buttons.update")} %>
+
+<h2>Order variants</h2>
+

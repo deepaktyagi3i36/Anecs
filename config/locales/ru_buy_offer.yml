@@ -1,0 +1,66 @@
+---
+ru:
+  activerecord:
+    models:
+      buy_offer:
+        one: "Пользователь"
+        few: "Пользователь"
+        many: "Пользователь"
+        other: "Пользователи"
+    attributes:
+      buy_offer:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+        captcha_text: "Проверочный код"
+        allow_email: "Посылать новости"
+    errors:
+      models:
+        buy_offer:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+          inv_password_update: "Ошибка изменения пароля. Пожалуйста свяжитесь с службой поддержки."
+          inv_buy_offer_status_update: "Ошибка изменения статуса пльзователя. Пожалуйста свяжитесь с службой поддержки."
+    hints:
+      models:
+        buy_offer:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      buy_offer:
+        actions: "Действия"
+        login: "Имя пользователя"
+        buy_offer_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      buy_offer:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      buy_offer:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+        myprofile: "Мой профиль"
+        forgot: "Забыли пароль?"
+        reset: "Восстановление пароля"
+        change_password: "Смена пароля"
+        resend: "Повторная отправка письма активации"
+        registration:
+          activation: "Пожалуйста, активируйте Вашу учетную запись!"
+          completed: "Ваша учетная запись успешно активирована!"
+          notification: "Активирован новый пользователь %{login}"
+    title:
+      buy_offer: "Пользователь"
+      new_buy_offer: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

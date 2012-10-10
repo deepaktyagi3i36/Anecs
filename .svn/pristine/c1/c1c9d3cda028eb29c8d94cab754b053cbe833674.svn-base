@@ -1,0 +1,11 @@
+<div class="form form-440">
+  <div class="form-header">
+    <h1>Произошла внутренняя ошибка (500 html ошибка)</h1>
+  </div>
+  <div class="form-content">
+    <p>
+      <%= theme_image_tag("flashicons/fatal_middle.png", {:alt => "Fatal icon", :title => "Fatal icon"})%>
+      Нам известно о проблеме и мы пытаемся ее решить.
+    </p>
+  </div>
+</div>

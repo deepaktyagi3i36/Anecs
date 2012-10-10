@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      category_type:
+        one: "Тип категорий"
+        few: "Типы категорий"
+        many: "Типы категорий"
+        other: "Типы категорий"
+      category_type_filter:
+        one: "Фильтр типы категорий"
+        few: "Фильтр типы категорий"
+        many: "Фильтр типы категорий"
+        other: "Фильтр типы категорий"
+    attributes:
+      category_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      category_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        category_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        category_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      category_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      category_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      category_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

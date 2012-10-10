@@ -1,0 +1,8 @@
+<div id="checkout_fieldset">
+  <% @payment_types.each do |payment_type| %>
+    <%= f.radio_button("payment_type_id", payment_type.id, :checked => payment_type.id == @payment_type.id, :id => unique_id('payment_type_id')) %>
+    <%= f.label last_id('payment_type_id'), payment_type.name %>
+
+  <% end %>
+
+</div>

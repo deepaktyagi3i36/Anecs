@@ -1,0 +1,35 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Product", "products.name" %> </th>
+      <th> <%= sortable_field_header "Login", "users.login" %> </th>
+      <th> <%= sortable_field_header "Title", "comments.title" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.comment.created_at"), "created_at" %></th>
+    </tr>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', comment.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => comment} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => comment} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => comment} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to comment.product.name, :action => "edit", :id =>comment %></td>
+        <td><%= link_to comment.user.login, :action => "edit", :id =>comment %></td>
+        <td><%= link_to comment.title, :action => "edit", :id =>comment %></td>
+        <td><%= localize(comment.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

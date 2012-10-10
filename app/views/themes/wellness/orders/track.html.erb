@@ -1,0 +1,15 @@
+<div id="track">
+  <div class="form form-440">
+    <div class="form-header">
+      <h1><%= t("activeview.messages.order.track") %></h1>
+    </div>
+    <div class="form-content">
+      <%= render :partial => "shared/flash_message" %>
+      <%= render :partial => "track_header" %>
+      <%= render :partial => "track_user_form", :locals => {
+              :action_name => "track_user_order", :button_label => t("buttons.login")} %>
+      <%= render :partial => "track_form", :locals => {
+              :action_name => "track_guest_order", :button_label => t("buttons.track")} %>
+    </div>
+  </div>
+</div>

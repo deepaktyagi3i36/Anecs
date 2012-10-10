@@ -1,0 +1,12 @@
+<div id="checkout-summary">
+  <h3>
+    <%= t('orders.name') %> <strong><%= @order.name %></strong>
+  </h3>
+  <p>
+    <%= t('orders.total_items') %>: <strong><%= @order.total_items %></strong>
+  </p>
+  <p>
+     <%= t("orders.total_price") %>: <h3><%= @order.total_price %> <%= @currency.sign %></h3>
+  </p>
+</div>
+

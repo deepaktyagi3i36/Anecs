@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      announcement_status:
+        one: "announcement status"
+        few: "announcement statuses"
+        many: "announcement statuses"
+        other: "announcement statuses"
+      announcement_status_filter:
+        one: "announcement statuses filter"
+        few: "announcement statuses filters"
+        many: "announcement statuses filters"
+        other: "announcement statuses filters"
+    attributes:
+      announcement_status:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      announcement_status_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      announcement_status:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      announcement_status:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      announcement_status:
+        index: "List"
+        new: "New"
+        edit: "Edit"

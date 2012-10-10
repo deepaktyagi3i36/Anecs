@@ -1,0 +1,32 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col class="coldata"/><col class="coldata"/>
+    <col class="coldata"/><col class="coldata"/><col class="coldata"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.delayed_job.priority"), "delayed_jobs.priority" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.delayed_job.attempts"), "delayed_jobs.attempts" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.delayed_job.run_at"), "delayed_jobs.run_at" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.delayed_job.failed_at"), "delayed_jobs.failed_at" %></th>
+      <th> <%= sortable_field_header t("activeview.columns.delayed_job.created_at"), "delayed_jobs.created_at" %></th>
+      <th> <%= t("activeview.columns.delayed_job.actions") %> </th>
+    </tr>
+    <% @delayed_jobs.each do |delayed_job| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', delayed_job.id, false) %></td>
+        <td><%= link_to delayed_job.priority, :action => "edit", :id =>delayed_job %></td>
+        <td><%= link_to delayed_job.attempts, :action => "edit", :id =>delayed_job %></td>
+        <td><%= localize(delayed_job.run_at, :format => :long) if delayed_job.run_at%></td>
+        <td><%= localize(delayed_job.failed_at, :format => :long) if delayed_job. failed_at %></td>
+        <td><%= localize(delayed_job.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => delayed_job) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => delayed_job) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>
+

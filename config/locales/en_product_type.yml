@@ -1,0 +1,53 @@
+---
+en:
+  activerecord:
+    models:
+      product_type:
+        one: "Presentaton"
+        few: "Presentatons"
+        many: "Presentatons"
+        other: "Presentatons"
+    attributes:
+      product_type:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+    errors:
+      models:
+        product_type:
+          header_message:
+            one: "Presentaton creation failed because of %{count} error"
+            few: "Presentaton creation failed because of %{count} errors"
+            many: "Presentaton creation failed because of %{count} errors"
+            other: "Presentaton creation failed because of %{count} errors"
+    hints:
+      models:
+        product_type:
+          attributes:
+            job: "Enter valid class name for job"
+  activeview:
+    columns:
+      product_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      product_type:
+        notices:
+          created: "Presentaton was successfully created."
+          updated: "Presentaton was successfully updated."
+          deleted: "Presentaton was successfully deleted."
+    messages:
+      product_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+    title:
+      product_type: "Presentaton"

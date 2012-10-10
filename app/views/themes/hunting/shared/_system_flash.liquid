@@ -1,0 +1,24 @@
+{% if has_flash_any_key? %}
+  <div id="system-flash">
+    {% if flash.key?(:notice)%}
+      <div class="notice">
+        <p>{{ flash[:notice] }}</p>
+      </div>
+    {% endif %}
+    {% if flash.key?(:information)%}
+      <div class="information">
+        <p> {{ flash[:information] }}</p>
+      </div>
+    {% endif %}
+    {% if flash.key?(:warning)%}
+      <div class="warning">
+        <p>{{ flash[:warning] }}</p>
+      </div>
+    {% endif %}
+    {% if flash.key?(:error)%}
+      <div class="error">
+        <p>{{ flash[:error] }}</p>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

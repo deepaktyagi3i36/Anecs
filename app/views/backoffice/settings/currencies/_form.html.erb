@@ -1,0 +1,41 @@
+<%= form_for(@currency, :url => {:action => action_name, :id => @currency.id},
+	:html => {:id => "currency_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :code %>
+	  <%= f.text_field :code %>
+	  <%= f.error_message_on :code %>
+	</p>
+
+	<p>
+	  <%= f.label :about %>
+	  <%= f.text_field :about %>
+	  <%= f.error_message_on :about %>
+	</p>
+
+	<p>
+	  <%= f.label :sign %>
+	  <%= f.text_field :sign %>
+	  <%= f.error_message_on :sign %>
+	</p>
+
+	<p>
+	  <%= f.label :enabled %>
+	  <%= f.check_box :enabled %>
+	  <%= f.error_message_on :enabled %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("currency_name") %>

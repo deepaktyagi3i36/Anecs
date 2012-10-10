@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: opinion_statuses
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+active_opinion_status:
+  name: active
+  code: active
+  about: active
+
+pending_opinion_status:
+  name: pending
+  code: pending
+  about: pending
+
+blocked_opinion_status:
+  name: blocked
+  code: blocked
+  about: blocked
+

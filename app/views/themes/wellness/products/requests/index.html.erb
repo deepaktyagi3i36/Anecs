@@ -1,0 +1,133 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+  <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div id="infoitem-requests" class="infoitem-common">
+      <h2>Professionals are answer on you requests</h2>
+
+<!-- <h3> <%= @product.name%></h3>-->
+      <p> <h4>Questions 13</h4><h4>Answers 18</h4>
+      <%= link_to "Ask a questions", {:action => "new", :category_id =>@category, :product_id =>@product}, {:class => "button"} %>
+      <%= link_to "How to publish?", {:controller => '/welcome', :action => "publish_policy"} %>
+      </p>
+
+
+      <!-- dt - question dd - answers -->
+      <ul><li>
+          <dl>
+            <dt>
+              <a class="author" href="#">Vasek Kolbasov</a>
+              <span class="rating-bars"></span>
+              <div class="time">15:25</div>
+              <div class="date">12 Oct 05</div>
+              <span>Q</span>
+              <p>Where can I find an instruction?
+               <a class="button" href="#">Answer</a>
+            </p>
+            </dt>
+            <dd>
+              <a href="#" class="author">Vasek Kolbasov</a>
+              <span class="rating-bars"></span>
+              <div class="time">15:25</div>
+              <div class="date">12 Oct 05</div>
+              <span>A</span><p>Read the next tab please</p>
+              <div class="usefull-block">Is this answer usefull for you
+                <a class="button" href="#">Yes</a>
+                <a class="button" href="#">No</a>
+              </div>
+            </dd>
+            <dd>
+              <a href="#" class="author">Vasek Kolbasov</a>
+              <span class="rating-bars"></span>
+              <div class="time">15:25</div>
+              <div class="date">12 Oct 05</div>
+              <span>A</span>
+              <p>Please follow this link</p>
+              <div class="usefull-block">Is this answer usefull for you
+                <a class="button" href="#">Yes</a>
+                <a class="button" href="#">No</a>
+              </div>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>
+              <a class="author" href="#">Vasek Kolbasov</a>
+              <span class="rating-bars"></span>
+              <div class="time">15:25</div>
+              <div class="date">12 Oct 05</div>
+              <span>Q</span>
+              <p>Where can I find an instruction?
+                <a class="button" href="#">Answer</a>
+              </p>
+            </dt>
+            <dd>
+              <a class="author" href="#">Vasek Kolbasov</a>
+              <span class="rating-bars"></span>
+              <div class="time">15:25</div>
+              <div class="date">12 Oct 05</div>
+              <span>A</span>
+              <p>Read the next tab please</p>
+              <div class="usefull-block">Is this answer usefull for you
+                <a class="button" href="#">Yes</a>
+                <a class="button" href="#">No</a>
+              </div>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+
+
+
+
+      <% @requests.each do |request| %>
+        <div class="requests-list">
+          <p>Rating: <%= request.rating %></p>
+          <h2><%= request.title %></h2>
+          <p><%= request.created_at %></p>
+          <p><%= request.body %></p>
+          <p>Useful comment:<%= request.useful%></p>
+          <p>Useless comment: Age:<%= request.useless%></p>
+          <%= link_to "Vote up" %>
+          <%= link_to "Vote down"%>
+
+          <p>
+            Count of the answers:
+            <strong><%= request.answers.count %></strong>
+          </p>
+          <% request.answers.each do |answer| %>
+            <%= request.answers.count %>
+            <div class="requests-list">
+              <p>Rating: <%= answer.rating %></p>
+              <h2><%= answer.title %></h2>
+              <p><%= answer.created_at %></p>
+              <p><%= answer.body %></p>
+              <p>Useful comment:<%= answer.useful%></p>
+              <p>Useless comment: Age:<%= answer.useless%></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <%= render :partial => "shared/paginator_without_info", :locals => { :objects => @requests } %>
+    </div>
+  </div>
+</div>

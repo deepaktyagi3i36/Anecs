@@ -1,0 +1,47 @@
+<% content_for :meta_keywords do %>
+  <title><%= t('orders.title') %></title>
+<% end %>
+<div id="checkout">
+  <% if !@states.empty? %>
+    <div class="progress-bar">
+      <ul>
+        <% @states.each do |state| %>
+          <% content_tag :li, state[:current] ? {:class => 'selected'} : {} do %>
+            <% if state[:link_enabled] && !state[:current] %>
+              <%= link_to state[:checkout_state].t_name, {:action => :set_checkout_state, :id => @order, :checkout_state => state[:checkout_state].code} %>
+            <% else %>
+              <div><%= state[:checkout_state].t_name %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= render :partial => "summary" %>
+  <div class="form form-750">
+    <div class="form-header form-header-blue">
+      <h1><%= @order.checkout_state.t_name %></h1>
+    </div>
+    <div class="form-content">
+      <!--%= render :partial => "shared/flash_message" %-->
+      <%= form_for @order, :url => {:action => 'update'},
+              :html => {:method => 'post', :id => "order_form_#{@order.checkout_stage}", :class => "basic-form"} do |f| %>
+
+        <% if @order.checkout_state.code != 'confirmation' %>
+          <%= render :partial => "header" %>
+        <% end %>
+        <%= f.error_messages %>
+        <p style="color: green"><%= flash[:notice] %></p>
+        <fieldset>
+
+          <%= render @order.checkout_stage, :f => f %>
+          <%= f.hidden_field :id %>
+          <div class="button-line">
+            <%= submit_tag t("buttons.back"), :name => "event[previous]", :class => "blue-button" if @order.has_previous? %>
+            <%= submit_tag t("buttons.proceed"), :name => "event[next]", :class => "blue-button" if @order.has_next? %>
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>

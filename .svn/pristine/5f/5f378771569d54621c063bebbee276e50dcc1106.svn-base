@@ -1,0 +1,12 @@
+---
+en:
+  myaccount:
+    shopping:
+      favorites:
+        index:
+          title: "Favorites"
+          favorite_products: "Favorite products"
+          no_favorite_products: "You don't have favorite products"
+        list:
+          name: "Product"
+          manufacturer: "Manufacturer"

@@ -1,0 +1,28 @@
+<% content_for :meta_keywords do %>
+  <title>Mywellness::Friends::Events#index</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "myaccount/welcome/templates/list_menu" %>
+<% end %>
+
+
+<h1>Dashboard</h1>
+
+<h2>Events</h2>
+<ul>
+	<li>New items at bugzilla since last login: 0</li>
+	<li>New topics at forum since last login: 0</li>
+	<li>New tasks at XPlanner since last login: 0</li>
+</ul>
+
+<h2>Login info</h2>
+<ul>
+	<li>Last login at: <%= localize(current_user.last_login_at, :format => :long) if current_user.last_login_at? %> </li>
+	<li>Last login from: <%= current_user.last_login_ip %> </li>
+	<li>Current login at: <%= localize(current_user.current_login_at, :format => :long) if current_user.current_login_at %></li>
+	<li>Current login from: <%= current_user.current_login_ip %></li>
+</ul>
+

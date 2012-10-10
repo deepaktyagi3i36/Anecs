@@ -1,0 +1,25 @@
+<div id="footer" class="round-bottom ">
+  <ul id="find-us">
+    <li></li>
+  </ul>
+
+  <ul id="first-bottom-menu">
+    <li>{{ "main_footer.about_us" | translate_message | link_to_footer: "/welcome","about_us"}} </li>
+    <li>{{ "main_footer.contact_us" | translate_message | link_to_footer: "/welcome","contact_us"}} </li>
+    <li>{{ "main_footer.vacancies" | translate_message | link_to_footer: "/vacancies","index"}} </li>
+    <li>{{ "main_footer.advertising" | translate_message | link_to_footer: "/welcome","advertising"}} </li>
+    <li>{{ "main_footer.requisites" | translate_message | link_to_footer: "/welcome","requisites"}} </li>
+    <li>{{ "main_footer.cooperation" | translate_message | link_to_footer: "/welcome","cooperation"}} </li>
+    <li>{{ "main_footer.massmedia" | translate_message | link_to_footer: "/welcome","massmedia"}} </li>
+  </ul>
+  <ul id="second-bottom-menu">
+    <li>{{ "main_footer.sitemap" | translate_message | link_to_footer: "/welcome","sitemap"}} </li>
+    <li>{{ "main_footer.feedback" | translate_message | link_to_footer: "/feedbacks","new"}} </li>
+    <li>{{ "main_footer.callback" | translate_message | link_to_footer: "/callmebacks","new"}} </li>
+    <li>{{ "main_footer.terms_of_use" | translate_message | link_to_footer: "/welcome","terms_of_use"}} </li>
+    <li>{{ "main_footer.privacy_policy" | translate_message | link_to_footer: "/welcome","privacy_policy"}} </li>
+    <li>{{ "main_footer.publish_policy" | translate_message | link_to_footer: "/welcome","publish_policy"}} </li>
+  </ul>
+  <span>&copy; ООО "ГРАНД СЕРВИС", 2011. Все права защищены.</span>
+</div>
+

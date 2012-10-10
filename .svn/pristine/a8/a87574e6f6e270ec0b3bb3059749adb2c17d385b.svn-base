@@ -1,0 +1,77 @@
+<%= form_for(@article, :url => {:action => action_name, :id => @article.id},
+	:html => {:id => "article_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+  <p>
+    <%= f.label :article_type_id %>
+    <%= f.collection_select :article_type_id, @article_types, :id, :name %>
+    <%= f.error_message_on :article_type_id %>
+  </p>
+
+  <p>
+    <%= f.label :parent_id %>
+    <%= f.collection_select :parent_id, @parents, :id, :name %>
+    <%= f.error_message_on :parent_id %>
+  </p>
+
+	<p>
+	  <%= f.label :weight %>
+	  <%= f.text_field :weight %>
+	  <%= f.error_message_on :weight %>
+	</p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :code %>
+	  <%= f.text_field :code %>
+	  <%= f.error_message_on :code %>
+	</p>
+
+	<p>
+	  <%= f.label :pagetitle %>
+	  <%= f.text_field :pagetitle %>
+	  <%= f.error_message_on :pagetitle %>
+	</p>
+
+	<p>
+	  <%= f.label :metakeywords %>
+	  <%= f.text_field :metakeywords %>
+	  <%= f.error_message_on :metakeywords %>
+	</p>
+
+	<p>
+	  <%= f.label :metadescription %>
+	  <%= f.text_field :metadescription %>
+	  <%= f.error_message_on :metadescription %>
+	</p>
+
+	<p>
+	  <%= f.label :annotation %>
+	  <%= f.text_area :annotation %>
+	  <%= f.error_message_on :annotation %>
+	</p>
+
+	<p>
+	  <%= f.label :content %>
+	  <%= f.text_area :content, :class => "mceEditor" %>
+	  <%= f.error_message_on :content %>
+	</p>
+
+	<p>
+	  <%= f.label :enabled %>
+	  <%= f.check_box :enabled %>
+	  <%= f.error_message_on :enabled %>
+	</p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("article_title") %>

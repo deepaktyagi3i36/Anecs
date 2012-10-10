@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      contact_type:
+        one: "contact type"
+        few: "contact types"
+        many: "contact types"
+        other: "contact types"
+      contact_type_filter:
+        one: "contact types filter"
+        few: "contact types filters"
+        many: "contact types filters"
+        other: "contact types filters"
+    attributes:
+      contact_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      contact_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      contact_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      contact_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      contact_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

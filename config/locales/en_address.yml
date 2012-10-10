@@ -1,0 +1,62 @@
+---
+en:
+  activerecord:
+    models:
+      address:
+        one: "Address"
+        few: "Addresses"
+        many: "Addresses"
+        other: "Addresses"
+    attributes:
+      address:
+        name: "Name alias"
+        full_name: "Address"
+        country_id: "Country"
+        city: "City"
+        street_address1: "Street address 1"
+        street_address2: "Street address 2"
+        zip: "Zip"
+        phone: "Phone"
+        extra_phone: "Additional phone"
+        address_type_id: "Type of address"
+        defaults:
+          name: "My default address"
+    errors:
+      models:
+        address:
+          address_in_not_closed_order_couldnt_be_deleted: "You're trying to delete address from an order #%{order_no} that isn't closed"
+  activeview:
+    columns:
+      address:
+        actions: "Actions"
+        default: "Default"
+        name: "Alias"
+        full_name: "Address"
+        country: "Country"
+        city: "City"
+        street_address1: "Street address 1"
+        street_address2: "Street address 2"
+        zip: "Zip"
+        phone: "Phone"
+        extra_phone: "Additional phone"
+        address_type: "Type of address"
+    flashes:
+      address:
+        notices:
+          created: "Address was successfully created."
+          updated: "Address was successfully updated."
+          deleted: "Address was successfully deleted."
+        errors:
+          not_created: "Address wasn't created due to errors."
+          not_updated: "Address wasn't updated due to errors."
+          not_deleted: "Address wasn't deleted due to errors."
+    messages:
+      address:
+        new: "Add new address"
+        edit: "Editing address"
+    title:
+      address: "Addresses"
+      new_address: "New Address"
+      edit_address: "Editing address"
+      shipping_addresses: "Shipping addresses"
+      billing_addresses: "Billing addresses"

@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      datatype:
+        one: "Тип данных"
+        few: "Тип данных"
+        many: "Тип данных"
+        other: "Тип данных"
+      datatype_filter:
+        one: "Фильтр типы данных"
+        few: "Фильтр типы данных"
+        many: "Фильтр типы данных"
+        other: "Фильтр типы данных"
+    attributes:
+      datatype:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      datatype_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        datatype:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        datatype:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      datatype:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      datatype:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      datatype:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

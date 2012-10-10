@@ -1,0 +1,17 @@
+<div id="breadcrumbs">
+  <ul>
+    <li class="first">
+      <%=link_to(theme_image_tag("breadcrumbs/home.png", {:alt => "Home", :title => "Home"}), :controller => "welcome") %> &gt;
+    </li>
+    <% if @breadcrumbs %>
+      <% @breadcrumbs[0..-2].each do |txt, path| %>
+        <li>
+          <%= link_to(h(txt), path) %> &gt;
+        </li>
+      <% end %>
+      <li>
+        <span><%= link_to(h(@breadcrumbs.last.first), @breadcrumbs.last.second) %> </span>
+      </li>
+    <% end %>
+  </ul>
+</div>

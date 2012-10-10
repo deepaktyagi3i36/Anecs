@@ -1,0 +1,44 @@
+<%= form_for(@category, :url => {:action => action_name, :id => @category.id},
+  :html => {:id => "category_form", :class => "html-form" }) do |f| %>
+  <%= render :partial => "backoffice/products/products/categories/header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :weight %>
+        <%= f.text_field :weight %>
+        <%= f.hint_message_on :weight %>
+        <%= f.error_message_on :weight %>
+      </li>
+      <li>
+        <%= f.mandatory_label :code %>
+        <%= f.text_field :code %>
+        <%= f.error_message_on :code %>
+      </li>
+      <li>
+        <%= f.mandatory_label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.mandatory_label :parent_id %>
+        <%= f.collection_select :parent_id, @parents, :id, :name %>
+        <%= f.error_message_on :parent_id %>
+      </li>
+      <li>
+        <%= f.mandatory_label :about %>
+        <%= f.text_area :about, :class => "mceEditor" %>
+        <%= f.error_message_on :about %>
+      </li>
+      <li>
+        <%= f.mandatory_label :enabled %>
+        <%= f.check_box :enabled %>
+        <%= f.error_message_on :enabled %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("category_name") %>
+

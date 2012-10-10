@@ -1,0 +1,22 @@
+<% content_for :meta_keywords do %>
+  <title>Roles at admin task zone</title>
+<% end %>
+
+<% content_for :content_menu do %>
+  <%= render :partial => "framework/heartbeat/templates/list_menu" %>
+<% end %>
+
+
+<div class="window-box">
+  <div class="window-header">
+    <h1>Dashboard</h1>
+  </div>
+  <div class="window-content">
+    <ul>
+      <li>Sessions count: <%= @sessions_count %></li>
+      <li>Shopping carts count: <%= @shopping_carts_count %></li>
+      <li>Comparators count: <%= @comparators_count %></li>
+      <li>Admin job reports count: <%= @admin_job_reports_count %></li>
+    </ul>
+  </div>
+</div>

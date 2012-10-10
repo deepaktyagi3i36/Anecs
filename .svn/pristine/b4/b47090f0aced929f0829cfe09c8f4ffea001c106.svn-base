@@ -1,0 +1,12 @@
+<div id="html-error" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>The change you wanted was rejected (422 html error)</h1>
+  </div>
+  <div class="window-content">
+    <p>
+      <%= image_tag("flashicons/error_middle.png", {:alt => "Error icon", :title => "Error icon"})%>
+      <span>422 error</span>
+      Maybe you tried to change something you didn't have access to.
+    </p>
+  </div>
+</div>

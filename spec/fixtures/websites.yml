@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: websites
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  domain     :string(128)     not null
+#  aggregator :integer(4)      default(0), not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+anecs_website:
+  name: anecs
+  code: anecs
+  about: anecs
+  domain: www.ANECS.com
+  primary: 0
+  enabled: 1
+
+wellness_website:
+  name: wellness
+  code: wellness
+  about: wellness
+  domain: www.MirWellnessa.ru
+  primary: 0
+  enabled: 1
+
+hunting_website:
+  name: hunting
+  code: hunting
+  about: hunting
+  domain: www.WizdomHunter.ru
+  primary: 0
+  enabled: 1
+
+sportgora_website:
+  name: sportgora
+  code: sportgora
+  about: sportgora
+  domain: www.SportGora.ru
+  primary: 1
+  enabled: 1

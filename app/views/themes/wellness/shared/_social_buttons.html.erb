@@ -1,0 +1,28 @@
+<div id="social_buttons">
+<% vkontakte_api_id = DomainsConfiguration.lookup('vkontakte_api_id') %>
+<% if ::Rails.env != 'development' and !vkontakte_api_id.nil? %>
+
+    <script type="text/javascript">
+        VK.init({apiId: <%= vkontakte_api_id %>, onlyWidgets: true});
+    </script>
+
+    <!-- VKontakte: I like it -->
+    <div id="vk_like" style="display: inline"></div>
+    <script type="text/javascript">
+        VK.Widgets.Like("vk_like", {type: "button"});
+    </script>
+<% else %>
+    ВКонтакте: Мне понравилось!
+<% end %>
+
+<% facebook_app_id = DomainsConfiguration.lookup('facebook_app_id') %>
+<% if ::Rails.env != 'development' and !facebook_app_id.nil? %>
+  <iframe src="//www.facebook.com/plugins/like.php?app_id=<%= facebook_app_id %>&amp;href&amp;send=false&amp;layout=button_count&amp;width=140&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=22" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:22px;" allowTransparency="true"></iframe>
+<% else %>
+  Facebook Like button
+<% end %>
+
+<!-- Google +1 -->
+<g:plusone size="medium"></g:plusone>
+
+</div>

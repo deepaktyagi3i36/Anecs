@@ -1,0 +1,13 @@
+---
+ru:
+  activerecord:
+    model:
+      cart_item:
+        one: "Товар в корзине"
+        few: "Товар в корзине"
+        many: "Товар в корзине"
+        other: "Товар в корзине"
+    attributes:
+      cart_item:
+        quantity: "Количество"
+        saved_for_later: "Отложен"

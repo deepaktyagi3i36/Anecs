@@ -1,0 +1,19 @@
+---
+ru:
+  activeview:
+    columns:
+      product_type_property:
+        name: "Наименование"
+        infoitem: "Информационный элемент"
+        created_at: "Создание"
+    flashes:
+      product_type_property:
+        notices:
+          created: "Разновидность успешно создано."
+          updated: "Разновидность успешно изменено."
+          deleted: "Разновидность успешно удалено."
+    messages:
+      product_type_property:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

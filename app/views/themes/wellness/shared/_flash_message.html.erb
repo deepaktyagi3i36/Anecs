@@ -1,0 +1,24 @@
+<% if has_flash_any_key? %>
+  <div id="flash" class="flash-960" >
+    <% if flash.key?(:notice)%>
+      <div class="notice">
+        <p><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:information)%>
+      <div class="information">
+        <p><%= flash[:information] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:warning)%>
+      <div class="warning">
+        <p><%= flash[:warning] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:error)%>
+      <div class="error">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

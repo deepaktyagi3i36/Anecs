@@ -1,0 +1,11 @@
+<h1>Your account has been created.</h1>
+<p>
+  Welcome to <%= @runtime_settings["server_name"] %>!
+  Login: <em><%= @user.login if @user%></em>
+  Password: <%= @user.password if @user%>
+</p>
+<p>
+  <% if @url %>
+    Visit this url to activate your account: <a href="<%= @url %>"><%= @url %></a>
+  <% end %>
+</p>

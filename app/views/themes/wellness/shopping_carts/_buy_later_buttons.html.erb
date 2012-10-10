@@ -1,0 +1,8 @@
+<%= image_submit_tag "/images/buttons/add_to_cart.png",
+        :alt => t("tooltips.add_to_cart"), :title => t("tooltips.add_to_cart"),
+        :name => "shopping_cart[cart_items_attributes][#{item.id}][saved_for_later]",
+        :value => 1 - item.saved_for_later, :class => "add-to-cart" %>
+<%= image_submit_tag "/images/buttons/remove_from_waitlist.png",
+        :alt => t("tooltips.remove_from_waitlist"), :title => t("tooltips.remove_from_waitlist"),
+        :name => "shopping_cart[cart_items_attributes][#{item.id}][_destroy]",
+        :value => 1, :class => "delete" %>

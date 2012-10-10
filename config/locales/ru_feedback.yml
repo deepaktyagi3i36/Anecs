@@ -1,0 +1,38 @@
+---
+ru:
+  activerecord:
+    models:
+      feedback:
+        one: "Обратная связь"
+        few: "Обратная связь"
+        many: "Обратная связь"
+        other: "Обратная связь"
+    attributes:
+      feedback:
+        user_id: "Пользователь"
+        contact_type_id: "Причина обращения"
+        contact_status_id: "Состояние"
+        title: "Обращение (ФИО)"
+        body: "Сообщение"
+  activeview:
+    columns:
+      feedback:
+        user: "Пользователь"
+        contact_type: "Причина обращения"
+        contact_status: "Состояние"
+        title: "Обращение (ФИО)"
+        body: "Сообщение"
+    flashes:
+      feedback:
+        notices:
+          created: "Спасибо за Ваше сообщение!"
+    messages:
+      feedback:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+    feedbacks:
+      new:
+        title: "Обратная связь"
+      header:
+        info: "Пожалуйста укажите причину Вашего обращения и оставьте свое сообщение."

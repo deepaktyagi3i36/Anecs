@@ -1,0 +1,9 @@
+<% content_for :meta_keywords do %>
+  <title>Term of user</title>
+  <meta name="keywords" content="mirwellnessa.ru" />
+  <meta name="description" content="mirwellnessa.ru" />
+<% end %>
+
+<div id="term-of-use" class="html-text">
+  <h1>Уважаемые покупатели!</h1>
+</div>

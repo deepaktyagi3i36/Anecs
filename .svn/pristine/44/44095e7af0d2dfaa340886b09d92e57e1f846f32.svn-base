@@ -1,0 +1,3 @@
+<p class="mandatory-message">
+  <span class="mandatory-sign">*</span> <%= t('forms.header.asterisk') %>
+</p>

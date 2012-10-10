@@ -1,0 +1,6 @@
+<div class="html-form-header">
+  <p>
+    Please enter you email to reset password.
+  </p>
+  <%= render :partial => "templates/mandatory_message" %>
+</div>

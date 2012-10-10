@@ -1,0 +1,2 @@
+module Myaccount::CommunityHelper
+end

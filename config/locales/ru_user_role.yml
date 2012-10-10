@@ -1,0 +1,54 @@
+---
+ru:
+  activerecord:
+    models:
+      user_role:
+        one: "Роль пользователя"
+        few: "Роль пользователя"
+        many: "Роль пользователя"
+        other: "Роль пользователя"
+    attributes:
+      user_role:
+        name: "Заказ №"
+        about: "Примечания к заказу:"
+        order_state_id: "Состояние обработки заказа"
+        user_id: "Получатель заказа"
+        shipping_type_id: "Тип доставки"
+        payment_type_id: "Тип платежа"
+        address_id: "Адрес доставки"
+        checkout_state_id: "Состояние оформления заказа"
+        email: "Адрес эл. почты получателя"
+        user_name: "Фамилия Имя Отчество"
+        notes: "Примечания (удобное время доставки, уточнение адреса)"
+        created_at: "Дата создания"
+        updated_at: "Дата изменения"
+    errors:
+      models:
+        user_role:
+          deletion_prohibited: "Нельзя удалять полностью оформленный и незакрытый заказ"
+          attributes:
+            email:
+              blank: "Для неавторизованного пользователя необходимо ввести адрес эл. почты"
+            user_name:
+              blank: "Должно быть указано имя получателя заказа"
+  activeview:
+    columns:
+      user_role:
+        role: "Роль"
+        user: "Пользователь"
+        actions: "Действие"
+        created_at: "Создано"
+    flashes:
+      user_role:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      user_role:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+    title:
+      user: "User"
+      new_user: "Register New User"
+      change_password: "Change password"

@@ -1,0 +1,32 @@
+<%= form_for(@property, :url => {:action => action_name, :id => @property.id},
+  :html => {:id => "property_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.label :datatype_id %>
+        <%= f.collection_select :datatype_id, @datatypes, :id, :name %>
+        <%= f.error_message_on :datatype_id %>
+      </li>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+      <li>
+        <%= f.label :code %>
+        <%= f.text_field :code %>
+        <%= f.error_message_on :code %>
+      </li>
+      <li>
+        <%= f.label :about %>
+        <%= f.text_field :about %>
+        <%= f.error_message_on :about %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("property_name") %>

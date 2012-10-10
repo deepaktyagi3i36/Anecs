@@ -1,0 +1,22 @@
+<% content_for :meta_keywords do %>
+  <title>Search results</title>
+  <meta name="keywords" content="Majoron, AntHill, AntHIll SMPP, AntHIll Diameter, Majoron latest news, Majoron events and announcements" />
+  <meta name="description" content="Majoron expertise is focused on two following directions: networking to create set of libraries to allow uniform communication across different transports and auxiliary utilities to speedup and standardize development process in early phases." />
+<% end %>
+
+<div id="search-result" class="html-text">
+  <h1>Search results</h1>
+  <div class="cse-search-results">
+      <!-- Google Search Result Snippet Begins -->
+      <div id="cse-search-results"></div>
+      <script type="text/javascript">
+        var googleSearchIframeName = "cse-search-results";
+        var googleSearchFormName = "cse-search-box";
+        var googleSearchFrameWidth = 600;
+        var googleSearchDomain = "www.google.com";
+        var googleSearchPath = "/cse";
+      </script>
+      <script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+      <!-- Google Search Result Snippet End -->
+  </div>
+</div>

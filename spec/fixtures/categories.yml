@@ -1,0 +1,155 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :integer(4)      not null, primary key
+#  code       :string(128)     not null
+#  name       :string(128)     not null
+#  namel      :string(128)     not null
+#  about      :string(5000)    not null
+#  weight     :integer(4)      default(0), not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#  ancestry   :string(255)
+#  permalink  :string(255)
+#  slug       :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+products_supplements_category:
+  website: wellness_website
+  code: supplements
+  name: supplements
+  namel: supplements
+  about: supplements
+  enabled: 1
+
+products_supplements_bycategory_category:
+  website: wellness_website
+  code: by category
+  name: by category
+  namel: by category
+  about: by category
+  enabled: 1
+
+products_supplements_bycategory_anabolic_category:
+  website: wellness_website
+  code: anabolic
+  name: anabolic
+  namel: anabolic
+  about: anabolic
+  enabled: 1
+
+products_supplements_bycategory_protein_category:
+  website: wellness_website
+  code: protein
+  name: protein
+  namel: protein
+  about: protein
+  enabled: 1
+
+products_supplements_bycategory_muscle_building_category:
+  website: wellness_website
+  code: "muscle building"
+  name: "muscle building"
+  namel: "muscle building"
+  about: "muscle building"
+  enabled: 1
+
+products_supplements_bycategory_amino_acids_category:
+  website: wellness_website
+  code: "amino acids"
+  name: "amino acids"
+  namel: "amino acids"
+  about: "amino acids"
+  enabled: 1
+
+
+centers_fitnesses_category:
+  website: wellness_website
+  code: fitness
+  name: fitness
+  namel: fitness
+  about: fitness
+  enabled: 1
+
+centers_fitnesses_by_city_category:
+  website: wellness_website
+  code: fitnesses by city
+  name: by city
+  namel: by city
+  about: by city
+  enabled: 1
+
+centers_fitnesses_by_city_moscow_category:
+  website: wellness_website
+  code: fitnesses moscow
+  name: moscow
+  namel: moscow
+  about: moscow
+  enabled: 1
+
+centers_fitnesses_by_city_spb_category:
+  website: wellness_website
+  code: fitnesses sbp
+  name: sbp
+  namel: sbp
+  about: sbp
+  enabled: 1
+
+
+experts_trainers_category:
+  website: wellness_website
+  code: trainers
+  name: trainers
+  namel: trainers
+  about: trainers
+  enabled: 1
+
+
+experts_trainers_by_city_category:
+  website: wellness_website
+  code: experts by city
+  name: by city
+  namel: by city
+  about: by city
+  enabled: 1
+
+
+experts_trainers_by_city_moscow_category:
+  website: wellness_website
+  code: experts moscow
+  name: moscow
+  namel: moscow
+  about: moscow
+  enabled: 1
+
+experts_trainers_by_city_spb_category:
+  website: wellness_website
+  code: experts spb
+  name: spb
+  namel: spb
+  about: spb
+  enabled: 1
+
+by_manufacturer_category:
+  website: wellness_website
+  code: supplements by manufactory
+  name: by manufactory
+  namel: by manufactory
+  about: by manufactory
+  weight: 999
+  enabled: 1
+
+manufacturer_multipower_category:
+  website: wellness_website
+  code: Multipower
+  name: Multipower
+  namel: Multipower
+  about: Multipower
+  weight: 999
+  enabled: 1
+

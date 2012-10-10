@@ -1,0 +1,97 @@
+<% content_for :meta_keywords do %>
+  <title><%= t("shopping_cart.title") %></title>
+<% end %>
+
+<div id="shopping-cart-content">
+  <h1><%= t('shopping_cart.title') %></h1>
+
+  <p>
+    <%= @cart.total_buy_now_items %> <%= t('shopping_cart.items') %>:
+    <span class="red"><%= @cart.buy_now_price %> <%= @currency.sign %></span>
+  </p>
+
+  <div class="shopping-cart-summary form form-960">
+    <div class="form-header form-header-blue">
+      <h2><%= t('shopping_cart.buy_now') %></h2>
+    </div>
+    <div class="form-content">
+      <%= render :partial => 'shared/flash_message' %>
+      <%= form_tag({:controller => '/shopping_carts', :action => 'update'}, {:id=>'list'}) do %>
+        <table cellspacing='0' cellpadding='0'>
+          <%= render :partial => 'header' %>
+          <% @buy_now_items.each do |cart_item| %>
+            <%= render :partial => 'cart_item', :locals => {:cart_item => cart_item} %>
+          <% end %>
+          <tr>
+            <td colspan="6">
+              <span class="red">
+                <%= t('shopping_cart.total_price') %>
+                : <%= @cart.buy_now_price %> <%= @currency.sign %>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div class="button-line">
+          <% button_style = @buy_now_items.empty? ? 'disabled-button' : '' %>
+          <%= link_to t('buttons.continue_shopping'), {:controller => '/products', :action => 'index'}, :class => 'button blue-button' %>
+          <%= submit_tag t('buttons.clean_cart'), :name => 'delete_all_buy_now_items', :class => "blue-button #{button_style}", :disabled => @buy_now_items.empty? %>
+          <%= submit_tag t('buttons.update'), :name => 'update_buy_now_items', :class => "blue-button #{button_style}", :disabled => @buy_now_items.empty? %>
+          <% if @buy_now_items.empty? %>
+            <%= submit_tag t('buttons.checkout'), :name => 'update_buy_now_items', :class => "disabled-button", :disabled => 'disabled' %>
+          <% else %>
+            <%= link_to t('buttons.checkout'), {:controller => '/orders', :action => 'new'}, :class => 'button red-button' %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if @cart.total_buy_later_items > 0 %>
+    <div class="shopping-cart-summary form form-960">
+      <div class="form-header form-header-blue">
+        <h2><%= t('shopping_cart.buy_later') %></h2>
+      </div>
+      <div class="form-content">
+        <%= form_tag({:controller => '/shopping_carts', :action => 'update'}, {:id=>'list1'}) do %>
+          <table cellspacing='0' cellpadding='0'>
+            <%= render :partial => 'header' %>
+            <% @buy_later_items.each do |cart_item| %>
+              <%= render :partial => 'cart_item', :locals => {:cart_item => cart_item} %>
+            <% end %>
+          </table>
+          <div class="button-line">
+            <%= submit_tag t('buttons.clean_saved_items'), :name => 'delete_all_buy_later_items', :class => 'blue-button' %>
+            <%= submit_tag t('buttons.update'), :name => 'update_buy_now_items', :class => 'submit-button blue-button' %>
+            <%= link_to t('buttons.continue_shopping'), {:controller => '/products', :action => 'index'}, :class => 'button blue-button' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<% if ::Rails.env != 'development' %>
+  <div id="google-conversion">
+    <!-- Google Code for &#1055;&#1088;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088; &#1082;&#1086;&#1088;&#1079;&#1080;&#1085;&#1099; Conversion Page -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1017589833;
+    var google_conversion_language = "ru";
+    var google_conversion_format = "1";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "GhlpCPedkgIQyeCc5QM";
+    var google_conversion_value = 0;
+    if (15) {
+      google_conversion_value = 15;
+    }
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1017589833/?value=15&amp;label=GhlpCPedkgIQyeCc5QM&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+  </div>
+<% end %>

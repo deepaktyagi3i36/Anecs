@@ -1,0 +1,12 @@
+<div id="footer">
+  <p>
+    If you receive this letter and you don't know why you are addressed with it is, please report
+    to our support at <a href="mailto:<%= @runtime_settings["email_abuse_address"] %>">
+    <%= @runtime_settings["email_abuse_address"] %></a>.
+  </p>
+  <p>
+    This letter has been sent due to your registration at
+    <a href=http://<%= @runtime_settings["server_url"] %> ><%= @runtime_settings["server_name"] %></a>.
+    You can change a notification <a href="http://<%= @runtime_settings["server_url"] %>">settings</a>.
+  </p>
+</div>

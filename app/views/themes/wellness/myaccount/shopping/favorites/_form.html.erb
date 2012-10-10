@@ -1,0 +1,23 @@
+<%= form_for(@order, :url => {:action => action_name, :id => @order.id},
+	:html => {:id => "order_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :about %>
+	  <%= f.text_field :about %>
+	  <%= f.error_message_on :about %>
+	</p>
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("order_name") %>

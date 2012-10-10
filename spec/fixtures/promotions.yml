@@ -1,0 +1,74 @@
+# == Schema Information
+#
+# Table name: promotions
+#
+#  id                :integer(4)      not null, primary key
+#  promotion_type_id :integer(4)      not null
+#  code              :string(128)     not null
+#  name              :string(128)     not null
+#  about             :string(128)     not null
+#  title             :string(128)     not null
+#  body              :string(512)     not null
+#  begin_dt          :datetime        not null
+#  finish_dt         :datetime        not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#  website_id        :integer(4)      not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+feburary23_action:
+  website: wellness_website
+  promotion_type: action_promotion_type
+  name: 23feburary
+  code: 23feburary
+  about: 23feburary
+  title: 23feburary
+  body: 23feburary
+  begin_dt: <%= 10.days.ago.to_s :db %>
+  finish_dt: <%= 1.days.ago.to_s :db %>
+
+march8_action:
+  website: wellness_website
+  promotion_type: action_promotion_type
+  name: 8march
+  code: 8march
+  about: 8march
+  title: 8march
+  body: 8march
+  begin_dt: <%= 10.days.ago.to_s :db %>
+  finish_dt: <%= 1.days.ago.to_s :db %>
+
+newyear_action:
+  website: wellness_website
+  promotion_type: action_promotion_type
+  name: newyear
+  code: newyear
+  about: newyear
+  title: newyear
+  body: newyear
+  begin_dt: <%= 10.days.ago.to_s :db %>
+  finish_dt: <%= 1.days.ago.to_s :db %>
+
+newitem_product:
+  website: wellness_website
+  promotion_type: newitem_promotion_type
+  name: newitem
+  code: newitem
+  about: newitem
+  title: newitem
+  body: newitem
+  begin_dt: <%= 10.days.ago.to_s :db %>
+  finish_dt: <%= 1.days.ago.to_s :db %>
+
+percents15_saleoff:
+  website: wellness_website
+  promotion_type: saleoff_promotion_type
+  name: 15percents
+  code: 15percents
+  about: 15percents
+  title: 15percents
+  body: 15percents
+  begin_dt: <%= 10.days.ago.to_s :db %>
+  finish_dt: <%= 1.days.ago.to_s :db %>

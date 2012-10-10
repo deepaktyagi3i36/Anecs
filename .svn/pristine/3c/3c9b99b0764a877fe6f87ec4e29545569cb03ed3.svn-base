@@ -1,0 +1,29 @@
+---
+ru:
+  activerecord:
+    models:
+      credential:
+        one: "Сессия"
+        few: "Сессии"
+        many: "Сессии"
+        other: "Сессии"
+    attributes:
+      credential:
+        login: "Логин"
+        password: "Пароль"
+        remember_me: "Запомнить"
+    errors:
+      models:
+        credential:
+          header_message:
+            one: "Вход пользователя не удался из-за %{count} ошибки"
+            few: "Вход пользователя не удался из-за %{count} ошибок"
+            many: "Вход пользователя не удался из-за %{count} ошибок"
+            other: "Вход пользователя не удался из-за %{count} ошибки"
+          invalid_username_or_password: "Неверный логин или пароль"
+          invalid_user_status: "Учетная запись пользователя не активизирована"
+    hints:
+      models:
+        credential:
+          attributes:
+            password: "(чувствителен к регистру)"

@@ -1,0 +1,13 @@
+---
+en:
+  activerecord:
+    model:
+      cart_item:
+        one: "Cart's item"
+        few: "Cart's items"
+        many: "Cart's items"
+        other: "Cart's items"
+    attributes:
+      cart_item:
+        quantity: "Quantity"
+        saved_for_later: "Saved for later"

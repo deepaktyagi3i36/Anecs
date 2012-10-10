@@ -1,0 +1,16 @@
+<div id="list-menu">
+  <ul>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.welcome.dashboard"),
+                       :url => "/myaccount/welcome/dashboard",
+                       :match_path => "^\/(myaccount(\/)?|myaccount\/welcome(\/)?|myaccount\/welcome\/dashboard(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.welcome.myprofile"),
+                       :url => "/myaccount/welcome/myprofile/edit",
+                       :match_path => "^\/(myaccount\/welcome\/myprofile(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.welcome.password"),
+                       :url => "/myaccount/welcome/password/edit",
+                       :match_path => "^\/(myaccount\/welcome\/password(.*))$" %>
+    <%= list_menu_item :label => t("navigation.myaccount.listmenu.welcome.complaints"),
+                       :url => "/myaccount/welcome/complaints",
+                       :match_path => "^\/(myaccount\/welcome\/complaints(.*))$" %>
+  </ul>
+</div>

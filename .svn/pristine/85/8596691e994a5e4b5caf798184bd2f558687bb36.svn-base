@@ -1,0 +1,16 @@
+# Config file remsport http
+
+development:
+  bin_path: "C://Binutils//Sphinx-2.0.4-release-win32//bin//"
+  searchd_binary_name: searchd
+  indexer_binary_name: indexer
+
+production:
+  bin_path: "C://Binutils//Sphinx-2.0.4-release-win32//bin//"
+  searchd_binary_name: searchd
+  indexer_binary_name: indexer
+
+test:
+  bin_path: "C://Binutils//Sphinx-2.0.4-release-win32//bin//"
+  searchd_binary_name: searchd
+  indexer_binary_name: indexer

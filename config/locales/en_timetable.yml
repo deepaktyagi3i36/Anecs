@@ -1,0 +1,66 @@
+---
+en:
+  activerecord:
+    models:
+      timetable:
+        one: "timetable"
+        few: "timetables"
+        many: "timetables"
+        other: "timetables"
+    attributes:
+      timetable:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        timetable:
+          header_message:
+            one: "timetable registration failed because of %{count} error"
+            few: "timetable registration failed because of %{count} errors"
+            many: "timetable registration failed because of %{count} errors"
+            other: "timetable registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_timetable_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        timetable:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      timetable:
+        actions: "Actions"
+        login: "Login"
+        timetable_status: "timetable status"
+        created_at: "Created"
+    flashes:
+      timetable:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      timetable:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+        myprofile: "My profile"
+        forgot: "Forgot a password?"
+        reset: "Reset password"
+        change_password: "Change password"
+        resend: "Resend activation letter"
+        registration:
+          activation: "Please activate your new account!"
+          completed: "Your account has been activated!"
+          notification: "New timetable %{login} has been activated"
+    title:
+      timetable: "timetable"
+      new_timetable: "Register New timetable"
+      change_password: "Change password"

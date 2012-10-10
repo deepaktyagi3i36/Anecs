@@ -1,0 +1,34 @@
+            <% prefix ="shopping_cart[cart_items_attributes][]" %>
+            <% fields_for prefix, cart_item do |item_fields| %>
+              <tr>
+                <td>
+                  <%= item_fields.hidden_field :variant_id, {:id => "variant_id.#{unique_id('item')}"} %>
+                  <% cart_item.variant.infoitem.images.each do |photo| %>
+                    <% if photo.primary > 0 %>
+                      <%= link_to theme_image_tag(photo.picture.url(:small)),
+                              cart_item.variant.infoitem.url, {:class => "infoitem-thumbnail"} %>
+                    <% end %>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to cart_item.variant.product.name,
+                          cart_item.variant.infoitem.url %>
+                </td>
+                <td>
+                  <%= cart_item.variant.t_name %>
+                </td>
+                <td>
+                  <%= cart_item.variant.price %>
+                </td>
+                <td>
+                  <%= item_fields.text_field :quantity, :id => "quantity.#{last_id('item')}",
+                          :size => 5 %>
+                  <%= item_fields.error_message_on :quantity %>
+                </td>
+                <td>
+                  <% item_type = cart_item.saved_for_later == 0 ? 'buy_now' : 'buy_later' %>
+                  <%= render :partial => "#{item_type}_buttons", :locals => {:item => cart_item} %>
+                  <%= item_fields.error_message_on :saved_for_later %>
+                </td>
+              </tr>
+            <% end %>

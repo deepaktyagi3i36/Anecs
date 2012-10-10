@@ -1,0 +1,37 @@
+---
+en:
+  activerecord:
+    models:
+      user_session:
+        one: "user session"
+        few: "user sessions"
+        many: "user sessions"
+        other: "user sessions"
+    attributes:
+      user_session:
+        login: "Login"
+        password: "Password"
+        remember_me: "Remember me"
+    errors:
+      models:
+    hints:
+      models:
+        user_session:
+          attributes:
+            password: "(case sensitive)"
+  activeview:
+    flashes:
+      user_session:
+        notices:
+          created: "Logged in successfully."
+          deleted: "You have been logged out."
+        warnings:
+          invalid_website: "You must have website to access this page"
+          must_be_logged_in: "You must be logged in to access this page"
+          must_be_logged_out: "You must be logged out to access this page"
+    messages:
+      user_session:
+        new: "Login"
+    forms:
+      user_session:
+        title: "Signup information"

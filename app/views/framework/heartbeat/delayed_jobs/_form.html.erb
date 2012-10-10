@@ -1,0 +1,52 @@
+<%= form_for(@delayed_job, :url => {:action => action_name, :id => @delayed_job.id},
+	:html => {:id => "delayed_job_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+  	<%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :priority %>
+        <%= f.text_field :priority %>
+        <%= f.error_message_on :priority %>
+      </li>
+      <li>
+        <%= f.mandatory_label :attempts %>
+        <%= f.text_field :attempts %>
+        <%= f.error_message_on :attempts %>
+      </li>
+      <li>
+        <%= f.label :handler %>
+        <%= f.text_area :handler %>
+        <%= f.error_message_on :handler %>
+      </li>
+      <li>
+        <%= f.label :last_error %>
+        <%= f.text_area :last_error %>
+        <%= f.error_message_on :last_error %>
+      </li>
+      <li>
+        <%= f.label :run_at %>
+        <%= f.date_time_picker :run_at %>
+        <%= f.error_message_on :run_at %>
+      </li>
+      <li>
+        <%= f.label :locked_at %>
+        <%= f.date_time_picker :locked_at %>
+        <%= f.error_message_on :locked_at %>
+      </li>
+      <li>
+        <%= f.label :failed_at %>
+        <%= f.date_time_picker :failed_at %>
+        <%= f.error_message_on :failed_at %>
+      </li>
+      <li>
+        <%= f.label :locked_by %>
+        <%= f.text_area :locked_by %>
+        <%= f.error_message_on :locked_by %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("delayed_job_name") %>

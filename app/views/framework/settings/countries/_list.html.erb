@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th> <%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.country.name"), "countries.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.country.code"), "countries.code" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.country.created_at"), "countries.created_at" %></th>
+      <th> <%= t("activeview.columns.country.actions") %> </th>
+    </tr>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', country.id, false) %></td>
+        <td><%= link_to country.name, :action => "edit", :id => country %></td>
+        <td><%= link_to country.code, :action => "edit", :id => country %></td>
+        <td><%= localize(country.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => country) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => country) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

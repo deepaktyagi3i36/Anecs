@@ -1,0 +1,45 @@
+---
+ru:
+  activerecord:
+    models:
+      pattern:
+        one: "Шаблон"
+        few: "Шаблон"
+        many: "Шаблон"
+        other: "Шаблон"
+      pattern_filter:
+        one: "Фильтр шаблона"
+        other: "Фильтр шаблона"
+    attributes:
+      pattern:
+        name: "Наименование"
+        name_ru: "Наименование ru"
+        product_id: "Информационный элемент"
+        price: "Цена"
+        enabled: "Активен"
+      pattern_filter:
+        namel: "Наименование"
+        product_id: "Информационный элемент"
+        created_at_till: "Создано после"
+        created_at_till: "Создано до"
+    hints:
+      pattern:
+        hint1: "Hint1"
+        hint2: "Hint2"
+  activeview:
+    columns:
+      pattern:
+        name: "Наименование"
+        title: "Title"
+        created_at: "Создание"
+    flashes:
+      pattern:
+        notices:
+          created: "Шаблон успешно создано."
+          updated: "Шаблон успешно изменено."
+          deleted: "Шаблон успешно удалено."
+    messages:
+      pattern:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

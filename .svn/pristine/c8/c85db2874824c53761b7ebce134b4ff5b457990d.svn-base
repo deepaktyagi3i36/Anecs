@@ -1,0 +1,43 @@
+<%= form_for(@photo, :url => {:action => action_name, :id => @photo.id},
+	:html => {:id => "photo_form", :class => "html-form"  }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :product_id %>
+        <%= f.collection_select :product_id, @products, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :primary %>
+        <%= f.check_box :primary %>
+        <%= f.error_message_on :primary %>
+      </li>
+      <li>
+        <%= f.label :picture_file %><br />
+        <%= f.file_field :picture %>
+        <%= f.error_message_on :picture %>
+      </li>
+    </ul>
+    <%= render :partial => "section2" %>
+    <ul>
+      <li>
+        <%= image_tag(@photo.picture.url(:thumb), :class => "photo-image")  %>
+      </li>
+      <li>
+        <%= image_tag(@photo.picture.url(:small), :class => "photo-image") %>
+      </li>
+      <li>
+        <%= image_tag(@photo.picture.url(:large), :class => "photo-image") %>
+      </li>
+      <li>
+        <%= image_tag(@photo.picture.url(:huge), :class => "photo-image") %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("photo_primary") %>
+

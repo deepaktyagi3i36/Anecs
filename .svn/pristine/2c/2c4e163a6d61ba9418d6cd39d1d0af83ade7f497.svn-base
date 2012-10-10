@@ -1,0 +1,12 @@
+<div id="resend">
+  <div class="form form-440">
+    <div class="form-header">
+      <h1><%= t("activeview.messages.user.resend") %></h1>
+    </div>
+    <div class="form-content">
+      <%= render :partial => "shared/flash_message" %>
+      <%= render :partial => "resend_form", :locals => {
+        :action_name => "resend", :button_label => t("buttons.resend")} %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<%= form_for(@user, :url => {:action => action_name, :id => @user.id},
+  :html => {:id => "user", :class => "html-form" }) do |f| %>
+  <%= render :partial => "header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "section1" %>
+    <ul>
+      <li>
+        <%= f.mandatory_label :nickname %>
+        <%= f.text_field :nickname %>
+        <%= f.error_message_on :nickname %>
+      </li>
+      <li>
+        <%= f.mandatory_label :firstname %>
+        <%= f.text_field :firstname %>
+        <%= f.error_message_on :firstname %>
+      </li>
+      <li>
+        <%= f.label :middlename %>
+        <%= f.text_field :middlename %>
+        <%= f.error_message_on :middlename %>
+      </li>
+      <li>
+        <%= f.mandatory_label :lastname %>
+        <%= f.text_field :lastname %>
+        <%= f.error_message_on :lastname %>
+      </li>
+      <li>
+        <%= f.check_box :allow_email %>
+        <%= f.label :allow_email %>
+        <%= f.hint_message_on :allow_email %>
+        <%= f.error_message_on :allow_email %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("user_nickname") %>

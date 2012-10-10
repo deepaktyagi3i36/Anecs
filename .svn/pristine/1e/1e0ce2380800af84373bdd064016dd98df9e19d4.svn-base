@@ -1,0 +1,64 @@
+<% form_for(@address, :url => {:action => action_name, :id => @address.id},
+        :html => {:id => unique_id('address_form'), :class => 'basic-form'}) do |f| %>
+  <%= render :partial => 'header' %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.mandatory_label :name %> 
+        <%= f.text_field :name %>
+        <%= f.error_message_on :name %>
+      </li>
+
+      <li>
+        <%= f.mandatory_label :country_id %> 
+        <%= f.collection_select :country_id, @countries, :id, :t_name %>
+        <%= f.error_message_on :country_id %>
+      </li>
+
+      <li>
+        <%= f.mandatory_label :city %> 
+        <%= f.text_field :city %>
+        <%= f.error_message_on :city %>
+      </li>
+
+      <li>
+        <%= f.mandatory_label :street_address1 %> 
+        <%= f.text_field :street_address1 %>
+        <%= f.error_message_on :street_address1 %>
+      </li>
+
+      <li>
+        <%= f.label :street_address2 %> 
+        <%= f.text_field :street_address2 %>
+        <%= f.error_message_on :street_address2 %>
+      </li>
+
+      <li>
+        <%= f.label :zip %> 
+        <%= f.text_field :zip %>
+        <%= f.error_message_on :zip %>
+      </li>
+
+      <li>
+        <%= f.mandatory_label :phone %> 
+        <%= f.text_field :phone %>
+        <%= f.error_message_on :phone %>
+      </li>
+
+      <li>
+        <%= f.label :extra_phone %> 
+        <%= f.text_field :extra_phone %>
+        <%= f.error_message_on :extra_phone %>
+      </li>
+
+      <li>
+        <%= f.label :address_type_id %> 
+        <%= f.collection_select :address_type_id, @address_types, :id, :name %>
+        <%= f.error_message_on :address_type_id %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("address_name") %>

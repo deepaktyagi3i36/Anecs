@@ -1,0 +1,18 @@
+<%= form_for @email, :url => {:action => action_name},
+   :html => {:id => "resend_form", :class => "html-form" } do |f| %>
+  <%= render :partial => "resend_header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "resend_section1" %>
+    <ul>
+      <li>
+	    <%= f.mandatory_label :email %>
+	    <%= f.text_field :email %>
+        <%= f.hint_message_on :email %>
+	    <%= f.error_message_on :email %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("email_email") %>

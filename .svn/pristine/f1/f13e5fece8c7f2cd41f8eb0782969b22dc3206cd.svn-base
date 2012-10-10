@@ -1,0 +1,13 @@
+<div id="main-menu-box">
+  <ul id="main-menu">
+    <% @categories.each do |category| %>
+      <% currents = self_and_childs(category) %>
+      <% current = currents[currents.size()-1] %>
+      <%= main_menu_item :label => category.name,
+                         :url => "/products?category=#{current.to_param}&layout=#{index_product_layout(current)}",
+                         :match_path => "^\/(products(.*))$" %>
+    <% end %>
+  </ul>
+</div>
+
+

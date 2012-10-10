@@ -1,0 +1,42 @@
+<%= form_for(@complaint, :url => {:action => action_name, :id => @complaint.id},
+  :html => {:id => "complaint_form" }) do |f| %>
+
+  <%= f.error_messages %>
+  <p style="color: green"><%= flash[:notice] %></p>
+
+  <p>
+    <%= f.label :complaint_type_id %>
+    <%= f.collection_select :complaint_type_id, @complaint_types, :id, :name %>
+    <%= f.error_message_on :complaint_type_id %>
+  </p>
+
+  <p>
+    <%= f.label :complaint_status_id %>
+    <%= f.collection_select :complaint_status_id, @complaint_statuses, :id, :name %>
+    <%= f.error_message_on :complaint_status_id %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, @users, :id, :login %>
+    <%= f.error_message_on :user_id %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.error_message_on :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, :class => "mceEditor" %>
+    <%= f.error_message_on :body %>
+  </p>
+
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("complaint_name") %>

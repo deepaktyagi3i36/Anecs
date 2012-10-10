@@ -1,0 +1,79 @@
+# == Schema Information
+#
+# Table name: manpages
+#
+#  id              :integer(4)      not null, primary key
+#  name            :string(128)     not null
+#  namel           :string(128)     not null
+#  code            :string(128)     not null
+#  annotation      :string(5000)
+#  content         :text(2147483647
+#  pagetitle       :string(128)     not null
+#  metakeywords    :string(255)     not null
+#  metadescription :text            default(""), not null
+#  weight          :integer(4)      default(0), not null
+#  enabled         :integer(4)      default(0), not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  website_id      :integer(4)      not null
+#  ancestry        :string(255)
+#  permalink       :string(255)
+#  slug            :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+welcome_manpage:
+  website: wellness_website
+  name: welcome
+  namel: welcome
+  code: welcome
+  annotation: welcome
+  content: nil
+  pagetitle: welcome
+  metakeywords: welcome
+  metadescription: welcome
+  weight: 100
+  enabled: 1
+
+  
+welcome_child_manpage:
+  website: wellness_website
+  name: welcome child
+  namel: welcome child
+  code: welcome child
+  annotation: welcome child
+  content: 'asdfdsfasdf'
+  pagetitle: welcome child
+  metakeywords: welcome child
+  metadescription: welcome child
+  weight: 101
+  enabled: 1
+
+
+delivery_manpage:
+  website: wellness_website
+  name: delivery
+  namel: delivery
+  code: delivery
+  annotation: delivery
+  content: Delivery_content
+  pagetitle: delivery
+  metakeywords: delivery
+  metadescription: delivery
+  weight: 300
+  enabled: 1
+
+delivery_types_manpage:
+  website: wellness_website
+  name: Способы доставки
+  namel: Способы доставки
+  code: "delivery_types"
+  annotation: Способы доставки
+  content: Способы доставки content
+  pagetitle: Способы доставки
+  metakeywords: Способы доставки
+  metadescription: Способы доставки
+  weight: 131
+  enabled: 1
+

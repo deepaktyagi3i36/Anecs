@@ -1,0 +1,27 @@
+---
+ru:
+  search:
+    results:
+      title: "Результаты поиска"
+      price_from: "от"
+    orderby_options:
+      by_relevance: "Соответствию"
+      by_price_asc: "Возрастанию цены"
+      by_price_desc: "Убыванию цены"
+    top_categories:
+      products: "Продукты"
+      articles: "Статьи"
+      centers: "Центры"
+      experts: "Эксперты"
+      total: "Все рeзультаты"
+      search_results:
+        products: "Результаты поиска: Продукты"
+        articles: "Результаты поиска: Статьи"
+        centers: "Результаты поиска: Центры"
+        experts: "Результаты поиска: Эксперты"
+        total: "Все результаты поиска"
+    message:
+      query_empty: "Пустой запрос"
+      illegal_characters: "Неразрешенные символы"
+      query_invalid: "Неправильный запрос"
+      

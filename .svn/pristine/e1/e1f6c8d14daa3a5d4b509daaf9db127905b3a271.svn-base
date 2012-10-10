@@ -1,0 +1,36 @@
+---
+en:
+  activerecord:
+    models:
+      article:
+        one: "Article"
+        few: "Articles"
+        many: "Articles"
+        other: "Articles"
+    attributes:
+      name: "Order #"
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        article:
+          loop_prohibited: "You cannot create a loop"
+          treepath_exceeded: "Treepath length is exceeded"
+  activeview:
+    columns:
+      article:
+        actions: "Actions"
+        login: "Login"
+        article_status: "article status"
+        created_at: "Created"
+    flashes:
+      article:
+        notices:
+          created: "Article was successfully created."
+          updated: "Article was successfully updated."
+          deleted: "Article was successfully deleted."
+    messages:
+      article:
+        index: "List"
+        new: "New"
+        edit: "Edit"

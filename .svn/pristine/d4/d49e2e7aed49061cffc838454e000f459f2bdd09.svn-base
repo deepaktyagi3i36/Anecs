@@ -1,0 +1,24 @@
+<% if has_form_flash_any_key? %>
+  <div id="form-flash">
+    <% if flash.key?(:form_notice)%>
+      <div class="notice">
+        <p><%= flash[:form_notice] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:form_information)%>
+      <div class="information">
+        <p><%= flash[:form_information] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:form_warning)%>
+      <div class="warning">
+        <p><%= flash[:form_warning] %></p>
+      </div>
+    <% end %>
+    <% if flash.key?(:form_error)%>
+      <div class="error">
+        <p><%= flash[:form_error] %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

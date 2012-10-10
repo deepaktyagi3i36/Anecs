@@ -1,0 +1,27 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+    <col class="checkbox"/><col span=2 class="coldata"/>
+    <col class="coldate"/><col class="actions"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> <%= sortable_field_header t("activeview.columns.category.name"), "categories.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.category.parent"), "parents_categories.name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.category.created_at"), "categories.created_at" %></th>
+      <th> <%= t("activeview.columns.category.actions") %> </th>
+    </tr>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', category.id, false) %></td>
+        <td><%= link_to category.name, :action => "edit", :id =>category %></td>
+        <td><%= category.parent.name if !category.parent.nil?%></td>
+        <td><%= localize(category.created_at, :format => :long) %></td>
+        <td>
+          <%=link_to(image_tag("buttons/update_object.png", {:alt => "Update", :title => "Update"}), :action => "edit", :id => category) %>
+          <%=link_to(image_tag("buttons/delete_object.png", {:alt => "Delete", :title => "Delete"}), :action => "destroy", :id => category) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

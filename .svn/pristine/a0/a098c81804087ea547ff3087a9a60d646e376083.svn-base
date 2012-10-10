@@ -1,0 +1,53 @@
+---
+en:
+  activerecord:
+    models:
+      announcement:
+        one: "announcement"
+        few: "announcements"
+        many: "announcements"
+        other: "announcements"
+    attributes:
+      announcement:
+        login: "Login"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        firstname: "First Name"
+        middlename: "Middle Name"
+        lastname: "Last Name"
+        nickname: "Nickname"
+        captcha_text: "Captcha"
+        allow_email: "Allow email me"
+    errors:
+      models:
+        announcement:
+          header_message:
+            one: "announcement registration failed because of %{count} error"
+            few: "announcement registration failed because of %{count} errors"
+            many: "announcement registration failed because of %{count} errors"
+            other: "announcement registration failed because of %{count} errors"
+          inv_password_update: "Error during password update. Please contact support."
+          inv_announcement_status_update: "Error during status update. Please contact support."
+    hints:
+      models:
+        announcement:
+          attributes:
+            allow_email: "No spam, see privacy policy for details"
+  activeview:
+    columns:
+      announcement:
+        actions: "Actions"
+        login: "Login"
+        announcement_status: "announcement status"
+        created_at: "Created"
+    flashes:
+      announcement:
+        notices:
+          thanks_for_singing_up: "Thanks for signing up! Activation letter has been sent."
+          singup_complete: "Signup complete!"
+    messages:
+      announcement:
+        index: "List"
+        new: "New"
+        edit: "Edit"

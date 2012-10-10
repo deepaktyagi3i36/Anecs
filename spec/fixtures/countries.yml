@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: countries
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+russia_country:
+  name: Russia
+  code: ru
+  about: ru
+
+usa_country:
+  name: USA
+  code: us
+  about: us

@@ -1,0 +1,19 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.properties") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.patterns"),
+                       :url => "/backoffice/products/properties/patterns",
+                       :match_path => "^\/(backoffice\/products\/properties(\/)?|backoffice\/products\/properties\/patterns(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.product_types"),
+                       :url => "/backoffice/products/properties/product_types",
+                       :match_path => "^\/backoffice\/products\/properties\/product_types(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.properties"),
+                       :url => "/backoffice/products/properties/properties",
+                       :match_path => "^\/backoffice\/products\/properties\/properties(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.product_type_properties"),
+                       :url => "/backoffice/products/properties/product_type_properties",
+                       :match_path => "^\/backoffice\/products\/properties\/product_type_properties(.*)$" %>
+  </ul>
+</div>

@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      bookcase:
+        one: "Bookcase"
+        few: "Bookcases"
+        many: "Bookcases"
+        other: "Bookcases"
+      bookcase_filter:
+        one: "bookcase filter"
+        few: "bookcase filter"
+        many: "bookcase filter"
+        other: "bookcase filters"
+    attributes:
+      bookcase:
+        name: "Name"
+        product_id: "Infoitem"
+        price: "Price"
+        enabled: "Enabled"
+      bookcase_filter:
+        namel: "Name"
+        product_id: "Infoitem"
+        created_at_since: "Created at before"
+        created_at_till: "Created at after"
+  activeview:
+    columns:
+      bookcase:
+        actions: "Actions"
+        login: "Login"
+        user_status: "User status"
+        created_at: "Created"
+    flashes:
+      bookcase:
+        notices:
+          created: "Bookcase was successfully created."
+          updated: "Bookcase was successfully updated."
+          deleted: "Bookcase was successfully deleted."
+    messages:
+      bookcase:
+        index: "List"
+        new: "New"
+        edit: "Edit"

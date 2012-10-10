@@ -1,0 +1,77 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id              :integer(4)      not null, primary key
+#  article_type_id :integer(4)      not null
+#  name            :string(128)     not null
+#  namel           :string(128)     not null
+#  code            :string(64)      not null
+#  annotation      :string(5000)
+#  content         :text(2147483647
+#  pagetitle       :string(128)     not null
+#  metakeywords    :string(255)     not null
+#  metadescription :text            default(""), not null
+#  weight          :integer(4)      default(0), not null
+#  enabled         :integer(4)      default(0), not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  website_id      :integer(4)      not null
+#  ancestry        :string(255)
+#  permalink       :string(255)
+#  slug            :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+nofk_article:
+  website: wellness_website
+  article_type: information_article_type
+  name: nofk
+  namel: nofk
+  code: nofk
+  annotation: nil
+  content: ""
+  pagetitle: nofk
+  metakeywords: nofk
+  metadescription: nofk
+  enabled: 1
+
+supplement_article:
+  website: wellness_website
+  article_type: information_article_type
+  name: supplement
+  namel: supplement
+  code: supplement
+  annotation: nil
+  content: ""
+  pagetitle: supplement
+  metakeywords: supplement
+  metadescription: supplement
+  enabled: 1
+
+aminos_supplement_article:
+  website: wellness_website
+  article_type: information_article_type
+  name: aminos
+  namel: aminos
+  code: aminos
+  annotation: aminos
+  content: aminos
+  pagetitle: aminos
+  metakeywords: aminos
+  metadescription: aminos
+  enabled: 1
+
+protein_supplement_article:
+  website: wellness_website
+  article_type: information_article_type
+  name: protein
+  namel: protein
+  code: protein
+  annotation: protein
+  content: protein
+  pagetitle: protein
+  metakeywords: protein
+  metadescription: protein
+  enabled: 1

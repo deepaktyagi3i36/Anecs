@@ -1,0 +1,19 @@
+---
+en:
+  activeview:
+    columns:
+       product_type_property:
+        name: "Name"
+        infoitem: "Infoitem"
+        created_at: "Created"
+    flashes:
+       product_type_property:
+        notices:
+          created: "Variant was successfully created."
+          updated: "Variant was successfully updated."
+          deleted: "Variant was successfully deleted."
+    messages:
+      product_type_property:
+        index: "List"
+        new: "New"
+        edit: "Edit"

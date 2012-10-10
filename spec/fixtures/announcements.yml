@@ -1,0 +1,50 @@
+# == Schema Information
+#
+# Table name: announcements
+#
+#  id                     :integer(4)      not null, primary key
+#  product_id             :integer(4)      not null
+#  announcement_status_id :integer(4)      not null
+#  user_id                :integer(4)      not null
+#  author_id              :integer(4)
+#  title                  :string(256)     not null
+#  titlel                 :string(256)     not null
+#  body                   :string(4000)    not null
+#  created_at             :datetime
+#  updated_at             :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+DEFAULTS: &DEFAULTS
+  created_at: <%= 1.days.ago.to_s :db %>
+
+carbokick_announcement:
+  product: products_supplements_carbokick
+  announcement_status: active_announcement_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  <<: *DEFAULTS
+
+pipkino_announcement:
+  product: centers_fitnesses_pipkino
+  announcement_status: active_announcement_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  <<: *DEFAULTS
+
+arufanov_announcement:
+  product: experts_trainers_arufanov
+  announcement_status: active_announcement_status
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  <<: *DEFAULTS
+

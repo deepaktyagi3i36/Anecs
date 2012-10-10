@@ -1,0 +1,28 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.framework.mainmenu.heartbeat")%>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.framework.listmenu.heartbeat"),
+                       :url => "/framework/heartbeat/heartbeat",
+                       :match_path => "^\/(framework(\/)?|framework\/heartbeat(\/)?|framework\/heartbeat\/heartbeat(.*))$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.websites"),
+                       :url => "/framework/heartbeat/websites",
+                       :match_path => "^\/framework\/heartbeat\/websites(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.themes"),
+                       :url => "/framework/heartbeat/themes",
+                       :match_path => "^\/framework\/heartbeat\/themes(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.users"),
+                       :url => "/framework/heartbeat/users",
+                       :match_path => "^\/framework\/heartbeat\/users(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.user_roles"),
+                       :url => "/framework/heartbeat/user_roles",
+                       :match_path => "^\/framework\/heartbeat\/user_roles(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.admin_jobs"),
+                       :url => "/framework/heartbeat/admin_jobs",
+                       :match_path => "^\/framework\/heartbeat\/admin_jobs(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.delayed_jobs"),
+                       :url => "/framework/heartbeat/delayed_jobs",
+                       :match_path => "^\/framework\/heartbeat\/delayed_jobs(.*)$" %>
+  </ul>
+</div>

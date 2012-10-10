@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      announcement_status:
+        one: "Статус объявления"
+        few: "Статус объявления"
+        many: "Статус объявления"
+        other: "Статус объявления"
+      announcement_status_filter:
+        one: "Фильтр статус объявления"
+        few: "Фильтр статус объявления"
+        many: "Фильтр статус объявления"
+        other: "Фильтр статус объявления"
+    attributes:
+      announcement_status:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      announcement_status_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        announcement_status:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        announcement_status:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      announcement_status:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      announcement_status:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      announcement_status:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

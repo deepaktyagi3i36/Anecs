@@ -1,0 +1,35 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header t("inventories.columns.storehouse"), "storehouses.name" %> </th>
+      <th> <%= sortable_field_header t("inventories.columns.product"), "products.name" %> </th>
+      <th> <%= sortable_field_header t("inventories.columns.variant"), "variants.name" %> </th>
+      <th> <%= sortable_field_header t("inventories.columns.quantity"), "inventories.quantity" %> </th>
+    </tr>
+    <% @inventories.each do |inventory| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', inventory.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => inventory}.merge(params) %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => inventory} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => inventory} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to inventory.storehouse.name, {:action => "edit", :id => inventory}.merge(params) %></td>
+        <td><%= link_to inventory.variant.product.name, {:action => "edit", :id => inventory}.merge(params) %></td>
+        <td><%= link_to inventory.variant.name, {:action => "edit", :id => inventory}.merge(params) %></td>
+        <td><%= link_to inventory.quantity, {:action => "edit", :id => inventory}.merge(params) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

@@ -1,0 +1,8 @@
+<div id="checkout_fieldset">
+  <% @shipping_types.each do |shipping_type| %>
+    <%= f.radio_button("shipping_type_id", shipping_type.id, :checked => shipping_type.id == @shipping_type.id, :id => unique_id('shipping_type_id')) %>
+    <%= f.label last_id('shipping_type_id'), shipping_type.name %>
+
+  <% end %>
+
+</div>

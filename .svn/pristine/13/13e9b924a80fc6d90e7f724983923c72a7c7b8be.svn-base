@@ -1,0 +1,34 @@
+---
+en:
+  activerecord:
+    models:
+      password:
+        one: "Password"
+        few: "Passwords"
+        many: "Passwords"
+        other: "Passwords"
+    attributes:
+      password:
+        old_password: "Current password"
+        password: "New password"
+        password_confirmation: "Password confirmation"
+    errors:
+      models:
+        password:
+          not_changed: "Password wasn't changed due to errors"
+          not_reset: "Password wasn't reset due to errors"
+    hints:
+      models:
+        password:
+          attributes:
+            password: "type a new password"
+            password_confirmation: "retype password"
+  activeview:
+    flashes:
+      password:
+        notices:
+          password_resetted: "Password reset successfully for %{email}"
+          password_changed: "Password changed successfully for user %{nickname}"
+        warnings:
+          inv_reset_code: "Invalid reset code"
+          change_authorized: "Password change can be done by authorized user only"

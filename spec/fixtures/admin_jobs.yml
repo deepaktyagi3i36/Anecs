@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: admin_jobs
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  job        :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#  success    :integer(4)      default(0), not null
+#  exception  :string(5000)
+#  begin_at   :datetime
+#  finish_at  :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+export_database_admin_job:
+  name: export_database
+  code: export_database
+  about: export_database
+  job: ExportDatabaseJob
+
+update_rating_admin_job:
+  name: update_rating
+  code: update_rating
+  about: update_rating
+  job: UpdateRatingJob
+

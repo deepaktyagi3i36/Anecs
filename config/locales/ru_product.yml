@@ -1,0 +1,144 @@
+---
+ru:
+  activerecord:
+    models:
+      product:
+        one: "Продукт"
+        few: "Продукт"
+        many: "Продукт"
+        other: "Продукт"
+    attributes:
+      created_at: "Creation date"
+      updated_at: "Modification date"
+    errors:
+      models:
+        infoitem:
+          loop_prohibited: "Нельзя создать цикл"
+          treepath_exceeded: "Длина пути превысила максимальный размер"
+  activeview:
+    columns:
+      infoitem:
+        name: "Наименование"
+        product_type: "Тип продукта"
+        enabled: "Активно"
+        created_at: "Создано"
+  products:
+    index:
+      supplements: "Спортивное питание"
+      empty_section: "В этом разделе на данный момент ничего нет. Пожалуйста, загляните в другие разделы."
+      price_for_package: "цена указана для каждой вариации упаковки/вкуса."
+      out_of_stocks: "Нет в наличии"
+    show:
+      description: "Здесь вы можете купить %{product} от %{manufacturer} по выгодным ценам, а также ознакомиться с описанием продукта и его компонентов. Инструкция по применению для %{product}. %{product} цена вас порадует. Приведены цены для различных упаковок."
+      manufacturer_link: "Ссылка на сайт производителя"
+      price_keyword: "цена"
+      instruction_keyword: "инструкция"
+      description_keyword: "описание"
+      product_overview: "Описание продукта"
+    templates:
+      supplements:
+        price_for_package: "цена указана для каждой вариации упаковки/вкуса."
+        out_of_stocks: "Нет в наличии"
+        out_of_stocks_long: "На данный момент товара нет в наличии"
+    instructions:
+      index:
+        instructions: "Инструкция по применению"
+        description: "Здесь вы можете ознакомиться с инструкциями продукта %{product} от %{manufacturer} по выгодным ценам."
+        manufacturer_link: "Ссылка на сайт производителя"
+    bookcases:
+      index:
+        bookcases: "Статьи по продукту"
+        description: "Здесь вы найдете статьи, которые относятся к продукту %{product}."
+        manufacturer_link: "Ссылка на сайт производителя"
+  activerecord:
+    models:
+      muscle user:
+        one: "Пользователь"
+        other: "Пользователи"
+      email:
+        one: "Почта"
+        other: "Почты"
+      password:
+        one: "Пароль"
+        other: "Пароли"
+    attributes:
+      user:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+      email:
+         email: "Электронная почта"
+      password:
+        old_password: "Текущий пароль"
+        password: "Новый пароль"
+        password_confirmation: "Подтверждение нового пароля"
+    errors:
+      models:
+        user:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+        password:
+          not_changed: "Пароль не был изменен из-за ошибок"
+          not_reset: "Пароль не был сброшен из-за ошибок"
+        password_change:
+          header_message:
+            one: "Смена пароля не удалась из-за %{count} ошибки"
+            few: "Смена пароля не удалась из-за %{count} ошибок"
+            many: "Смена пароля не удалась из-за %{count} ошибок"
+            other: "Смена пароля не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        category:
+          attributes:
+            weight: "Укажите правильный вес"
+  activeview:
+    columns:
+      category:
+        name: "Категория"
+        parent: "Родитель"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      user:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+      email:
+        notices:
+          reset_code_sent: "Код смены пароля послан на %{email}"
+          activation_letter_resend: "Письмо активации повторно послано на почтовый адрес: %{email}"
+        warnings:
+          inv_email: "Почтовый ящик %{email} не зарегистрирован в системе для успешно активированной учетной записи"
+          inv_email_for_resend: "Не активированная учетная запись для почтового адреса %{email} в системе не существует"
+      password:
+        notices:
+          password_resetted: "Пароль для почтового ящика %{email} успешно изменен"
+          password_changed: "Пароль для пользователя %{nickname} успешно изменен"
+        warnings:
+          inv_reset_code: "Неверный код смены пароля"
+          change_authorized: "Менять пароль могут только авторизованные пользователи"
+    messages:
+      product:
+        index: "Список"
+        new: "Создать"
+        edit: "Изменить"
+    title:
+      user: "Пользователь"
+      new_user: "Регистрация нового пользователя"
+      change_password: "Смена пароля"
+  products:
+    templates:
+      popular_products:
+        title: "Популярные продукты"
+        view_comments: "Смотреть отзывы"
+      thebest_products:
+        title: "Лучшие продукты"
+        view_comments: "Смотреть отзывы"

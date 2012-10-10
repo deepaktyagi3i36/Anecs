@@ -1,0 +1,12 @@
+---
+ru:
+  myaccount:
+    shopping:
+      favorites:
+        index:
+          title: "Избранное"
+          favorite_products: "Избранные продукты"
+          no_favorite_products: "У вас нет продуктов в избранном"
+        list:
+          name: "Продукт"
+          manufacturer: "Производитель"

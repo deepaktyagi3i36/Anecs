@@ -1,0 +1,66 @@
+---
+ru:
+  activerecord:
+    models:
+      inventory:
+        one: "Пользователь"
+        few: "Пользователь"
+        many: "Пользователь"
+        other: "Пользователи"
+    attributes:
+      inventory:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        firstname: "Имя"
+        middlename: "Отчество"
+        lastname: "Фамилия"
+        nickname: "Ник"
+        captcha_text: "Проверочный код"
+        allow_email: "Посылать новости"
+    errors:
+      models:
+        inventory:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+          inv_password_update: "Ошибка изменения пароля. Пожалуйста свяжитесь с службой поддержки."
+          inv_inventory_status_update: "Ошибка изменения статуса пльзователя. Пожалуйста свяжитесь с службой поддержки."
+    hints:
+      models:
+        inventory:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      inventory:
+        actions: "Действия"
+        login: "Имя пользователя"
+        inventory_status: "Статус пользователя"
+        created_at: "Создано"
+    flashes:
+      inventory:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      inventory:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"
+        myprofile: "Мой профиль"
+        forgot: "Забыли пароль?"
+        reset: "Восстановление пароля"
+        change_password: "Смена пароля"
+        resend: "Повторная отправка письма активации"
+        registration:
+          activation: "Пожалуйста, активируйте Вашу учетную запись!"
+          completed: "Ваша учетная запись успешно активирована!"
+          notification: "Активирован новый пользователь %{login}"
+    title:
+      inventory: "Пользователь"
+      new_inventory: "Регистрация нового пользователя"
+      change_password: "Смена пароля"

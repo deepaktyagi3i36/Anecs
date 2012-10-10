@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      privacy_type:
+        one: "Тип приватности"
+        few: "Типы приватности"
+        many: "Типы приватности"
+        other: "Типы приватности"
+      privacy_type_filter:
+        one: "Фильтр типы приватности"
+        few: "Фильтр типы приватности"
+        many: "Фильтр типы приватности"
+        other: "Фильтр типы приватности"
+    attributes:
+      privacy_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      privacy_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        privacy_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        privacy_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      privacy_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      privacy_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      privacy_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

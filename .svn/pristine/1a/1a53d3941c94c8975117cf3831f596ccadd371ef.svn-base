@@ -1,0 +1,24 @@
+<%= form_for @password, :url => {:action => action_name},
+   :html => {:id => "reset_form", :class => "html-form" } do |f| %>
+  <%= render :partial => "reset_header" %>
+  <%= f.error_messages %>
+  <fieldset>
+    <%= render :partial => "reset_section1" %>
+    <ul>
+      <li>
+	    <%= f.label :password %>*
+	    <%= f.password_field :password %>
+	    <%= f.hint_message_on :password %>
+	    <%= f.error_message_on :password %>
+      </li>
+      <li>
+	    <%= f.label :password_confirmation %>*
+	    <%= f.password_field :password_confirmation %>
+	    <%= f.hint_message_on :password_confirmation %>
+	    <%= f.error_message_on :password_confirmation %>
+      </li>
+    </ul>
+    <%= f.submit button_label %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("password_password") %>

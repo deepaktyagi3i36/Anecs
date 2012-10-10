@@ -1,0 +1,63 @@
+# == Schema Information
+#
+# Table name: privacy_types
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+invite_to_groups_privacy_type:
+  name: Кто может приглашать меня в группы
+  code: invite_to_groups
+  about: invite_to_groups
+
+view_list_my_groups_privacy_type:
+  name: Кто может видеть список моих групп
+  code: view_list_my_groups
+  about: view_list_my_groups
+
+invite_to_meetings_privacy_type:
+  name: Кто может приглашать меня на встречи
+  code: invite_to_meetings
+  about: invite_to_meetings
+
+invite_to_meetings_privacy_type:
+  name: Кто может писать мне личные сообщения
+  code: send_private_messages
+  about: send_private_messages
+
+view_my_photos_privacy_type:
+  name: Кто может смотреть фотографии со мной
+  code: view_my_photos
+  about: view_my_photos
+
+view_my_friends_privacy_type:
+  name: Кто может смотреть список моих друзей
+  code: view_my_friends
+  about: view_my_friends
+
+view_my_wall_privacy_type:
+  name: Кто может видеть мою стену
+  code: view_my_wall
+  about: view_my_wall
+
+write_walls_messages_privacy_type:
+  name: Кто может оставлять сообщения у меня на стене
+  code: write_walls_messages
+  about: write_walls_messages
+
+write_walls_graphity_privacy_type:
+  name: Кто может оставлять граффити на моей стене
+  code: write_walls_graphity
+  about: write_walls_graphity
+
+view_my_page_privacy_type:
+  name: Кто может смотреть мою страницу
+  code: view_my_page
+  about: view_my_page

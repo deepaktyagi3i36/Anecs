@@ -1,0 +1,19 @@
+# == Schema Information
+#
+# Table name: shopping_carts
+#
+#  id         :integer(4)      not null, primary key
+#  user_id    :integer(4)
+#  session_id :integer(4)
+#  created_at :datetime
+#  updated_at :datetime
+#  website_id :integer(4)      not null
+#
+
+quentin_cart:
+  website: wellness_website
+  user: quentin
+
+guest_cart:
+  website: wellness_website
+  user_id: nil

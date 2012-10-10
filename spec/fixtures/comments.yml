@@ -1,0 +1,66 @@
+# == Schema Information
+#
+# Table name: comments
+#
+#  id                :integer(4)      not null, primary key
+#  product_id        :integer(4)      not null
+#  comment_status_id :integer(4)      not null
+#  comment_type_id   :integer(4)      not null
+#  user_id           :integer(4)      not null
+#  author_id         :integer(4)
+#  title             :string(256)     not null
+#  titlel            :string(256)     not null
+#  body              :string(4000)    not null
+#  rating            :integer(4)      not null
+#  useful            :integer(4)      not null
+#  useless           :integer(4)      not null
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+DEFAULTS: &DEFAULTS
+  created_at: <%= 1.days.ago.to_s :db %>
+
+carbokick_comment:
+  product: products_supplements_carbokick
+  comment_status: active_comment_status
+  comment_type: comment_comment_type
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS
+
+pipkino_comment:
+  product: centers_fitnesses_pipkino
+  comment_status: active_comment_status
+  comment_type: comment_comment_type
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS
+
+arufanov_comment:
+  product: experts_trainers_arufanov
+  comment_status: active_comment_status
+  comment_type: comment_comment_type
+  user: quentin
+  author: nil
+  title: title
+  titlel: title
+  body: body
+  rating: 1
+  useful: 1
+  useless: 1
+  <<: *DEFAULTS
+

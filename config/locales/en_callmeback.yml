@@ -1,0 +1,40 @@
+---
+en:
+  activerecord:
+    models:
+      callmeback:
+        one: "Сallmeback"
+        few: "Сallmebacks"
+        many: "Сallmebacks"
+        other: "Сallmebacks"
+    attributes:
+      callmeback:
+        muscle_user_id: "User"
+        contact_type_id: "Reason to contact"
+        contact_status_id: "State"
+        phone: "Phone"
+        title: "Title"
+        body: "Body"
+  activeview:
+    columns:
+      callmeback:
+        muscle_user: "User"
+        contact_type: "Reason to contact"
+        contact_status: "State"
+        phone: "Phone"
+        title: "Title"
+        body: "Body"
+    flashes:
+      callmeback:
+        notices:
+          created: "Thanks for your feedback. We'll contact you later."
+    messages:
+      callmeback:
+        index: "List"
+        new: "New"
+        edit: "Edit"
+    callmebacks:
+      new:
+        title: "Call Me Back"
+      header:
+        info: "Please let us know what information are you interested in and how we may contact you."

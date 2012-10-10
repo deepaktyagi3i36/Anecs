@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      currency:
+        one: "currency"
+        few: "currencies"
+        many: "currencies"
+        other: "currencies"
+      currency_filter:
+        one: "currencies filter"
+        few: "currencies filters"
+        many: "currencies filters"
+        other: "currencies filters"
+    attributes:
+      currency:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      currency_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      currency:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      currency:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      currency:
+        index: "List"
+        new: "New"
+        edit: "Edit"

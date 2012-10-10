@@ -1,0 +1,32 @@
+<%= form_for :user_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "users_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :login %>
+        <%= f.text_field :login %>
+        <%= f.error_message_on :login %>
+      </li>
+      <li>
+        <%= f.label :user_status_id %>
+        <%= f.collection_select :user_status_id, @user_statuses_filter, :id, :name %>
+        <%= f.error_message_on :user_status_id %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("user_filter_login") %>
+
+

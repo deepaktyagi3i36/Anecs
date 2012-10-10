@@ -1,0 +1,3 @@
+<div id="header" style="background-image: url(http://<%= @runtime_settings["server_url"] %>/images/postoffice/header_bg.png)">
+	<img src="http://<%= @runtime_settings["server_url"] %>/images/logos/logo_muscle.png" />
+</div>

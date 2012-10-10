@@ -1,0 +1,12 @@
+<div id="html-error" class="window-box window-box-400">
+  <div class="window-header">
+    <h1>Произошла внутренняя ошибка (500 html ошибка)</h1>
+  </div>
+  <div class="window-content">
+    <p>
+      <%= image_tag("flashicons/fatal_middle.png", {:alt => "Fatal icon", :title => "Fatal icon"})%>
+      <span>500 error</span>
+      Нам известно о проблеме и мы пытаемся ее решить.
+    </p>
+  </div>
+</div>

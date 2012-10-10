@@ -1,0 +1,9 @@
+--- 
+pid: tmp/pids/thin.pid
+log: log/thin.log
+timeout: 60
+port: 42001
+chdir: /home/anecs/public_html/anecs/current
+environment: production
+servers: 5
+address: 127.0.0.1

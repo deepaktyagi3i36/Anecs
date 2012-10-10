@@ -1,0 +1,48 @@
+<%= form_for(@callmeback, :url => {:action => action_name, :id => @callmeback.id},
+  :html => {:id => "callmeback_form" }) do |f| %>
+
+  <%= f.error_messages %>
+  <p style="color: green"><%= flash[:notice] %></p>
+
+  <p>
+    <%= f.label :contact_type_id %>
+    <%= f.collection_select :contact_type_id, @contact_types, :id, :name %>
+    <%= f.error_message_on :contact_type_id %>
+  </p>
+
+  <p>
+    <%= f.label :contact_status_id %>
+    <%= f.collection_select :contact_status_id, @contact_statuses, :id, :name %>
+    <%= f.error_message_on :contact_status_id %>
+  </p>
+
+  <p>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, @users, :id, :login %>
+    <%= f.error_message_on :user_id %>
+  </p>
+
+  <p>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+    <%= f.error_message_on :phone %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.error_message_on :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, :class => "mceEditor" %>
+    <%= f.error_message_on :body %>
+  </p>
+
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("callmeback_name") %>

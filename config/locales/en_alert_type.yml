@@ -1,0 +1,43 @@
+---
+en:
+  activerecord:
+    models:
+      alert_type:
+        one: "alert type"
+        few: "alert types"
+        many: "alert types"
+        other: "alert types"
+      alert_type_filter:
+        one: "alert types filter"
+        few: "alert types filters"
+        many: "alert types filters"
+        other: "alert types filters"
+    attributes:
+      alert_type:
+        name: "Name"
+        code: "Code"
+        about: "About"
+      alert_type_filter:
+        name: "Name"
+        code: "Code"
+        about: "About"
+        created_at_since: "Created since"
+        created_at_till: " Created till"
+  activeview:
+    columns:
+      alert_type:
+        name: "Name"
+        code: "Code"
+        created_at: "Created"
+        actions: "Actions"
+    flashes:
+      alert_type:
+        notices:
+          created: "Property was successfully created."
+          updated: "Property was successfully updated."
+          deleted: "Property was successfully deleted."
+    messages:
+      alert_type:
+        index: "List"
+        new: "New"
+        edit: "Edit"

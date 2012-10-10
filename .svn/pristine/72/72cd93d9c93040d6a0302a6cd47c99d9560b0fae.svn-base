@@ -1,0 +1,1 @@
+<%= (@region.nil? || @region.name == t("settings.other_regions")) ? '(812) 922-38-47' : @region.phone %>

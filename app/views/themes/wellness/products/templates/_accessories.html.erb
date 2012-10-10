@@ -1,0 +1,36 @@
+<div id="photo-block">
+  <% @product.images.each do |photo| %>
+    <% if photo.primary > 0%>
+         <%= link_to (theme_image_tag photo.picture.url(:large)), photo.picture.url(:huge),{:rel => "lyteshow[images]"}%>
+    <% end %>
+  <% end %>
+
+  <% @product.images.each do |photo| %>
+    <%= link_to (theme_image_tag photo.picture.url(:thumb)), photo.picture.url(:huge),{:rel => "lyteshow[images]"}%>
+  <% end %>
+</div>
+<h1><%= @product.name%></h1>
+<h2><%= t('labels.manufacturer') << ' ' << @product.manufacturer %></h2>
+<p class="about">
+  <%= @product.sketch%>
+</p>
+<p class="variants">
+  Разновидности (цена):
+</p>
+<ul>
+  <% @product.variants.each do |variant| %>
+    <% next if variant.enabled == 0 %>
+    <li><%= variant.t_name + "(" + variant.price.to_s + "руб.)"%></li>
+  <% end %>
+</ul>
+<h2>Key facts(Ключевые факты)</h2>
+  <% if @product.property_value?("newitem") %>
+    <%= theme_image_tag("properties/newitem.png") %>
+    <p>
+      Данный продукт является новинкой. Был выпущен на заводе в течении последний 30 дней и мы просим обратить ваше внимание на него.
+    </p>
+  <% end %>
+  <p class="about">
+    Сайт производителя дури: <%= @product.wwwaddress%>
+  </p>
+

@@ -1,0 +1,28 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.framework.mainmenu.settings")%>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.framework.listmenu.countries"),
+                       :url => "/framework/settings/countries",
+                       :match_path => "^\/(framework\/settings(\/)?|framework\/settings\/countries(.*))$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.states"),
+                       :url => "/framework/settings/states",
+                       :match_path => "^\/framework\/settings\/states(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.languages"),
+                       :url => "/framework/settings/languages",
+                       :match_path => "^\/framework\/settings\/languages(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.currencies"),
+                       :url => "/framework/settings/currencies",
+                       :match_path => "^\/framework\/settings\/currencies(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.regions"),
+                       :url => "/framework/settings/regions",
+                       :match_path => "^\/framework\/settings\/regions(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.roles"),
+                       :url => "/framework/settings/roles",
+                       :match_path => "^\/framework\/settings\/roles(.*)$" %>
+    <%= list_menu_item :label => t("navigation.framework.listmenu.runtime_settings"),
+                       :url => "/framework/settings/runtime_settings",
+                       :match_path => "^\/framework\/settings\/runtime_settings(.*)$" %>
+  </ul>
+</div>

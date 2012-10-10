@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      role:
+        one: "Статус роли"
+        few: "Статус роли"
+        many: "Статус роли"
+        other: "Статус роли"
+      role_filter:
+        one: "Фильтр роли"
+        few: "Фильтр роли"
+        many: "Фильтр роли"
+        other: "Фильтр роли"
+    attributes:
+      role:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      role_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        role:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        role:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      role:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      role:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      role:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

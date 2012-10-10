@@ -1,0 +1,34 @@
+# == Schema Information
+#
+# Table name: currencies
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(128)     not null
+#  code       :string(128)     not null
+#  about      :string(128)     not null
+#  sign       :string(8)       not null
+#  enabled    :integer(4)      default(0), not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+rouble_currency:
+  name: рубль
+  code: rouble
+  about: rouble
+  sign: руб
+  enabled: 1
+
+euro_currency:
+  name: euro
+  code: euro
+  about: euro
+  sign: euro
+  enabled: 1
+
+dollar_currency:
+  name: dollar
+  code: dollar
+  about: dollar
+  sign: $
+  enabled: 1

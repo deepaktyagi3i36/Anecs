@@ -1,0 +1,30 @@
+<%= form_for(@category, :url => {:action => action_name, :id => @category.id},
+	:html => {:id => "category_form" }) do |f| %>
+
+    <%= f.error_messages %>
+    <p style="color: green"><%= flash[:notice] %></p>
+
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name %>
+	  <%= f.error_message_on :name %>
+	</p>
+
+	<p>
+	  <%= f.label :parent_id %>
+	  <%= f.collection_select :parent_id, @parents, :id, :name %>
+	  <%= f.error_message_on :parent_id %>
+	</p>
+
+	<p>
+	  <%= f.label :about %>
+	  <%= f.text_area :about %>
+	  <%= f.error_message_on :about %>
+	</p>
+
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
+<%= set_focus_on_load("category_name") %>

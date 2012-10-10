@@ -1,0 +1,30 @@
+<%= form_for :promoitem_filter, :url => {:action => "index"},
+:html => {:method => :get, :id => "promoitems_filter", :class => "list-filter" } do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <ul>
+      <li>
+        <%= f.label :promotion_id %>
+        <%= f.collection_select :promotion_id, @promotions_filter, :id, :name %>
+        <%= f.error_message_on :promotion_id %>
+      </li>
+      <li>
+        <%= f.label :product_id %>
+        <%= f.collection_select :product_id, @products_filter, :id, :name %>
+        <%= f.error_message_on :product_id %>
+      </li>
+      <li>
+        <%= f.label :created_at_since %>
+        <%= f.date_time_picker :created_at_since %>
+        <%= f.error_message_on :created_at_since %>
+      </li>
+      <li>
+        <%= f.label :created_at_till %>
+        <%= f.date_time_picker :created_at_till %>
+        <%= f.error_message_on :create_at_after %>
+      </li>
+    </ul>
+    <%= f.submit t("buttons.filtrate") %>
+  </fieldset>
+<% end %>
+<%= set_focus_on_load("promoitem_filter_promotion_id") %>

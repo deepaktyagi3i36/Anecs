@@ -1,0 +1,184 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id              :integer(4)      not null, primary key
+#  code            :string(128)     not null
+#  name            :string(128)     not null
+#  namel           :string(128)     not null
+#  sketch          :string(1024)
+#  about           :string(8192)    not null
+#  product_type_id :integer(4)      not null
+#  metakeywords    :string(255)
+#  metadescription :text
+#  wwwaddress      :string(255)
+#  enabled         :integer(4)      default(0), not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  website_id      :integer(4)      not null
+#  ancestry        :string(255)
+#  rating          :integer(10)     default(0), not null
+#  weight          :integer(4)      default(0), not null
+#  permalink       :string(255)
+#  slug            :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+products_supplements_carbokick:
+  website: wellness_website
+  code: carbokick
+  name: carbokick
+  namel: carbokick
+  sketch: carbokick
+  about: carbokick
+  product_type: supplement_products_type
+  permalink: carbokick
+  metakeywords: carbokick
+  metadescription: carbokick
+  wwwaddress: carbokick
+  rating: 0
+  enabled: 1
+
+
+products_supplements_dreamtan:
+  website: wellness_website
+  code: dreamtan
+  name: dreamtan
+  namel: dreamtan
+  sketch: dreamtan
+  about: dreamtan
+  product_type: supplement_products_type
+  permalink: dreamtan
+  metakeywords: dreamtan
+  metadescription: dreamtan
+  wwwaddress: dreamtan
+  rating: 0
+  enabled: 1
+
+
+products_supplements_protein:
+  website: wellness_website
+  code: protein
+  name: protein
+  namel: protein
+  sketch: protein
+  about: protein
+  product_type: supplement_products_type
+  permalink: protein
+  metakeywords: protein
+  metadescription: protein
+  wwwaddress: protein
+  rating: 0
+  enabled: 1
+
+
+products_supplements_energizer:
+  website: wellness_website
+  code: energizer
+  name: energizer
+  namel: energizer
+  sketch: energizer
+  about: energizer
+  product_type: supplement_products_type
+  permalink: energizer
+  metakeywords: energizer
+  metadescription: energizer
+  wwwaddress: energizer
+  rating: 0
+  enabled: 1
+
+products_supplements_supergainer:
+  website: wellness_website
+  code: supergainer
+  name: supergainer
+  namel: supergainer
+  sketch: supergainer
+  about: supergainer
+  product_type: supplement_products_type
+  permalink: supergainer
+  metakeywords: supergainer
+  metadescription: supergainer
+  wwwaddress: supergainer
+  rating: 0
+  enabled: 1
+
+
+products_supplements_l_carnitin:
+  website: wellness_website
+  code: l_carnitin
+  name: l_carnitin
+  namel: l_carnitin
+  sketch: l_carnitin
+  about: l_carnitin
+  product_type: supplement_products_type
+  permalink: l_carnitin
+  metakeywords: l_carnitin
+  metadescription: l_carnitin
+  wwwaddress: l_carnitin
+  rating: 0
+  enabled: 1
+
+
+centers_fitnesses_pipkino:
+  website: wellness_website
+  code: pipkino
+  name: pipkino
+  namel: pipkino
+  sketch: pipkino
+  about: pipkino
+  product_type: fitness_centers_type
+  permalink: pipkino
+  metakeywords: pipkino
+  metadescription: pipkino
+  wwwaddress: pipkino
+  rating: 0
+  enabled: 1
+
+centers_fitnesses_pupkino:
+  website: wellness_website
+  code: pupkino
+  name: pupkino
+  namel: pupkino
+  sketch: pupkino
+  about: pupkino
+  product_type: fitness_centers_type
+  permalink: pupkino
+  metakeywords: pupkino
+  metadescription: pupkino
+  wwwaddress: pupkino
+  rating: 0
+  enabled: 1
+
+experts_trainers_arufanov:
+  website: wellness_website
+  code: arufanov
+  name: arufanov
+  namel: arufanov
+  sketch: arufanov
+  about: arufanov
+  product_type: trainer_experts_type
+  permalink: arufanov
+  metakeywords: arufanov
+  metadescription: arufanov
+  wwwaddress: arufanov
+  rating: 0
+  enabled: 1
+
+experts_trainers_svyal:
+  website: wellness_website
+  code: svayal
+  name: svayal
+  namel: svayal
+  sketch: svayal
+  about: svayal
+  product_type: trainer_experts_type
+  permalink: svayal
+  metakeywords: svayal
+  metadescription: svayal
+  wwwaddress: svayal
+  rating: 0
+  enabled: 1
+
+

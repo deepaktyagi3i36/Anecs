@@ -1,0 +1,56 @@
+---
+ru:
+  activerecord:
+    models:
+      shipping_type:
+        one: "Тип доставки"
+        few: "Типы доставки"
+        many: "Типы доставки"
+        other: "Типы доставки"
+      shipping_type_filter:
+        one: "Фильтр типы доставки"
+        few: "Фильтр типы доставки"
+        many: "Фильтр типы доставки"
+        other: "Фильтр типы доставки"
+    attributes:
+      shipping_type:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      shipping_type_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        enabled: "Доступно"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        shipping_type:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        shipping_type:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      shipping_type:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      shipping_type:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      shipping_type:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

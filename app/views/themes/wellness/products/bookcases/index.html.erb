@@ -1,0 +1,36 @@
+<% content_for :meta_keywords do %>
+  <title><%= "#{t('.bookcases')} | #{@product.t_name} | #{@category.path_title}" %></title>
+  <meta name="keywords" content="<%= "#{t('.bookcases')} #{@product.t_name}, #{@product.manufacturer}, #{@category.path_keywords}" %>"/>
+  <meta name="description" content="<%= t('.description', :product => @product.t_name, :manufacturer => @product.manufacturer) %>"/>
+<% end %>
+
+
+<% content_for :content_menu do %>
+    <%= render :partial => "products/templates/slide_menu" %>
+<% end %>
+
+<% content_for :advertisement do %>
+  <%= render :partial => "products/templates/need_advice" %>
+  <%= render :partial => "products/templates/popular_products" %>
+  <%= render :partial => "products/templates/thebest_products" %>
+<% end %>
+
+<div id="infoitem">
+  <%= render :partial => "products/templates/" + @product.presentation.code %>
+  <div class="tabular-shadow">
+    <%= render :partial => "products/templates/product_menu" %>
+    <div id="infoitem-bookcases" class="infoitem-common">
+      <% if @articles.size() > 0%>
+        <% @articles.each do |infoitem_article| %>
+          <h2>
+            <%= link_to infoitem_article.article.name, {:controller => "/articles",
+                :action => "show", :code => infoitem_article.article.code }%>
+          </h2>
+          <p>
+            <%= infoitem_article.annotation %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

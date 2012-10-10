@@ -1,0 +1,31 @@
+<%= form_tag( {},{:id=>"list", :name=>"list"}) do %>
+  <%= render :partial => "buttons" %>
+  <table class="list-table">
+   <col class="checkbox"/><col class="actions"/><col class="coldata"/>
+    <tr>
+      <th><%= checkable_field_header %></th>
+      <th> Actions </th>
+      <th> <%= sortable_field_header "Name", "name" %> </th>
+      <th> <%= sortable_field_header t("activeview.columns.contact.created_at"), "created_at" %></th>
+    </tr>
+    <% @contacts.each do |category| %>
+      <tr>
+        <td><%= check_box_tag('ids[]', category.id, false) %></td>
+        <td>
+          <ul class="action-menu">
+            <li>
+              <%= link_to "What to do?", {:action => "edit", :id => category} %>
+              <ul>
+                <li><%= link_to 'Update',{:action => "edit", :id => category} %></li>
+                <li><%= link_to 'Delete',{:action => "destroy", :id => category} %></li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td><%= link_to category.name, :action => "edit", :id =>category %></td>
+        <td><%= localize(category.created_at, :format => :long) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= render :partial => "buttons" %>
+<%end%>

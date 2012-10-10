@@ -1,0 +1,55 @@
+---
+ru:
+  activerecord:
+    models:
+      timetable_status:
+        one: "Статус расписания"
+        few: "Статус расписания"
+        many: "Статус расписания"
+        other: "Статус расписания"
+      timetable_status_filter:
+        one: "Фильтр статус расписания"
+        few: "Фильтр статус расписания"
+        many: "Фильтр статус расписания"
+        other: "Фильтр статус расписания"
+    attributes:
+      timetable_status:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+      timetable_status_filter:
+        name: "Имя"
+        code: "Код"
+        about: "Описаине"
+        created_at_since: "Создано с"
+        created_at_till: " Создано по"
+    errors:
+      models:
+        timetable_status:
+          header_message:
+            one: "Регистрация пользователя не удалась из-за %{count} ошибки"
+            few: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            many: "Регистрация пользователя не удалась из-за %{count} ошибок"
+            other: "Регистрация пользователя не удалась из-за %{count} ошибки"
+    hints:
+      models:
+        timetable_status:
+          attributes:
+            allow_email: "Никакого спама, смотрите политику безопасности"
+  activeview:
+    columns:
+      timetable_status:
+        name: "Имя"
+        code: "Код"
+        created_at: "Создано"
+        actions: "Действия"
+    flashes:
+      timetable_status:
+        notices:
+          thanks_for_singing_up: "Спасибо за регистрацию! Письмо активации уже послано."
+          singup_complete: "Регистрация завершена!"
+    messages:
+      timetable_status:
+        index: "Список"
+        new: "Создать"
+        edit: "Редактировать"

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <%= yield :meta_keywords %>
+  <%= render :partial => "templates/metatags_info" %>
+</head>
+<body>
+  <div id="container">
+    <%= render :partial => "templates/top_header" %>
+    <div id="header">
+      <%= render :partial => "templates/main_logotype" %>
+      <%= render :partial => "templates/main_search" %>
+      <%= render :partial => "templates/main_menu" %>
+    </div>
+    <%= render :partial => "templates/system_flash" %>
+    <div id="content" class="application">
+      <div id="navigation">
+        <%= yield :content_menu %>
+      </div>
+      <div id="advertisement">
+        <%= yield :advertisement %>
+      </div>
+      <div id="main-content">
+         <%= yield %>
+      </div>
+    </div>
+    <%= render :partial => "templates/main_footer" %>
+  </div>
+  <%= render :partial => "templates/analytics" %>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.feedbacks") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.comments"),
+                       :url => "/backoffice/products/feedbacks/comments",
+                       :match_path => "^\/(backoffice\/products\/feedbacks(\/)?|backoffice\/products\/feedbacks\/comments(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.requests"),
+                       :url => "/backoffice/products/feedbacks/requests",
+                       :match_path => "^\/backoffice\/products\/feedbacks\/requests(.*)$" %>
+  </ul>
+</div>

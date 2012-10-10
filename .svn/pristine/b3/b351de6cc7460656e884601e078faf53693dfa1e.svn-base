@@ -1,0 +1,3 @@
+<div class="basic-form-section">
+  <h2><%= t('activeview.forms.user_session.title') %></h2>
+</div>

@@ -1,0 +1,21 @@
+<div id="slide-menu">
+  <% slide_menu do %>
+    <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.dashboard"), :url => "/myaccount/community/dashboard" %>
+    <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.myprofile"), :url => "/myaccount/community/myprofile" %>
+    <% slide_menu_group t("navigation.myaccount.slidemenu.community.fellowship") do %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.friends"), :url => "/myaccount/community/friends" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.photos"), :url => "/myaccount/community/photos" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.videos"), :url => "/myaccount/community/videos" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.audios"), :url => "/myaccount/community/audios" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.messages"), :url => "/myaccount/community/messages" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.groups"), :url => "/myaccount/community/groups" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.meetings"), :url => "/myaccount/community/meetings" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.notes"), :url => "/myaccount/community/notes" %>
+    <% end %>
+    <% slide_menu_group t("navigation.myaccount.slidemenu.community.settings") do %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.privacy"), :url => "/myaccount/community/privacy" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.alerts"), :url => "/myaccount/community/alerts" %>
+      <%= list_menu_item :label => t("navigation.myaccount.slidemenu.community.blacklists"), :url => "/myaccount/community/blacklists" %>
+    <% end %>
+  <% end %>
+</div>

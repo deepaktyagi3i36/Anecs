@@ -1,0 +1,19 @@
+<div id="list-menu-box">
+  <div id="list-menu-title">
+    <%= t("navigation.backoffice.tabularmenu.feedbacks") %>
+  </div>
+  <ul id="list-menu">
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.feedbacks"),
+                       :url => "/backoffice/website/feedbacks",
+                       :match_path => "^\/(backoffice\/website\/feedbacks(\/)?|backoffice\/website\/feedbacks\/feedbacks(.*))$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.callmebacks"),
+                       :url => "/backoffice/website/feedbacks/callmebacks",
+                       :match_path => "^\/backoffice\/website\/feedbacks\/callmebacks(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.complaints"),
+                       :url => "/backoffice/website/feedbacks/complaints",
+                       :match_path => "^\/backoffice\/website\/feedbacks\/complaints(.*)$" %>
+    <%= list_menu_item :label => t("navigation.backoffice.listmenu.pollings"),
+                       :url => "/backoffice/website/feedbacks/pollings",
+                       :match_path => "^\/backoffice\/website\/feedbacks\/pollings(.*)$" %>
+  </ul>
+</div>

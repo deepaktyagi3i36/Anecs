@@ -1,0 +1,12 @@
+<center><h1>Hunting - Theme </h1></center>
+<div id="welcome-main">
+ <div id="power" class="big-box">
+   <div id="add-power" class="small-box">
+
+   {% for category in categories %}
+        {{ "muscle building" | category_link | link_to_category: "muscle building" }} <br>
+   {% endfor %}
+
+  </div>
+ </div>
+</div>
